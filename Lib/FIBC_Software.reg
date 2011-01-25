@@ -1,0 +1,18 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\FIBC_Software]
+
+[HKEY_CURRENT_USER\Software\FIBC_Software\Transation Kinds]
+
+[HKEY_CURRENT_USER\Software\FIBC_Software\Transation Kinds\0]
+"Name"="ReadCommitted"
+"Params"="read read_committed rec_version nowait"
+
+[HKEY_CURRENT_USER\Software\FIBC_Software\Transation Kinds\1]
+"Name"="WriteCommitted"
+"Params"="write read_committed rec_version nowait"
+
+[HKEY_CURRENT_USER\Software\FIBC_Software\Transation Kinds\2]
+"Name"="WriteConcurrency"
+"Params"="write concurrency nowait"
+

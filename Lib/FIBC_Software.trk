@@ -1,0 +1,9 @@
+[0]
+Name=ReadCommitted
+Params=read read_committed rec_version nowait
+[1]
+Name=WriteCommitted
+Params=write read_committed rec_version nowait
+[2]
+Name=WriteConcurrency
+Params=write concurrency nowait
