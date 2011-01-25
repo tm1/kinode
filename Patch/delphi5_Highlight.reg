@@ -1,0 +1,220 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Assembler]
+"Foreground Color"=dword:00000002
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Character]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Comment]
+"Foreground Color"=dword:00000001
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="True"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Disabled break]
+"Foreground Color"=dword:00000009
+"Background Color"=dword:0000000a
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Enabled break]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000009
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Error line]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000001
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Execution point]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000004
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Float]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Hex]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Hot Link]
+"Foreground Color"=dword:0000000c
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="True"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Identifier]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Illegal Char]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Invalid break]
+"Foreground Color"=dword:0000000a
+"Background Color"=dword:00000003
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Marked block]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000004
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="-1"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Number]
+"Foreground Color"=dword:00000005
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Octal]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Plain text]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="-1"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Preprocessor]
+"Foreground Color"=dword:00000002
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Reserved word]
+"Foreground Color"=dword:0000000c
+"Background Color"=dword:00000000
+"Bold"="True"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Right margin]
+"Foreground Color"=dword:00000007
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Search match]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\String]
+"Foreground Color"=dword:00000006
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Symbol]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Whitespace]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="-1"
+"Default Background"="-1"
+

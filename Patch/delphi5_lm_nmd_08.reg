@@ -1,0 +1,56 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Borland Shared]
+"SharedFilesDir"="D:\\Program Files\\Common Files\\Borland Shared"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Borland Shared\Data]
+"RootDir"="D:\\Program Files\\Common Files\\Borland Shared\\Data"
+"UseCount"="1"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Borland Shared\Image Files]
+"RootDir"="D:\\Program Files\\Common Files\\Borland Shared\\Images"
+"UseCount"="1"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Borland Shared\MSHelp]
+"RootDir"="D:\\Program Files\\Common Files\\Borland Shared\\MSHelp"
+"UseCount"="1"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Borland Shared\SampleDictionary]
+"RootDir"="D:\\Program Files\\Common Files\\Borland Shared\\SampleDictionary"
+"UseCount"="1"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine\Settings]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine\Settings\Repositories]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine\Settings\Repositories\Sample Data Dictionary]
+"DATABASE NAME"="DefaultDD"
+"TABLE NAME"="BDESDD"
+"LANGUAGE DRIVER"=""
+"DESCRIPTION"="Borland Database Engine Sample Data Dictionary"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine\Settings\System]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine\Settings\System\INIT]
+"DATA REPOSITORY"="Sample Data Dictionary"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\5.0]
+"App"="D:\\Program Files\\Borland\\Delphi5\\Bin\\Delphi32.exe"
+"RootDir"="D:\\Program Files\\Borland\\Delphi5"
+"Version"="CSS"
+"UseSharedFiles"="TRUE"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\5.0\AdminInstall]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\5.0\UninstInfo]
+"DebuggerInstalled"="TRUE"
+"UseSharedMSHelp"="TRUE"
+"UseSharedImages"="TRUE"
+"UseSharedData"="TRUE"
+

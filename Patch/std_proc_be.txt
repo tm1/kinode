@@ -1,0 +1,18 @@
+const
+  ProcName: string = 'FormActivate';
+
+const
+  ProcName: string = 'FormCreate';
+
+const
+  ProcName: string = 'FormClose';
+
+const
+  ProcName: string = 'FormDestroy';
+
+  DEBUGMessEnh(1, UnitName, ProcName, '->');
+  // --------------------------------------------------------------------------
+
+
+  // --------------------------------------------------------------------------
+  DEBUGMessEnh(-1, UnitName, ProcName, '<-');

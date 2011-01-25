@@ -1,0 +1,14 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options\Known Editor Enhancements]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options\Known Editor Enhancements\Borland.BufferList]
+"DisplayName"="Buffer List"
+"Priority"=dword:00000000
+"Enabled"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options\Known Editor Enhancements\GExperts.TGxKeyboardBinding]
+"DisplayName"="GExperts Shortcuts"
+"Priority"=dword:00000001
+"Enabled"="1"
+

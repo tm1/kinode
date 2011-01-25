@@ -1,0 +1,1527 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0]
+"Toolbar"="1"
+"TextLabels"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ActiveX Controls]
+"UnitDirName"="D:\\Program Files\\Borland\\Delphi5\\Imports"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Add to Package]
+"AddToPackageName"="d:\\program files\\borland\\delphi5\\Lib\\dclusr50.dpk"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Auto Save]
+"Editor Files"="0"
+"Desktop"="0"
+"Symbols"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Class Completion]
+"Finish properties"="-1"
+"Complete navigation"="-1"
+"Add interface methods"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Code Explorer]
+"Highlight incomplete"="-1"
+"Sorting"="1"
+"Expanding"="0"
+"Grouping"="1"
+"CategorySort"="Private;Protected;Public;Published;Fields;Properties;Methods;Classes;Interfaces;Procedures;Types;Variables;Uses;Virtuals;Statics;Inherited;Introduced"
+"DeclarationSyntax"="True"
+"Show Mod Exp"="False"
+"Browser Location"=""
+"Initial View"="1"
+"Symbol Scope"="1"
+"PrivateVisible"="-1"
+"PrivateExpand"="0"
+"PublicVisible"="-1"
+"PublicExpand"="0"
+"ProtectedVisible"="-1"
+"ProtectedExpand"="0"
+"PublishedVisible"="-1"
+"PublishedExpand"="0"
+"MethodsVisible"="-1"
+"MethodsExpand"="0"
+"PropertiesVisible"="-1"
+"PropertiesExpand"="0"
+"FieldsVisible"="-1"
+"FieldsExpand"="0"
+"ClassesVisible"="0"
+"ClassesExpand"="0"
+"InterfacesVisible"="-1"
+"InterfacesExpand"="0"
+"ProceduresVisible"="-1"
+"TypesVisible"="-1"
+"VariablesVisible"="-1"
+"ProceduresExpand"="0"
+"TypesExpand"="0"
+"VariablesExpand"="0"
+"UsesVisible"="-1"
+"UsesExpand"="0"
+"VirtualsExpand"="-1"
+"VirtualsVisible"="0"
+"StaticsVisible"="0"
+"StaticsExpand"="-1"
+"InheritedVisible"="-1"
+"InheritedExpand"="0"
+"IntroducedVisible"="0"
+"IntroducedExpand"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Code Insight]
+"Auto Code Completions"="-1"
+"Auto Code Parameters"="-1"
+"Code Complete Delay"=dword:00000003
+"Scope Sort"="-1"
+"Declaration Information"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Compiling]
+"Show Compiler Progress"="True"
+"Warn on Package Rebuild"="False"
+"Compile Beep"="0"
+"Cache Headers"="0"
+"BackgroundCompilation"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Custom Colors]
+"ColorA"="FFFFFFFF"
+"ColorB"="FFFFFFFF"
+"ColorC"="FFFFFFFF"
+"ColorD"="FFFFFFFF"
+"ColorE"="FFFFFFFF"
+"ColorF"="FFFFFFFF"
+"ColorG"="FFFFFFFF"
+"ColorH"="FFFFFFFF"
+"ColorI"="FFFFFFFF"
+"ColorJ"="FFFFFFFF"
+"ColorK"="FFFFFFFF"
+"ColorL"="FFFFFFFF"
+"ColorM"="FFFFFFFF"
+"ColorN"="FFFFFFFF"
+"ColorO"="FFFFFFFF"
+"ColorP"="FFFFFFFF"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\DbXForm]
+"DbX.WindowState"="0"
+"DbX.Left"="66"
+"DbX.Top"="66"
+"DbX.Width"="562"
+"DbX.Height"="271"
+"DbX.MainSplit"="180"
+"DbX.EditsSplit"="57"
+"DbX.QuerySplit"="77"
+"DbX.PropertySplit"="178"
+"DbX.ToolBar"="1"
+"DbX.StatusBar"="1"
+"DbX.ViewStyle"="3"
+"DbX.AutoArrange"="0"
+"DbX.TextFont"="1:Courier New:0:8"
+"DbX.WordWrap"="0"
+"DbX.ShowConfirms"="1"
+"DbX.ShowWarnings"="1"
+"DbX.Query.RequestLive"="0"
+"DbX.Query.LineDelimit"="---"
+"DbX.Query.StmtDelimit"="#0"
+"DbX.Query.Escape"="#0"
+"DbX.Query.EscapeQuote"="0"
+"DbX.Query.Comments"="--;/*,*/"
+"DbX.ViewingBlobs"="0"
+"DbX.ObjectView"="1"
+"DbX.ViewSystemData"="0"
+"DbX.ViewEditText"="1"
+"DbX.ViewCompleteText"="0"
+"DbX.ViewRoot"="TDatabases"
+"DbX.KeepTreeSync"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging]
+"Debug DCUs Path"="$(DELPHI)\\Lib\\Debug;C:\\DELPHI\\jcl\\lib\\D5\\debug"
+"Step Program Block"="0"
+"Hide Designers On Run"="-1"
+"Minimize On Run"="True"
+"ToolTip Watches"="-1"
+"Detailed Exceptions"="0"
+"DontPromptForJITDebugger"="1"
+"Execute Startup Code"="0"
+"Integrated Debugging"="1"
+"Break On Delphi Exceptions"="1"
+"Break On CPP Exceptions"="0"
+"LogLength"=dword:00000064
+"LogUnlimited"="1"
+"LogClearOnStartup"="0"
+"LogIncludeProcessInfo"="1"
+"LogOptions"=dword:0000000d
+"DisableEdit"="0"
+"TD32Keys"="0"
+"RearrangeMenu"="0"
+"RemoveDataBPs"="1"
+"InspectorsStayOnTop"="1"
+"Language Exception Classes"=""
+"ViewCPUOnException"="0"
+"Debug Spawned Processes"="0"
+"Allow COM Cross-process Stepping"="0"
+"Allow CORBA Cross-process Stepping"="0"
+"Allow Side Effects in Watches"="1"
+"Disable Multiple Evaluators"="0"
+"Debug Symbols Search Path"=""
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\Bind]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\BindExceptionOccurred]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\BindFailed]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\BindSucceeded]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\ClientExceptionOccurred]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\Locate]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\LocateFailed]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\LocateForwarded]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\LocateSucceeded]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\PrepareReply]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\PrepareRequest]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\Rebind]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\RebindFailed]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\RebindSucceeded]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\ReceiveReply]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\ReceiveReplyFailed]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\ReceiveRequest]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\RequestCompleted]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\SendReply]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\SendReplyFailed]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\SendRequest]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\SendRequestFailed]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\SendRequestSucceeded]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\ServerExceptionOccurred]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\CORBA Events\Shutdown]
+"Action0"="0,1,.,.,.,."
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\ExceptionCodes]
+"Access Violation"="0,0"
+"In Page Error"="0,0"
+"Invalid Handle"="0,0"
+"No Memory"="0,0"
+"Illegal Instruction"="0,0"
+"Noncontinuable Exception"="0,0"
+"Invalid Disposition"="0,0"
+"Array Bounds Exceeded"="0,0"
+"Float Denormal Operation"="0,0"
+"Float Divide By Zero"="0,0"
+"Float Inexact Result"="0,0"
+"Float Invalid Operation"="0,0"
+"Float Overflow"="0,0"
+"Float Stack Check"="0,0"
+"Float Underflow"="0,0"
+"Integer Divide By Zero"="0,0"
+"Integer Overflow"="0,0"
+"Privileged Instruction"="0,0"
+"Stack Overflow"="0,0"
+"Control C Exit"="0,0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Debugging\Language Exception Classes]
+"VCL EAbort Exception"="1"
+"Microsoft DAO Exceptions"="1"
+"VisiBroker Internal Exceptions"="1"
+"CORBA System Exceptions"="1"
+"CORBA User Exceptions"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Direct]
+"InfoURL"="http://www.inprise.com/delphi/direct/info.html"
+"LastPoll"=hex:f4,d3,b9,07,d9,b3,e2,40
+"PollPeriod"=dword:00000007
+"DontShowAgain"="0"
+"AutoPollNetwork"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Disabled Packages]
+"D:\\Program Files\\Eureka for Delphi 5\\ExceptionExpert5.bpl"="Eureka exception log 3.1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Assembler]
+"Foreground Color"=dword:00000002
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Character]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Comment]
+"Foreground Color"=dword:00000001
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="True"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Disabled break]
+"Foreground Color"=dword:00000009
+"Background Color"=dword:0000000a
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Enabled break]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000009
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Error line]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000001
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Execution point]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000004
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Float]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Hex]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Hot Link]
+"Foreground Color"=dword:0000000c
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="True"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Identifier]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Illegal Char]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Invalid break]
+"Foreground Color"=dword:0000000a
+"Background Color"=dword:00000003
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Marked block]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000004
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="-1"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Number]
+"Foreground Color"=dword:00000005
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Octal]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Plain text]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="-1"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Preprocessor]
+"Foreground Color"=dword:00000002
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Reserved word]
+"Foreground Color"=dword:0000000c
+"Background Color"=dword:00000000
+"Bold"="True"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Right margin]
+"Foreground Color"=dword:00000007
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Search match]
+"Foreground Color"=dword:0000000f
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="False"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\String]
+"Foreground Color"=dword:00000006
+"Background Color"=dword:00000000
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Symbol]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="False"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Highlight\Whitespace]
+"Foreground Color"=dword:00000000
+"Background Color"=dword:0000000f
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"Default Foreground"="-1"
+"Default Background"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options]
+"Auto Indent"="-1"
+"Insert"="-1"
+"Tab Character"="0"
+"Smart Tab"="0"
+"Optimal Fill"="0"
+"Backspace Unindents"="-1"
+"Cursor Through Tabs"="-1"
+"Group Undo"="-1"
+"Cursor Beyond EOF"="0"
+"Undo After Save"="0"
+"Keep Trailing Blanks"="0"
+"Persistent Blocks"="0"
+"Overwrite Blocks"="-1"
+"Double Click Line"="0"
+"Find Text At Cursor"="-1"
+"Force Cut Copy Enabled"="0"
+"Use Syntax Highlight"="-1"
+"Block Indent"=dword:00000002
+"Undo Limit"=dword:00007fff
+"Tab Stops"="8"
+"Syntax Extensions"="pas;dpr;dpk;inc;dfm"
+"BRIEF Cursor Shapes"="0"
+"Create Backup File"="-1"
+"Preserve Line Ends"="-1"
+"Zoom To Full Screen"="0"
+"Visible Right Margin"="-1"
+"Right Margin"=dword:00000064
+"Visible Gutter"="-1"
+"Gutter Width"=dword:0000001e
+"Editor Font"="Courier New"
+"Font Size"=dword:0000000a
+"BRIEF RegEx"="0"
+"Editor SpeedSetting"="Borland.Default"
+"Editor Keymapping"="0"
+"Color SpeedSetting"="0"
+"C Syntax Extensions"="cpp;c;hpp;h;hh;cxx;hxx"
+"SQL Syntax Extensions"="sql"
+"IDL Syntax Extensions"="idl"
+"Editor Emulation"="Borland.Internal"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options\Known Editor Enhancements]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options\Known Editor Enhancements\Borland.BufferList]
+"DisplayName"="Buffer List"
+"Priority"=dword:00000000
+"Enabled"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Editor\Options\Known Editor Enhancements\GExperts.TGxKeyboardBinding]
+"DisplayName"="GExperts Shortcuts"
+"Priority"=dword:00000001
+"Enabled"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Experts]
+"ConExpt"="D:\\Program Files\\Borland\\Delphi5\\Bin\\conexprt.DLL"
+"ExptDemo"="D:\\Program Files\\Borland\\Delphi5\\Bin\\EXPTDEMO.DLL"
+"GExperts"="D:\\Program Files\\GExperts\\GExpert5.dll"
+"DelForEx5"="D:\\Program Files\\DelForEx\\DelForEx5.dll"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Form Design]
+"Display Grid"="-1"
+"Snap to Grid"="-1"
+"Show Component Captions"="0"
+"Grid Size X"=dword:00000008
+"Grid Size Y"=dword:00000008
+"Show Designer Hints"="-1"
+"DFM As Text"="-1"
+"Auto Create Forms"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Active]
+"Code_Proofreader"="1"
+"Grep_Results"="1"
+"Clean_Directory"="1"
+"SourceExport"="1"
+"Clipboard_Expert"="1"
+"Grep_Dlg"="1"
+"ExpertManager"="1"
+"Procedure_Viewer"="1"
+"Message_Expert"="1"
+"Backup_Project"="1"
+"Tab_Order"="1"
+"File_Manager"="1"
+"Class_Browser"="1"
+"Code_Librarian"="1"
+"ASCII_Window"="1"
+"PE_DUMP"="1"
+"Component_Replace"="1"
+"Component_Grid_Expert"="1"
+"ShortCut_Expert"="1"
+"Dependency_Expert"="1"
+"Layout_Expert"="1"
+"ToDo_Expert"="1"
+"MenusForEditorExperts"="1"
+"GXProjOptionSets_Expert"="1"
+"ComponentsToCode"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ASCII Chart]
+"Font Size"=dword:00000008
+"Font Name"="MS Sans Serif"
+"Font Base"=dword:00000000
+"Edit Display Text"=""
+"Show Hex"="0"
+"Zoom Font Size"=dword:00000020
+"Show Hint"="1"
+"Window Location"="2C0000000000000001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9A0000009A000000FA030000F1020000"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Backup]
+"Include"="0"
+"Type"=dword:00000000
+"Directory"="%PROJECTDIR%\\%PROJECTNAME%"
+"IncludeDir"="1"
+"BackupScope"=dword:00000000
+"FollowLibraryPath"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ClassBrowse]
+"Left"=dword:0000011e
+"Top"=dword:000000d9
+"Width"=dword:00000244
+"Height"=dword:000001ae
+"Split"=dword:000000af
+"ViewMode"=dword:00000001
+"StoragePath"="D:\\Program Files\\GExperts\\Storage5\\"
+"PrimitiveTop"="0"
+"StayInPackage"="0"
+"ParseRecursing"="0"
+"AutomaticallyHideBrowser"="1"
+"UnitNames"="0"
+"ClassHierarchyFontSize"=dword:00000008
+"ClassHierarchyBoxWidth"=dword:00000019
+"ClassHierarchyBoxSpace"=dword:0000000a
+"ClassHierarchyFont"="Arial"
+"Filter0"="1"
+"Filter1"="1"
+"Filter2"="1"
+"Filter3"="1"
+"Filter4"="1"
+"Filter5"="1"
+"Filter6"="1"
+"Filter7"="1"
+"Filter8"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ClassBrowse\EditorFont]
+"Name"="Courier New"
+"Size"=dword:0000000a
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ClassBrowse\ListFont]
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ClassBrowse\TreeFont]
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CleanList]
+"ReportError"="1"
+"IncludeBinaryDirs"="0"
+"Width"=dword:000001ea
+"Height"=dword:000001ae
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CleanList\Delete]
+"Count"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CleanList\Extensions]
+"Count"=dword:0000001d
+"AvailableExt0"=".#??"
+"AvailableExt1"=".$*"
+"AvailableExt2"=".~*"
+"AvailableExt3"=".~bpg"
+"AvailableExt4"=".~cpp"
+"AvailableExt5"=".~dfm"
+"AvailableExt6"=".~dpk"
+"AvailableExt7"=".~dsk"
+"AvailableExt8"=".~h"
+"AvailableExt9"=".~hpp"
+"AvailableExt10"=".~pas"
+"AvailableExt11"=".~xfm"
+"AvailableExt12"=".bak"
+"AvailableExt13"=".cfg"
+"AvailableExt14"=".csm"
+"AvailableExt15"=".dcu"
+"AvailableExt16"=".ddp"
+"AvailableExt17"=".dof"
+"AvailableExt18"=".dsk"
+"AvailableExt19"=".fts"
+"AvailableExt20"=".gid"
+"AvailableExt21"=".il*"
+"AvailableExt22"=".kwf"
+"AvailableExt23"=".map"
+"AvailableExt24"=".md"
+"AvailableExt25"=".obj"
+"AvailableExt26"=".rsm"
+"AvailableExt27"=".tds"
+"AvailableExt28"=".tmp"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Clip]
+"Maximum"=dword:00000014
+"AutoStart"="1"
+"AutoClose"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ClipWin]
+"Left"=dword:00000068
+"Top"=dword:00000043
+"Width"=dword:0000032f
+"Height"=dword:00000245
+"SplitterRatio"=dword:00000032
+"ViewToolbar"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CodeLib]
+"Left"=dword:00000130
+"Top"=dword:000000cb
+"Width"=dword:00000220
+"Height"=dword:0000019f
+"Layout"=dword:00000000
+"Splitter"=dword:000000a9
+"DatabasePath"="D:\\Program Files\\GExperts\\"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CodeLib\Editor]
+"Name"="Courier New"
+"Size"=dword:0000000a
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CodeLib\TreeView]
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\CodeProofreader]
+"ReplacerActive"="1"
+"DictionaryActive"="1"
+"CompilerActive"="1"
+"DictionaryCaseDiffer"="1"
+"OtherLetter"="1"
+"NearbyLetter"="1"
+"NoLetter"="1"
+"MoreLetter"="0"
+"MixedLetter"="1"
+"NoFirstOther"="1"
+"BeepOnReplace"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ComponentsToCode]
+"BinaryProperties"=dword:00000001
+"PrependWithComponent"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Depend]
+"ScanEntireUnit"="1"
+"Left"=dword:00000132
+"Top"=dword:000000ce
+"Width"=dword:0000021b
+"Height"=dword:00000199
+"Splitter"=dword:000000be
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditEnhance]
+"MultiLine"="1"
+"HotTrack"="1"
+"Buttons"="0"
+"ButtonsFlat"="0"
+"ToolBarVisible"="1"
+"ToolBarAlign"=dword:00000003
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\Comment]
+"ShortCut"=dword:0000c0be
+"InsertRemoveSpace"="0"
+"CommentType"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\DateExpert]
+"Format"="dd.MM.yyyy"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\DateTime]
+"ShortCut"=dword:0000c041
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\HeaderExpert]
+"Count"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\ProcedureHeader]
+"ShortCut"=dword:0000c050
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\ProcHeaderExpert]
+"Count"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\EditorExperts\UnitHeader]
+"ShortCut"=dword:0000c048
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Expert Manager]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\FileMgr]
+"Left"=dword:00000140
+"Top"=dword:000000d4
+"Width"=dword:000001ff
+"Height"=dword:0000018e
+"Splitter"=dword:00000079
+"Splitter2"=dword:00000093
+"SaveFile"="D:\\Program Files\\GExperts\\Fave.fav"
+"FolderDelete"="1"
+"ExpandAll"="0"
+"ExecHide"="1"
+"ShowPreview"="1"
+"ListView"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\FileMgr\tvFolders]
+"Selected"="Favorites"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Grep]
+"NoCase"="0"
+"NoComments"="0"
+"Forms"="1"
+"Search"=dword:00000001
+"SubDirectories"="1"
+"Save"="1"
+"ANSICompatible"="0"
+"ExpandAll"="0"
+"Whole Word"="0"
+"Middle"="1"
+"RegEx"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\GrepDirList]
+"Count"=dword:00000002
+"GrepDir0"="D:\\Program Files\\Borland\\Delphi5\\Source\\VCL"
+"GrepDir1"="D:\\Program Files\\Borland\\Delphi5\\Source\\rtl"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\GrepMaskList]
+"Count"=dword:00000001
+"GrepMask0"="*.pas;*.dpr"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\GrepResult]
+"Left"=dword:00000169
+"Top"=dword:0000000f
+"Width"=dword:00000297
+"Height"=dword:000002bd
+"OnTop"="1"
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+"ResultsHeight"=dword:00000207
+"ShowContext"="1"
+"NumContextLines"=dword:00000004
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\GrepSearchList]
+"Count"=dword:00000014
+"GrepSearch0"="lvInfo"
+"GrepSearch1"="stInfo"
+"GrepSearch2"="stTarifet"
+"GrepSearch3"="Refresh_TC_Count("
+"GrepSearch4"="OperModification"
+"GrepSearch5"="Cur_Seans_Time"
+"GrepSearch6"="cur_panel"
+"GrepSearch7"="current"
+"GrepSearch8"="curent"
+"GrepSearch9"="ticket"
+"GrepSearch10"="SimplePrint"
+"GrepSearch11"="c_Images_Counter_Limit"
+"GrepSearch12"="'1'"
+"GrepSearch13"="beep"
+"GrepSearch14"="'0'"
+"GrepSearch15"="gfx"
+"GrepSearch16"=":= varNull"
+"GrepSearch17"="ds_Changelog_List"
+"GrepSearch18"="Foreign"
+"GrepSearch19"="Application.ShowHint"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\IDEEnhancements]
+"ShowWindowsMenu"="0"
+"CPMultiLine"="0"
+"CPScrollOpposite"="0"
+"CPRaggedRight"="0"
+"CPHotTracking"="0"
+"CPAsButtons"="0"
+"CPFlatButtons"="0"
+"AutoSave"="0"
+"AutoSaveInterval"=dword:00000000
+"CPTabsInPopup"="1"
+"CPTabsInPopupAlphaSort"="0"
+"EnableOIFont"="0"
+"EnableCPFont"="0"
+"OICustomFontNames"="0"
+"MultilineTabDockHost"="0"
+"DefaultMultilineTabDockHost"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\IDEEnhancements\CPFont]
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\IDEEnhancements\OIFont]
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\IDEShortcuts]
+"ProjectSyntaxItem"=dword:00008031
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Layout]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Layout\AppBuilder]
+"Left"=dword:fffffffc
+"Top"=dword:fffffffc
+"Height"=dword:00000069
+"Width"=dword:00000488
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Layout\EditWindow_0]
+"Left"=dword:000000c8
+"Top"=dword:00000079
+"Height"=dword:000002a9
+"Width"=dword:000003b0
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Layout\fmToDo]
+"Left"=dword:00000151
+"Top"=dword:00000116
+"Height"=dword:00000133
+"Width"=dword:000001dd
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Layout\PropertyInspector]
+"Left"=dword:00000000
+"Top"=dword:0000006b
+"Height"=dword:0000029f
+"Width"=dword:000000c5
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\Misc]
+"ConfigPath"="D:\\Program Files\\GExperts\\"
+"HelpFile"="D:\\Program Files\\GExperts\\GExperts.hlp"
+"Layout"=dword:00000000
+"VCLPath"="D:\\Program Files\\Borland\\Delphi5\\Source\\VCL\\"
+"UseActionIcons"="1"
+"AlphabetizeMenu"="0"
+"EditorExpertsEnabled"="1"
+"PlaceGxMainMenuInToolsMenu"="0"
+"IdeEnhancementsEnabled"="1"
+"EditorEnhancementsEnabled"="1"
+"WorkaroundShortcutBug"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\MsgDlg]
+"Concate"="+#13+#10+"
+"CppConcate"="\\n"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\PEDump]
+"Left"=dword:0000015d
+"Top"=dword:00000106
+"Width"=dword:00000273
+"Height"=dword:000001ed
+"Numbers"=dword:00000001
+"BinPath"=""
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ProcViewer]
+"SearchAll"="1"
+"Left"=dword:0000011f
+"Top"=dword:0000004a
+"Width"=dword:0000026e
+"Height"=dword:00000282
+"SortColumn"=dword:00000001
+"Name"="MS Sans Serif"
+"Size"=dword:00000008
+"Bold"="0"
+"Italic"="0"
+"Underline"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ProjOptionSets]
+"StoragePath"="D:\\Program Files\\GExperts\\"
+"Height"=dword:00000165
+"Width"=dword:000001cb
+"SplitterRatio"=dword:00000032
+"ActiveTab"="tsProjectSettings"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ShortCut]
+"Code_Proofreader"=dword:00000000
+"Grep_Results"=dword:0000c052
+"Clean_Directory"=dword:00000000
+"SourceExport"=dword:00000000
+"Clipboard_Expert"=dword:00000000
+"Grep_Dlg"=dword:00006053
+"ExpertManager"=dword:00000000
+"Procedure_Viewer"=dword:00004047
+"Message_Expert"=dword:00004044
+"Backup_Project"=dword:00000000
+"Tab_Order"=dword:00000000
+"File_Manager"=dword:00000000
+"Class_Browser"=dword:00000000
+"Code_Librarian"=dword:00000000
+"ASCII_Window"=dword:00000000
+"PE_DUMP"=dword:00000000
+"Component_Replace"=dword:00000000
+"Component_Grid_Expert"=dword:00000000
+"ShortCut_Expert"=dword:00000000
+"Dependency_Expert"=dword:00000000
+"Layout_Expert"=dword:0000604c
+"ToDo_Expert"=dword:00000000
+"MenusForEditorExperts"=dword:00000000
+"GXProjOptionSets_Expert"=dword:00000000
+"ComponentsToCode"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ShortCutWindow]
+"Left"=dword:0000012d
+"Top"=dword:0000010e
+"Width"=dword:00000226
+"Height"=dword:0000010f
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\SourceExport]
+"Copy Format"=dword:00000000
+"Save Directory"=""
+"Save Format"=dword:00000001
+"Background"=dword:80000005
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\SuppressedMessages]
+"TGxMultipleInstancesMessage"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ToDo]
+"ShowTokens"="0"
+"AddMessage"="0"
+"HideOnGoto"="0"
+"ScanType"=dword:00000000
+"DirToScan"=""
+"RecurseDirScan"="0"
+"SortAscending"="1"
+"SortColumn"=dword:00000000
+"Height"=dword:00000133
+"Width"=dword:000001dd
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ToDo\Tokens]
+"TODO"=dword:00000001
+"#ToDo1"=dword:00000000
+"#ToDo2"=dword:00000001
+"#ToDo3"=dword:00000002
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\GExperts-1.1\ToolBarActions]
+"Count"=dword:00000005
+"Action0"="EditCutCommand"
+"Action1"="EditCopyCommand"
+"Action2"="EditPasteCommand"
+"Action3"="EditUndoCommand"
+"Action4"="EditRedoCommand"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Globals]
+"Win32Help Available"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\History Lists]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\History Lists\hlRepositoryFilename]
+"Count"=dword:00000001
+"Item0"="$(DELPHI)\\bin\\default.rps"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ITE]
+"TranslatorCount"=dword:00000002
+"Translator0"="$(DELPHI)\\Bin\\DFM50.dll"
+"Translator1"="$(DELPHI)\\Bin\\RC50.dll"
+"Automatic Repository Query"="-1"
+"Multiple Find Action"="1"
+"Automatically Compile Projects"="0"
+"Show Translation Manager After RDW"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ITE\DFM]
+"Exts"=".dfm"
+"Col0"=dword:00000000
+"Col1"=dword:00000001
+"Col2"=dword:00000002
+"Col3"=dword:00000003
+"Col4"=dword:00000004
+"Col5"=dword:00000005
+"Col6"=dword:00000006
+"Col7"=dword:00000007
+"Col8"=dword:00000008
+"Col9"=dword:00000009
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ITE\RC]
+"Exts"=".rc;.drc"
+"Col0"=dword:00000000
+"Col1"=dword:00000001
+"Col2"=dword:00000002
+"Col3"=dword:00000003
+"Col4"=dword:00000004
+"Col5"=dword:00000005
+"Col6"=dword:00000006
+"Col7"=dword:00000007
+"Col8"=dword:00000008
+"Col9"=dword:00000009
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ITE\Repository]
+"Left"=dword:00000001
+"Filename"="$(DELPHI)\\bin\\default.rps"
+"Top"=dword:00000001
+"Width"=dword:0000027e
+"Height"=dword:000001aa
+"TextLabels"="-1"
+"LanguagesToolBarExpanded"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Known IDE Packages]
+"$(DELPHI)\\Bin\\dphide50.bpl"="(Untitled)"
+"$(DELPHI)\\Bin\\direct50.bpl"="(Untitled)"
+"$(DELPHI)\\Bin\\stride50.bpl"="(Untitled)"
+"$(DELPHI)\\Bin\\proide50.bpl"="(Untitled)"
+"$(DELPHI)\\Bin\\dphpro50.bpl"="(Untitled)"
+"$(DELPHI)\\Bin\\dphcrb50.bpl"="(Untitled)"
+"$(DELPHI)\\Bin\\dphmts50.bpl"="(Untitled)"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Known Packages]
+"$(DELPHI)\\Bin\\dclstd50.bpl"="Borland Standard Components"
+"$(DELPHI)\\Bin\\dcl31w50.bpl"="Delphi 1.0 Compatibility Components"
+"$(DELPHI)\\Bin\\dclsmp50.bpl"="Borland Sample Components"
+"$(DELPHI)\\Bin\\dclado50.bpl"="Borland ADO DB Components"
+"$(DELPHI)\\Bin\\dcldb50.bpl"="Borland Database Components"
+"D:\\WINNT\\system32\\\\ibevnt50.bpl"="Borland Interbase Event Alerter Component"
+"$(DELPHI)\\Bin\\dclbde50.bpl"="Borland BDE DB Components"
+"$(DELPHI)\\Bin\\dclqrt50.bpl"="QuickReport Components"
+"$(DELPHI)\\Bin\\dcltee50.bpl"="TeeChart 5.0 Components"
+"$(DELPHI)\\Bin\\dcldss50.bpl"="Borland Decision Cube Components"
+"$(DELPHI)\\Bin\\applet50.bpl"="Borland Control Panel Applet Package"
+"$(DELPHI)\\Bin\\dcltqr50.bpl"="TeeChart 5.0 for QuickReport Components Design Package"
+"$(DELPHI)\\Bin\\DCLIB50.bpl"="InterBase Data Access Components"
+"$(DELPHI)\\Bin\\dclsmpedit50.bpl"="Borland Editor Script Enhancements"
+"$(DELPHI)\\Bin\\dclmid50.bpl"="Borland MIDAS Components"
+"$(DELPHI)\\Bin\\dclnet50.bpl"="Borland Internet Components"
+"$(DELPHI)\\Bin\\DBWEBXPRT.BPL"="Borland Web Wizard Package"
+"$(DELPHI)\\Bin\\DCLNMF50.bpl"="NetMasters Fastnet Tools"
+"$(DELPHI)\\Bin\\dclwbm50.bpl"="Borland InternetExpress Components"
+"$(DELPHI)\\Bin\\dclie50.bpl"="Internet Explorer Components"
+"$(DELPHI)\\Bin\\dclocx50.bpl"="Borland Sample Imported ActiveX Controls"
+"$(DELPHI)\\Bin\\dclite50.bpl"="Borland Integrated Translation Environment"
+"$(DELPHI)\\Bin\\dclaxserver50.bpl"="Borland Sample Automation Server Components"
+"$(DELPHI)\\Projects\\Bpl\\FIBPlus5.bpl"="FIBPlus"
+"$(DELPHI)\\Projects\\Bpl\\SynEdit_D5.bpl"="SynEdit component suite"
+"$(DELPHI)\\Projects\\Bpl\\dclusr50.bpl"="Borland User Components"
+"$(DELPHI)\\Projects\\Bpl\\FIBPlusEditors5.bpl"="FIBPlus property editors "
+"$(DELPHI)\\Projects\\Bpl\\NmdCtrl2.bpl"="n0mad Controls III [Speed and Shape Based 3 Light]"
+"D:\\Program Files\\Eureka for Delphi 5\\ExceptionExpert5.bpl"="Eureka exception log 3.1"
+"$(DELPHI)\\Projects\\Bpl\\NmdCtrl3.bpl"="n0mad Controls IV [Speed and Shape Based 4 + WcBitBtn w/o Caption + XPMenu + HostInfo]"
+"$(DELPHI)\\Projects\\Bpl\\udp50.bpl"="Simple TCP and UDP"
+"$(DELPHI)\\Projects\\Bpl\\JclDebugIde50.bpl"="JCL Debug IDE extension for Delphi 5"
+"$(DELPHI)\\Projects\\Bpl\\ProjectAnalyzer50.bpl"="JCL Project Analyzer for Delphi 5"
+"$(DELPHI)\\Projects\\Bpl\\IdeOpenDlgFavorite50.bpl"="JCL Open and Save IDE dialogs with favorite folders for Delphi 5"
+"$(DELPHI)\\Projects\\Bpl\\ThreadNameExpert50.bpl"="JCL Thread Name IDE expert for Delphi 5"
+"$(DELPHI)\\Projects\\Bpl\\FREEREP5.bpl"="FreeReport 2.32 Components"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Library]
+"Search Path"="$(DELPHI)\\Lib;$(DELPHI)\\Bin;$(DELPHI)\\Imports;$(DELPHI)\\Projects\\Bpl;C:\\Delphi\\Lib;C:\\Delphi\\fib442;C:\\DELPHI\\SynEdit\\Source;C:\\DELPHI\\EhLib\\Common;D:\\Program Files\\Eureka for Delphi 5;C:\\DELPHI\\jcl\\lib\\D5;C:\\DELPHI\\jcl\\source;C:\\DELPHI\\FrRP232"
+"Package DCP Output"="$(DELPHI)\\Projects\\Bpl"
+"Package DPL Output"="$(DELPHI)\\Projects\\Bpl"
+"Browsing Path"="$(DELPHI)\\source\\vcl;$(DELPHI)\\source\\rtl\\Corba;$(DELPHI)\\source\\rtl\\Sys;$(DELPHI)\\source\\rtl\\Win;$(DELPHI)\\source\\Internet;C:\\DELPHI\\SynEdit\\Source;C:\\DELPHI\\EhLib\\Common;C:\\DELPHI\\jcl\\source\\common;C:\\DELPHI\\jcl\\source\\windows;C:\\DELPHI\\jcl\\source\\vcl;C:\\DELPHI\\jcl\\source\\visclx;C:\\DELPHI\\FrRP232"
+"Package Search Path"="C:\\Delphi\\Lib"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Main Window]
+"TopDockSiteWidth"=dword:00000480
+"TopDockSiteHeight"=dword:0000004e
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\New Component]
+"PalettePage"=""
+"UnitDirName"=""
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\OpenHelp]
+"ProjectFile"="D:\\Program Files\\Borland\\Delphi5\\Help\\delphi5.ohp"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Palette]
+"Standard"="Frames;TMainMenu;TPopupMenu;TLabel;TEdit;TMemo;TButton;TCheckBox;TRadioButton;TListBox;TComboBox;TScrollBar;TGroupBox;TRadioGroup;TPanel;TActionList;"
+"Additional"="TBitBtn;TSpeedButton;TMaskEdit;TStringGrid;TDrawGrid;TImage;TShape;TBevel;TScrollBox;TCheckListBox;TSplitter;TStaticText;TControlBar;TApplicationEvents;TChart;"
+"Win32"="TTabControl;TPageControl;TImageList;TRichEdit;TTrackBar;TProgressBar;TUpDown;THotKey;TAnimate;TDateTimePicker;TMonthCalendar;TTreeView;TListView;THeaderControl;TStatusBar;TToolBar;TCoolBar;TPageScroller;"
+"System"="TTimer;TPaintBox;TMediaPlayer;TOleContainer;TDdeClientConv;TDdeClientItem;TDdeServerConv;TDdeServerItem;"
+"Samples"="TGauge;TColorGrid;TSpinButton;TSpinEdit;TDirectoryOutline;TCalendar;TIBEventAlerter;TTCPClient;TTCPServer;TUDPClient;TUDPServer;"
+"n0mad Controls"="TSpeedShapeEx;TTicketControl;TWc_BitBtn;TFrmRstr;TTicketControlEx;TSeatEx;TBorder;TXPMenu;TSpeedShapeBtnEx;TOdeumPanel;TSpeedShapeControlEx;TSpeedShapePanelEx;TCustomSeatEx;TScrollPanel;TShapeCell;TShapePanel;TSpeedShape;TSpeedPanel;TWCBitBtn;TAUpFIBDataSet;"
+"Dialogs"="TOpenDialog;TSaveDialog;TOpenPictureDialog;TSavePictureDialog;TFontDialog;TColorDialog;TPrintDialog;TPrinterSetupDialog;TFindDialog;TReplaceDialog;"
+"Data Access"="TDataSource;TTable;TQuery;TStoredProc;TDatabase;TSession;TBatchMove;TUpdateSQL;TNestedTable;TReport;"
+"Data Access.Hidden"="TReport;"
+"Data Controls"="TDBGrid;TDBNavigator;TDBText;TDBEdit;TDBMemo;TDBImage;TDBListBox;TDBComboBox;TDBCheckBox;TDBRadioGroup;TDBLookupListBox;TDBLookupComboBox;TDBRichEdit;TDBCtrlGrid;TDBChart;"
+"ADO"="TADOConnection;TADOCommand;TADODataSet;TADOTable;TADOQuery;TADOStoredProc;TRDSConnection;"
+"FIBPlus"="TpFIBEventer;TpFIBStoredProc;TFIBSQLMonitor;TpFIBDatabase;TpFIBDataSet;TpFIBTransaction;TpFIBQuery;TpFIBUpdateObject;TDataSetsContainer;TpFibErrorHandler;TpFIBServerProperties;TpFIBConfigService;TpFIBLicensingService;TpFIBLogService;TpFIBStatisticalService;TpFIBBackupService;TpFIBRestoreService;TpFIBValidationService;TpFIBSecurityService;TpFIBInstall;TpFIBUnInstall;TSIBfibEventAlerter;TFIBDataSet;TFIBQuery;TFIBDatabase;TFIBTransaction;"
+"InterBase"="TIBTable;TIBQuery;TIBStoredProc;TIBDatabase;TIBTransaction;TIBUpdateSQL;TIBDataSet;TIBSQL;TIBDatabaseInfo;TIBSQLMonitor;TIBEvents;"
+"Midas"="TClientDataSet;TDCOMConnection;TSocketConnection;TDataSetProvider;TSimpleObjectBroker;TWebConnection;TCorbaConnection;TRemoteServer;TMidasConnection;TOLEnterpriseConnection;TProvider;"
+"Midas.Hidden"="TRemoteServer;TMidasConnection;TOLEnterpriseConnection;TProvider;"
+"InternetExpress"="TXMLBroker;TMidasPageProducer;"
+"Internet"="TClientSocket;TServerSocket;TWebDispatcher;TPageProducer;TQueryTableProducer;TDataSetTableProducer;TDataSetPageProducer;TWebBrowser;"
+"FastNet"="TNMDayTime;TNMMsg;TNMMSGServ;TNMEcho;TNMFTP;TNMHTTP;TNMNNTP;TNMStrm;TNMStrmServ;TNMPOP3;TNMSMTP;TNMTime;TNMUDP;TNMURL;TNMUUProcessor;TPowersock;TNMGeneralServer;TNMFinger;"
+"Decision Cube"="TDecisionCube;TDecisionQuery;TDecisionSource;TDecisionPivot;TDecisionGrid;TDecisionGraph;"
+"QReport"="TQuickRep;TQRSubDetail;TQRStringsBand;TQRBand;TQRChildBand;TQRGroup;TQRLabel;TQRDBText;TQRExpr;TQRSysData;TQRMemo;TQRExprMemo;TQRRichText;TQRDBRichText;TQRShape;TQRImage;TQRDBImage;TQRCompositeReport;TQRPreview;TQRTextFilter;TQRCSVFilter;TQRHTMLFilter;TQRChart;"
+"Win 3.1"="TTabSet;TOutline;TTabbedNotebook;TNotebook;THeader;TFileListBox;TDirectoryListBox;TDriveComboBox;TFilterComboBox;TDBLookupList;TDBLookupCombo;"
+"ActiveX"="TChartfx;TVSSpell;TF1Book;TVtChart;"
+"Servers"="TWordApplication;TWordDocument;TWordFont;TWordParagraphFormat;TWordLetterContent;TBinder;TExcelQueryTable;TExcelApplication;TExcelChart;TExcelWorksheet;TExcelWorkbook;TExcelOLEObject;TDoCmd;TAccessHyperlink;TAccessForm;TAccessReport;TAccessApplication;TAccessReferences;TPowerPointApplication;TPowerPointSlide;TPowerPointPresentation;TOutlookApplication;TAppointmentItem;TContactItem;TJournalItem;TMailItem;TMeetingRequestItem;TNoteItem;TPostItem;TRemoteItem;TReportItem;TTaskItem;TTaskRequestItem;"
+"SynEdit"="TSynEdit;TSynMemo;TDBSynEdit;TSynExporterHTML;TSynExporterRTF;TSynEditPythonBehaviour;TSynMultiSyn;TSynCompletionProposal;TSynAutoComplete;TSynMacroRecorder;TSynEditPrint;TSynEditPrintPreview;TSynAutoCorrect;TSynHighlighterManager;"
+"SynEdit Highlighters"="TSynCppSyn;TSynFortranSyn;TSynGeneralSyn;TSynJavaSyn;TSynM3Syn;TSynPasSyn;TSynVBSyn;TSynCssSyn;TSynHTMLSyn;TSynJScriptSyn;TSynPHPSyn;TSynVBScriptSyn;TSynXMLSyn;TSynAWKSyn;TSynBatSyn;TSynKixSyn;TSynPerlSyn;TSynPythonSyn;TSynTclTkSyn;TSynGWScriptSyn;TSynCACSyn;TSynCacheSyn;TSynFoxproSyn;TSynSQLSyn;TSynSDDSyn;TSynADSP21xxSyn;TSynAsmSyn;TSynHC11Syn;TSynHP48Syn;TSynDmlSyn;TSynModelicaSyn;TSynSMLSyn;TSynDfmSyn;TSynIniSyn;TSynInnoSyn;TSynBaanSyn;TSynGalaxySyn;TSynProgressSyn;TSynMsgSyn;TSynIdlSyn;TSynUnrealSyn;TSynCPMSyn;"
+".StayOnPage"="TBorder;TXPMenu;TScrollPanel;"
+"FreeReport"="TfrReport;TfrCompositeReport;TfrDBDataSet;TfrUserDataset;TfrOLEObject;TfrRichObject;TfrCheckBoxObject;TfrShapeObject;TfrBarCodeObject;TfrChartObject;TfrRoundRectObject;TfrTextExport;TfrRTFExport;TfrCSVExport;TfrHTMExport;TfrDesigner;TfrPreview;"
+"FR Tools"="TfrSpeedButton;TfrDock;TfrToolBar;TfrTBButton;TfrTBSeparator;TfrTBPanel;TfrOpenDBDialog;"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Palette Defaults]
+"Standard"=""
+"Additional"=""
+"Win32"=""
+"System"=""
+"Data Access"="TReport"
+"Data Access.Hidden"="TReport"
+"Data Controls"=""
+"ADO"=""
+"InterBase"=""
+"Midas"="TRemoteServer;TMidasConnection;TOLEnterpriseConnection;TProvider"
+"Midas.Hidden"="TRemoteServer;TMidasConnection;TOLEnterpriseConnection;TProvider"
+"InternetExpress"=""
+"Internet"=""
+"FastNet"=""
+"Decision Cube"=""
+"QReport"=""
+"Dialogs"=""
+"Win 3.1"=""
+"Samples"=""
+"ActiveX"=""
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Print Selection]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ProjectManager]
+"StatusBar"="0"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\ActionList Editor]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\ActionList Editor\TActionList]
+"Width"="336"
+"Height"="296"
+"Descriptions"="1"
+"Toolbar"="1"
+"CategoryWidth"="73"
+"LargeButtons"="0"
+"ActionClass"="TAction"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\Collection Editor]
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\Collection Editor\TDBGridColumns]
+"Width"="272"
+"Height"="232"
+"LargeButtons"="0"
+"Toolbar"="1"
+"Column0"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\Collection Editor\TIndexDefs]
+"Width"="125"
+"Height"="160"
+"LargeButtons"="0"
+"Toolbar"="1"
+"Column0"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\Collection Editor\TListColumns]
+"Width"="125"
+"Height"="160"
+"LargeButtons"="0"
+"Toolbar"="1"
+"Column0"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Property Editors\Collection Editor\TStatusPanels]
+"Width"="125"
+"Height"="253"
+"LargeButtons"="0"
+"Toolbar"="1"
+"Column0"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Replace]
+"Case Sensitive"="False"
+"Whole Words"="0"
+"Regular Expression"="0"
+"Prompt On Replace"="-1"
+"From Cursor"="False"
+"Global"="True"
+"Search Forward"="-1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Repository]
+"Repository Dir"=""
+"CodeName"=dword:0000003c
+"CodeDescription"=dword:000000b9
+"View"=dword:00000000
+"Arrange"=dword:00000000
+"Name"=dword:00000078
+"Description"=dword:00000091
+"Modified"=dword:00000041
+"Author"=dword:0000003c
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Search]
+"AdvancedSearch"=dword:00000001
+"Case Sensitive"="0"
+"Whole Words"="0"
+"Regular Expression"="0"
+"Search Forward"="-1"
+"From Cursor"="True"
+"File Mask"=""
+"Include Sub Dirs"="0"
+"Global"="True"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Session]
+"Project"=""
+"DesktopName"="kinode-02"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\TEvalDialog]
+"TextLabels"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\ToDo List]
+"HiddenCategories"=""
+"HiddenOwners"=""
+"HiddenItems"=""
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Toolbars]
+"StandardToolBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,0c,54,44,6f,63,\
+  6b,54,6f,6f,6c,42,61,72,0f,53,74,61,6e,64,61,72,64,54,6f,6f,6c,42,61,72,04,\
+  4c,65,66,74,02,0b,03,54,6f,70,02,1c,05,57,69,64,74,68,03,d6,00,06,48,65,69,\
+  67,68,74,02,16,0b,48,65,6c,70,43,6f,6e,74,65,78,74,03,d4,17,07,43,61,70,74,\
+  69,6f,6e,06,08,53,74,61,6e,64,61,72,64,15,43,6f,6e,73,74,72,61,69,6e,74,73,\
+  2e,4d,69,6e,48,65,69,67,68,74,02,16,14,43,6f,6e,73,74,72,61,69,6e,74,73,2e,\
+  4d,69,6e,57,69,64,74,68,02,17,08,44,6f,63,6b,53,69,74,65,09,06,49,6d,61,67,\
+  65,73,07,0a,49,6d,61,67,65,4c,69,73,74,31,0e,50,61,72,65,6e,74,53,68,6f,77,\
+  48,69,6e,74,08,09,50,6f,70,75,70,4d,65,6e,75,07,0d,54,6f,6f,6c,62,61,72,73,\
+  50,6f,70,75,70,08,53,68,6f,77,48,69,6e,74,09,08,54,61,62,4f,72,64,65,72,02,\
+  00,09,4f,6e,45,6e,64,44,6f,63,6b,07,0e,54,6f,6f,6c,42,61,72,45,6e,64,44,6f,\
+  63,6b,0d,4f,6e,47,65,74,53,69,74,65,49,6e,66,6f,07,12,54,6f,6f,6c,42,61,72,\
+  47,65,74,53,69,74,65,49,6e,66,6f,0b,4f,6e,53,74,61,72,74,44,6f,63,6b,07,10,\
+  54,6f,6f,6c,42,61,72,53,74,61,72,74,44,6f,63,6b,00,0b,54,54,6f,6f,6c,42,75,\
+  74,74,6f,6e,00,04,4c,65,66,74,02,00,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,\
+  07,0e,46,69,6c,65,4e,65,77,43,6f,6d,6d,61,6e,64,00,00,0e,54,43,6f,6d,6d,61,\
+  6e,64,42,75,74,74,6f,6e,00,04,4c,65,66,74,02,17,03,54,6f,70,02,00,05,57,69,\
+  64,74,68,02,25,06,48,65,69,67,68,74,02,16,06,41,63,74,69,6f,6e,07,0f,46,69,\
+  6c,65,4f,70,65,6e,43,6f,6d,6d,61,6e,64,0c,44,72,6f,70,64,6f,77,6e,4d,65,6e,\
+  75,07,10,43,6c,6f,73,65,64,46,69,6c,65,73,50,6f,70,75,70,06,49,6d,61,67,65,\
+  73,07,0a,49,6d,61,67,65,4c,69,73,74,31,00,00,0b,54,54,6f,6f,6c,42,75,74,74,\
+  6f,6e,00,04,4c,65,66,74,02,3c,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,0f,\
+  46,69,6c,65,53,61,76,65,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,\
+  74,74,6f,6e,00,04,4c,65,66,74,02,53,03,54,6f,70,02,00,05,57,69,64,74,68,02,\
+  08,07,43,61,70,74,69,6f,6e,06,0b,54,6f,6f,6c,42,75,74,74,6f,6e,38,0a,49,6d,\
+  61,67,65,49,6e,64,65,78,02,14,05,53,74,79,6c,65,07,0c,74,62,73,53,65,70,61,\
+  72,61,74,6f,72,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,\
+  02,5b,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,12,46,69,6c,65,53,61,76,65,\
+  41,6c,6c,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,\
+  04,4c,65,66,74,02,72,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,16,46,69,6c,\
+  65,4f,70,65,6e,50,72,6f,6a,65,63,74,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,\
+  6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,89,00,03,54,6f,70,02,00,06,41,\
+  63,74,69,6f,6e,07,13,46,69,6c,65,43,6c,6f,73,65,41,6c,6c,43,6f,6d,6d,61,6e,\
+  64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,a0,00,03,\
+  54,6f,70,02,00,05,57,69,64,74,68,02,08,07,43,61,70,74,69,6f,6e,06,0b,54,6f,\
+  6f,6c,42,75,74,74,6f,6e,37,0a,49,6d,61,67,65,49,6e,64,65,78,02,00,05,53,74,\
+  79,6c,65,07,0c,74,62,73,53,65,70,61,72,61,74,6f,72,00,00,0b,54,54,6f,6f,6c,\
+  42,75,74,74,6f,6e,00,04,4c,65,66,74,03,a8,00,03,54,6f,70,02,00,06,41,63,74,\
+  69,6f,6e,07,11,50,72,6f,6a,65,63,74,41,64,64,43,6f,6d,6d,61,6e,64,00,00,0b,\
+  54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,bf,00,03,54,6f,70,02,\
+  00,06,41,63,74,69,6f,6e,07,14,50,72,6f,6a,65,63,74,52,65,6d,6f,76,65,43,6f,\
+  6d,6d,61,6e,64,00,00,00,00
+"ViewToolBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,0c,54,44,6f,63,6b,\
+  54,6f,6f,6c,42,61,72,0b,56,69,65,77,54,6f,6f,6c,42,61,72,04,4c,65,66,74,03,\
+  ee,00,03,54,6f,70,02,1c,05,57,69,64,74,68,02,64,06,48,65,69,67,68,74,02,16,\
+  0b,48,65,6c,70,43,6f,6e,74,65,78,74,03,d5,17,07,43,61,70,74,69,6f,6e,06,04,\
+  56,69,65,77,15,43,6f,6e,73,74,72,61,69,6e,74,73,2e,4d,69,6e,48,65,69,67,68,\
+  74,02,16,14,43,6f,6e,73,74,72,61,69,6e,74,73,2e,4d,69,6e,57,69,64,74,68,02,\
+  17,08,44,6f,63,6b,53,69,74,65,09,06,49,6d,61,67,65,73,07,0a,49,6d,61,67,65,\
+  4c,69,73,74,31,0e,50,61,72,65,6e,74,53,68,6f,77,48,69,6e,74,08,09,50,6f,70,\
+  75,70,4d,65,6e,75,07,0d,54,6f,6f,6c,62,61,72,73,50,6f,70,75,70,08,53,68,6f,\
+  77,48,69,6e,74,09,08,54,61,62,4f,72,64,65,72,02,01,09,4f,6e,45,6e,64,44,6f,\
+  63,6b,07,0e,54,6f,6f,6c,42,61,72,45,6e,64,44,6f,63,6b,0d,4f,6e,47,65,74,53,\
+  69,74,65,49,6e,66,6f,07,12,54,6f,6f,6c,42,61,72,47,65,74,53,69,74,65,49,6e,\
+  66,6f,0b,4f,6e,53,74,61,72,74,44,6f,63,6b,07,10,54,6f,6f,6c,42,61,72,53,74,\
+  61,72,74,44,6f,63,6b,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,\
+  74,02,00,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,0f,56,69,65,77,55,6e,69,\
+  74,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,\
+  65,66,74,02,17,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,0f,56,69,65,77,46,\
+  6f,72,6d,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,\
+  04,4c,65,66,74,02,2e,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,15,56,69,65,\
+  77,54,6f,67,67,6c,65,46,6f,72,6d,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,\
+  6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,02,45,03,54,6f,70,02,00,05,57,69,64,\
+  74,68,02,08,07,43,61,70,74,69,6f,6e,06,0c,54,6f,6f,6c,42,75,74,74,6f,6e,32,\
+  32,0a,49,6d,61,67,65,49,6e,64,65,78,02,04,05,53,74,79,6c,65,07,0c,74,62,73,\
+  53,65,70,61,72,61,74,6f,72,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,\
+  4c,65,66,74,02,4d,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,12,46,69,6c,65,\
+  4e,65,77,46,6f,72,6d,43,6f,6d,6d,61,6e,64,00,00,00,00
+"DebugToolBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,0c,54,44,6f,63,6b,\
+  54,6f,6f,6c,42,61,72,0c,44,65,62,75,67,54,6f,6f,6c,42,61,72,04,4c,65,66,74,\
+  02,0b,03,54,6f,70,02,36,05,57,69,64,74,68,03,9d,01,06,48,65,69,67,68,74,02,\
+  16,0b,48,65,6c,70,43,6f,6e,74,65,78,74,03,d6,17,07,43,61,70,74,69,6f,6e,06,\
+  05,44,65,62,75,67,15,43,6f,6e,73,74,72,61,69,6e,74,73,2e,4d,69,6e,48,65,69,\
+  67,68,74,02,16,14,43,6f,6e,73,74,72,61,69,6e,74,73,2e,4d,69,6e,57,69,64,74,\
+  68,02,17,08,44,6f,63,6b,53,69,74,65,09,06,49,6d,61,67,65,73,07,0a,49,6d,61,\
+  67,65,4c,69,73,74,31,0e,50,61,72,65,6e,74,53,68,6f,77,48,69,6e,74,08,09,50,\
+  6f,70,75,70,4d,65,6e,75,07,0d,54,6f,6f,6c,62,61,72,73,50,6f,70,75,70,08,53,\
+  68,6f,77,48,69,6e,74,09,08,54,61,62,4f,72,64,65,72,02,02,09,4f,6e,45,6e,64,\
+  44,6f,63,6b,07,0e,54,6f,6f,6c,42,61,72,45,6e,64,44,6f,63,6b,0d,4f,6e,47,65,\
+  74,53,69,74,65,49,6e,66,6f,07,12,54,6f,6f,6c,42,61,72,47,65,74,53,69,74,65,\
+  49,6e,66,6f,0b,4f,6e,53,74,61,72,74,44,6f,63,6b,07,10,54,6f,6f,6c,42,61,72,\
+  53,74,61,72,74,44,6f,63,6b,00,0e,54,43,6f,6d,6d,61,6e,64,42,75,74,74,6f,6e,\
+  00,04,4c,65,66,74,02,00,03,54,6f,70,02,00,05,57,69,64,74,68,02,25,06,48,65,\
+  69,67,68,74,02,16,06,41,63,74,69,6f,6e,07,0d,52,75,6e,52,75,6e,43,6f,6d,6d,\
+  61,6e,64,07,45,6e,61,62,6c,65,64,08,0e,50,61,72,65,6e,74,53,68,6f,77,48,69,\
+  6e,74,08,08,53,68,6f,77,48,69,6e,74,09,0c,44,72,6f,70,64,6f,77,6e,4d,65,6e,\
+  75,07,0b,50,72,6f,63,65,73,73,4d,65,6e,75,0e,45,6e,61,62,6c,65,44,72,6f,70,\
+  44,6f,77,6e,09,06,49,6d,61,67,65,73,07,0a,49,6d,61,67,65,4c,69,73,74,31,00,\
+  00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,02,25,03,54,6f,70,\
+  02,00,06,41,63,74,69,6f,6e,07,0f,52,75,6e,50,61,75,73,65,43,6f,6d,6d,61,6e,\
+  64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,02,3c,03,54,\
+  6f,70,02,00,06,41,63,74,69,6f,6e,07,12,52,75,6e,53,68,6f,77,43,53,49,50,43,\
+  6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,\
+  74,02,53,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,0f,52,75,6e,52,65,73,65,\
+  74,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,\
+  65,66,74,02,6a,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,14,52,75,6e,50,61,\
+  72,61,6d,65,74,65,72,73,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,\
+  74,74,6f,6e,00,04,4c,65,66,74,03,81,00,03,54,6f,70,02,00,06,41,63,74,69,6f,\
+  6e,07,11,52,75,6e,45,76,61,6c,4d,6f,64,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,\
+  6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,98,00,03,54,6f,70,02,00,06,\
+  41,63,74,69,6f,6e,07,23,44,65,6c,70,68,69,43,6f,6d,6d,61,6e,64,73,2e,50,72,\
+  6f,6a,65,63,74,53,79,6e,74,61,78,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,\
+  6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,af,00,03,54,6f,70,02,00,06,41,63,\
+  74,69,6f,6e,07,24,44,65,6c,70,68,69,43,6f,6d,6d,61,6e,64,73,2e,50,72,6f,6a,\
+  65,63,74,43,6f,6d,70,69,6c,65,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,\
+  42,75,74,74,6f,6e,00,04,4c,65,66,74,03,c6,00,03,54,6f,70,02,00,06,41,63,74,\
+  69,6f,6e,07,13,50,72,6f,6a,65,63,74,42,75,69,6c,64,43,6f,6d,6d,61,6e,64,00,\
+  00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,dd,00,03,54,6f,\
+  70,02,00,05,57,69,64,74,68,02,08,07,43,61,70,74,69,6f,6e,06,0c,54,6f,6f,6c,\
+  42,75,74,74,6f,6e,31,34,0a,49,6d,61,67,65,49,6e,64,65,78,02,1c,05,53,74,79,\
+  6c,65,07,0c,74,62,73,53,65,70,61,72,61,74,6f,72,00,00,0b,54,54,6f,6f,6c,42,\
+  75,74,74,6f,6e,00,04,4c,65,66,74,03,e5,00,03,54,6f,70,02,00,06,41,63,74,69,\
+  6f,6e,07,13,52,75,6e,54,72,61,63,65,49,6e,74,6f,43,6f,6d,6d,61,6e,64,00,00,\
+  0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,fc,00,03,54,6f,70,\
+  02,00,06,41,63,74,69,6f,6e,07,12,52,75,6e,53,74,65,70,4f,76,65,72,43,6f,6d,\
+  6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,\
+  13,01,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,17,52,75,6e,54,72,61,63,65,\
+  54,6f,53,6f,75,72,63,65,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,\
+  74,74,6f,6e,00,04,4c,65,66,74,03,2a,01,03,54,6f,70,02,00,06,41,63,74,69,6f,\
+  6e,07,15,52,75,6e,55,6e,74,69,6c,52,65,74,75,72,6e,43,6f,6d,6d,61,6e,64,00,\
+  00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,41,01,03,54,6f,\
+  70,02,00,06,41,63,74,69,6f,6e,07,2a,50,72,6f,53,6b,75,43,6f,6d,6d,61,6e,64,\
+  73,2e,52,75,6e,41,64,64,44,61,74,61,42,72,65,61,6b,70,6f,69,6e,74,43,6f,6d,\
+  6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,\
+  58,01,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,15,44,65,62,75,67,43,61,6c,\
+  6c,53,74,61,63,6b,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,\
+  6f,6e,00,04,4c,65,66,74,03,6f,01,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,\
+  23,50,72,6f,53,6b,75,43,6f,6d,6d,61,6e,64,73,2e,44,65,62,75,67,45,76,65,6e,\
+  74,4c,6f,67,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,\
+  00,04,4c,65,66,74,03,86,01,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,29,50,\
+  72,6f,53,6b,75,43,6f,6d,6d,61,6e,64,73,2e,44,65,62,75,67,4c,6f,63,61,6c,56,\
+  61,72,69,61,62,6c,65,73,43,6f,6d,6d,61,6e,64,00,00,00,00
+"DesktopToolBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,0c,54,44,6f,63,\
+  6b,54,6f,6f,6c,42,61,72,0e,44,65,73,6b,74,6f,70,54,6f,6f,6c,42,61,72,04,4c,\
+  65,66,74,03,e0,01,03,54,6f,70,02,02,05,57,69,64,74,68,03,ba,00,06,48,65,69,\
+  67,68,74,02,16,0b,48,65,6c,70,43,6f,6e,74,65,78,74,03,d8,17,07,43,61,70,74,\
+  69,6f,6e,06,07,44,65,73,6b,74,6f,70,08,44,6f,63,6b,53,69,74,65,09,06,49,6d,\
+  61,67,65,73,07,0a,49,6d,61,67,65,4c,69,73,74,31,0e,50,61,72,65,6e,74,53,68,\
+  6f,77,48,69,6e,74,08,09,50,6f,70,75,70,4d,65,6e,75,07,0d,54,6f,6f,6c,62,61,\
+  72,73,50,6f,70,75,70,08,53,68,6f,77,48,69,6e,74,09,08,54,61,62,4f,72,64,65,\
+  72,02,03,09,4f,6e,45,6e,64,44,6f,63,6b,07,0e,54,6f,6f,6c,42,61,72,45,6e,64,\
+  44,6f,63,6b,0d,4f,6e,47,65,74,53,69,74,65,49,6e,66,6f,07,12,54,6f,6f,6c,42,\
+  61,72,47,65,74,53,69,74,65,49,6e,66,6f,0b,4f,6e,53,74,61,72,74,44,6f,63,6b,\
+  07,10,54,6f,6f,6c,42,61,72,53,74,61,72,74,44,6f,63,6b,00,10,54,44,65,73,6b,\
+  74,6f,70,43,6f,6d,62,6f,42,6f,78,09,63,62,44,65,73,6b,74,6f,70,04,4c,65,66,\
+  74,02,00,03,54,6f,70,02,00,05,57,69,64,74,68,03,81,00,06,48,65,69,67,68,74,\
+  02,15,04,48,69,6e,74,06,14,44,65,73,6b,74,6f,70,20,73,70,65,65,64,73,65,74,\
+  74,69,6e,67,0a,49,74,65,6d,48,65,69,67,68,74,02,0d,0d,49,74,65,6d,73,2e,53,\
+  74,72,69,6e,67,73,01,06,09,6b,69,6e,6f,64,65,2d,30,31,06,09,6b,69,6e,6f,64,\
+  65,2d,30,32,06,06,3c,4e,6f,6e,65,3e,00,08,54,61,62,4f,72,64,65,72,02,00,04,\
+  54,65,78,74,06,09,6b,69,6e,6f,64,65,2d,30,32,07,4f,6e,43,6c,69,63,6b,07,0e,\
+  63,62,44,65,73,6b,74,6f,70,43,6c,69,63,6b,0a,4f,6e,44,72,6f,70,44,6f,77,6e,\
+  07,11,63,62,44,65,73,6b,74,6f,70,44,72,6f,70,44,6f,77,6e,0a,4f,6e,4b,65,79,\
+  50,72,65,73,73,07,11,63,62,44,65,73,6b,74,6f,70,4b,65,79,50,72,65,73,73,00,\
+  00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,81,00,03,54,6f,\
+  70,02,00,05,57,69,64,74,68,02,0b,07,43,61,70,74,69,6f,6e,06,0c,54,6f,6f,6c,\
+  42,75,74,74,6f,6e,31,37,05,53,74,79,6c,65,07,0c,74,62,73,53,65,70,61,72,61,\
+  74,6f,72,00,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,00,04,4c,65,66,74,03,8c,\
+  00,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,16,56,69,65,77,53,61,76,65,44,\
+  65,73,6b,74,6f,70,43,6f,6d,6d,61,6e,64,00,00,0b,54,54,6f,6f,6c,42,75,74,74,\
+  6f,6e,00,04,4c,65,66,74,03,a3,00,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,\
+  19,56,69,65,77,52,75,6e,74,69,6d,65,44,65,73,6b,74,6f,70,43,6f,6d,6d,61,6e,\
+  64,0e,50,61,72,65,6e,74,53,68,6f,77,48,69,6e,74,08,08,53,68,6f,77,48,69,6e,\
+  74,09,00,00,00,00
+"CustomToolBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,0c,54,44,6f,63,\
+  6b,54,6f,6f,6c,42,61,72,0d,43,75,73,74,6f,6d,54,6f,6f,6c,42,61,72,04,4c,65,\
+  66,74,03,5f,01,03,54,6f,70,02,1c,05,57,69,64,74,68,02,17,06,48,65,69,67,68,\
+  74,02,16,0b,48,65,6c,70,43,6f,6e,74,65,78,74,03,d7,17,07,43,61,70,74,69,6f,\
+  6e,06,06,43,75,73,74,6f,6d,15,43,6f,6e,73,74,72,61,69,6e,74,73,2e,4d,69,6e,\
+  48,65,69,67,68,74,02,16,14,43,6f,6e,73,74,72,61,69,6e,74,73,2e,4d,69,6e,57,\
+  69,64,74,68,02,17,08,44,6f,63,6b,53,69,74,65,09,06,49,6d,61,67,65,73,07,0a,\
+  49,6d,61,67,65,4c,69,73,74,31,0e,50,61,72,65,6e,74,53,68,6f,77,48,69,6e,74,\
+  08,09,50,6f,70,75,70,4d,65,6e,75,07,0d,54,6f,6f,6c,62,61,72,73,50,6f,70,75,\
+  70,08,53,68,6f,77,48,69,6e,74,09,08,54,61,62,4f,72,64,65,72,02,04,09,4f,6e,\
+  45,6e,64,44,6f,63,6b,07,0e,54,6f,6f,6c,42,61,72,45,6e,64,44,6f,63,6b,0d,4f,\
+  6e,47,65,74,53,69,74,65,49,6e,66,6f,07,12,54,6f,6f,6c,42,61,72,47,65,74,53,\
+  69,74,65,49,6e,66,6f,0b,4f,6e,53,74,61,72,74,44,6f,63,6b,07,10,54,6f,6f,6c,\
+  42,61,72,53,74,61,72,74,44,6f,63,6b,00,0b,54,54,6f,6f,6c,42,75,74,74,6f,6e,\
+  00,04,4c,65,66,74,02,00,03,54,6f,70,02,00,06,41,63,74,69,6f,6e,07,13,48,65,\
+  6c,70,43,6f,6e,74,65,6e,74,73,43,6f,6d,6d,61,6e,64,00,00,00,00
+"PaletteBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,03,b3,01,02,1a,03,\
+  cb,02,02,34,00
+"MenuBar"=hex:54,50,54,53,30,30,30,32,09,08,54,50,46,30,02,0b,02,02,03,c8,01,\
+  02,16,00
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\TPackageEditorForm]
+"TextLabels"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\TProjectManagerForm]
+"TextLabels"="1"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Transfer]
+"Count"="3"
+"Params0"=""
+"Path0"="D:\\Program Files\\Borland\\Database Desktop\\DBD32.exe"
+"Title0"="Data&base Desktop"
+"WorkingDir0"="D:\\Program Files\\Borland\\Database Desktop\\WorkDir"
+"Params1"=""
+"Path1"="D:\\Program Files\\Borland\\Delphi5\\Bin\\PCE.EXE"
+"Title1"="&Package Collection Editor"
+"WorkingDir1"="D:\\Program Files\\Borland\\Delphi5\\Bin\\"
+"Params2"=""
+"Path2"="D:\\Program Files\\Borland\\Delphi5\\Bin\\IMAGEDIT.EXE"
+"Title2"="&Image Editor"
+"WorkingDir2"="D:\\Program Files\\Borland\\Delphi5\\Projects"
+
+[HKEY_CURRENT_USER\Software\Borland\Delphi\5.0\Type Library]
+"UILanguage"="1"
+"SafeCallMapping"="1"
+"ShowUpdatesUI"="0"
+"MakeComponent"="-1"
+
