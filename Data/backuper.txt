@@ -1,0 +1,161 @@
+Hello, Alex!
+You wrote to Nikolay Ponomarenko on Wed, 26 May 2004 13:38:11 +0500:
+
+ RS>>>> Win2000 - at.exe
+ AP>>>   Это можно, а как потом удалить ненужные бэкапы? т.е. оставлять,
+ AP>>> например только за последние 7 дней?
+ NP>> Простенький батничек?
+
+ AP>   Батник в студию, раз простенький.
+
+Держи. А как удалять бекапы недельной давности(ака оставлять в живых
+только семь последних), тебе уже рядом подсказали: бекапишь в файлы
+backup_1
+...
+backup_7
+И при каждом бекапе "сдвигаешь" названия.
+
+
+: Copyright (c) 2002-2004 Пономаренко Николай
+: Версия 1.1
+:
+: запуск с ключом  r    восстанавливает рабочую базу, перезаписывая ее
+: запуск с ключом  ntr  не производит тестовый рестор БД
+
+
+@echo off
+:-========================== настройки ==============================-
+ : с какой базой работаем
+set database=localhost:c:\edu_load_db\db\decanat.gdb
+
+set pass_database=localhost:C:\firebird\security.fdb
+
+ : где лежат резервные копии
+set backup_dir=c:\edu_load_db\db\backup\
+
+ : где лежат логи
+set backup_log=%backup_dir%log\
+
+ : где установлен сервер БД
+set fb_dir=C:\firebird\bin\
+
+set b_user=sysdba
+set b_password=masterke
+
+set admin_mail=pnv82@pisem.net,80504713103@sms.umc.com.ua
+:=====================================================================
+
+ : вычисляем строку с сегодняшней датой
+for /F "tokens=4,3,2  delims=/ " %%a in ('date /T') do set
+date_name=%%a%%b%%c
+for /F "tokens=1,2,3  delims=/." %%a in ("%date_name%") do set
+date_name=%%c.%%b.%%a
+
+
+ :подготавливаем экран,фон и заголовки
+cls
+color 80
+echo Регламентное обслуживание БД
+title Регламентное обслуживание БД
+
+ : удаляем логи за сегодня
+if exist "%backup_log%b_%date_name%_log.txt"  del
+"%backup_log%b_%date_name%_log.txt"
+if exist "%backup_log%r_%date_name%_log.txt" del
+"%backup_log%r_%date_name%_log.txt"
+
+:backup
+echo Начинаем резервное копирование....
+%fb_dir%gbak.exe "%database%" -v -b
+"%backup_dir%decanat_%date_name%.gbk" -t -user %b_user% -pass
+%b_password% -y "%backup_log%\b_%date_name%_log.txt"
+if errorlevel 1 goto :berror
+
+ :если задан ключ ntr то тестового восстановления не проводим
+if %1.==ntr. goto :exit_arch
+
+goto :test_restore
+
+:test_restore
+echo Начинаем тестовое восстановление....
+%fb_dir%gbak.exe "%backup_dir%decanat_%date_name%.gbk" -c
+"localhost:%backup_dir%test_restore.gdb" -r -user %b_user% -pass
+%b_password% -p 4096 -v -y "%backup_log%\r_%date_name%_log.txt"
+if errorlevel 1 goto :rerror else if r.==%1.  goto :main_restore else
+goto :exit_arch
+
+:main_restore
+echo Начинаем восстановление основной базы (если был задан ключ r)....
+%fb_dir%gbak.exe "%backup_dir%decanat_%date_name%.gbk" -c
+"%database%" -r -user %b_user% -pass %b_password% -p 4096 -v
+echo ---------------------------------------------------------------
+goto :exit
+
+:berror
+type "%backup_log%b_%date_name%_log.txt"
+call sent_to_email.bat "%admin_mail%" "сбой РЕЗЕРВИРОВАНИЯ"
+echo
+echo
+echo ---------------------------------------------------------------
+echo -¤¤¤¤¤¤¤¤¤¤¤                                ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤ Срочно вызовите администратора ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤ СРОЧНО ВЫЗОВИТЕ АДМИНИСТРАТОРА ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤                                ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤ Произошел сбой РЕЗЕРВИРОВАНИЯ  ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤                                ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤    До прихода администратора   ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤         НЕ ЗАКРЫВАТЬ           ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo ---------------------------------------------------------------
+pause
+pause
+goto :exit
+
+:rerror
+type "%backup_log%r_%date_name%_log.txt"
+call sent_to_email.bat "%admin_mail%" "сбой ВОССТАНОВЛЕНИЯ"
+echo
+echo
+echo ---------------------------------------------------------------
+echo -¤¤¤¤¤¤¤¤¤¤¤                                ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤ Срочно вызовите администратора ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤ СРОЧНО ВЫЗОВИТЕ АДМИНИСТРАТОРА ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤                                ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤ Произошел сбой ВОССТАНОВЛЕНИЯ  ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤                                ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤    До прихода администратора   ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo -¤¤¤¤¤¤¤¤¤¤¤         НЕ ЗАКРЫВАТЬ           ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤-
+echo ---------------------------------------------------------------
+pause
+pause
+goto :exit
+
+:exit_arch
+
+
+ :бекапим базу с паролями
+%fb_dir%gbak.exe "%pass_database%"  -b
+"%backup_dir%isc4_%date_name%.gbk" -t -user %b_user% -pass %b_password%
+
+ :ПЕРЕМЕЩАЕМ файл бекапа в архив
+rar m -z"%backup_log%b_%date_name%_log.txt" -rr -ep
+"%backup_dir%decanat_%date_name%.rar" "%backup_dir%decanat_%date_name%.gbk"
+"%backup_dir%isc4_%date_name%.gbk"
+
+ :копия на сетевой диск
+:xcopy /Z "%backup_dir%decanat_%date_name%.rar"
+"\\teachdiplom\d$\decanat\db\backup\"
+
+ :копия на другой физический диск
+:xcopy  "%backup_dir%decanat_%date_name%.rar" "f:\"
+
+:call sent_to_email.bat "%admin_mail%" "FB base is ok."
+
+:exit
+exit
+
+
+--
+-=Продаю рубли по цене ниже завода изготовителя.=-
+With best regards,
+Николай Пономаренко
+
