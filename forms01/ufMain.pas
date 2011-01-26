@@ -412,7 +412,8 @@ const
 var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
-  i, tmp_Zal_Kod, tmp_Odeum_Horz_Pos, tmp_Odeum_Vert_Pos, tmp_Print_Maket_Version: integer;
+  i, tmp_Zal_Kod, tmp_Odeum_Horz_Pos, tmp_Odeum_Vert_Pos: integer;
+  tmp_Print_Maket_Version, tmp_Print_Maket_Horz_Shift, tmp_Print_Maket_Vert_Shift: integer;
   tmp_Odeum_Show_Hint: string;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
@@ -539,6 +540,24 @@ begin
   DEBUGMessEnh(0, UnitName, ProcName, 'Print_Maket_Version = ['
     + IntToStr(Print_Maket_Version) + ']');
 {$ENDIF}
+  // --------------------------------------------------------------------------
+  if LoadInitParameterInt(s_Preferences_Section, s_PrintMaketHorzShift, Print_Maket_Horz_Shift,
+    tmp_Print_Maket_Horz_Shift) then
+  begin
+    if (tmp_Print_Maket_Horz_Shift > 1000) and (tmp_Print_Maket_Horz_Shift < 1000) then
+      Print_Maket_Horz_Shift := tmp_Print_Maket_Horz_Shift;
+  end;
+  // --------------------------------------------------------------------------
+  SaveInitParameter(s_Preferences_Section, s_PrintMaketHorzShift, IntToStr(Print_Maket_Horz_Shift));
+  // --------------------------------------------------------------------------
+  if LoadInitParameterInt(s_Preferences_Section, s_PrintMaketVertShift, Print_Maket_Vert_Shift,
+    tmp_Print_Maket_Vert_Shift) then
+  begin
+    if (tmp_Print_Maket_Vert_Shift > 1000) and (tmp_Print_Maket_Vert_Shift < 1000) then
+      Print_Maket_Vert_Shift := tmp_Print_Maket_Vert_Shift;
+  end;
+  // --------------------------------------------------------------------------
+  SaveInitParameter(s_Preferences_Section, s_PrintMaketVertShift, IntToStr(Print_Maket_Vert_Shift));
   // --------------------------------------------------------------------------
   // calculating work time
   // --------------------------------------------------------------------------

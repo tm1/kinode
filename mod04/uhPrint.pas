@@ -65,6 +65,8 @@ const
   PrintJob_StartNew: Boolean = true;
   Print_Serial_Num: Boolean = false;
   Print_Maket_Version: Integer = 1;
+  Print_Maket_Horz_Shift: Integer = 0;
+  Print_Maket_Vert_Shift: Integer = 0;
 
 implementation
 
@@ -164,7 +166,7 @@ begin
     // --------------------------------------------------------------------------
     // Logo_Xmax := 70;
     Logo_Xmax := 50;
-    Logo_Ymax := 220;
+    Logo_Ymax := 228; // 220
     Logo_Wmax := 160;
     Logo_Hmax := 74;
     Logo_1_2_HDelta := 4;
@@ -549,10 +551,10 @@ begin
     buffer := buffer + '#Arial,0000,19,204' + c_CRLF;
     buffer := buffer + '^0120,0000;' + FormatDateTime('d mmmm yyyy', dtFilm_Date) + c_CRLF;
     buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-    buffer := buffer + '^0039,0000;' + '  ' + tmp_Vremya + '  ' + c_CRLF;
+    buffer := buffer + '^0052,0000;' + '  ' + tmp_Vremya + '  ' + c_CRLF;
     buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
     // buffer := buffer + '^0100,0000;' + strSeans_Time;
-    buffer := buffer + '^0060,0000;' + strSeans_Time;
+    buffer := buffer + '^0048,0000;' + strSeans_Time;
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -975,8 +977,8 @@ begin
         PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
       end;
       //*****************************************************************************************
-      Text_X := 10; // 10
-      Text_Y := 215; // 215
+      Text_X := 10 + Print_Maket_Horz_Shift; // 10
+      Text_Y := 215 + Print_Maket_Vert_Shift; // 215
       //*****************************************************************************************
       // PlaceBitmap(1, 1, Text_X, Text_Y, gfx_Test);
       //*****************************************************************************************

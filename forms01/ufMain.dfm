@@ -25,7 +25,7 @@ object fm_Main: Tfm_Main
   TextHeight = 13
   object sb_Main: TStatusBar
     Left = 0
-    Top = 472
+    Top = 475
     Width = 775
     Height = 19
     Panels = <
@@ -65,7 +65,7 @@ object fm_Main: Tfm_Main
   end
   object pn_Place_Container: TPanel
     Left = 0
-    Top = 431
+    Top = 434
     Width = 775
     Height = 41
     Align = alBottom
@@ -503,7 +503,7 @@ object fm_Main: Tfm_Main
     Left = 0
     Top = 36
     Width = 775
-    Height = 395
+    Height = 398
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
@@ -513,7 +513,7 @@ object fm_Main: Tfm_Main
       Left = 2
       Top = 28
       Width = 771
-      Height = 328
+      Height = 331
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
@@ -521,7 +521,7 @@ object fm_Main: Tfm_Main
         Left = 0
         Top = 0
         Width = 771
-        Height = 328
+        Height = 331
         Align = alClient
         HotTrack = True
         Images = iml_Zal
@@ -541,7 +541,7 @@ object fm_Main: Tfm_Main
           Left = 4
           Top = 6
           Width = 706
-          Height = 318
+          Height = 321
           Align = alClient
           Alignment = taCenter
           AutoSize = False
@@ -563,7 +563,7 @@ object fm_Main: Tfm_Main
           Left = 4
           Top = 6
           Width = 706
-          Height = 318
+          Height = 321
           Cursor = crHandPoint
           Align = alClient
           Font.Charset = DEFAULT_CHARSET
@@ -581,13 +581,13 @@ object fm_Main: Tfm_Main
             'Blade 2'
             'Minority Report')
           TabIndex = 0
-          TabWidth = 170
+          TabWidth = 165
           OnChange = tbc_Film_ListChange
           object sbx_Cntr: TScrollBox
             Left = 4
             Top = 28
             Width = 698
-            Height = 286
+            Height = 289
             HorzScrollBar.Style = ssFlat
             HorzScrollBar.ThumbSize = 5
             HorzScrollBar.Tracking = True
@@ -655,7 +655,7 @@ object fm_Main: Tfm_Main
     end
     object pn_Command: TPanel
       Left = 2
-      Top = 356
+      Top = 359
       Width = 771
       Height = 37
       Align = alBottom

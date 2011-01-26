@@ -146,6 +146,8 @@ resourcestring
   s_OdeumVertPos = 'OdeumVertPos';
   s_CommonOdeumShowHint = 'CommonOdeumShowHint';
   s_PrintMaketVersion = 'PrintMaketVersion';
+  s_PrintMaketHorzShift = 'PrintMaketHorzShift';
+  s_PrintMaketVertShift = 'PrintMaketVertShift';
   s_Yes = 'Yes';
   s_No = 'No';
   s_RptPref = 'RptPref';
