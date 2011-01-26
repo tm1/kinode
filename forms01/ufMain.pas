@@ -34,9 +34,6 @@ type
     cmb_Zal: TComboBox;
     pn_BigOne: TPanel;
     pn_Main_Container: TPanel;
-    lbl_NoRepert: TLabel;
-    tbc_Film_List: TTabControl;
-    sbx_Cntr: TScrollBox;
     pn_Command: TPanel;
     pn_Cmd_Left: TPanel;
     bt_CmdReserve: TBitBtn;
@@ -188,7 +185,6 @@ type
     saFree: TAction;
     miFree: TMenuItem;
     miLineActions1Free: TMenuItem;
-    st_Test_Hint: TStaticText;
     miLineActions6Foo: TMenuItem;
     ppmFastOptions: TMenuItem;
     ppmSeatCanceledShow: TMenuItem;
@@ -197,13 +193,10 @@ type
     acPrinterTest: TAction;
     miPrinterTest: TMenuItem;
     acPrinterInit: TAction;
-    imgLogoOdeum: TImage;
-    imgLogoCinema: TImage;
     acPrintSerial: TAction;
     miPrintSerial: TMenuItem;
     acGlobalRowShow: TAction;
     miGlobalRowShow: TMenuItem;
-    cbShowHint: TCheckBox;
     bt_Exit: TWc_BitBtn;
     acPrintCheq: TAction;
     miPrintCheq: TMenuItem;
@@ -231,6 +224,15 @@ type
     miRefresh: TMenuItem;
     acSalesReport: TAction;
     miSalesReport: TMenuItem;
+    tbc_Zal_List: TTabControl;
+    tbc_Film_List: TTabControl;
+    sbx_Cntr: TScrollBox;
+    imgLogoOdeum: TImage;
+    imgLogoCinema: TImage;
+    st_Test_Hint: TStaticText;
+    cbShowHint: TCheckBox;
+    lbl_NoRepert: TLabel;
+    iml_Zal: TImageList;
     // --------------------------------------------------------------------------
     procedure acExitExecute(Sender: TObject);
     procedure acFullScreenExecute(Sender: TObject);
@@ -342,6 +344,7 @@ type
     // --------------------------------------------------------------------------
     procedure dtp_DateChange(Sender: TObject);
     procedure cmb_ZalChange(Sender: TObject);
+    procedure tbc_Zal_ListChange(Sender: TObject);
     procedure tbc_Film_ListChange(Sender: TObject);
     procedure acPrinterInitExecute(Sender: TObject);
     procedure acPrinterInitUpdate(Sender: TObject);
@@ -405,7 +408,8 @@ const
 var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
-  i, tmp_Zal_Kod: integer;
+  i, tmp_Zal_Kod, tmp_Odeum_Horz_Pos, tmp_Odeum_Vert_Pos: integer;
+  tmp_Odeum_Show_Hint: string;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
   // --------------------------------------------------------------------------
@@ -427,6 +431,7 @@ begin
     Application.MessageBox(PChar('Не могу загрузить залы. Ошибка такая:' + c_CRLF +
       c_Separator_20 + c_CRLF + c_CRLF + DBLastError2), 'Loading error', MB_ICONERROR);
   end;
+  tbc_Zal_List.Tabs.Assign(cmb_Zal.Items);
   // --------------------------------------------------------------------------
   // 2.2) Загрузка всех типов билетов
   // --------------------------------------------------------------------------
@@ -456,6 +461,7 @@ begin
     begin
       ItemIndex := Items.Count - 1;
       tmp_Zal_Kod := Integer(Items.Objects[ItemIndex]);
+      // --------------------------------------------------------------------------
       if LoadInitParameterInt(s_Preferences_Section, s_OdeumKod, tmp_Zal_Kod, tmp_Zal_Kod) then
       begin
         for i := 0 to Items.Count - 1 do
@@ -465,8 +471,43 @@ begin
             tmp_Zal_Kod := Integer(Items.Objects[ItemIndex]);
           end;
       end;
+      // --------------------------------------------------------------------------
+      if LoadInitParameterInt(s_Preferences_Section, s_CommonOdeumHorzPos, Common_Odeum_Horz_Pos,
+        tmp_Odeum_Horz_Pos) then
+      begin
+        if (tmp_Odeum_Horz_Pos >= 0) and (tmp_Odeum_Horz_Pos <= 100) then
+          Common_Odeum_Horz_Pos := tmp_Odeum_Horz_Pos;
+      end;
+      // --------------------------------------------------------------------------
+      if LoadInitParameterInt(s_Preferences_Section, s_CommonOdeumVertPos, Common_Odeum_Vert_Pos,
+        tmp_Odeum_Vert_Pos) then
+      begin
+        if (tmp_Odeum_Vert_Pos >= 0) and (tmp_Odeum_Vert_Pos <= 100) then
+          Common_Odeum_Vert_Pos := tmp_Odeum_Vert_Pos;
+      end;
+      // --------------------------------------------------------------------------
       Process_Zal_Change(nil, ProgressBar);
+      // --------------------------------------------------------------------------
       SaveInitParameter(s_Preferences_Section, s_OdeumKod, IntToStr(tmp_Zal_Kod));
+      SaveInitParameter(s_Preferences_Section, s_CommonOdeumHorzPos, IntToStr(tmp_Odeum_Horz_Pos));
+      SaveInitParameter(s_Preferences_Section, s_CommonOdeumVertPos, IntToStr(tmp_Odeum_Vert_Pos));
+      // --------------------------------------------------------------------------
+      if LoadInitParameterStr(s_Preferences_Section, s_CommonOdeumShowHint, s_Yes,
+        tmp_Odeum_Show_Hint) then
+      begin
+        if (UpperCase(tmp_Odeum_Show_Hint) = UpperCase(s_Yes)) then
+        begin
+          tmp_Odeum_Show_Hint := s_Yes;
+          sbx_Cntr.ShowHint := true;
+        end
+        else if (UpperCase(tmp_Odeum_Show_Hint) = UpperCase(s_No)) then
+        begin
+          tmp_Odeum_Show_Hint := s_No;
+          sbx_Cntr.ShowHint := false;
+        end;
+      end;
+      SaveInitParameter(s_Preferences_Section, s_CommonOdeumShowHint, tmp_Odeum_Show_Hint);
+      // --------------------------------------------------------------------------
     end
     else
     begin
@@ -772,10 +813,15 @@ begin
   // sbx_Cntr.Visible := False;
   LostFirstTime := True;
   with cmb_Zal do
+  begin
     if ItemIndex = -1 then
       tmp_Zal_Kod := -1
     else
+    begin
       tmp_Zal_Kod := Integer(Items.Objects[ItemIndex]);
+      tbc_Zal_List.TabIndex := ItemIndex;
+    end;
+  end;
   // --------------------------------------------------------------------------
   DEBUGMessEnh(0, UnitName, ProcName, 'Zal_Kod = (' + IntToStr(tmp_Zal_Kod) + ')');
   if tbc_Film_List.TabIndex <> -1 then
@@ -797,7 +843,7 @@ begin
           st_Test_Hint.Hint := Caption;
     end;
   // --------------------------------------------------------------------------
-  AdjustZalPosSbx(10, 50);
+  AdjustZalPosSbx(Common_Odeum_Horz_Pos, Common_Odeum_Vert_Pos);
   ScrollMove(50, 50);
   if Cur_Repert_Kod > -1 then
   begin
@@ -858,7 +904,7 @@ begin
     // set Date from Control
     Change_Cur_Date(dtp_Date.Date, not Assigned(Sender), tbc_Film_List.Tabs,
       Process_Film_Change, SeansReload, ProgressBar);
-    AdjustZalPosSbx(10, 50);
+    AdjustZalPosSbx(Common_Odeum_Horz_Pos, Common_Odeum_Vert_Pos);
     ScrollMove(50, 50);
   finally
     cmb_Zal.Enabled := True;
@@ -2291,7 +2337,8 @@ begin
   if (Self.Width - FWDelta) > Cur_Panel_Cntr.Width then
   begin
     // Cur_Panel_Cntr.Left := ((Self.Width - FWDelta) - Cur_Panel_Cntr.Width) div 2; // hCenter
-    Cur_Panel_Cntr.Left := round(((Self.Width - FWDelta) - Cur_Panel_Cntr.Width) * HorzPos / 100);
+    Cur_Panel_Cntr.Left := round(((Self.Width - FWDelta) - Cur_Panel_Cntr.Width) * HorzPos / 100)
+      - 1;
   end
   else
   begin
@@ -2300,7 +2347,8 @@ begin
   if (Self.Height - FHDelta) > Cur_Panel_Cntr.Height then
   begin
     // Cur_Panel_Cntr.Top := ((Self.Height - FHDelta) - Cur_Panel_Cntr.Height) div 2; // vCenter
-    Cur_Panel_Cntr.Top := round(((Self.Height - FHDelta) - Cur_Panel_Cntr.Height) * VertPos / 100);
+    Cur_Panel_Cntr.Top := round(((Self.Height - FHDelta) - Cur_Panel_Cntr.Height) * VertPos / 100)
+      - tbc_Film_List.Canvas.TextHeight('Test');
   end
   else
   begin
@@ -2325,7 +2373,7 @@ begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
 {$ENDIF}
   // --------------------------------------------------------------------------
-  AdjustZalPosSbx(10, 50);
+  AdjustZalPosSbx(Common_Odeum_Horz_Pos, Common_Odeum_Vert_Pos);
   // --------------------------------------------------------------------------
 {$IFDEF Debug_Level_9}
   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
@@ -2347,6 +2395,12 @@ end;
 
 procedure Tfm_Main.cmb_ZalChange(Sender: TObject);
 begin
+  Process_Zal_Change(Sender, gg_Progress);
+end;
+
+procedure Tfm_Main.tbc_Zal_ListChange(Sender: TObject);
+begin
+  cmb_Zal.ItemIndex := tbc_Zal_List.TabIndex;
   Process_Zal_Change(Sender, gg_Progress);
 end;
 

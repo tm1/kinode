@@ -80,7 +80,7 @@ OriginalFilename=kinode.exe
 ProductName=KinoDE
 ProductVersion=1.2.8.x
 Comments=for internal use only
-PrivateBuild=2005.02.23.01
+PrivateBuild=2005.02.27.01
 [Excluded Packages]
 D:\Program Files\Eureka for Delphi 5\ExceptionExpert5.bpl=Eureka exception log 3.1
 [HistoryLists\hlUnitAliases]

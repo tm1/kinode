@@ -113,6 +113,9 @@ const
   s_ACTION_CANCEL = 'C';
   }
   // -------------------------------------------------------------------------
+  Common_Odeum_Horz_Pos: integer = 10;
+  Common_Odeum_Vert_Pos: integer = 50;
+  // -------------------------------------------------------------------------
 
 resourcestring
   // Some predefined constants
@@ -137,6 +140,13 @@ resourcestring
   s_Preferences_Section = 'Preferences';
   s_OdeumKod = 'OdeumKod';
   s_OdeumBgColor = 'OdeumBgColor';
+  s_CommonOdeumHorzPos = 'CommonOdeumHorzPos';
+  s_CommonOdeumVertPos = 'CommonOdeumVertPos';
+  s_OdeumHorzPos = 'OdeumHorzPos';
+  s_OdeumVertPos = 'OdeumVertPos';
+  s_CommonOdeumShowHint = 'CommonOdeumShowHint';
+  s_Yes = 'Yes';
+  s_No = 'No';
   s_RptPref = 'RptPref';
   // -------------------------------------------------------------------------
   // Procedure names and params
