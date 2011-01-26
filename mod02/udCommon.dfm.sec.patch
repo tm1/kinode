@@ -1,0 +1,14 @@
+--- udCommon.dfm	2004-12-11 20:55:16.000000000 +0600
++++ udCommon.dfm	2004-12-11 20:50:48.000000000 +0600
+@@ -9,8 +9,9 @@
+     DBName = 'localhost:C:\FB_DATA\KAPPA.FDB'
+     DBParams.Strings = (
+       'lc_ctype=WIN1251'
+-      'user_name=SYSDBA'
+-      'password=masterkey')
++      'user_name=cashier001'
++      'password=secondarykey'
++      'sql_role_name=entrance')
+     DefaultTransaction = tr_Common_Read1
+     SQLDialect = 3
+     Timeout = 0

@@ -1,0 +1,89 @@
+
+  Master_Total_Count := 0;
+  Master_Total_Sum := 0;
+
+  Master_Cash_Count := 0;
+  Master_Cash_Sum := 0;
+  Master_Credit_Count := 0;
+  Master_Credit_Sum := 0;
+
+  Detail_Total_Count := 0;
+  Detail_Total_Sum := 0;
+
+  Detail_Cash_Count := 0;
+  Detail_Cash_Sum := 0;
+  Detail_Credit_Count := 0;
+  Detail_Credit_Sum := 0;
+
+    Detail_Cash_Count := Detail_Cash_Count + [TOTAL_OPER_COUNT];
+    Detail_Cash_Sum := Detail_Cash_Sum + [TOTAL_OPER_SUM];
+
+    Detail_Credit_Count := Detail_Credit_Count + [TOTAL_OPER_COUNT];
+    Detail_Credit_Sum := Detail_Credit_Sum + [TOTAL_OPER_SUM];
+
+  Master_Total_Count := Master_Total_Count + Detail_Total_Count;
+  Master_Total_Sum := Master_Total_Sum + Detail_Total_Sum;
+
+  Master_Cash_Count := Master_Cash_Count + Detail_Cash_Count;
+  Master_Cash_Sum := Master_Cash_Sum + Detail_Cash_Sum;
+
+  Master_Credit_Count := Master_Credit_Count + Detail_Credit_Count;
+  Master_Credit_Sum := Master_Credit_Sum + Detail_Credit_Sum;
+
+  Master_Free_Count := 0;
+  Master_Free_Sum := 0;
+
+  Detail_Free_Count := 0;
+  Detail_Free_Sum := 0;
+
+===================
+
+
+  SubDetail_Total_Count := 0;
+  SubDetail_Total_Sum := 0;
+
+  SubDetail_Cash_Count := 0;
+  SubDetail_Cash_Sum := 0;
+
+  SubDetail_Credit_Count := 0;
+  SubDetail_Credit_Sum := 0;
+
+  SubDetail_Free_Count := 0;
+  SubDetail_Free_Sum := 0;
+
+
+=====---------------
+
+  SubDetail_Total_Count := SubDetail_Total_Count + [TOTAL_OPER_COUNT];
+  SubDetail_Total_Sum := SubDetail_Total_Sum + [TOTAL_OPER_SUM];
+
+  if [OPER_SALE_FORM] = 1 then
+  begin
+    SubDetail_Cash_Count := SubDetail_Cash_Count + [TOTAL_OPER_COUNT];
+    SubDetail_Cash_Sum := SubDetail_Cash_Sum + [TOTAL_OPER_SUM];
+  end
+  else if [OPER_SALE_FORM] = 2 then
+  begin
+    SubDetail_Credit_Count := SubDetail_Credit_Count + [TOTAL_OPER_COUNT];
+    SubDetail_Credit_Sum := SubDetail_Credit_Sum + [TOTAL_OPER_SUM];
+  end
+  else if [OPER_SALE_FORM] = 0 then
+  begin
+    SubDetail_Free_Count := SubDetail_Free_Count + [TOTAL_OPER_COUNT];
+    SubDetail_Free_Sum := SubDetail_Free_Sum + [TOTAL_OPER_SUM];
+  end;
+
+
+****************
+
+  Detail_Total_Count := Detail_Total_Count + SubDetail_Total_Count;
+  Detail_Total_Sum := Detail_Total_Sum + SubDetail_Total_Sum;
+
+  Detail_Cash_Count := Detail_Cash_Count + SubDetail_Cash_Count;
+  Detail_Cash_Sum := Detail_Cash_Sum + SubDetail_Cash_Sum;
+
+  Detail_Credit_Count := Detail_Credit_Count + SubDetail_Credit_Count;
+  Detail_Credit_Sum := Detail_Credit_Sum + SubDetail_Credit_Sum;
+
+  Detail_Free_Count := Detail_Free_Count + SubDetail_Free_Count;
+  Detail_Free_Sum := Detail_Free_Sum + SubDetail_Free_Sum;

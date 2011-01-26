@@ -1,0 +1,41 @@
+--- udBase.pas	2004-12-11 20:39:16.000000000 +0600
++++ udBase.pas	2004-12-12 02:16:04.000000000 +0600
+@@ -56,7 +56,6 @@
+     sp_Oper_Mod: TpFIBStoredProc;
+     tr_Oper_Clr_Write: TpFIBTransaction;
+     sp_Oper_Clr: TpFIBStoredProc;
+-    ds_Daily_Report: TpFIBDataSet;
+     ds_Rep_Instant: TpFIBDataSet;
+     ds_Rep_Ticket: TpFIBDataSet;
+     ds_Rep_Daily_Odeums: TpFIBDataSet;
+@@ -128,7 +127,7 @@
+ 
+ const
+   UnitName: string = 'udBase';
+-  RF_DataSetsCount = 26;
++  RF_DataSetsCount = 31;
+   RF_DataSets: array[0..RF_DataSetsCount] of TMixDS = (
+     (DS_UID: 0; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
+     (DS_UID: 1; DS_Name: 'DBUSER'; DS_InsUpd: 0; DS_FN_Kod: 'DBUSER_KOD'; DS_FN_Ver: 'DBUSER_VER';
+@@ -174,7 +173,12 @@
+     (DS_UID: 702; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
+     (DS_UID: 703; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
+     (DS_UID: 704; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
+-    (DS_UID: 705; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0)
++    (DS_UID: 705; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
++    (DS_UID: 706; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
++    (DS_UID: 707; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
++    (DS_UID: 708; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
++    (DS_UID: 709; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0),
++    (DS_UID: 710; DS_Name: ''; DS_InsUpd: 0; DS_FN_Kod: ''; DS_FN_Ver: ''; DS_MaxVal: 0)
+     );
+ 
+ function Tdm_Base.DataModule2Connected: Boolean;
+@@ -313,6 +317,7 @@
+               DEBUGMessEnh(0, UnitName, ProcName, s_IN_CHANGE_NUM + ' = [' +
+                 IntToStr(FChangelog_Max_Value) + ']');
+               ParamByName(s_IN_CHANGE_NUM).AsString := IntToStr(FChangelog_Max_Value);
++              // Обновляем Select-sql из репозитория, если нужно
+               Prepare;
+               Open;
+               if Assigned(FN(s_MAX_CHANGE_KOD)) then

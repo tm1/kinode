@@ -1,0 +1,73 @@
+--- udBase.pas	2004-12-12 03:55:44.000000000 +0600
++++ udBase.pas	2004-12-12 03:55:48.000000000 +0600
+@@ -374,8 +374,18 @@
+ end;
+ 
+ function Tdm_Base.Get_DataSetsID_By_Name(DataSet_ID: Integer): TMixDS;
++var
++  i: Integer;
++  fnd: Boolean;
+ begin
+-  if (DataSet_ID <= 0) or (DataSet_ID > High(RF_DataSets)) then
++  fnd := false;
++  for i := Low(RF_DataSets) to High(RF_DataSets) do
++    if (DataSet_ID = RF_DataSets[i].DS_UID) then
++    begin
++      fnd := true;
++      Result := RF_DataSets[i];
++    end;
++  if (not fnd) then
+   begin
+     Result.DS_UID := 0;
+     Result.DS_Name := '';
+@@ -383,9 +393,7 @@
+     Result.DS_FN_Kod := '';
+     Result.DS_FN_Ver := '';
+     Result.DS_MaxVal := 0;
+-  end
+-  else
+-    Result := RF_DataSets[DataSet_ID];
++  end;
+ end;
+ 
+ procedure Tdm_Base.All_Events_Unregister(Sender: TObject);
+@@ -585,8 +593,9 @@
+ procedure Tdm_Base.ds_DatasetBeforeOpen(DataSet: TDataSet);
+ const
+   ProcName: string = 'ds_DatasetBeforeOpen';
+-{$IFDEF Debug_Level_5}
+ var
++  a_MixDS: TMixDS;
++{$IFDEF Debug_Level_5}
+   i: Integer;
+ {$ENDIF}
+ begin
+@@ -618,7 +627,9 @@
+       end; // for
+ {$ENDIF}
+       // -----------------------------------------------------------
+-      if (DataSet_ID > 0) and (DataSet_ID <= RF_DataSetsCount) then
++      // if (DataSet_ID > 0) and (DataSet_ID <= RF_DataSetsCount) then
++      a_MixDS := Get_DataSetsID_By_Name(DataSet_ID);
++      if (a_MixDS.DS_UID <> DataSet_ID) and (a_MixDS.DS_UID <> 0) then
+       begin
+         {
+         if Length(InsertSQL.Text) = 0 then
+@@ -761,12 +772,16 @@
+ procedure Tdm_Base.ds_DatasetBeforeClose(DataSet: TDataSet);
+ const
+   ProcName: string = 'ds_DatasetBeforeClose';
++var
++  a_MixDS: TMixDS;
+ begin
+   // -----------------------------------------------------------
+   if (DataSet is TpFIBDataSet) then
+     with (DataSet as TpFIBDataSet) do
+     begin
+-      if (DataSet_ID > 0) and (DataSet_ID <= RF_DataSetsCount) then
++      // if (DataSet_ID > 0) and (DataSet_ID <= RF_DataSetsCount) then
++      a_MixDS := Get_DataSetsID_By_Name(DataSet_ID);
++      if (a_MixDS.DS_UID <> DataSet_ID) and (a_MixDS.DS_UID <> 0) then
+       begin
+         Changelog_Events_Reg(false, Dataset);
+       end;
