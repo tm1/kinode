@@ -1,0 +1,548 @@
+====================================================================================================
+= 03.12.2004 18:45:48                                                                              =
+====================================================================================================
+Access violation at address 000AB631 in module 'kinode01.exe'. Write of address 03ED788C.
+
+Exception class: EAccessViolation
+Exception address: 000AB631
+----------------------------------------------------------------------------------------------------
+Stack list, generated 03.12.2004 18:45:47
+[000AB631] XPMenu.TControlSubClass.ControlSubClass (Line 2636, "Lib\XPMenu.pas" + 58) + $3
+[0001353F] System.@HandleAnyException + $33
+[0004B638] Forms.TCustomForm.WMDestroy + $58
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[000B036B] uhGetver.GetModuleVersionInfo (Line 139, "mod01\uhGetver.pas" + 72) + $122
+[00060FD0] Controls.TWinControl.MainWndProc + $2C
+[00046A7C] Forms.StdWndProc + $14
+[00060CB0] Controls.TWinControl.DestroyWindowHandle + $28
+[0004AACF] Forms.TCustomForm.DestroyWindowHandle + $33
+[000489BA] Forms.TCustomForm.Destroy + $66
+[00013068] System.TObject.Free + $8
+[0012E4DA] ufGenre.acGenreShowModal (Line 75, "forms03\ufGenre.pas" + 12) + $5
+[0012F9ED] ufFilm.Tfm_Film.bt_GenreClick (Line 341, "forms03\ufFilm.pas" + 2) + $2
+[0005EA9E] Controls.TControl.Click + $62
+[0003FB08] StdCtrls.TButton.Click + $1C
+[00082AA5] Buttons.TBitBtn.Click + $65
+[0003FBFC] StdCtrls.TButton.CNCommand + $C
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[000B036B] uhGetver.GetModuleVersionInfo (Line 139, "mod01\uhGetver.pas" + 72) + $122
+[00061446] Controls.TWinControl.DefaultHandler + $6A
+[0005E90D] Controls.TControl.WndProc + $111
+[0003FA7C] StdCtrls.TButtonControl.WndProc + $6C
+[0005E754] Controls.TControl.Perform + $24
+[000614FB] Controls.DoControlMsg + $23
+[000619FF] Controls.TWinControl.WMCommand + $B
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[000B036B] uhGetver.GetModuleVersionInfo (Line 139, "mod01\uhGetver.pas" + 72) + $122
+[000AB3DB] XPMenu.TControlSubClass.ControlSubClass (Line 2589, "Lib\XPMenu.pas" + 11) + $9
+[00060FD0] Controls.TWinControl.MainWndProc + $2C
+[00046A7C] Forms.StdWndProc + $14
+[000B036B] uhGetver.GetModuleVersionInfo (Line 139, "mod01\uhGetver.pas" + 72) + $122
+[000614A6] Controls.TWinControl.DefaultHandler + $CA
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[000614A6] Controls.TWinControl.DefaultHandler + $CA
+[0005EE30] Controls.TControl.WMLButtonUp + $10
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[00060FD0] Controls.TWinControl.MainWndProc + $2C
+[00060FE5] Controls.TWinControl.MainWndProc + $41
+[00046A7C] Forms.StdWndProc + $14
+[0003FA7C] StdCtrls.TButtonControl.WndProc + $6C
+[00060FD0] Controls.TWinControl.MainWndProc + $2C
+[00046A7C] Forms.StdWndProc + $14
+[00120600] DBCtrls.TDBLookupComboBox.KeyDown + $2C
+[0004F9AB] Forms.TApplication.ProcessMessage + $83
+[0004F9E2] Forms.TApplication.HandleMessage + $A
+[0004C757] Forms.TCustomForm.ShowModal + $147
+[0012EBE3] ufFilm.acFilmShowModal (Line 98, "forms03\ufFilm.pas" + 10) + $7
+[001600E3] ufMain.Tfm_Main.acFilmExecute (Line 1722, "forms01\ufMain.pas" + 4) + $7
+[0002A73B] Classes.TBasicAction.Execute + $F
+[00042FAD] ActnList.TContainedAction.Execute + $31
+[00043846] ActnList.TCustomAction.Execute + $12
+[0002A644] Classes.TBasicActionLink.Execute + $8
+[00056041] Menus.TMenuItem.Click + $51
+[00057326] Menus.DoClick + $EE
+[0005740D] Menus.TMenu.IsShortCut + $81
+[0004CC72] Forms.TCustomForm.IsShortCut + $56
+[00063126] Controls.TWinControl.IsMenuKey + $66
+[00063166] Controls.TWinControl.CNKeyDown + $12
+[0005E90D] Controls.TControl.WndProc + $111
+[000613CE] Controls.TWinControl.WndProc + $1D2
+[00120600] DBCtrls.TDBLookupComboBox.KeyDown + $2C
+[00060FD0] Controls.TWinControl.MainWndProc + $2C
+[00046A7C] Forms.StdWndProc + $14
+[0004F84B] Forms.TApplication.IsKeyMsg + $77
+[0004F98E] Forms.TApplication.ProcessMessage + $66
+[0004F9E2] Forms.TApplication.HandleMessage + $A
+[0004FBED] Forms.TApplication.Run + $81
+[0016CB3D] kinode01.kinode01 (Line 329, "kinode01.dpr" + 237) + $7
+----------------------------------------------------------------------------------------------------
+System   : Windows 2000 Professional, Version: 5.0, Build: 893, "Service Pack 4"
+Processor: AMD, AMD Athlon(tm) XP 1700+, 1466 MHz MMX
+Display  : 1152x864 pixels, 32 bpp
+----------------------------------------------------------------------------------------------------
+List of loaded modules:
+[00010000] C:\DELPHI\Kino\kinode\kinode01.exe
+           1.2.8.123 - 1.2.8.123
+           KinoDE project
+[01980000] D:\Program Files\Punto Switcher\correct.dll
+<10000000> 1.0.0.1 - 1, 0, 0, 1
+           Correct MFC Application
+[01B20000] C:\Include\Print1c.dll
+<00010000> 1.3.2.7 - 1.3.2.7
+           External print from 1C and other (DPL)
+[020E0000] D:\WINNT\system32\PrxerDrv.dll
+<10000000> 1.0.4.0 - 1, 0, 4, 0
+           ProxifierDrv
+[02B30000] D:\WINNT\system32\DRWEBSP.DLL
+<10000000> 4.31.0.2020 - 4.31.0.02020
+           SpIDer Mail Hook [Home Edition]
+[02C70000] D:\Bin32\wbhook.dll
+<00400000> 2.1.0.9 - 2.1.0.9
+           wb.exe
+[10000000] D:\Program Files\Firebird\bin\gds32.dll
+           6.3.2.4721 - WI-V6.3.2.4721
+           Firebird SQL Server
+[5C080000] D:\WINNT\system32\spool\DRIVERS\W32X86\2\wfxunt40.dll
+           0.2.0.0 - 7.00 (Build 019)
+           WinFax NT Printer Driver User Interface
+[66000000] D:\Program Files\Stardock\Object Desktop\WindowBlinds\WBlind.dll
+           4.2.0.0 - 4.2
+           WindowBlinds
+[66600000] D:\Program Files\Stardock\Object Desktop\WindowBlinds\wbhelp.dll
+           4.0.0.1 - 4.01
+           WindowBlinds Helper DLL
+[68F80000] D:\WINNT\system32\PSAPI.dll
+           5.0.2134.1 - 5.00.2134.1
+           Process Status Helper
+[694C0000] D:\WINNT\system32\olepro32.dll
+           5.0.4522.0 - 5.0.4522
+[6B1E0000] D:\WINNT\system32\msimg32.dll
+           5.0.2180.1 - 5.00.2180.1
+           GDIEXT Client DLL
+[74F60000] D:\WINNT\system32\msafd.dll
+           5.0.2195.6602 - 5.00.2195.6602
+           Microsoft Windows Sockets 2.0 Service Provider
+[74FA0000] D:\WINNT\System32\wshtcpip.dll
+           5.0.2195.6601 - 5.00.2195.6601
+           Windows Sockets Helper DLL
+[74FB0000] D:\WINNT\system32\WS2HELP.DLL
+           5.0.2134.1 - 5.00.2134.1
+           Модуль поддержки Windows Socket 2.0 для Windows NT
+[74FC0000] D:\WINNT\system32\WS2_32.DLL
+           5.0.2195.6601 - 5.00.2195.6601
+           Windows Socket 2.0 32-Bit DLL
+[74FE0000] D:\WINNT\system32\wsock32.dll
+           5.0.2195.6603 - 5.00.2195.6603
+           32-разрядная библиотека Windows Socket
+[750E0000] D:\WINNT\system32\SAMLIB.DLL
+           5.0.2195.6897 - 5.00.2195.6897
+           SAM Library DLL
+[75100000] D:\WINNT\system32\NETAPI32.DLL
+           5.0.2195.6949 - 5.00.2195.6949
+           Net Win32 API DLL
+[75150000] D:\WINNT\system32\NETRAP.dll
+           5.0.2134.1 - 5.00.2134.1
+           Net Remote Admin Protocol DLL
+[75950000] D:\WINNT\system32\LZ32.DLL
+           5.0.2195.6611 - 5.00.2195.6611
+           LZ Expand/Compress API DLL
+[76AE0000] D:\WINNT\system32\comdlg32.dll
+           5.0.3700.6693 - 5.00.3700.6693
+           Библиотека общих диалоговых окон
+[770F0000] D:\WINNT\system32\RPCRT4.DLL
+           5.0.2195.6904 - 5.00.2195.6904
+           Remote Procedure Call Runtime
+[772D0000] D:\WINNT\system32\MPRAPI.DLL
+           5.0.2181.1 - 5.00.2181.1
+           Windows NT MP Router Administration DLL
+[772F0000] D:\WINNT\system32\iphlpapi.dll
+           5.0.2195.6602 - 5.00.2195.6602
+           API модуля поддержки IP
+[77310000] D:\WINNT\system32\DHCPCSVC.DLL
+           5.0.2195.6685 - 5.00.2195.6685
+           Служба DHCP-клиента
+[77330000] D:\WINNT\system32\ADSLDPC.DLL
+           5.0.2195.6701 - 5.00.2195.6701
+           Библиотека DLL поставщика LDAP AD
+[77360000] D:\WINNT\system32\ACTIVEDS.DLL
+           5.0.2195.6601 - 5.00.2195.6601
+           Библиотека DLL уровня маршрутизатора AD
+[77470000] D:\WINNT\system32\RASMAN.DLL
+           5.0.2195.6604 - 5.00.2195.6604
+           Remote Access Connection Manager
+[77490000] D:\WINNT\system32\RASAPI32.DLL
+           5.0.2195.6625 - 5.00.2195.6625
+           Remote Access API
+[774D0000] D:\WINNT\system32\ICMP.DLL
+           5.0.2134.1 - 5.00.2134.1
+           ICMP DLL
+[774E0000] D:\WINNT\system32\TAPI32.DLL
+           5.0.2195.6664 - 5.00.2195.6664
+           Библиотека API телефонии Microsoft® Windows™
+[77560000] D:\WINNT\system32\SHELL32.DLL
+           5.0.3900.6975 - 5.00.3900.6975
+           Общая библиотека оболочки Windows
+[777B0000] D:\WINNT\System32\winrnr.dll
+           5.0.2160.1 - 5.00.2160.1
+           LDAP RnR Provider DLL
+[777C0000] D:\WINNT\system32\rasadhlp.dll
+           5.0.2168.1 - 5.00.2168.1
+           Remote Access AutoDial Helper
+[777D0000] D:\WINNT\system32\winspool.drv
+           5.0.2195.6659 - 5.00.2195.6659
+           Драйвер диспетчера очереди Windows
+[777F0000] D:\WINNT\system32\version.dll
+           5.0.2195.6623 - 5.00.2195.6623
+           Version Checking and File Installation Libraries
+[77800000] D:\WINNT\system32\RTUTILS.DLL
+           5.0.2168.1 - 5.00.2168.1
+           Routing Utilities
+[77810000] D:\WINNT\System32\rnr20.dll
+           5.0.2195.6603 - 5.00.2195.6603
+           Windows Socket2 NameSpace DLL
+[77860000] D:\WINNT\system32\SETUPAPI.DLL
+           5.0.2195.6622 - 5.00.2195.6622
+           Windows Setup API
+[77920000] D:\WINNT\system32\imagehlp.dll
+           5.0.2195.6613 - 5.00.2195.6613
+           Windows NT Image Helper
+[77950000] D:\WINNT\system32\WLDAP32.DLL
+           5.0.2195.6666 - 5.00.2195.6666
+           Win32 LDAP API DLL
+[77980000] D:\WINNT\system32\DNSAPI.DLL
+           5.0.2195.6824 - 5.00.2195.6824
+           DNS Client API DLL
+[779B0000] D:\WINNT\system32\oleaut32.dll
+           2.40.4522.0 - 2.40.4522
+[77A50000] D:\WINNT\system32\ole32.dll
+           5.0.2195.6906 - 5.00.2195.6906
+           Microsoft OLE для  Windows
+[77B50000] D:\WINNT\system32\comctl32.dll
+           5.81.3502.6601 - 5.81
+           Common Controls Library
+[77BF0000] D:\WINNT\system32\NTDSAPI.dll
+           5.0.2195.6666 - 5.00.2195.6666
+           NT5DS
+[77C70000] D:\WINNT\system32\SHLWAPI.DLL
+           5.0.3900.6969 - 5.00.3900.6969
+           Библиотека небольших программ оболочки
+[77E10000] D:\WINNT\system32\user32.dll
+           5.0.2195.6897 - 5.00.2195.6897
+           Библиотека клиента USER API Windows 2000
+[77F40000] D:\WINNT\system32\GDI32.DLL
+           5.0.2195.6945 - 5.00.2195.6945
+           GDI Client DLL
+[77F80000] D:\WINNT\system32\ntdll.dll
+           5.0.2195.6899 - 5.00.2195.6899
+           Системная библиотека NT
+[78000000] D:\WINNT\system32\MSVCRT.DLL
+           6.1.9844.0 - 6.10.9844.0
+           Microsoft (R) C Runtime Library
+[780C0000] D:\WINNT\system32\MSVCP60.dll
+           6.0.8972.0 - 6.00.8972.0
+           Microsoft (R) C++ Runtime Library
+[78E60000] D:\WINNT\system32\USERENV.DLL
+           5.0.2195.6794 - 5.00.2195.6794
+           Userenv
+[79060000] D:\WINNT\system32\advapi32.dll
+           5.0.2195.6876 - 5.00.2195.6876
+           Расширенная библиотека API Windows 32
+[79140000] D:\WINNT\system32\Secur32.dll
+           5.0.2195.6695 - 5.00.2195.6695
+           Security Support Provider Interface
+[79430000] D:\WINNT\system32\kernel32.dll
+           5.0.2195.6946 - 5.00.2195.6946
+           Библиотека клиента Windows NT BASE API
+[79500000] D:\WINNT\system32\MPR.DLL
+           5.0.2195.6824 - 5.00.2195.6824
+           Библиотека маршрутизации для нескольких служб доступа
+----------------------------------------------------------------------------------------------------
+Active Controls hierarchy:
+TWc_BitBtn "bt_Genre"
+TGroupBox "gb_Edit"
+TPanel "pn_Top"
+Tfm_Film "fm_Film"
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+= 04.12.2004 16:56:11                                                                              =
+====================================================================================================
+Access violation at address 004B4DB9 in module 'kinode01.exe'. Write of address 03DBB884.
+
+Exception class: EAccessViolation
+Exception address: 004B4DB9
+----------------------------------------------------------------------------------------------------
+Stack list, generated 04.12.2004 16:54:49
+[004B4DB9] XPMenu.TControlSubClass.ControlSubClass (Line 2636, "Lib\XPMenu.pas" + 58) + $3
+[00403E0B] System.@HandleAnyException (Line 4399, "system.pas" + 13) + $0
+[0044446F] Forms.TCustomForm.WMDestroy (Line 4026, "Forms.pas" + 7) + $6
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[0045E284] Controls.TWinControl.MainWndProc (Line 5612, "Controls.pas" + 3) + $9
+[0043E5AC] Forms.StdWndProc (Line 1459, "Forms.pas" + 8) + $0
+[0045DE94] Controls.TWinControl.DestroyWindowHandle (Line 5483, "Controls.pas" + 3) + $A
+[0044364C] Forms.TCustomForm.DestroyWindowHandle (Line 3675, "Forms.pas" + 4) + $3
+[00440CC6] Forms.TCustomForm.Destroy (Line 2614, "Forms.pas" + 5) + $11
+[004038D8] System.TObject.Free (Line 3530, "system.pas" + 4) + $0
+[0053FEB2] ufGenre.acGenreShowModal (Line 75, "forms03\ufGenre.pas" + 12) + $5
+[005413C5] ufFilm.Tfm_Film.bt_GenreClick (Line 341, "forms03\ufFilm.pas" + 2) + $2
+[0045B36F] Controls.TControl.Click (Line 4288, "Controls.pas" + 9) + $C
+[004369EF] StdCtrls.TButton.Click (Line 2885, "StdCtrls.pas" + 3) + $3
+[00486E00] Buttons.TBitBtn.Click (Line 1346, "buttons.pas" + 17) + $3
+[00403AD8] System.@CallDynaInst (Line 3784, "system.pas" + 3) + $0
+[00436B56] StdCtrls.TButton.CNCommand (Line 2937, "StdCtrls.pas" + 1) + $11
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[00402BFC] System.SysFreeMem (Line 1123, "GETMEM.INC" + 83) + $6
+[0043693A] StdCtrls.TButtonControl.WndProc (Line 2865, "StdCtrls.pas" + 13) + $6
+[0045AECA] Controls.TControl.Perform (Line 4152, "Controls.pas" + 5) + $F
+[00455CF8] Controls.FindControl (Line 1615, "Controls.pas" + 4) + $C
+[0045E8E4] Controls.DoControlMsg (Line 5774, "Controls.pas" + 6) + $1B
+[0045EF19] Controls.TWinControl.WMCommand (Line 5950, "Controls.pas" + 1) + $9
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[00538364] DBGrids.TCustomDBGrid.DrawCell (Line 3225, "dbgrids.pas" + 113) + $2C
+[00402BFC] System.SysFreeMem (Line 1123, "GETMEM.INC" + 83) + $6
+[00402C24] System.SysFreeMem (Line 1127, "GETMEM.INC" + 87) + $E
+[00402F88] System.@FreeMem (Line 1239, "system.pas" + 2) + $0
+[0041FFDB] Graphics.TResourceManager.FreeResource (Line 1118, "Graphics.pas" + 25) + $3
+[004B4B63] XPMenu.TControlSubClass.ControlSubClass (Line 2589, "Lib\XPMenu.pas" + 11) + $9
+[0045E284] Controls.TWinControl.MainWndProc (Line 5612, "Controls.pas" + 3) + $9
+[0043E5AC] Forms.StdWndProc (Line 1459, "Forms.pas" + 8) + $0
+[0045E868] Controls.TWinControl.DefaultHandler (Line 5755, "Controls.pas" + 20) + $28
+[0045B801] Controls.TControl.WMLButtonUp (Line 4410, "Controls.pas" + 1) + $8
+[00461848] Controls.TWinControl.GetHandle (Line 7208, "Controls.pas" + 1) + $3
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[0043693A] StdCtrls.TButtonControl.WndProc (Line 2865, "StdCtrls.pas" + 13) + $6
+[0045E284] Controls.TWinControl.MainWndProc (Line 5612, "Controls.pas" + 3) + $9
+[0043E5AC] Forms.StdWndProc (Line 1459, "Forms.pas" + 8) + $0
+[00449710] Forms.TApplication.ProcessMessage (Line 6630, "Forms.pas" + 13) + $4
+[00449757] Forms.TApplication.HandleMessage (Line 6649, "Forms.pas" + 1) + $6
+[0044592C] Forms.TCustomForm.ShowModal (Line 4692, "Forms.pas" + 22) + $5
+[005405BB] ufFilm.acFilmShowModal (Line 98, "forms03\ufFilm.pas" + 10) + $7
+[00571D4F] ufMain.Tfm_Main.acFilmExecute (Line 1743, "forms01\ufMain.pas" + 4) + $7
+[0041E4F5] Classes.TBasicAction.Execute (Line 8077, "Classes.pas" + 3) + $9
+[0043A9F5] ActnList.TContainedAction.Execute + $31
+[0043B28E] ActnList.TCustomAction.Execute + $12
+[0041E348] Classes.TBasicActionLink.Execute (Line 8012, "Classes.pas" + 1) + $A
+[004507D2] Menus.TMenuItem.Click (Line 1738, "Menus.pas" + 9) + $8
+[004520F2] Menus.DoClick (Line 2527, "Menus.pas" + 27) + $7
+[004521DE] Menus.TMenu.IsShortCut (Line 2556, "Menus.pas" + 19) + $6
+[00445F44] Forms.TCustomForm.IsShortCut (Line 4872, "Forms.pas" + 3) + $31
+[00460DD1] Controls.TWinControl.IsMenuKey (Line 6865, "Controls.pas" + 13) + $10
+[00460E20] Controls.TWinControl.CNKeyDown (Line 6879, "Controls.pas" + 4) + $6
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[00445DEA] Forms.TraverseClients (Line 4835, "Forms.pas" + 5) + $33
+[00445E57] Forms.TCustomForm.CMActionUpdate (Line 4848, "Forms.pas" + 3) + $26
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[00445E57] Forms.TCustomForm.CMActionUpdate (Line 4848, "Forms.pas" + 3) + $26
+[0045E73A] Controls.TWinControl.WndProc (Line 5731, "Controls.pas" + 47) + $6
+[0045B147] Controls.TControl.WndProc (Line 4227, "Controls.pas" + 37) + $8
+[0045AECA] Controls.TControl.Perform (Line 4152, "Controls.pas" + 5) + $F
+[0045E37E] Controls.GetControlAtPos (Line 5633, "Controls.pas" + 4) + $70
+[00441E72] Forms.TCustomForm.WndProc (Line 3063, "Forms.pas" + 94) + $6
+[0045E284] Controls.TWinControl.MainWndProc (Line 5612, "Controls.pas" + 3) + $9
+[0043E5AC] Forms.StdWndProc (Line 1459, "Forms.pas" + 8) + $0
+[0044954E] Forms.TApplication.IsKeyMsg (Line 6588, "Forms.pas" + 20) + $1E
+[004496EB] Forms.TApplication.ProcessMessage (Line 6626, "Forms.pas" + 9) + $2A
+[00449757] Forms.TApplication.HandleMessage (Line 6649, "Forms.pas" + 1) + $6
+[004499DD] Forms.TApplication.Run (Line 6732, "Forms.pas" + 15) + $3
+[0057EADD] kinode01.kinode01 (Line 331, "C:\DELPHI\Kino\kinode\kinode01.dpr" + 237) + $7
+----------------------------------------------------------------------------------------------------
+System   : Windows 2000 Professional, Version: 5.0, Build: 893, "Service Pack 4"
+Processor: AMD, AMD Athlon(tm) XP 1700+, 1466 MHz MMX
+Display  : 1152x864 pixels, 32 bpp
+----------------------------------------------------------------------------------------------------
+List of loaded modules:
+[00400000] C:\DELPHI\Kino\kinode\kinode01.exe
+           1.2.8.123 - 1.2.8.123
+           KinoDE project
+[01380000] D:\Program Files\Punto Switcher\correct.dll
+<10000000> 1.0.0.1 - 1, 0, 0, 1
+           Correct MFC Application
+[01520000] C:\Include\Print1c.dll
+<00010000> 1.3.2.7 - 1.3.2.7
+           External print from 1C and other (DPL)
+[01AE0000] D:\WINNT\system32\PrxerDrv.dll
+<10000000> 1.0.4.0 - 1, 0, 4, 0
+           ProxifierDrv
+[02530000] D:\WINNT\system32\DRWEBSP.DLL
+<10000000> 4.31.0.2020 - 4.31.0.02020
+           SpIDer Mail Hook [Home Edition]
+[02670000] D:\Bin32\wbhook.dll
+<00400000> 2.1.0.9 - 2.1.0.9
+           wb.exe
+[10000000] D:\Program Files\Firebird\bin\gds32.dll
+           6.3.2.4721 - WI-V6.3.2.4721
+           Firebird SQL Server
+[5C080000] D:\WINNT\system32\spool\DRIVERS\W32X86\2\wfxunt40.dll
+           0.2.0.0 - 7.00 (Build 019)
+           WinFax NT Printer Driver User Interface
+[66000000] D:\Program Files\Stardock\Object Desktop\WindowBlinds\WBlind.dll
+           4.2.0.0 - 4.2
+           WindowBlinds
+[66600000] D:\Program Files\Stardock\Object Desktop\WindowBlinds\wbhelp.dll
+           4.0.0.1 - 4.01
+           WindowBlinds Helper DLL
+[68F80000] D:\WINNT\system32\PSAPI.dll
+           5.0.2134.1 - 5.00.2134.1
+           Process Status Helper
+[694C0000] D:\WINNT\system32\olepro32.dll
+           5.0.4522.0 - 5.0.4522
+[6B1E0000] D:\WINNT\system32\msimg32.dll
+           5.0.2180.1 - 5.00.2180.1
+           GDIEXT Client DLL
+[74F60000] D:\WINNT\system32\msafd.dll
+           5.0.2195.6602 - 5.00.2195.6602
+           Microsoft Windows Sockets 2.0 Service Provider
+[74FA0000] D:\WINNT\System32\wshtcpip.dll
+           5.0.2195.6601 - 5.00.2195.6601
+           Windows Sockets Helper DLL
+[74FB0000] D:\WINNT\system32\WS2HELP.DLL
+           5.0.2134.1 - 5.00.2134.1
+           Модуль поддержки Windows Socket 2.0 для Windows NT
+[74FC0000] D:\WINNT\system32\WS2_32.DLL
+           5.0.2195.6601 - 5.00.2195.6601
+           Windows Socket 2.0 32-Bit DLL
+[74FE0000] D:\WINNT\system32\wsock32.dll
+           5.0.2195.6603 - 5.00.2195.6603
+           32-разрядная библиотека Windows Socket
+[750E0000] D:\WINNT\system32\SAMLIB.DLL
+           5.0.2195.6897 - 5.00.2195.6897
+           SAM Library DLL
+[75100000] D:\WINNT\system32\NETAPI32.DLL
+           5.0.2195.6949 - 5.00.2195.6949
+           Net Win32 API DLL
+[75150000] D:\WINNT\system32\NETRAP.dll
+           5.0.2134.1 - 5.00.2134.1
+           Net Remote Admin Protocol DLL
+[75950000] D:\WINNT\system32\LZ32.DLL
+           5.0.2195.6611 - 5.00.2195.6611
+           LZ Expand/Compress API DLL
+[76AE0000] D:\WINNT\system32\comdlg32.dll
+           5.0.3700.6693 - 5.00.3700.6693
+           Библиотека общих диалоговых окон
+[770F0000] D:\WINNT\system32\RPCRT4.DLL
+           5.0.2195.6904 - 5.00.2195.6904
+           Remote Procedure Call Runtime
+[772D0000] D:\WINNT\system32\MPRAPI.DLL
+           5.0.2181.1 - 5.00.2181.1
+           Windows NT MP Router Administration DLL
+[772F0000] D:\WINNT\system32\iphlpapi.dll
+           5.0.2195.6602 - 5.00.2195.6602
+           API модуля поддержки IP
+[77310000] D:\WINNT\system32\DHCPCSVC.DLL
+           5.0.2195.6685 - 5.00.2195.6685
+           Служба DHCP-клиента
+[77330000] D:\WINNT\system32\ADSLDPC.DLL
+           5.0.2195.6701 - 5.00.2195.6701
+           Библиотека DLL поставщика LDAP AD
+[77360000] D:\WINNT\system32\ACTIVEDS.DLL
+           5.0.2195.6601 - 5.00.2195.6601
+           Библиотека DLL уровня маршрутизатора AD
+[77470000] D:\WINNT\system32\RASMAN.DLL
+           5.0.2195.6604 - 5.00.2195.6604
+           Remote Access Connection Manager
+[77490000] D:\WINNT\system32\RASAPI32.DLL
+           5.0.2195.6625 - 5.00.2195.6625
+           Remote Access API
+[774D0000] D:\WINNT\system32\ICMP.DLL
+           5.0.2134.1 - 5.00.2134.1
+           ICMP DLL
+[774E0000] D:\WINNT\system32\TAPI32.DLL
+           5.0.2195.6664 - 5.00.2195.6664
+           Библиотека API телефонии Microsoft® Windows™
+[77560000] D:\WINNT\system32\SHELL32.DLL
+           5.0.3900.6975 - 5.00.3900.6975
+           Общая библиотека оболочки Windows
+[777B0000] D:\WINNT\System32\winrnr.dll
+           5.0.2160.1 - 5.00.2160.1
+           LDAP RnR Provider DLL
+[777C0000] D:\WINNT\system32\rasadhlp.dll
+           5.0.2168.1 - 5.00.2168.1
+           Remote Access AutoDial Helper
+[777D0000] D:\WINNT\system32\winspool.drv
+           5.0.2195.6659 - 5.00.2195.6659
+           Драйвер диспетчера очереди Windows
+[777F0000] D:\WINNT\system32\version.dll
+           5.0.2195.6623 - 5.00.2195.6623
+           Version Checking and File Installation Libraries
+[77800000] D:\WINNT\system32\RTUTILS.DLL
+           5.0.2168.1 - 5.00.2168.1
+           Routing Utilities
+[77810000] D:\WINNT\System32\rnr20.dll
+           5.0.2195.6603 - 5.00.2195.6603
+           Windows Socket2 NameSpace DLL
+[77860000] D:\WINNT\system32\SETUPAPI.DLL
+           5.0.2195.6622 - 5.00.2195.6622
+           Windows Setup API
+[77920000] D:\WINNT\system32\imagehlp.dll
+           5.0.2195.6613 - 5.00.2195.6613
+           Windows NT Image Helper
+[77950000] D:\WINNT\system32\WLDAP32.DLL
+           5.0.2195.6666 - 5.00.2195.6666
+           Win32 LDAP API DLL
+[77980000] D:\WINNT\system32\DNSAPI.DLL
+           5.0.2195.6824 - 5.00.2195.6824
+           DNS Client API DLL
+[779B0000] D:\WINNT\system32\oleaut32.dll
+           2.40.4522.0 - 2.40.4522
+[77A50000] D:\WINNT\system32\ole32.dll
+           5.0.2195.6906 - 5.00.2195.6906
+           Microsoft OLE для  Windows
+[77B50000] D:\WINNT\system32\comctl32.dll
+           5.81.3502.6601 - 5.81
+           Common Controls Library
+[77BF0000] D:\WINNT\system32\NTDSAPI.dll
+           5.0.2195.6666 - 5.00.2195.6666
+           NT5DS
+[77C70000] D:\WINNT\system32\SHLWAPI.DLL
+           5.0.3900.6969 - 5.00.3900.6969
+           Библиотека небольших программ оболочки
+[77E10000] D:\WINNT\system32\user32.dll
+           5.0.2195.6897 - 5.00.2195.6897
+           Библиотека клиента USER API Windows 2000
+[77F40000] D:\WINNT\system32\GDI32.DLL
+           5.0.2195.6945 - 5.00.2195.6945
+           GDI Client DLL
+[77F80000] D:\WINNT\system32\ntdll.dll
+           5.0.2195.6899 - 5.00.2195.6899
+           Системная библиотека NT
+[78000000] D:\WINNT\system32\MSVCRT.DLL
+           6.1.9844.0 - 6.10.9844.0
+           Microsoft (R) C Runtime Library
+[780C0000] D:\WINNT\system32\MSVCP60.dll
+           6.0.8972.0 - 6.00.8972.0
+           Microsoft (R) C++ Runtime Library
+[78E60000] D:\WINNT\system32\USERENV.DLL
+           5.0.2195.6794 - 5.00.2195.6794
+           Userenv
+[79060000] D:\WINNT\system32\advapi32.dll
+           5.0.2195.6876 - 5.00.2195.6876
+           Расширенная библиотека API Windows 32
+[79140000] D:\WINNT\system32\Secur32.dll
+           5.0.2195.6695 - 5.00.2195.6695
+           Security Support Provider Interface
+[79430000] D:\WINNT\system32\kernel32.dll
+           5.0.2195.6946 - 5.00.2195.6946
+           Библиотека клиента Windows NT BASE API
+[79500000] D:\WINNT\system32\MPR.DLL
+           5.0.2195.6824 - 5.00.2195.6824
+           Библиотека маршрутизации для нескольких служб доступа
+----------------------------------------------------------------------------------------------------
+Active Controls hierarchy:
+TWc_BitBtn "bt_Genre"
+TGroupBox "gb_Edit"
+TPanel "pn_Top"
+Tfm_Film "fm_Film"
+----------------------------------------------------------------------------------------------------
