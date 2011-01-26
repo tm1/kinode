@@ -1,0 +1,182 @@
+--- ufDRprt.pas	2004-12-08 12:18:00.000000000 +0600
++++ ufDRpAz.pas	2004-12-08 12:56:28.000000000 +0600
+@@ -1,12 +1,12 @@
+ {-----------------------------------------------------------------------------
+- Unit Name: ufDRprt
++ Unit Name: ufDRpAz
+  Author:    n0mad
+  Version:   1.2.8.x
+  Creation:  19.11.2004
+  Purpose:   Daily Report Preview
+  History:
+ -----------------------------------------------------------------------------}
+-unit ufDRprt;
++unit ufDRpAz;
+ 
+ interface
+ 
+@@ -16,7 +16,7 @@
+   Buttons, WcBitBtn, ComCtrls, DBCtrls, ImgList, ActnList;
+ 
+ type
+-  Tfm_DRprt = class(TSLForm)
++  Tfm_DRpAz = class(TSLForm)
+     frDBDataSet1: TfrDBDataSet;
+     frReport1: TfrReport;
+     dsrc_Data: TDataSource;
+@@ -62,10 +62,10 @@
+     { Public declarations }
+   end;
+ 
+-procedure acDRprtShowModal(v_Repert_Date: TDateTime; v_Repert_Odeum: Integer);
++procedure acDRpAzShowModal(v_Repert_Date: TDateTime; v_Repert_Odeum: Integer);
+ 
+ var
+-  fm_DRprt: Tfm_DRprt;
++  fm_DRpAz: Tfm_DRpAz;
+   pm_Repert_Date: TDateTime;
+   pm_Repert_Odeum: Integer;
+ 
+@@ -77,11 +77,11 @@
+ {$R *.DFM}
+ 
+ const
+-  UnitName: string = 'ufDRprt';
++  UnitName: string = 'ufDRpAz';
+ 
+-procedure acDRprtShowModal(v_Repert_Date: TDateTime; v_Repert_Odeum: Integer);
++procedure acDRpAzShowModal(v_Repert_Date: TDateTime; v_Repert_Odeum: Integer);
+ const
+-  ProcName: string = 'acDRprtShowModal';
++  ProcName: string = 'acDRpAzShowModal';
+ begin
+   // --------------------------------------------------------------------------
+   // ≈жедневный отчет
+@@ -92,19 +92,19 @@
+   try
+     pm_Repert_Date := v_Repert_Date;
+     pm_Repert_Odeum := v_Repert_Odeum;
+-    Application.CreateForm(Tfm_DRprt, fm_DRprt);
+-    DEBUGMessEnh(0, UnitName, ProcName, fm_DRprt.Name + '.ShowModal');
+-    fm_DRprt.ShowModal;
++    Application.CreateForm(Tfm_DRpAz, fm_DRpAz);
++    DEBUGMessEnh(0, UnitName, ProcName, fm_DRpAz.Name + '.ShowModal');
++    fm_DRpAz.ShowModal;
+   finally
+-    fm_DRprt.Free;
+-    fm_DRprt := nil;
++    fm_DRpAz.Free;
++    fm_DRpAz := nil;
+   end;
+   // --------------------------------------------------------------------------
+   // DEBUGMessEnh(-1, UnitName, ProcName, '<-');
+   DEBUGMessBrk(-1, ')   <<< [' + UnitName + '::' + ProcName + '] <<<   (');
+ end;
+ 
+-procedure Tfm_DRprt.sb_UpClick(Sender: TObject);
++procedure Tfm_DRpAz.sb_UpClick(Sender: TObject);
+ begin
+   if dtp_Date_Filt.Enabled then
+   begin
+@@ -113,17 +113,17 @@
+   end;
+ end;
+ 
+-procedure Tfm_DRprt.bt_CloseClick(Sender: TObject);
++procedure Tfm_DRpAz.bt_CloseClick(Sender: TObject);
+ begin
+   Close;
+ end;
+ 
+-procedure Tfm_DRprt.bt_RefreshClick(Sender: TObject);
++procedure Tfm_DRpAz.bt_RefreshClick(Sender: TObject);
+ begin
+   PrepReport(Sender);
+ end;
+ 
+-procedure Tfm_DRprt.FormCreate(Sender: TObject);
++procedure Tfm_DRpAz.FormCreate(Sender: TObject);
+ begin
+   // --------------------------------------------------------------------------
+   FNotYetActivated := true;
+@@ -135,7 +135,7 @@
+   // --------------------------------------------------------------------------
+ end;
+ 
+-procedure Tfm_DRprt.FormActivate(Sender: TObject);
++procedure Tfm_DRpAz.FormActivate(Sender: TObject);
+ const
+   ProcName: string = 'FormActivate';
+ var
+@@ -185,7 +185,7 @@
+   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
+ end;
+ 
+-procedure Tfm_DRprt.sb_DownClick(Sender: TObject);
++procedure Tfm_DRpAz.sb_DownClick(Sender: TObject);
+ begin
+   if dtp_Date_Filt.Enabled then
+   begin
+@@ -194,7 +194,7 @@
+   end;
+ end;
+ 
+-procedure Tfm_DRprt.sb_TodayClick(Sender: TObject);
++procedure Tfm_DRpAz.sb_TodayClick(Sender: TObject);
+ begin
+   if dtp_Date_Filt.Enabled then
+   begin
+@@ -203,7 +203,7 @@
+   end;
+ end;
+ 
+-procedure Tfm_DRprt.PrepReport(Sender: TObject);
++procedure Tfm_DRpAz.PrepReport(Sender: TObject);
+ const
+   ProcName: string = 'PrepReport';
+ var
+@@ -425,7 +425,7 @@
+   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
+ end;
+ 
+-procedure Tfm_DRprt.bt_ShowReportClick(Sender: TObject);
++procedure Tfm_DRpAz.bt_ShowReportClick(Sender: TObject);
+ const
+   ProcName: string = 'ShowReport';
+ begin
+@@ -436,7 +436,7 @@
+   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
+ end;
+ 
+-procedure Tfm_DRprt.FormClose(Sender: TObject; var Action: TCloseAction);
++procedure Tfm_DRpAz.FormClose(Sender: TObject; var Action: TCloseAction);
+ const
+   ProcName: string = 'FormClose';
+ begin
+@@ -445,7 +445,7 @@
+   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
+ end;
+ 
+-function Tfm_DRprt.SetDTStatus(PanelIndex: Integer; StatusText: string): Boolean;
++function Tfm_DRpAz.SetDTStatus(PanelIndex: Integer; StatusText: string): Boolean;
+ const
+   ProcName: string = 'SetDTStatus';
+ begin
+@@ -460,7 +460,7 @@
+   end;
+ end;
+ 
+-procedure Tfm_DRprt.DTStatusBarClick(Sender: TObject);
++procedure Tfm_DRpAz.DTStatusBarClick(Sender: TObject);
+ begin
+   if Assigned(dbgr_Data.DataSource) and
+     Assigned(dbgr_Data.DataSource.DataSet) and
+@@ -476,7 +476,7 @@
+   end;
+ end;
+ 
+-procedure Tfm_DRprt.Activate_After_Once(Sender: TObject);
++procedure Tfm_DRpAz.Activate_After_Once(Sender: TObject);
+ const
+   ProcName: string = 'Activate_After_Once';
+ var
