@@ -1,0 +1,195 @@
+;------------------------------------------------------------
+; program: diff -Naur
+; 1st: D:\DELPHI\Kino\kinode.127orms04\ufDRpAz.dfm
+; 2nd: D:\DELPHI\Kino\kinodeorms04\ufDRpAz.dfm
+; output: c:\Temp\$cmpSL(ufDRpAz.dfm)-(ufDRpAz.dfm).diff
+;------------------------------------------------------------
+--- D:\DELPHI\KINO\KINODE.127\FORMS04\ufDRpAz.dfm	2005-02-27 06:06:50.000000000 +0600
++++ D:\DELPHI\KINO\KINODE\FORMS04\ufDRpAz.dfm	2005-03-13 03:10:52.927792000 +0600
+@@ -34,6 +34,14 @@
+   end
+   object Splitter3: TSplitter
+     Left = 0
++    Top = 381
++    Width = 775
++    Height = 3
++    Cursor = crVSplit
++    Align = alBottom
++  end
++  object Splitter4: TSplitter
++    Left = 0
+     Top = 437
+     Width = 775
+     Height = 3
+@@ -613,7 +621,7 @@
+     Left = 0
+     Top = 356
+     Width = 775
+-    Height = 81
++    Height = 25
+     Align = alClient
+     DataSource = dsrc_SubDetail
+     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+@@ -809,6 +817,130 @@
+         Visible = True
+       end>
+   end
++  object dbgr_Data_Detail_2: TDBGrid
++    Left = 0
++    Top = 384
++    Width = 775
++    Height = 53
++    Align = alBottom
++    DataSource = dsrc_Detail_2
++    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
++    ReadOnly = True
++    TabOrder = 7
++    TitleFont.Charset = DEFAULT_CHARSET
++    TitleFont.Color = clWindowText
++    TitleFont.Height = -11
++    TitleFont.Name = 'MS Sans Serif'
++    TitleFont.Style = []
++    Columns = <
++      item
++        Color = clBtnHighlight
++        Expanded = False
++        FieldName = 'OPER_REPERT_KOD'
++        Title.Caption = 'Код'
++        Visible = True
++      end
++      item
++        Color = clBtnHighlight
++        Expanded = False
++        FieldName = 'OPER_REPERT_VER'
++        Title.Caption = 'Версия'
++        Width = 32
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'REPERT_DATE'
++        Title.Caption = 'Дата'
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'REPERT_START'
++        Title.Caption = 'Сеанс'
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'OPER_TICKET_KOD'
++        Font.Charset = DEFAULT_CHARSET
++        Font.Color = clWindowText
++        Font.Height = -11
++        Font.Name = 'MS Sans Serif'
++        Font.Style = [fsBold]
++        Title.Caption = 'Код типа билета'
++        Width = 32
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'OPER_TICKET_VER'
++        Font.Charset = DEFAULT_CHARSET
++        Font.Color = clWindowText
++        Font.Height = -11
++        Font.Name = 'MS Sans Serif'
++        Font.Style = [fsBold]
++        Title.Caption = 'Версия типа билета'
++        Width = 32
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'TICKET_NAM'
++        Title.Caption = 'Тип билета'
++        Width = 132
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'OPER_STATE'
++        Title.Caption = 'Состояние'
++        Width = 2
++        Visible = True
++      end
++      item
++        Color = clBtnHighlight
++        Expanded = False
++        FieldName = 'OPER_SALE_FORM'
++        Title.Caption = 'Код типа оплаты'
++        Width = 32
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'OPER_SALE_FORM_DESC'
++        Title.Caption = 'Тип оплаты'
++        Width = 80
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'OPER_COST_VALUE'
++        Title.Caption = 'Цена'
++        Width = 72
++        Visible = True
++      end
++      item
++        Color = clBtnHighlight
++        Expanded = False
++        FieldName = 'TOTAL_OPER_COUNT'
++        Title.Caption = 'Количество'
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'TOTAL_OPER_SUM'
++        Title.Caption = 'Сумма'
++        Width = 128
++        Visible = True
++      end
++      item
++        Expanded = False
++        FieldName = 'TOTAL_PRINT_COUNT'
++        Title.Caption = 'Распечатано'
++        Visible = True
++      end>
++  end
+   object frReport_Daily: TfrReport
+     InitialZoom = pzDefault
+     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+@@ -2318,4 +2450,31 @@
+     Left = 436
+     Top = 72
+   end
++  object dsrc_Detail_2: TDataSource
++    AutoEdit = False
++    DataSet = dm_Base.ds_Rep_Daily_Presale
++    Left = 512
++    Top = 72
++  end
++  object frDBds_Detail_2: TfrDBDataSet
++    DataSource = dsrc_Detail_2
++    Left = 564
++    Top = 72
++  end
++  object frTextExport1: TfrTextExport
++    Left = 449
++    Top = 153
++  end
++  object frRTFExport1: TfrRTFExport
++    Left = 393
++    Top = 153
++  end
++  object frCSVExport1: TfrCSVExport
++    Left = 513
++    Top = 153
++  end
++  object frHTMExport1: TfrHTMExport
++    Left = 577
++    Top = 153
++  end
+ end

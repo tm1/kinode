@@ -1,0 +1,19 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\5.0]
+"App"="D:\\Program Files\\Borland\\Delphi5\\Bin\\Delphi32.exe"
+"RootDir"="D:\\Program Files\\Borland\\Delphi5"
+"Version"="CSS"
+"UseSharedFiles"="TRUE"
+"Update #1"="TRUE"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\5.0\AdminInstall]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Delphi\5.0\UninstInfo]
+"DebuggerInstalled"="TRUE"
+"UseSharedMSHelp"="TRUE"
+"UseSharedImages"="TRUE"
+"UseSharedData"="TRUE"
+

@@ -61,7 +61,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=2
 Release=8
-Build=127
+Build=128
 Debug=0
 PreRelease=0
 Special=0
@@ -72,7 +72,7 @@ CodePage=1251
 [Version Info Keys]
 CompanyName=Otau Cinema
 FileDescription=KinoDE project
-FileVersion=1.2.8.127
+FileVersion=1.2.8.128
 InternalName=kinode
 LegalCopyright=n0mad eagle eye
 LegalTrademarks=
@@ -80,9 +80,10 @@ OriginalFilename=kinode.exe
 ProductName=KinoDE
 ProductVersion=1.2.8.x
 Comments=for internal use only
-PrivateBuild=2005.02.27.01
+PrivateBuild=2005.03.28.01
 [Excluded Packages]
-D:\Program Files\Eureka for Delphi 5\ExceptionExpert5.bpl=Eureka exception log 3.1
+$(DELPHI)\Bin\dclmid50.bpl=Borland MIDAS Components
+$(DELPHI)\Projects\Bpl\dclusr50.bpl=Borland User Components
 [HistoryLists\hlUnitAliases]
 Count=1
 Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;

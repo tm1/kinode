@@ -33,6 +33,8 @@ contains
   THostInfoUnit in 'THostInfoUnit.pas',
   StrConsts in 'StrConsts.pas',
   ShpCtrl2 in 'ShpCtrl2.pas',
-  WcBitBtn in 'WcBitBtn.pas';
+  WcBitBtn in 'WcBitBtn.pas',
+  FrmRstr in 'FrmRstr.pas',
+  XPMenu in 'XPMenu.pas';
 
 end.
