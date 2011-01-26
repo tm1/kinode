@@ -80,7 +80,7 @@ OriginalFilename=kinode.exe
 ProductName=KinoDE
 ProductVersion=1.2.8.x
 Comments=for internal use only
-PrivateBuild=2005.04.20.01
+PrivateBuild=2005.04.21.01
 [Excluded Packages]
 $(DELPHI)\Bin\dclmid50.bpl=Borland MIDAS Components
 [HistoryLists\hlUnitAliases]

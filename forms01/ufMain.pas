@@ -544,7 +544,7 @@ begin
   if LoadInitParameterInt(s_Preferences_Section, s_PrintMaketHorzShift, Print_Maket_Horz_Shift,
     tmp_Print_Maket_Horz_Shift) then
   begin
-    if (tmp_Print_Maket_Horz_Shift > 1000) and (tmp_Print_Maket_Horz_Shift < 1000) then
+    if (tmp_Print_Maket_Horz_Shift > -1000) and (tmp_Print_Maket_Horz_Shift < 1000) then
       Print_Maket_Horz_Shift := tmp_Print_Maket_Horz_Shift;
   end;
   // --------------------------------------------------------------------------
@@ -553,7 +553,7 @@ begin
   if LoadInitParameterInt(s_Preferences_Section, s_PrintMaketVertShift, Print_Maket_Vert_Shift,
     tmp_Print_Maket_Vert_Shift) then
   begin
-    if (tmp_Print_Maket_Vert_Shift > 1000) and (tmp_Print_Maket_Vert_Shift < 1000) then
+    if (tmp_Print_Maket_Vert_Shift > -1000) and (tmp_Print_Maket_Vert_Shift < 1000) then
       Print_Maket_Vert_Shift := tmp_Print_Maket_Vert_Shift;
   end;
   // --------------------------------------------------------------------------
