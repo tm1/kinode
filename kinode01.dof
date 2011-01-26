@@ -61,7 +61,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=2
 Release=8
-Build=128
+Build=129
 Debug=0
 PreRelease=0
 Special=0
@@ -72,15 +72,15 @@ CodePage=1251
 [Version Info Keys]
 CompanyName=Otau Cinema
 FileDescription=KinoDE project
-FileVersion=1.2.8.128
+FileVersion=1.2.8.129
 InternalName=kinode
 LegalCopyright=n0mad eagle eye
-LegalTrademarks=
+LegalTrademarks=for internal use only
 OriginalFilename=kinode.exe
 ProductName=KinoDE
 ProductVersion=1.2.8.x
-Comments=for internal use only
-PrivateBuild=2005.04.21.01
+Comments=2005.05.15.01
+PrivateBuild=2005.05.15.01
 [Excluded Packages]
 $(DELPHI)\Bin\dclmid50.bpl=Borland MIDAS Components
 [HistoryLists\hlUnitAliases]

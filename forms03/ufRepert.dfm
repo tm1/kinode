@@ -95,7 +95,7 @@ object fm_Repert: Tfm_Repert
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label4: TLabel
+      object lbl_Seans: TLabel
         Left = 16
         Top = 72
         Width = 85
@@ -109,7 +109,7 @@ object fm_Repert: Tfm_Repert
         Font.Style = [fsBold]
         ParentFont = False
       end
-      object Label2: TLabel
+      object lbl_Film: TLabel
         Left = 160
         Top = 72
         Width = 109

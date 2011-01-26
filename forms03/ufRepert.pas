@@ -36,10 +36,10 @@ type
     dsrc_Lookup_Film: TDataSource;
     dtp_Date_Filt: TDateTimePicker;
     lbl_Zal: TLabel;
-    Label4: TLabel;
+    lbl_Seans: TLabel;
     dbcm_Seans: TDBLookupComboBox;
     bt_Seans: TWc_BitBtn;
-    Label2: TLabel;
+    lbl_Film: TLabel;
     dbcm_Film: TDBLookupComboBox;
     bt_Film: TWc_BitBtn;
     lbl_Tarif: TLabel;
@@ -245,8 +245,6 @@ begin
     begin
       // dm_Base.ds_Repert
       DisableControls;
-      // chb_FiltrateZal.Enabled := false;
-      // chb_FiltrateDate.Enabled := false;
       cmb_FiltrateDate.Enabled := false;
       cmb_FiltrateZal.Enabled := false;
       sb_Up.Enabled := false;
@@ -315,8 +313,6 @@ begin
       sb_Today.Enabled := true;
       cmb_FiltrateDate.Enabled := true;
       cmb_FiltrateZal.Enabled := true;
-      // chb_FiltrateZal.Enabled := true;
-      // chb_FiltrateDate.Enabled := true;
       EnableControls;
     end;
   // --------------------------------------------------------------------------

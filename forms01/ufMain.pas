@@ -1946,7 +1946,7 @@ procedure Tfm_Main.acAbonJournalExecute(Sender: TObject);
 begin
   if TestDBConnect then
   begin
-    acAbJnlShowModal(Cur_Date);
+    acAbJnlShowModal(Cur_Date, Cur_Zal_Kod);
     // Process_Date_Change(nil, True, gg_Progress);
   end;
 end;

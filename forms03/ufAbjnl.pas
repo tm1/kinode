@@ -31,9 +31,11 @@ type
     gb_Edit: TGroupBox;
     pn_Top: TPanel;
     bt_Refresh: TBitBtn;
+    lbl_Zal: TLabel;
+    dbcm_Zal: TComboBox;
     dsrc_Lookup_Price: TDataSource;
     dtp_Date_Filt: TDateTimePicker;
-    Label2: TLabel;
+    lbl_Price: TLabel;
     dbcm_Price: TDBLookupComboBox;
     bt_Price: TWc_BitBtn;
     pn_Bottom: TPanel;
@@ -43,17 +45,17 @@ type
     sb_Down: TSpeedButton;
     sb_Today: TSpeedButton;
     cmb_FiltrateDate: TComboBox;
+    cmb_FiltrateZal: TComboBox;
     bt_Price_Last: TWc_BitBtn;
     bt_Cheq: TBitBtn;
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure dbcm_Date_Change(Sender: TObject);
+    procedure dbcm_Date_Or_Zal_Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Abjnl_OnDataChange(Sender: TObject; Field: TField);
     procedure Abjnl_AfterInsert(DataSet: TDataSet);
     procedure Abjnl_BeforePost(DataSet: TDataSet);
     procedure FormDestroy(Sender: TObject);
-    procedure bt_SeansClick(Sender: TObject);
     procedure bt_PriceClick(Sender: TObject);
     procedure bt_Price_LastClick(Sender: TObject);
     procedure sb_UpClick(Sender: TObject);
@@ -65,9 +67,7 @@ type
   private
     { Private declarations }
     FNotYetActivated: Boolean;
-    FSeansActive: Boolean;
     FPriceActive: Boolean;
-    FTariffActive: Boolean;
     FOnDataChangeOldEv: TDataChangeEvent;
     FAfterInsertOldEv: TDataSetNotifyEvent;
     FBeforePostOldEv: TDataSetNotifyEvent;
@@ -75,11 +75,12 @@ type
     { Public declarations }
   end;
 
-procedure acAbjnlShowModal(v_Abjnl_Date: TDateTime);
+procedure acAbjnlShowModal(v_Abjnl_Date: TDateTime; v_Abjnl_Odeum: Integer);
 
 var
   fm_Abjnl: Tfm_Abjnl;
   pm_Abjnl_Date: TDateTime;
+  pm_Abjnl_Odeum: Integer;
 
 implementation
 
@@ -91,7 +92,7 @@ uses
 const
   UnitName: string = 'ufAbjnl';
 
-procedure acAbjnlShowModal(v_Abjnl_Date: TDateTime);
+procedure acAbjnlShowModal(v_Abjnl_Date: TDateTime; v_Abjnl_Odeum: Integer);
 const
   ProcName: string = 'acAbjnlShowModal';
 begin
@@ -103,6 +104,7 @@ begin
   // --------------------------------------------------------------------------
   try
     pm_Abjnl_Date := v_Abjnl_Date;
+    pm_Abjnl_Odeum := v_Abjnl_Odeum;
     Application.CreateForm(Tfm_Abjnl, fm_Abjnl);
     DEBUGMessEnh(0, UnitName, ProcName, fm_Abjnl.Name + '.ShowModal');
     fm_Abjnl.ShowModal;
@@ -120,16 +122,45 @@ const
   ProcName: string = 'FormActivate';
 var
   OldCursor: TCursor;
+  Old_Zal_Indx: Integer;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
   // --------------------------------------------------------------------------
+  {
+  if Assigned(dbcm_Zal.ListSource) then
+    if Assigned(dbcm_Zal.ListSource.DataSet) then
+    begin
+      dbcm_Zal.ListSource.DataSet.Active := true;
+      dbcm_Zal.ListSource.DataSet.Last;
+      dbcm_Zal.ListSource.DataSet.First;
+    end;
+  }
   OldCursor := Screen.Cursor;
   try
     Screen.Cursor := crSQLWait;
-    with cmb_FiltrateDate do
+    with dbcm_Zal, dm_Base do
     begin
+      Old_Zal_Indx := ItemIndex;
+      if (Old_Zal_Indx < 0) then
+        Old_Zal_Indx := 0;
+      ds_Zal.Close;
+      ds_Zal.Prepare;
+      ds_Zal.Open;
+      Combo_Load_Zal(ds_Zal, Items);
+      if Items.Count > 0 then
+        ItemIndex := 0;
+      if Old_Zal_Indx < Items.Count then
+        ItemIndex := Old_Zal_Indx;
       if FNotYetActivated then
       begin
+        {
+        Comp := Self.FindComponent(s_Reposition_Name);
+        if (Comp is TPanel) and (not (Comp.Tag and 1 = 1)) then
+          if Assigned((Comp as TPanel).OnDblClick) then
+          begin
+            (Comp as TPanel).OnDblClick(nil);
+          end;
+        }
         Activate_After_Once(nil);
         FNotYetActivated := False;
       end
@@ -143,8 +174,8 @@ begin
         dbcm_Price.ListSource.DataSet.Active := true;
         dbcm_Price.ListSource.DataSet.Last;
         dbcm_Price.ListSource.DataSet.First;
-        dbcm_Price.DropDownWidth := 0;
-        dbcm_Price.DropDownWidth := dbcm_Price.Width + cmb_FiltrateDate.Width;
+        // dbcm_Price.DropDownWidth := 0;
+        // dbcm_Price.DropDownWidth := dbcm_Price.Width + cmb_FiltrateDate.Width;
       end;
   finally
     Screen.Cursor := OldCursor;
@@ -166,10 +197,11 @@ begin
   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
 end;
 
-procedure Tfm_Abjnl.dbcm_Date_Change(Sender: TObject);
+procedure Tfm_Abjnl.dbcm_Date_Or_Zal_Change(Sender: TObject);
 const
-  ProcName: string = 'dbcm_Date_Change';
+  ProcName: string = 'dbcm_Date_Or_Zal_Change';
 var
+  index: integer;
   OldCursor: TCursor;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
@@ -180,24 +212,49 @@ begin
       // dm_Base.ds_Abjnl
       DisableControls;
       cmb_FiltrateDate.Enabled := false;
+      cmb_FiltrateZal.Enabled := false;
       sb_Up.Enabled := false;
       sb_Down.Enabled := false;
       sb_Today.Enabled := false;
+      index := 0;
+      try
+        if dbcm_Zal.ItemIndex > -1 then
+          index := Integer(dbcm_Zal.Items.Objects[dbcm_Zal.ItemIndex]);
+      except
+        index := 0;
+      end;
       OldCursor := Screen.Cursor;
       try
         Screen.Cursor := crSQLWait;
         try
           Close;
           // -----------------------------------------------------------
+          if Assigned(Params.FindParam(s_IN_FILT_ODEUM)) then
+            ParamByName(s_IN_FILT_ODEUM).AsInteger := index;
           if Assigned(Params.FindParam(s_IN_FILT_DATE)) then
             ParamByName(s_IN_FILT_DATE).AsDate := dtp_Date_Filt.Date;
           // -----------------------------------------------------------
-          if Assigned(Params.FindParam(s_IN_FILT_MODE)) then
-            case cmb_FiltrateDate.ItemIndex of
-              0: ParamByName(s_IN_FILT_MODE).AsInteger := 0;
-              1: ParamByName(s_IN_FILT_MODE).AsInteger := 1;
+          if Assigned(Params.FindParam(s_IN_FILT_MODE_ODEUM)) then
+            case cmb_FiltrateZal.ItemIndex of
+              0:
+                ParamByName(s_IN_FILT_MODE_ODEUM).AsInteger := 0;
+              1:
+                ParamByName(s_IN_FILT_MODE_ODEUM).AsInteger := 1;
+              2:
+                begin
+                  ParamByName(s_IN_FILT_MODE_ODEUM).AsInteger := 0;
+                  if Assigned(Params.FindParam(s_IN_FILT_ODEUM)) then
+                    ParamByName(s_IN_FILT_ODEUM).AsInteger := -1;
+                end
             else
-              ParamByName(s_IN_FILT_MODE).AsInteger := 0;
+              ParamByName(s_IN_FILT_MODE_ODEUM).AsInteger := 0;
+            end;
+          if Assigned(Params.FindParam(s_IN_FILT_MODE_DATE)) then
+            case cmb_FiltrateDate.ItemIndex of
+              0: ParamByName(s_IN_FILT_MODE_DATE).AsInteger := 0;
+              1: ParamByName(s_IN_FILT_MODE_DATE).AsInteger := 1;
+            else
+              ParamByName(s_IN_FILT_MODE_DATE).AsInteger := 0;
             end;
           // -----------------------------------------------------------
           Prepare;
@@ -221,8 +278,7 @@ begin
       sb_Down.Enabled := true;
       sb_Today.Enabled := true;
       cmb_FiltrateDate.Enabled := true;
-      // chb_FiltrateZal.Enabled := true;
-      // chb_FiltrateDate.Enabled := true;
+      cmb_FiltrateZal.Enabled := true;
       EnableControls;
     end;
   // --------------------------------------------------------------------------
@@ -236,9 +292,7 @@ begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
   // --------------------------------------------------------------------------
   FNotYetActivated := true;
-  FSeansActive := false;
   FPriceActive := false;
-  FTariffActive := false;
   // --------------------------------------------------------------------------
   if Assigned(dbcm_Price.ListSource) then
     if Assigned(dbcm_Price.ListSource.DataSet) then
@@ -246,6 +300,8 @@ begin
   // --------------------------------------------------------------------------
   if cmb_FiltrateDate.Items.Count > 0 then
     cmb_FiltrateDate.ItemIndex := 0;
+  if cmb_FiltrateZal.Items.Count > 0 then
+    cmb_FiltrateZal.ItemIndex := 0;
   // --------------------------------------------------------------------------
   dtp_Date_Filt.Date := pm_Abjnl_Date;
   // --------------------------------------------------------------------------
@@ -342,6 +398,8 @@ end;
 procedure Tfm_Abjnl.Abjnl_AfterInsert(DataSet: TDataSet);
 const
   ProcName: string = 'Abjnl_AfterInsert';
+var
+  index: integer;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
   // --------------------------------------------------------------------------
@@ -353,6 +411,15 @@ begin
         FN(s_ABJNL_STATE).AsInteger := 1;
       if Assigned(FN(s_ABJNL_SALE_DATE)) then
         FN(s_ABJNL_SALE_DATE).AsDateTime := dtp_Date_Filt.Date;
+      if Assigned(FN(s_ABJNL_ODEUM_KOD)) then
+      begin
+        try
+          index := Integer(dbcm_Zal.Items.Objects[dbcm_Zal.ItemIndex]);
+        except
+          index := 0;
+        end;
+        FN(s_ABJNL_ODEUM_KOD).AsInteger := index;
+      end;
     end;
   if Assigned(FAfterInsertOldEv) then
   try
@@ -377,6 +444,18 @@ begin
     with (dsrc_Data.Dataset as TpFIBDataSet) do
     begin
       // dm_Base.ds_Abjnl
+      if Assigned(FN(s_ABJNL_ODEUM_KOD)) and Assigned(FN(s_ABJNL_ODEUM_VER)) then
+      begin
+        try
+          new_kod := FN(s_ABJNL_ODEUM_KOD).NewValue;
+          old_kod := FN(s_ABJNL_ODEUM_KOD).OldValue;
+          if new_kod <> old_kod then
+            FN(s_ABJNL_ODEUM_VER).AsVariant := Null;
+        finally
+          new_kod := 0;
+          old_kod := 0;
+        end;
+      end;
       if Assigned(FN(s_ABJNL_PRICE_KOD)) and Assigned(FN(s_ABJNL_PRICE_VER)) then
       begin
         try
@@ -430,13 +509,6 @@ begin
     end;
   // --------------------------------------------------------------------------
   DEBUGMessEnh(-1, UnitName, ProcName, '<-');
-end;
-
-procedure Tfm_Abjnl.bt_SeansClick(Sender: TObject);
-begin
-  //
-  acSeansShowModal(nil);
-  FormActivate(nil);
 end;
 
 procedure Tfm_Abjnl.bt_PriceClick(Sender: TObject);
@@ -520,9 +592,11 @@ end;
 
 procedure Tfm_Abjnl.FormResize(Sender: TObject);
 begin
+  {
   dbcm_Price.DropDownWidth := 0;
   if (Self.WindowState = wsMaximized) then
     dbcm_Price.DropDownWidth := dbcm_Price.Width + cmb_FiltrateDate.Width;
+  }  
   // dbcm_Price.Update;
 end;
 

@@ -25,14 +25,14 @@ object fm_Abjnl: Tfm_Abjnl
     Left = 0
     Top = 0
     Width = 732
-    Height = 121
+    Height = 169
     Align = alTop
     TabOrder = 1
     object gb_Edit: TGroupBox
       Left = 1
       Top = 1
       Width = 730
-      Height = 119
+      Height = 167
       Align = alClient
       Caption = 'Редактирование'
       Constraints.MinWidth = 336
@@ -82,9 +82,23 @@ object fm_Abjnl: Tfm_Abjnl
         ParentFont = False
         Transparent = True
       end
-      object Label2: TLabel
-        Left = 280
+      object lbl_Zal: TLabel
+        Left = 296
         Top = 16
+        Width = 23
+        Height = 13
+        Caption = '&Зал'
+        FocusControl = dbcm_Zal
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object lbl_Price: TLabel
+        Left = 24
+        Top = 72
         Width = 165
         Height = 13
         Caption = '&Название типа абонемента'
@@ -256,13 +270,25 @@ object fm_Abjnl: Tfm_Abjnl
         Layout = blGlyphTop
         OnClick = sb_TodayClick
       end
+      object dbcm_Zal: TComboBox
+        Left = 256
+        Top = 40
+        Width = 249
+        Height = 21
+        Style = csDropDownList
+        Anchors = [akLeft, akTop, akRight]
+        DropDownCount = 14
+        ItemHeight = 13
+        TabOrder = 1
+        OnChange = dbcm_Date_Or_Zal_Change
+      end
       object bt_AddRec: TBitBtn
         Left = 8
-        Top = 80
+        Top = 128
         Width = 97
         Height = 25
         Caption = '&Добавить'
-        TabOrder = 4
+        TabOrder = 7
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           04000000000068010000C40E0000C40E00001000000000000000000000000000
@@ -284,7 +310,7 @@ object fm_Abjnl: Tfm_Abjnl
       end
       object bt_EditRec: TBitBtn
         Left = 216
-        Top = 80
+        Top = 128
         Width = 97
         Height = 25
         Caption = '&Запомнить'
@@ -294,7 +320,7 @@ object fm_Abjnl: Tfm_Abjnl
         Font.Name = 'MS Sans Serif'
         Font.Style = []
         ParentFont = False
-        TabOrder = 7
+        TabOrder = 9
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -316,11 +342,11 @@ object fm_Abjnl: Tfm_Abjnl
       end
       object bt_DeleteRec: TBitBtn
         Left = 112
-        Top = 80
+        Top = 128
         Width = 97
         Height = 25
         Caption = '&Удалить'
-        TabOrder = 6
+        TabOrder = 8
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           04000000000068010000C40E0000C40E00001000000000000000000000000000
@@ -342,11 +368,11 @@ object fm_Abjnl: Tfm_Abjnl
       end
       object bt_Cancel: TBitBtn
         Left = 320
-        Top = 80
+        Top = 128
         Width = 97
         Height = 25
         Caption = '&Отменить'
-        TabOrder = 8
+        TabOrder = 10
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -368,11 +394,11 @@ object fm_Abjnl: Tfm_Abjnl
       end
       object bt_Refresh: TBitBtn
         Left = 424
-        Top = 80
+        Top = 128
         Width = 97
         Height = 25
         Caption = 'Об&новить'
-        TabOrder = 9
+        TabOrder = 11
         Glyph.Data = {
           DE010000424DDE01000000000000760000002800000024000000120000000100
           0400000000006801000000000000000000001000000000000000000000000000
@@ -405,12 +431,12 @@ object fm_Abjnl: Tfm_Abjnl
         Kind = dtkDate
         ParseInput = False
         TabOrder = 0
-        OnChange = dbcm_Date_Change
+        OnChange = dbcm_Date_Or_Zal_Change
       end
       object dbcm_Price: TDBLookupComboBox
-        Left = 264
-        Top = 40
-        Width = 185
+        Left = 8
+        Top = 96
+        Width = 441
         Height = 21
         Anchors = [akLeft, akTop, akRight]
         DataField = 'ABJNL_PRICE_KOD'
@@ -420,15 +446,15 @@ object fm_Abjnl: Tfm_Abjnl
         ListField = 'PRICE_KOD;PRICE_VER;ABONEM_DESC'
         ListFieldIndex = 2
         ListSource = dsrc_Lookup_Price
-        TabOrder = 1
+        TabOrder = 4
       end
       object bt_Price: TWc_BitBtn
         Left = 477
-        Top = 37
+        Top = 93
         Width = 25
         Height = 27
         Anchors = [akTop, akRight]
-        TabOrder = 3
+        TabOrder = 6
         OnClick = bt_PriceClick
         Glyph.Data = {
           36040000424D3604000000000000360000002800000010000000100000000100
@@ -468,25 +494,40 @@ object fm_Abjnl: Tfm_Abjnl
       end
       object cmb_FiltrateDate: TComboBox
         Left = 528
-        Top = 40
+        Top = 16
         Width = 185
         Height = 21
         Style = csDropDownList
         Anchors = [akTop, akRight]
         ItemHeight = 13
-        TabOrder = 5
-        OnChange = dbcm_Date_Change
+        TabOrder = 2
+        OnChange = dbcm_Date_Or_Zal_Change
         Items.Strings = (
           'Выбранный день'
           'Выбранный день и позже')
       end
+      object cmb_FiltrateZal: TComboBox
+        Left = 528
+        Top = 42
+        Width = 185
+        Height = 21
+        Style = csDropDownList
+        Anchors = [akTop, akRight]
+        ItemHeight = 13
+        TabOrder = 3
+        OnChange = dbcm_Date_Or_Zal_Change
+        Items.Strings = (
+          'Выбранный зал'
+          'Все залы в том же кинотеатре'
+          'Все залы всех кинотеатров')
+      end
       object bt_Price_Last: TWc_BitBtn
         Left = 454
-        Top = 37
+        Top = 93
         Width = 19
         Height = 27
         Anchors = [akTop, akRight]
-        TabOrder = 2
+        TabOrder = 5
         OnClick = bt_Price_LastClick
         Glyph.Data = {
           56040000424D560400000000000036000000280000000F000000160000000100
@@ -527,11 +568,11 @@ object fm_Abjnl: Tfm_Abjnl
       end
       object bt_Cheq: TBitBtn
         Left = 528
-        Top = 80
+        Top = 128
         Width = 97
         Height = 25
         Caption = '&Чек'
-        TabOrder = 10
+        TabOrder = 12
         OnClick = bt_CheqClick
         Glyph.Data = {
           E6040000424DE604000000000000360000002800000014000000140000000100
@@ -579,9 +620,9 @@ object fm_Abjnl: Tfm_Abjnl
   end
   object dbgr_Data: TDBGrid
     Left = 0
-    Top = 121
+    Top = 169
     Width = 732
-    Height = 311
+    Height = 263
     Align = alClient
     DataSource = dsrc_Data
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -618,6 +659,29 @@ object fm_Abjnl: Tfm_Abjnl
         Font.Style = [fsBold]
         Title.Caption = 'Дата'
         Width = 72
+        Visible = True
+      end
+      item
+        Color = clBtnHighlight
+        Expanded = False
+        FieldName = 'ABJNL_ODEUM_KOD'
+        Title.Caption = 'Код зала'
+        Width = 1
+        Visible = True
+      end
+      item
+        Color = clBtnHighlight
+        Expanded = False
+        FieldName = 'ABJNL_ODEUM_VER'
+        Title.Caption = 'Версия зала'
+        Width = 1
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ODEUM_DESC'
+        Title.Caption = 'Зал'
+        Width = 128
         Visible = True
       end
       item
@@ -663,13 +727,14 @@ object fm_Abjnl: Tfm_Abjnl
         Expanded = False
         FieldName = 'PRICE_VALUE'
         Title.Caption = 'Цена'
-        Width = 72
+        Width = 48
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'ABJNL_COUNT'
         Title.Caption = 'Количество'
+        Width = 32
         Visible = True
       end
       item
