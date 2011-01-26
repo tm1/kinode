@@ -279,7 +279,7 @@ begin
                   if (ssTmp.SeatState in [tsFree]) then
                     inc(Count_Local_Sel)
                   else if (ssTmp.SeatState in [tsRealized]) then
-                    if (not ssTmp.Cheqed) then
+                    if (not ssTmp.Cheqed) and (ssTmp.SaleCost > 0) then
                     begin
                       inc(Count_Local_Sold);
                       Sum_Local_Sold := Sum_Local_Sold + ssTmp.SaleCost;

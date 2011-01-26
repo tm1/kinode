@@ -341,7 +341,7 @@ object fm_Main: Tfm_Main
     object pn_Tariff: TPanel
       Left = 226
       Top = 2
-      Width = 209
+      Width = 129
       Height = 32
       Align = alLeft
       AutoSize = True
@@ -365,7 +365,7 @@ object fm_Main: Tfm_Main
       object st_Tariff: TSpeedShapeBtnEx
         Left = 52
         Top = 5
-        Width = 149
+        Width = 69
         Height = 23
         ParentFont = False
         ParentShowHint = False
@@ -391,9 +391,9 @@ object fm_Main: Tfm_Main
       end
     end
     object pn_Info: TPanel
-      Left = 435
+      Left = 355
       Top = 2
-      Width = 55
+      Width = 151
       Height = 32
       Align = alClient
       AutoSize = True
@@ -403,7 +403,7 @@ object fm_Main: Tfm_Main
       object st_Info: TSpeedShapeBtnEx
         Left = 4
         Top = 5
-        Width = 46
+        Width = 142
         Height = 23
         Anchors = [akLeft, akTop, akRight]
         ParentFont = False
@@ -430,9 +430,9 @@ object fm_Main: Tfm_Main
       end
     end
     object pn_Zal: TPanel
-      Left = 490
+      Left = 506
       Top = 2
-      Width = 283
+      Width = 267
       Height = 32
       Align = alRight
       AutoSize = True
@@ -456,9 +456,9 @@ object fm_Main: Tfm_Main
         OnClick = SaveOdeumMapToFile
       end
       object cmb_Zal: TComboBox
-        Left = 70
+        Left = 72
         Top = 6
-        Width = 209
+        Width = 191
         Height = 21
         Cursor = crHandPoint
         Style = csDropDownList
