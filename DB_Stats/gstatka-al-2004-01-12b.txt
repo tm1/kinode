@@ -1,0 +1,3025 @@
+. 
+----------------------------------------------------------------------------------------- 
+gstat -a -r -s -u "devel001" -p "primarykey" -z "localhost:C:\FB_DATA\kappa.fdb" 
+----------------------------------------------------------------------------------------- 
+è≠ 31.01.2005 
+ 0:03 
+----------------------------------------------------------------------------------------- 
+gstat version WI-V1.5.2.4721 Firebird 1.5
+
+Database "C:\FB_DATA\kappa.fdb"
+
+Database header page information:
+	Flags			0
+	Checksum		12345
+	Generation		91593
+	Page size		4096
+	ODS version		10.1
+	Oldest transaction	91448
+	Oldest active		91449
+	Oldest snapshot		91449
+	Next transaction	91452
+	Bumped transaction	1
+	Sequence number		0
+	Next attachment ID	132
+	Implementation ID	16
+	Shadow count		0
+	Page buffers		0
+	Next header page	0
+	Database dialect	3
+	Creation date		Dec 26, 2004 18:39:07
+	Attributes		force write
+
+    Variable header data:
+	Sweep interval:		20000
+	*END*
+
+
+Database file sequence:
+File C:\FB_DATA\kappa.fdb is the only file
+
+Database log page information:
+	Creation date
+	Log flags:	2
+		No write ahead log
+
+	Next log page:	0
+
+    Variable log data:
+	Control Point 1:
+		File name:	
+		Partition offset: 0 	Seqno: 0 	Offset: 0 
+	Control Point 2:
+		File name:	
+		Partition offset: 0 	Seqno: 0 	Offset: 0 
+	Current File:
+		File name:		
+		Partition offset: 0 	Seqno: 0 	Offset: 0 
+	*END*
+	Firebird/x86/Windows NT (access method), version "WI-V1.5.2.4721 Firebird 1.5"
+	Firebird/x86/Windows NT (remote server), version "WI-V1.5.2.4721 Firebird 1.5/tcp (xf-ea)/P10"
+	Firebird/x86/Windows NT (remote interface), version "WI-V1.5.2.4721 Firebird 1.5/tcp (xf-ea)/P10"
+	on disk structure version 10.1
+
+Analyzing database pages ...
+
+FIB$DATASETS_INFO (128)
+    Primary pointer page: 405, Index root page: 406
+    Average record length: 60.27, total records: 33
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 6, data page slots: 6, average fill: 88%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 0
+	80 - 99% = 5
+
+    Index PK_FIB$DATASETS_INFO (0)
+	Depth: 1, leaf buckets: 1, nodes: 33
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+FIB$FIELDS_INFO (129)
+    Primary pointer page: 407, Index root page: 408
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index PK_FIB$FIELDS_INFO (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+IBE$PARAMS_HISTORY (135)
+    Primary pointer page: 420, Index root page: 421
+    Average record length: 32.84, total records: 37
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 7, data page slots: 7, average fill: 77%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 1
+	80 - 99% = 5
+
+    Index RDB$PRIMARY2 (0)
+	Depth: 1, leaf buckets: 1, nodes: 37
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+IBE$VERSION_HISTORY (157)
+    Primary pointer page: 464, Index root page: 465
+    Average record length: 560.73, total records: 386
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 179, data page slots: 179, average fill: 79%
+    Fill distribution:
+	 0 - 19% = 4
+	20 - 39% = 2
+	40 - 59% = 23
+	60 - 79% = 45
+	80 - 99% = 105
+
+    Index RDB$PRIMARY1 (0)
+	Depth: 1, leaf buckets: 1, nodes: 386
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+RDB$CHARACTER_SETS (28)
+    Primary pointer page: 60, Index root page: 61
+    Average record length: 36.02, total records: 44
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 57%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_19 (0)
+	Depth: 1, leaf buckets: 1, nodes: 44
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_25 (1)
+	Depth: 1, leaf buckets: 1, nodes: 44
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$CHECK_CONSTRAINTS (24)
+    Primary pointer page: 52, Index root page: 53
+    Average record length: 34.79, total records: 66
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 2, data page slots: 2, average fill: 42%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 1
+	80 - 99% = 0
+
+    Index RDB$INDEX_14 (0)
+	Depth: 1, leaf buckets: 1, nodes: 66
+	Average data length: 4.00, total dup: 26, max dup: 1
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_40 (1)
+	Depth: 1, leaf buckets: 1, nodes: 66
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$COLLATIONS (29)
+    Primary pointer page: 62, Index root page: 63
+    Average record length: 25.08, total records: 119
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 2, data page slots: 2, average fill: 61%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 1
+	80 - 99% = 0
+
+    Index RDB$INDEX_20 (0)
+	Depth: 1, leaf buckets: 1, nodes: 119
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_26 (1)
+	Depth: 1, leaf buckets: 1, nodes: 119
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$DATABASE (1)
+    Primary pointer page: 6, Index root page: 7
+    Average record length: 18.00, total records: 1
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 1%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+RDB$DEPENDENCIES (13)
+    Primary pointer page: 30, Index root page: 31
+    Average record length: 55.88, total records: 3084
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 74, data page slots: 74, average fill: 75%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 73
+	80 - 99% = 0
+
+    Index RDB$INDEX_27 (0)
+	Depth: 2, leaf buckets: 9, nodes: 3084
+	Average data length: 0.00, total dup: 2715, max dup: 68
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 6
+	    60 - 79% = 3
+	    80 - 99% = 0
+
+    Index RDB$INDEX_28 (1)
+	Depth: 2, leaf buckets: 7, nodes: 3084
+	Average data length: 0.00, total dup: 2963, max dup: 316
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 5
+	    80 - 99% = 1
+
+RDB$EXCEPTIONS (30)
+    Primary pointer page: 64, Index root page: 65
+    Average record length: 54.67, total records: 3
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 9%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_23 (0)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 9.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_24 (1)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$FIELDS (2)
+    Primary pointer page: 8, Index root page: 9
+    Average record length: 30.86, total records: 1178
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 23, data page slots: 23, average fill: 69%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 18
+	80 - 99% = 4
+
+    Index RDB$INDEX_2 (0)
+	Depth: 2, leaf buckets: 3, nodes: 1178
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 2
+	    80 - 99% = 1
+
+RDB$FIELD_DIMENSIONS (21)
+    Primary pointer page: 46, Index root page: 47
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_36 (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$FILES (10)
+    Primary pointer page: 24, Index root page: 25
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+RDB$FILTERS (16)
+    Primary pointer page: 36, Index root page: 37
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_17 (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$FORMATS (8)
+    Primary pointer page: 20, Index root page: 21
+    Average record length: 16.42, total records: 57
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 4, data page slots: 4, average fill: 72%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 3
+
+    Index RDB$INDEX_16 (0)
+	Depth: 1, leaf buckets: 1, nodes: 57
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$FUNCTIONS (14)
+    Primary pointer page: 32, Index root page: 33
+    Average record length: 65.50, total records: 10
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 34%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_9 (0)
+	Depth: 1, leaf buckets: 1, nodes: 10
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$FUNCTION_ARGUMENTS (15)
+    Primary pointer page: 34, Index root page: 35
+    Average record length: 32.29, total records: 21
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 25%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_10 (0)
+	Depth: 1, leaf buckets: 1, nodes: 21
+	Average data length: 3.00, total dup: 11, max dup: 2
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$GENERATORS (20)
+    Primary pointer page: 44, Index root page: 45
+    Average record length: 26.59, total records: 37
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 40%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_11 (0)
+	Depth: 1, leaf buckets: 1, nodes: 37
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$INDEX_SEGMENTS (3)
+    Primary pointer page: 10, Index root page: 11
+    Average record length: 45.75, total records: 435
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 10, data page slots: 10, average fill: 67%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 9
+	80 - 99% = 0
+
+    Index RDB$INDEX_6 (0)
+	Depth: 2, leaf buckets: 2, nodes: 435
+	Average data length: 3.00, total dup: 217, max dup: 8
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 2
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$INDICES (4)
+    Primary pointer page: 12, Index root page: 13
+    Average record length: 54.15, total records: 218
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 8, data page slots: 8, average fill: 53%
+    Fill distribution:
+	 0 - 19% = 3
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 5
+	80 - 99% = 0
+
+    Index RDB$INDEX_31 (1)
+	Depth: 1, leaf buckets: 1, nodes: 218
+	Average data length: 2.00, total dup: 157, max dup: 9
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_41 (2)
+	Depth: 1, leaf buckets: 1, nodes: 218
+	Average data length: 0.00, total dup: 200, max dup: 151
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_5 (0)
+	Depth: 1, leaf buckets: 1, nodes: 218
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+RDB$LOG_FILES (25)
+    Primary pointer page: 54, Index root page: 55
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+RDB$PAGES (0)
+    Primary pointer page: 3, Index root page: 4
+    Average record length: 14.95, total records: 138
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 2, data page slots: 2, average fill: 54%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 2
+	60 - 79% = 0
+	80 - 99% = 0
+
+RDB$PROCEDURES (26)
+    Primary pointer page: 56, Index root page: 57
+    Average record length: 82.33, total records: 88
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 72, data page slots: 72, average fill: 77%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 5
+	40 - 59% = 10
+	60 - 79% = 21
+	80 - 99% = 36
+
+    Index RDB$INDEX_21 (0)
+	Depth: 1, leaf buckets: 1, nodes: 88
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_22 (1)
+	Depth: 1, leaf buckets: 1, nodes: 88
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$PROCEDURE_PARAMETERS (27)
+    Primary pointer page: 58, Index root page: 59
+    Average record length: 52.85, total records: 974
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 23, data page slots: 23, average fill: 73%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 22
+	80 - 99% = 0
+
+    Index RDB$INDEX_18 (0)
+	Depth: 2, leaf buckets: 7, nodes: 974
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 5
+	    60 - 79% = 2
+	    80 - 99% = 0
+
+RDB$REF_CONSTRAINTS (23)
+    Primary pointer page: 50, Index root page: 51
+    Average record length: 71.53, total records: 66
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 2, data page slots: 2, average fill: 72%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 2
+	80 - 99% = 0
+
+    Index RDB$INDEX_13 (0)
+	Depth: 1, leaf buckets: 1, nodes: 66
+	Average data length: 9.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$RELATIONS (6)
+    Primary pointer page: 16, Index root page: 17
+    Average record length: 74.06, total records: 71
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 20, data page slots: 24, average fill: 64%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 4
+	40 - 59% = 3
+	60 - 79% = 5
+	80 - 99% = 7
+
+    Index RDB$INDEX_0 (0)
+	Depth: 1, leaf buckets: 1, nodes: 71
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_1 (1)
+	Depth: 1, leaf buckets: 1, nodes: 71
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$RELATION_CONSTRAINTS (22)
+    Primary pointer page: 48, Index root page: 49
+    Average record length: 70.83, total records: 213
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 6, data page slots: 6, average fill: 77%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 6
+	80 - 99% = 0
+
+    Index RDB$INDEX_12 (0)
+	Depth: 1, leaf buckets: 1, nodes: 213
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+    Index RDB$INDEX_42 (1)
+	Depth: 1, leaf buckets: 1, nodes: 213
+	Average data length: 6.00, total dup: 99, max dup: 5
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+    Index RDB$INDEX_43 (2)
+	Depth: 1, leaf buckets: 1, nodes: 213
+	Average data length: 6.00, total dup: 39, max dup: 39
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+RDB$RELATION_FIELDS (5)
+    Primary pointer page: 14, Index root page: 15
+    Average record length: 69.50, total records: 730
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 20, data page slots: 20, average fill: 78%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 17
+	80 - 99% = 3
+
+    Index RDB$INDEX_15 (2)
+	Depth: 2, leaf buckets: 8, nodes: 730
+	Average data length: 21.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 5
+	    60 - 79% = 2
+	    80 - 99% = 1
+
+    Index RDB$INDEX_3 (0)
+	Depth: 2, leaf buckets: 2, nodes: 730
+	Average data length: 1.00, total dup: 543, max dup: 105
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 1
+
+    Index RDB$INDEX_4 (1)
+	Depth: 2, leaf buckets: 2, nodes: 730
+	Average data length: 0.00, total dup: 659, max dup: 33
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+RDB$ROLES (31)
+    Primary pointer page: 66, Index root page: 67
+    Average record length: 26.50, total records: 6
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 6%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_39 (0)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$SECURITY_CLASSES (9)
+    Primary pointer page: 22, Index root page: 23
+    Average record length: 32.49, total records: 168
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 24, data page slots: 24, average fill: 49%
+    Fill distribution:
+	 0 - 19% = 7
+	20 - 39% = 6
+	40 - 59% = 1
+	60 - 79% = 1
+	80 - 99% = 9
+
+    Index RDB$INDEX_7 (0)
+	Depth: 1, leaf buckets: 1, nodes: 168
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$TRANSACTIONS (19)
+    Primary pointer page: 42, Index root page: 43
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_32 (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$TRIGGERS (12)
+    Primary pointer page: 28, Index root page: 29
+    Average record length: 63.26, total records: 304
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 86, data page slots: 86, average fill: 85%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 4
+	60 - 79% = 17
+	80 - 99% = 64
+
+    Index RDB$INDEX_38 (1)
+	Depth: 1, leaf buckets: 1, nodes: 304
+	Average data length: 1.00, total dup: 252, max dup: 15
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_8 (0)
+	Depth: 1, leaf buckets: 1, nodes: 304
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 1
+
+RDB$TRIGGER_MESSAGES (17)
+    Primary pointer page: 38, Index root page: 39
+    Average record length: 46.00, total records: 34
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 53%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_35 (0)
+	Depth: 1, leaf buckets: 1, nodes: 34
+	Average data length: 1.00, total dup: 11, max dup: 5
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$TYPES (11)
+    Primary pointer page: 26, Index root page: 27
+    Average record length: 45.60, total records: 182
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 4, data page slots: 4, average fill: 70%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 4
+	80 - 99% = 0
+
+    Index RDB$INDEX_37 (0)
+	Depth: 1, leaf buckets: 1, nodes: 182
+	Average data length: 3.00, total dup: 12, max dup: 1
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+RDB$USER_PRIVILEGES (18)
+    Primary pointer page: 40, Index root page: 41
+    Average record length: 58.37, total records: 1249
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 31, data page slots: 31, average fill: 75%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 30
+	80 - 99% = 0
+
+    Index RDB$INDEX_29 (0)
+	Depth: 2, leaf buckets: 3, nodes: 1249
+	Average data length: 0.00, total dup: 1117, max dup: 71
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 1
+	    80 - 99% = 1
+
+    Index RDB$INDEX_30 (1)
+	Depth: 2, leaf buckets: 4, nodes: 1249
+	Average data length: 1.00, total dup: 956, max dup: 289
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 2
+	    60 - 79% = 2
+	    80 - 99% = 0
+
+RDB$VIEW_RELATIONS (7)
+    Primary pointer page: 18, Index root page: 19
+    Average record length: 33.53, total records: 17
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 21%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index RDB$INDEX_33 (0)
+	Depth: 1, leaf buckets: 1, nodes: 17
+	Average data length: 1.00, total dup: 11, max dup: 3
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index RDB$INDEX_34 (1)
+	Depth: 1, leaf buckets: 1, nodes: 17
+	Average data length: 3.00, total dup: 9, max dup: 4
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_ABJNL (160)
+    Primary pointer page: 470, Index root page: 471
+    Average record length: 61.52, total records: 120
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 4, data page slots: 4, average fill: 58%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 3
+	80 - 99% = 0
+
+    Index FK_TB_ABJNL_TB_BRANCH (3)
+	Depth: 1, leaf buckets: 1, nodes: 120
+	Average data length: 0.00, total dup: 119, max dup: 119
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_ABJNL_TB_PRICE (5)
+	Depth: 1, leaf buckets: 1, nodes: 120
+	Average data length: 0.00, total dup: 117, max dup: 60
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_ABJNL_TB_SESSION (4)
+	Depth: 1, leaf buckets: 1, nodes: 120
+	Average data length: 1.00, total dup: 104, max dup: 17
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_ABJNL (2)
+	Depth: 1, leaf buckets: 1, nodes: 120
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ABJNL_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 120
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ABJNL_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 120
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_ABONEM (159)
+    Primary pointer page: 468, Index root page: 469
+    Average record length: 59.33, total records: 3
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 6%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_ABONEM_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 0.00, total dup: 2, max dup: 2
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_ABONEM_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 3.00, total dup: 2, max dup: 2
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_ABONEM (3)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ABONEM_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ABONEM_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ABONEM_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 33.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_BRANCH (130)
+    Primary pointer page: 409, Index root page: 410
+    Average record length: 38.40, total records: 10
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 14%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index PK_TB_BRANCH (2)
+	Depth: 1, leaf buckets: 1, nodes: 10
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_BRANCH_NAM (0)
+	Depth: 1, leaf buckets: 1, nodes: 10
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_BRANCH_SIGN (1)
+	Depth: 1, leaf buckets: 1, nodes: 10
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_CARD (131)
+    Primary pointer page: 411, Index root page: 412
+    Average record length: 88.36, total records: 105
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 4, data page slots: 4, average fill: 68%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 3
+
+    Index FK_TB_CARD_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 0.00, total dup: 104, max dup: 104
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_CARD_TB_KIND (5)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 0.00, total dup: 101, max dup: 96
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_CARD_TB_PERSON (6)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 0.00, total dup: 100, max dup: 53
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_CARD_TB_SESSION (7)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 0.00, total dup: 104, max dup: 104
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_CARD (3)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CARD_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CARD_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CARD_NUM (2)
+	Depth: 1, leaf buckets: 1, nodes: 105
+	Average data length: 9.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_CHANGELOG (132)
+    Primary pointer page: 413, Index root page: 414
+    Average record length: 42.97, total records: 36648
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 764, data page slots: 764, average fill: 71%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 10
+	40 - 59% = 24
+	60 - 79% = 729
+	80 - 99% = 0
+
+    Index PK_TB_CHANGELOG (0)
+	Depth: 2, leaf buckets: 214, nodes: 36648
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 70
+	    40 - 59% = 71
+	    60 - 79% = 35
+	    80 - 99% = 37
+
+    Index TB_CHANGELOG_IDX1 (1)
+	Depth: 2, leaf buckets: 113, nodes: 36648
+	Average data length: 0.00, total dup: 36429, max dup: 1761
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 34
+	    40 - 59% = 58
+	    60 - 79% = 16
+	    80 - 99% = 5
+
+TB_CINEMA (133)
+    Primary pointer page: 415, Index root page: 416
+    Average record length: 53.43, total records: 7
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 5, data page slots: 5, average fill: 68%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 2
+	60 - 79% = 2
+	80 - 99% = 1
+
+    Index FK_TB_CINEMA_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 0.00, total dup: 6, max dup: 6
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_CINEMA_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 1.00, total dup: 6, max dup: 6
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_CINEMA (3)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CINEMA_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CINEMA_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CINEMA_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 16.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_CLASS (134)
+    Primary pointer page: 418, Index root page: 419
+    Average record length: 61.71, total records: 7
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 14%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_CLASS_TB_BRANCH (5)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 0.00, total dup: 6, max dup: 6
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_CLASS_TB_SESSION (6)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 1.00, total dup: 6, max dup: 6
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_CLASS (4)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CLASS_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CLASS_FLAGS (1)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 31.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CLASS_LAST (2)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_CLASS_NAM (3)
+	Depth: 1, leaf buckets: 1, nodes: 7
+	Average data length: 26.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_COST (136)
+    Primary pointer page: 422, Index root page: 423
+    Average record length: 50.21, total records: 142
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 4, data page slots: 4, average fill: 59%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 3
+	80 - 99% = 0
+
+    Index FK_TB_COST_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 0.00, total dup: 141, max dup: 141
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_COST_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 0.00, total dup: 139, max dup: 123
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_COST_TB_TARIFF (6)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 0.00, total dup: 133, max dup: 23
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_COST_TB_TICKET (7)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 0.00, total dup: 129, max dup: 15
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_COST (3)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 4.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_COST_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_COST_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_COST_TARIFF_TICKET (2)
+	Depth: 1, leaf buckets: 1, nodes: 142
+	Average data length: 14.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+TB_DBUSER (137)
+    Primary pointer page: 424, Index root page: 425
+    Average record length: 128.13, total records: 8
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 29%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index PK_TB_DBUSER (2)
+	Depth: 1, leaf buckets: 1, nodes: 8
+	Average data length: 4.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_DBUSER_LAST_KOD (0)
+	Depth: 1, leaf buckets: 1, nodes: 8
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_DBUSER_NAM_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 8
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_FILM (138)
+    Primary pointer page: 426, Index root page: 427
+    Average record length: 390.83, total records: 6
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 60%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 1
+	80 - 99% = 0
+
+    Index FK_TB_FILM_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 0.00, total dup: 5, max dup: 5
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_FILM_TB_GENRE (5)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 2.00, total dup: 4, max dup: 2
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_FILM_TB_SESSION (6)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 6.00, total dup: 1, max dup: 1
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_FILM (3)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 4.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_FILM_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_FILM_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 4.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_FILM_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 23.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_GENRE (139)
+    Primary pointer page: 428, Index root page: 429
+    Average record length: 64.33, total records: 9
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 18%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_GENRE_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 0.00, total dup: 8, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_GENRE_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 7, max dup: 6
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_GENRE (3)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_GENRE_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_GENRE_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_GENRE_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 20.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_GLOBSET (140)
+    Primary pointer page: 430, Index root page: 431
+    Average record length: 292.00, total records: 1
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 8%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_GLOBSET_TB_BRANCH (1)
+	Depth: 1, leaf buckets: 1, nodes: 1
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_GLOBSET (0)
+	Depth: 1, leaf buckets: 1, nodes: 1
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_INVITER (141)
+    Primary pointer page: 432, Index root page: 433
+    Average record length: 51.00, total records: 6
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 10%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_INVITER_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 0.00, total dup: 5, max dup: 5
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_INVITER_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 1.00, total dup: 5, max dup: 5
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_INVITER (3)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_INVITER_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 8.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_INVITER_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_INVITER_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 21.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_KIND (142)
+    Primary pointer page: 434, Index root page: 435
+    Average record length: 53.00, total records: 5
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 9%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_KIND_TB_BRANCH (5)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 0.00, total dup: 4, max dup: 4
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_KIND_TB_SESSION (6)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 1.00, total dup: 4, max dup: 4
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_KIND (4)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_KIND_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 8.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_KIND_FLAGS (1)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 13.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_KIND_LAST (2)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_KIND_NAM (3)
+	Depth: 1, leaf buckets: 1, nodes: 5
+	Average data length: 16.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_LOCKOPER (143)
+    Primary pointer page: 436, Index root page: 437
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_LOCKOPER_TB_REPERT (2)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_LOCKOPER_TB_SESSION (3)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_LOCKOPER (1)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_LOCKOPER_REPERT_ROW_COL (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_LOCKUSER (144)
+    Primary pointer page: 438, Index root page: 439
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_LOCKUSER_TB_DBUSER (1)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_LOCKUSER (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_MAKET (145)
+    Primary pointer page: 440, Index root page: 441
+    Average record length: 0.00, total records: 0
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 0, data page slots: 0, average fill: 0%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_MAKET_TB_BRANCH (5)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_MAKET_TB_CLASS (6)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_MAKET_TB_ODEUM (7)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_MAKET_TB_SESSION (8)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_MAKET (4)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_MAKET_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_MAKET_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_MAKET_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_MAKET_ODEUM_CLASS (3)
+	Depth: 1, leaf buckets: 1, nodes: 0
+	Average data length: 0.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_ODEUM (146)
+    Primary pointer page: 442, Index root page: 443
+    Average record length: 65.33, total records: 9
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 2, data page slots: 2, average fill: 50%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 1
+
+    Index FK_TB_ODEUM_TB_BRANCH (5)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 0.00, total dup: 8, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_ODEUM_TB_CINEMA (6)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 5.00, total dup: 2, max dup: 1
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_ODEUM_TB_SESSION (7)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 8, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_ODEUM (4)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ODEUM_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ODEUM_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ODEUM_NAM_CINEMA (2)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 15.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_ODEUM_PREFIX (3)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_OPER (147)
+    Primary pointer page: 444, Index root page: 445
+    Average record length: 152.69, total records: 22199
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1115, data page slots: 1115, average fill: 87%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 26
+	60 - 79% = 21
+	80 - 99% = 1068
+
+    Index FK_TB_OPER_TB_BRANCH (4)
+	Depth: 2, leaf buckets: 64, nodes: 22199
+	Average data length: 0.00, total dup: 22198, max dup: 22198
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 63
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+    Index FK_TB_OPER_TB_REPERT (5)
+	Depth: 2, leaf buckets: 58, nodes: 22199
+	Average data length: 0.00, total dup: 22094, max dup: 1125
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 44
+	    60 - 79% = 7
+	    80 - 99% = 7
+
+    Index FK_TB_OPER_TB_SEAT (6)
+	Depth: 2, leaf buckets: 45, nodes: 22199
+	Average data length: 0.00, total dup: 21607, max dup: 158
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 13
+	    60 - 79% = 12
+	    80 - 99% = 20
+
+    Index FK_TB_OPER_TB_SESSION (7)
+	Depth: 2, leaf buckets: 60, nodes: 22199
+	Average data length: 0.00, total dup: 22144, max dup: 3517
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 48
+	    60 - 79% = 8
+	    80 - 99% = 4
+
+    Index FK_TB_OPER_TB_TICKET (8)
+	Depth: 2, leaf buckets: 71, nodes: 22199
+	Average data length: 0.00, total dup: 22188, max dup: 13294
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 16
+	    40 - 59% = 52
+	    60 - 79% = 3
+	    80 - 99% = 0
+
+    Index PK_TB_OPER (3)
+	Depth: 2, leaf buckets: 100, nodes: 22199
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 2
+	    20 - 39% = 0
+	    40 - 59% = 92
+	    60 - 79% = 2
+	    80 - 99% = 4
+
+    Index UNQ_TB_OPER_DELETED (0)
+	Depth: 2, leaf buckets: 167, nodes: 22937
+	Average data length: 7.00, total dup: 546, max dup: 6
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 35
+	    40 - 59% = 121
+	    60 - 79% = 10
+	    80 - 99% = 1
+
+    Index UNQ_TB_OPER_LAST (1)
+	Depth: 2, leaf buckets: 91, nodes: 22937
+	Average data length: 1.00, total dup: 705, max dup: 6
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 25
+	    40 - 59% = 63
+	    60 - 79% = 2
+	    80 - 99% = 1
+
+    Index UNQ_TB_OPER_REPERT_ROW_COL (2)
+	Depth: 2, leaf buckets: 156, nodes: 22937
+	Average data length: 8.00, total dup: 705, max dup: 6
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 4
+	    40 - 59% = 117
+	    60 - 79% = 30
+	    80 - 99% = 5
+
+TB_PERSON (148)
+    Primary pointer page: 446, Index root page: 447
+    Average record length: 51.00, total records: 6
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 10%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_PERSON_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 0.00, total dup: 5, max dup: 5
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_PERSON_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 1.00, total dup: 5, max dup: 5
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_PERSON (3)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_PERSON_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 8.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_PERSON_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 2.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_PERSON_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 6
+	Average data length: 21.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_PRICE (158)
+    Primary pointer page: 466, Index root page: 467
+    Average record length: 43.00, total records: 3
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 4%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_PRICE_TB_ABONEM (6)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_PRICE_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 0.00, total dup: 2, max dup: 2
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_PRICE_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 3.00, total dup: 2, max dup: 2
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_PRICE (2)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_PRICE_ABONEM (3)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 16.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_PRICE_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_PRICE_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 3.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_REPERT (149)
+    Primary pointer page: 448, Index root page: 449
+    Average record length: 98.52, total records: 129
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 5, data page slots: 5, average fill: 73%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 4
+
+    Index FK_TB_REPERT_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 0.00, total dup: 128, max dup: 128
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_REPERT_TB_FILM (5)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 0.00, total dup: 124, max dup: 36
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_REPERT_TB_ODEUM (6)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 0.00, total dup: 128, max dup: 128
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_REPERT_TB_SEANS (7)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 0.00, total dup: 111, max dup: 17
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_REPERT_TB_SESSION (8)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 1.00, total dup: 107, max dup: 14
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_REPERT_TB_TARIFF (9)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 0.00, total dup: 122, max dup: 30
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_REPERT (3)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 4.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_REPERT_DATE_ODEUM_SEANS (0)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_REPERT_DELETED (1)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_REPERT_LAST (2)
+	Depth: 1, leaf buckets: 1, nodes: 129
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_SEANS (150)
+    Primary pointer page: 450, Index root page: 451
+    Average record length: 51.67, total records: 144
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 4, data page slots: 4, average fill: 61%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 3
+	80 - 99% = 0
+
+    Index FK_TB_SEANS_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 144
+	Average data length: 0.00, total dup: 143, max dup: 143
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_SEANS_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 144
+	Average data length: 0.00, total dup: 143, max dup: 143
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_SEANS (3)
+	Depth: 1, leaf buckets: 1, nodes: 144
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_SEANS_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 144
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 1
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_SEANS_HOUR_MINUTE (1)
+	Depth: 1, leaf buckets: 1, nodes: 144
+	Average data length: 11.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 0
+
+    Index UNQ_TB_SEANS_LAST (2)
+	Depth: 1, leaf buckets: 1, nodes: 144
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_SEAT (151)
+    Primary pointer page: 452, Index root page: 453
+    Average record length: 56.56, total records: 2859
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 70, data page slots: 70, average fill: 74%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 69
+	80 - 99% = 0
+
+    Index FK_TB_SEAT_TB_BRANCH (5)
+	Depth: 2, leaf buckets: 5, nodes: 2859
+	Average data length: 0.00, total dup: 2858, max dup: 2858
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 4
+
+    Index FK_TB_SEAT_TB_ODEUM (6)
+	Depth: 2, leaf buckets: 5, nodes: 2859
+	Average data length: 0.00, total dup: 2850, max dup: 591
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 4
+
+    Index FK_TB_SEAT_TB_SESSION (7)
+	Depth: 2, leaf buckets: 5, nodes: 2859
+	Average data length: 0.00, total dup: 2858, max dup: 2858
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 4
+
+    Index PK_TB_SEAT (4)
+	Depth: 2, leaf buckets: 8, nodes: 2859
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 8
+
+    Index UNQ_TB_SEAT_DELETED (0)
+	Depth: 2, leaf buckets: 8, nodes: 2859
+	Average data length: 5.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 8
+
+    Index UNQ_TB_SEAT_LAST (1)
+	Depth: 2, leaf buckets: 5, nodes: 2859
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 5
+
+    Index UNQ_TB_SEAT_ROW_COL (2)
+	Depth: 2, leaf buckets: 13, nodes: 2859
+	Average data length: 11.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 12
+
+    Index UNQ_TB_SEAT_X_Y (3)
+	Depth: 2, leaf buckets: 13, nodes: 2859
+	Average data length: 12.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 1
+	    80 - 99% = 12
+
+TB_SESSION (152)
+    Primary pointer page: 454, Index root page: 455
+    Average record length: 294.00, total records: 68
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 6, data page slots: 6, average fill: 87%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 1
+	80 - 99% = 5
+
+    Index FK_TB_SESSION_TB_DBUSER (2)
+	Depth: 1, leaf buckets: 1, nodes: 68
+	Average data length: 0.00, total dup: 64, max dup: 25
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_SESSION (1)
+	Depth: 1, leaf buckets: 1, nodes: 68
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_SESSION_STATE (0)
+	Depth: 1, leaf buckets: 1, nodes: 68
+	Average data length: 10.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 0
+	    20 - 39% = 1
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_STATE (156)
+    Primary pointer page: 462, Index root page: 463
+    Average record length: 22.33, total records: 3
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 3%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index PK_TB_STATE (0)
+	Depth: 1, leaf buckets: 1, nodes: 3
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_TARIFF (153)
+    Primary pointer page: 456, Index root page: 457
+    Average record length: 125.00, total records: 9
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 31%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 1
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_TARIFF_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 0.00, total dup: 8, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_TARIFF_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 7, max dup: 7
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_TARIFF (3)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TARIFF_COST_NAM (0)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 19.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TARIFF_DELETED (1)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TARIFF_LAST (2)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_TICKET (154)
+    Primary pointer page: 458, Index root page: 459
+    Average record length: 94.05, total records: 20
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 55%
+    Fill distribution:
+	 0 - 19% = 0
+	20 - 39% = 0
+	40 - 59% = 1
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_TICKET_TB_BRANCH (5)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 0.00, total dup: 19, max dup: 19
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_TICKET_TB_CLASS (6)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 2.00, total dup: 13, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_TICKET_TB_SESSION (7)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 0.00, total dup: 19, max dup: 19
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_TICKET (4)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TICKET_BGCOLOR (0)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 11.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TICKET_DELETED (1)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TICKET_LAST (2)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_TICKET_NAM (3)
+	Depth: 1, leaf buckets: 1, nodes: 20
+	Average data length: 19.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+TB_VISITGRP (155)
+    Primary pointer page: 460, Index root page: 461
+    Average record length: 53.00, total records: 9
+    Average version length: 0.00, total versions: 0, max versions: 0
+    Data pages: 1, data page slots: 1, average fill: 15%
+    Fill distribution:
+	 0 - 19% = 1
+	20 - 39% = 0
+	40 - 59% = 0
+	60 - 79% = 0
+	80 - 99% = 0
+
+    Index FK_TB_VISITGRP_TB_BRANCH (4)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 0.00, total dup: 8, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index FK_TB_VISITGRP_TB_SESSION (5)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 8, max dup: 8
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index PK_TB_VISITGRP (3)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 6.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_VISITGRP_DELETED (0)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 7.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_VISITGRP_LAST (1)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 1.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
+    Index UNQ_TB_VISITGRP_NAM (2)
+	Depth: 1, leaf buckets: 1, nodes: 9
+	Average data length: 14.00, total dup: 0, max dup: 0
+	Fill distribution:
+	     0 - 19% = 1
+	    20 - 39% = 0
+	    40 - 59% = 0
+	    60 - 79% = 0
+	    80 - 99% = 0
+
