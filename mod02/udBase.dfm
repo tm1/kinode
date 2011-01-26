@@ -1557,4 +1557,53 @@ object dm_Base: Tdm_Base
     Left = 520
     Top = 232
   end
+  object ds_Rep_Daily_Presale: TpFIBDataSet
+    Database = db_kino2
+    Transaction = tr_Common_Read2
+    Options = [poTrimCharFields, poRefreshAfterPost, poRefreshDeletedRecord, poStartTransaction, poAutoFormatFields, poAllowChangeSqls]
+    AutoCommit = True
+    BufferChunks = 32
+    CachedUpdates = False
+    SelectSQL.Strings = (
+      'select'
+      '  PRP.OPER_REPERT_KOD,'
+      '  PRP.OPER_REPERT_VER,'
+      '  PRP.REPERT_DATE,'
+      '  PRP.REPERT_START,'
+      '  PRP.OPER_TICKET_KOD,'
+      '  PRP.OPER_TICKET_VER,'
+      '  PRP.TICKET_NAM,'
+      '  PRP.TICKET_BGCOLOR,'
+      '  PRP.TICKET_FNTCOLOR,'
+      '  PRP.OPER_STATE,'
+      '  PRP.OPER_COST_VALUE,'
+      '  PRP.OPER_SALE_FORM,'
+      '  PRP.OPER_SALE_FORM_DESC,'
+      '  PRP.TOTAL_OPER_COUNT,'
+      '  PRP.TOTAL_OPER_SUM,'
+      '  PRP.TOTAL_PRINT_COUNT,'
+      '  PRP.REPERT_KOD'
+      'from RP_OPER_PRE ('
+      '  :IN_REPORT_MODE,'
+      '  :ODEUM_KOD,'
+      '  :FOO_DATE,'
+      '  :IN_SESSION_ID) PRP'
+      '')
+    UniDirectional = False
+    UpdateRecordTypes = [cusUnmodified, cusModified, cusInserted]
+    DataSource = dsrc_Rep_Daily_Odeums
+    BeforeOpen = ds_Rep_Daily_BeforeOpen
+    DefaultFormats.DateTimeDisplayFormat = 'dd.mm.yyyy'
+    DataSet_ID = 710
+    Left = 520
+    Top = 312
+    poUseBooleanField = False
+    poApplyRepositary = True
+    dcForceOpen = True
+  end
+  object dsrc_Rep_Daily_Presale: TDataSource
+    DataSet = ds_Rep_Daily_Presale
+    Left = 520
+    Top = 376
+  end
 end

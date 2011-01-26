@@ -13,7 +13,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, SLForms, Dialogs,
   FR_Class, FR_DSet, FR_DBSet, StdCtrls, Db, Grids, DBGrids, ExtCtrls,
-  Buttons, WcBitBtn, ComCtrls, DBCtrls, ImgList, ActnList;
+  Buttons, WcBitBtn, ComCtrls, DBCtrls, ImgList, ActnList,
+  FR_E_HTM, FR_E_CSV, FR_E_TXT, FR_E_RTF;
 
 type
   Tfm_DRpBe = class(TSLForm)
@@ -51,6 +52,10 @@ type
     frDBds_Abonem: TfrDBDataSet;
     dbgr_Data: TDBGrid;
     Splitter3: TSplitter;
+    frRTFExport1: TfrRTFExport;
+    frTextExport1: TfrTextExport;
+    frCSVExport1: TfrCSVExport;
+    frHTMExport1: TfrHTMExport;
     procedure sb_DownClick(Sender: TObject);
     procedure sb_TodayClick(Sender: TObject);
     procedure sb_UpClick(Sender: TObject);

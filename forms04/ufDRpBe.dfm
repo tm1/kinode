@@ -2154,4 +2154,20 @@ object fm_DRpBe: Tfm_DRpBe
     Left = 436
     Top = 72
   end
+  object frRTFExport1: TfrRTFExport
+    Left = 393
+    Top = 153
+  end
+  object frTextExport1: TfrTextExport
+    Left = 449
+    Top = 153
+  end
+  object frCSVExport1: TfrCSVExport
+    Left = 513
+    Top = 153
+  end
+  object frHTMExport1: TfrHTMExport
+    Left = 577
+    Top = 153
+  end
 end

@@ -13,7 +13,8 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, SLForms, Dialogs,
   FR_Class, FR_DSet, FR_DBSet, StdCtrls, Db, Grids, DBGrids, ExtCtrls,
-  Buttons, WcBitBtn, ComCtrls, DBCtrls, ImgList, ActnList;
+  Buttons, WcBitBtn, ComCtrls, DBCtrls, ImgList, ActnList,
+  FR_E_HTM, FR_E_CSV, FR_E_RTF, FR_E_TXT;
 
 type
   Tfm_DRpAz = class(TSLForm)
@@ -55,6 +56,14 @@ type
     frDBds_Abonem: TfrDBDataSet;
     dbgr_Data: TDBGrid;
     Splitter3: TSplitter;
+    dsrc_Detail_2: TDataSource;
+    frDBds_Detail_2: TfrDBDataSet;
+    dbgr_Data_Detail_2: TDBGrid;
+    Splitter4: TSplitter;
+    frTextExport1: TfrTextExport;
+    frRTFExport1: TfrRTFExport;
+    frCSVExport1: TfrCSVExport;
+    frHTMExport1: TfrHTMExport;
     procedure sb_DownClick(Sender: TObject);
     procedure sb_TodayClick(Sender: TObject);
     procedure sb_UpClick(Sender: TObject);
@@ -737,6 +746,39 @@ begin
           // Обновляем Select-sql из репозитория, если нужно
           DEBUGMessEnh(0, UnitName, ProcName, Name + '.Prepare');
           Prepare;
+        except
+          on E: Exception do
+          begin
+            DEBUGMessEnh(0, UnitName, ProcName, 'Error is [' + E.Message + ']');
+            DEBUGMessEnh(0, UnitName, ProcName, Name + '.Prepare failed.');
+          end;
+        end;
+      finally
+        EnableControls;
+      end; // try
+    end; // if
+  // --------------------------------------------------------------------------
+  if (dsrc_Detail_2.DataSet is TpFIBDataSet) then
+    with (dsrc_Detail_2.DataSet as TpFIBDataSet) do
+    begin
+      DisableControls;
+      try
+        try
+          DEBUGMessEnh(0, UnitName, ProcName, Name + '.Close');
+          Close;
+        except
+          on E: Exception do
+          begin
+            DEBUGMessEnh(0, UnitName, ProcName, 'Error is [' + E.Message + ']');
+            DEBUGMessEnh(0, UnitName, ProcName, Name + '.Close failed.');
+          end;
+        end;
+        try
+          // Обновляем Select-sql из репозитория, если нужно
+          DEBUGMessEnh(0, UnitName, ProcName, Name + '.Prepare');
+          Prepare;
+          DEBUGMessEnh(0, UnitName, ProcName, Name + '.SelectSQL.Text = ['
+            + SelectSQL.Text + ']');
         except
           on E: Exception do
           begin

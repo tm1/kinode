@@ -72,6 +72,8 @@ type
     dsrc_Rep_Ticket_Odeums: TDataSource;
     ds_Rep_Ticket_Tickets: TpFIBDataSet;
     dsrc_Rep_Ticket_Tickets: TDataSource;
+    ds_Rep_Daily_Presale: TpFIBDataSet;
+    dsrc_Rep_Daily_Presale: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
     procedure ds_DatasetBeforeOpen(DataSet: TDataSet);
