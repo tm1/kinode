@@ -72,6 +72,6 @@ date /t
 time /t
 
 rem type %_log_%
-less %_log_%
+if ["%1"]==[""] less %_log_%
 
 set _log_=
