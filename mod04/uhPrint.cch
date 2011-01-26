@@ -64,7 +64,6 @@ const
   Emblema_Loaded: Boolean = false;
   PrintJob_StartNew: Boolean = true;
   Print_Serial_Num: Boolean = false;
-  Print_Maket_Version: Integer = 1;
 
 implementation
 
@@ -478,12 +477,11 @@ function Init_TC_Print(bmp_CinemaLogo, bmp_OdeumLogo: TBitmap;
   strSeans_Time: string): Integer; //ready
 const
   ProcName: string = 'Init_TC_Print';
-  str_Vremya: string = 'время';
+  strVremya: string = 'время';
 var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
   buffer: string;
-  tmp_Vremya: string;
 begin
   // --------------------------------------------------------------------------
   // Инициализация печати
@@ -493,7 +491,6 @@ begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
   {!$ENDIF}
   Result := -1;
-  tmp_Vremya := '';
   if PrintJob_StartNew or (not Emblema_Loaded) then
   begin
     if (not Emblema_Loaded) then
@@ -534,22 +531,11 @@ begin
     // --------------------------------------------------------------------------
     // Загрузка
     // --------------------------------------------------------------------------
-    case Print_Maket_Version of
-      1:
-        begin
-          tmp_Vremya := str_Vremya;
-        end;
-      2:
-        begin
-          tmp_Vremya := '';
-        end
-    else
-    end;
     buffer := '@2,000,050' + c_CRLF;
     buffer := buffer + '#Arial,0000,19,204' + c_CRLF;
     buffer := buffer + '^0120,0000;' + FormatDateTime('d mmmm yyyy', dtFilm_Date) + c_CRLF;
     buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-    buffer := buffer + '^0039,0000;' + '  ' + tmp_Vremya + '  ' + c_CRLF;
+    buffer := buffer + '^0039,0000;' + '  ' + strVremya + '  ' + c_CRLF;
     buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
     // buffer := buffer + '^0100,0000;' + strSeans_Time;
     buffer := buffer + '^0060,0000;' + strSeans_Time;
@@ -711,7 +697,6 @@ var
   Hour, Min, Sec, MSec: Word;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   gfx2_Ryadnum, gfx2_Mestonum, gfx2_Cenamesta, gfx2_Primechanie, gfx2_Serial: Integer;
-  gfx3_Ryad, gfx3_Mesto, gfx3_Cena: Integer;
   s_NomerRyada, s_NomerMesta, str_Sum: string;
   buffer: string;
   // str_Zal_Nam, str_Film_Name, str_Seans_Desk: string;
@@ -741,11 +726,6 @@ begin
   // --------------------------------------------------------------------------
   Result := -1;
   res := Result;
-  // --------------------------------------------------------------------------
-  gfx3_Ryad := 0;
-  gfx3_Mesto := 0;
-  gfx3_Cena := 0;
-  // --------------------------------------------------------------------------
   if Assigned(proc_Get_Ticket_Type_Info)
     and Assigned(proc_Get_Repert_Info) then
   begin
@@ -923,25 +903,6 @@ begin
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx2_Serial = [' + IntToStr(gfx2_Serial) + ']');
 {$ENDIF}
-      case Print_Maket_Version of
-        1:
-          begin
-            gfx3_Ryad := gfx_Ryad;
-            gfx3_Mesto := gfx_Mesto;
-            gfx3_Cena := gfx_Cena;
-          end;
-        2:
-          begin
-            gfx3_Ryad := 0;
-            gfx3_Mesto := 0;
-            gfx3_Cena := 0;
-          end
-      else
-      end;
-{$IFDEF uhPrint_DEBUG}
-      DEBUGMessEnh(0, UnitName, ProcName, 'Print_Maket_Version = ['
-        + IntToStr(Print_Maket_Version) + ']');
-{$ENDIF}
       //#########################################################################################
       if BeginLabelCmd >= 0 then
         Inc(res);
@@ -994,7 +955,7 @@ begin
       // Надпись "Ряд"
       // --------------------------------------------------------------------------
       // PlaceBitmap(1, 1, 228, 167, gfx_Ryad); // 340, 60
-      PlaceBitmap(1, 1, Text_X + 218 - 5, Text_Y - 48 + 5, gfx3_Ryad);
+      PlaceBitmap(1, 1, Text_X + 218 - 5, Text_Y - 48 + 5, gfx_Ryad);
       //*****************************************************************************************
       if Print_Type = 1 then
       begin
@@ -1019,7 +980,7 @@ begin
         // Надпись "Место"
         // --------------------------------------------------------------------------
         // PlaceBitmap(1, 1, 149, 167, gfx_Mesto); // 230, 60
-        PlaceBitmap(1, 1, Text_X + 139 - 5, Text_Y - 48 + 5, gfx3_Mesto);
+        PlaceBitmap(1, 1, Text_X + 139 - 5, Text_Y - 48 + 5, gfx_Mesto);
         //*****************************************************************************************
         // Номер места
         // --------------------------------------------------------------------------
@@ -1050,7 +1011,7 @@ begin
         begin
           //*****************************************************************************************
           // PlaceBitmap(1, 1, 225, 146, gfx_Cena); // 320, 45
-          PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx3_Cena);
+          PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx_Cena);
         end;
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 193, 146, gfx2_Cenamesta); // 250, 45

@@ -233,6 +233,9 @@ type
     cbShowHint: TCheckBox;
     lbl_NoRepert: TLabel;
     iml_Zal: TImageList;
+    miPrintMaket: TMenuItem;
+    miMaketVer1: TMenuItem;
+    miMaketVer2: TMenuItem;
     // --------------------------------------------------------------------------
     procedure acExitExecute(Sender: TObject);
     procedure acFullScreenExecute(Sender: TObject);
@@ -366,6 +369,7 @@ type
     procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure sb_MainDblClick(Sender: TObject);
     procedure acDebugModeExecute(Sender: TObject);
+    procedure MaketVerChoose(Sender: TObject);
     // --------------------------------------------------------------------------
   private
     FWDelta, FHDelta: Integer;
@@ -408,7 +412,7 @@ const
 var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
-  i, tmp_Zal_Kod, tmp_Odeum_Horz_Pos, tmp_Odeum_Vert_Pos: integer;
+  i, tmp_Zal_Kod, tmp_Odeum_Horz_Pos, tmp_Odeum_Vert_Pos, tmp_Print_Maket_Version: integer;
   tmp_Odeum_Show_Hint: string;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
@@ -513,6 +517,28 @@ begin
     begin
       DEBUGMessEnh(0, UnitName, ProcName, 'Error - there is no zal.');
     end;
+  // --------------------------------------------------------------------------
+  // Загрузка остальных настроек
+  // --------------------------------------------------------------------------
+  if LoadInitParameterInt(s_Preferences_Section, s_PrintMaketVersion, Print_Maket_Version,
+    tmp_Print_Maket_Version) then
+  begin
+    if (tmp_Print_Maket_Version > 0) and (tmp_Print_Maket_Version < 10000) then
+      Print_Maket_Version := tmp_Print_Maket_Version;
+  end;
+  // --------------------------------------------------------------------------
+  SaveInitParameter(s_Preferences_Section, s_PrintMaketVersion, IntToStr(Print_Maket_Version));
+  // --------------------------------------------------------------------------
+  for i := 0 to miPrintMaket.Count - 1 do
+  begin
+    if miPrintMaket.Items[i].Tag = Print_Maket_Version then
+      miPrintMaket.Items[i].Checked := True;
+  end;
+  // --------------------------------------------------------------------------
+{$IFDEF Debug_Level_6}
+  DEBUGMessEnh(0, UnitName, ProcName, 'Print_Maket_Version = ['
+    + IntToStr(Print_Maket_Version) + ']');
+{$ENDIF}
   // --------------------------------------------------------------------------
   // calculating work time
   // --------------------------------------------------------------------------
@@ -2719,6 +2745,23 @@ begin
     GlobalSeatCheqedShow := False;
   end;
   RepaintSeatExCtrls(Self);
+end;
+
+procedure Tfm_Main.MaketVerChoose(Sender: TObject);
+const
+  ProcName: string = 'MaketVerChoose';
+begin
+  //
+  if (Sender is TMenuItem) then
+  begin
+    Print_Maket_Version := (Sender as TMenuItem).Tag;
+{$IFDEF Debug_Level_6}
+    DEBUGMessEnh(0, UnitName, ProcName, 'Print_Maket_Version = ['
+      + IntToStr(Print_Maket_Version) + ']');
+{$ENDIF}
+    SaveInitParameter(s_Preferences_Section, s_PrintMaketVersion, IntToStr(Print_Maket_Version));
+    (Sender as TMenuItem).Checked := True;
+  end;
 end;
 
 end.

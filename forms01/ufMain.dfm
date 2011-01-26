@@ -25,7 +25,7 @@ object fm_Main: Tfm_Main
   TextHeight = 13
   object sb_Main: TStatusBar
     Left = 0
-    Top = 475
+    Top = 472
     Width = 775
     Height = 19
     Panels = <
@@ -65,7 +65,7 @@ object fm_Main: Tfm_Main
   end
   object pn_Place_Container: TPanel
     Left = 0
-    Top = 434
+    Top = 431
     Width = 775
     Height = 41
     Align = alBottom
@@ -503,7 +503,7 @@ object fm_Main: Tfm_Main
     Left = 0
     Top = 36
     Width = 775
-    Height = 398
+    Height = 395
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
@@ -513,7 +513,7 @@ object fm_Main: Tfm_Main
       Left = 2
       Top = 28
       Width = 771
-      Height = 331
+      Height = 328
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 0
@@ -521,7 +521,7 @@ object fm_Main: Tfm_Main
         Left = 0
         Top = 0
         Width = 771
-        Height = 331
+        Height = 328
         Align = alClient
         HotTrack = True
         Images = iml_Zal
@@ -541,7 +541,7 @@ object fm_Main: Tfm_Main
           Left = 4
           Top = 6
           Width = 706
-          Height = 321
+          Height = 318
           Align = alClient
           Alignment = taCenter
           AutoSize = False
@@ -563,7 +563,7 @@ object fm_Main: Tfm_Main
           Left = 4
           Top = 6
           Width = 706
-          Height = 321
+          Height = 318
           Cursor = crHandPoint
           Align = alClient
           Font.Charset = DEFAULT_CHARSET
@@ -587,7 +587,7 @@ object fm_Main: Tfm_Main
             Left = 4
             Top = 28
             Width = 698
-            Height = 289
+            Height = 286
             HorzScrollBar.Style = ssFlat
             HorzScrollBar.ThumbSize = 5
             HorzScrollBar.Tracking = True
@@ -655,7 +655,7 @@ object fm_Main: Tfm_Main
     end
     object pn_Command: TPanel
       Left = 2
-      Top = 359
+      Top = 356
       Width = 771
       Height = 37
       Align = alBottom
@@ -3324,6 +3324,23 @@ object fm_Main: Tfm_Main
       end
       object miPrintCheq: TMenuItem
         Action = acPrintCheq
+      end
+      object miPrintMaket: TMenuItem
+        Caption = 'Версия макета билета'
+        object miMaketVer1: TMenuItem
+          Tag = 1
+          Caption = 'Версия 1 (Без надписей)'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = MaketVerChoose
+        end
+        object miMaketVer2: TMenuItem
+          Tag = 2
+          Caption = 'Версия 2 (С надписями)'
+          GroupIndex = 1
+          RadioItem = True
+          OnClick = MaketVerChoose
+        end
       end
       object miLine22: TMenuItem
         Caption = '-'

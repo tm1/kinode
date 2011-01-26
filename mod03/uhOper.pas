@@ -1059,7 +1059,7 @@ var
   s: string;
   // --------------------------------------------------------------------------
   int_Oper_Kod: integer;
-  str_Oper_Serial: string;
+  s_Zal_Prefix, str_Oper_Serial: string;
   tError_Kod: Integer;
   tError_Text: string;
   // --------------------------------------------------------------------------
@@ -1258,7 +1258,7 @@ begin
                 // PrintJobFirst := True;
                 re := Add_TC_Print(0, TicketKod, Get_Ticket_Type_Info,
                   Cur_Repert_Kod, Get_Repert_Info, SeatRow, SeatColumn,
-                  SaleCost, 'group 555', SerialStr, true);
+                  SaleCost, s_Zal_Prefix, 'group 555', SerialStr, true);
 {$IFDEF Debug_Level_5}
                 DEBUGMessEnh(0, UnitName, ProcName, 'Add_TC_Print result = ' + IntToStr(re));
 {$ENDIF}
