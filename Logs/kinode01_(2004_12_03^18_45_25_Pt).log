@@ -1,0 +1,971 @@
+[2004.12.03]-(18:45:25)-----------==========[Start]==========----------
+[2004.12.03]-(18:45:25)-[Bugger(B)::SInit]: ExitProcB = 0x0017303C
+[2004.12.03]-(18:45:25)-[Bugger(B)::SInit]: Installing ExitProc pointer... 
+[2004.12.03]-(18:45:25)-[Bugger(B)::SInit]: ExitProcA = 0x0017303C
+[2004.12.03]-(18:45:25)-[Bugger(B)::SInit]: SaveExitAddress = 0x00000000
+[2004.12.03]-(18:45:25)-[Bugger(B)::SInit]: Adding TerminateProc = 0x000AEFEC
+[2004.12.03]-(18:45:25)-[Bugger(B)::BuggerInfo:@=(0x000AEBCC)]: ...Init... ->
+[2004.12.03]-(18:45:25)-  Unit version is - (B)2004.11.12.02
+[2004.12.03]-(18:45:25)-  DateTime is  = 2004, Декабрь 03, пятница, 18:45:25)
+[2004.12.03]-(18:45:25)-  DEBUGFileName = "Z:\temp\kinode01_(2004_12_03^18_45_25_Пт).log"
+[2004.12.03]-(18:45:25)-  CurrentDir = "Z:\temp"
+[2004.12.03]-(18:45:25)-[Bugger(B)::BuggerInfo:@=(0x000AEBCC)]: ...Init... <-
+[2004.12.03]-(18:45:25)---------------------=< ... >=--------------------
+[2004.12.03]-(18:45:25)-[uhImport::initialization]: Skipping module load...
+[2004.12.03]-(18:45:25)-[uhPrint::Init:@=(0x0013C4E4)]: ->
+[2004.12.03]-(18:45:25)-  [uhPrint::Init]: Creating GfxCache...
+[2004.12.03]-(18:45:25)-[uhPrint::Init:@=(0x0013C4E4)]: <-
+[2004.12.03]-(18:45:25)-[kinode01::MainProgram:@=(0x0016B6DC)]: Start
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: UniqueProgramID = {17A4D964-389E-47EC-ABB7-5AC31B14D0ED}
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: Application.Handle = 3735608 = 0x00390038
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: Showing splash ...
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: Work Dir >> Z:\temp
+[2004.12.03]-(18:45:25)-> [uhGetver::GetModuleVersionInfo:@=(0x000AFCA4)]: ->
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Module Path : "C:\DELPHI\Kino\kinode\kinode01.exe"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Product Name : "KinoDE"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Product Version : [1.2.8.x]
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Legal Copyright : "n0mad eagle eye"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: File Description : "KinoDE project"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Company Name : "Otau Cinema"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: File Version : [1.2.8.123]
+[2004.12.03]-(18:45:25)-< [uhGetver::GetModuleVersionInfo:@=(0x000AFCA4)]: <-
+[2004.12.03]-(18:45:25)-  --------------------=< Searching for print module dll... >=--------------------
+[2004.12.03]-(18:45:25)-> [uhImport::ModuleLoad:@=(0x001382F8)]: ->
+[2004.12.03]-(18:45:25)-    [uhImport::ModuleLoad]: Print1c module is opened, path - "C:\Include\Print1c.dll".
+[2004.12.03]-(18:45:25)-    [uhImport::ModuleLoad]: Module version is [1.3.2.7rc Debug (FBP) release].
+[2004.12.03]-(18:45:25)-< [uhImport::ModuleLoad:@=(0x001382F8)]: <-
+[2004.12.03]-(18:45:25)-> [uhGetver::GetModuleVersionInfo:@=(0x000AFCA4)]: ->
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Module Path : "C:\Include\Print1c.dll"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Product Name : "Print1C"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Product Version : [1.3.2.7 rc6]
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Legal Copyright : "n0mad eagle eye"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: File Description : "External print from 1C and other (DPL)"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Company Name : "Home(R)"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: File Version : [1.3.2.7]
+[2004.12.03]-(18:45:25)-< [uhGetver::GetModuleVersionInfo:@=(0x000AFCA4)]: <-
+[2004.12.03]-(18:45:25)-  --------------------=< Searching for IB/FB client dll... >=--------------------
+[2004.12.03]-(18:45:25)-> [uhGetver::GetModuleVersionInfo:@=(0x000AFCA4)]: ->
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Module Path : "D:\Program Files\Firebird\bin\gds32.dll"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Product Name : "Firebird SQL Server"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Product Version : [1.5.2.4721]
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Legal Copyright : "All Copyright (c) retained by individual contributors - original code Copyright (c) 2000 Inprise Corporation"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: File Description : "Firebird SQL Server"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: Company Name : "The Firebird Project"
+[2004.12.03]-(18:45:25)-    [uhGetver::GetModuleVersionInfo]: File Version : [WI-V6.3.2.4721]
+[2004.12.03]-(18:45:25)-< [uhGetver::GetModuleVersionInfo:@=(0x000AFCA4)]: <-
+[2004.12.03]-(18:45:25)-  --------------------=< Trying connect to database... >=--------------------
+[2004.12.03]-(18:45:25)-> [udCommon::DataModuleCreate:@=(0x000F19C4)]: ->
+[2004.12.03]-(18:45:25)-    [udCommon::DataModuleCreate]: db_kino1.Connected = N
+[2004.12.03]-(18:45:25)-    [udCommon::DataModuleCreate]: FIBVersion = 4.4.6 build 20.05.2004
+[2004.12.03]-(18:45:25)->   [uhCommon::LoadDatabaseParameters:@=(0x000F1FE0)]: ->
+[2004.12.03]-(18:45:25)-|     [uhCommon::LoadDatabaseParameters]: SQLDialect = 3
+[2004.12.03]-(18:45:25)-|     [uhCommon::LoadDatabaseParameters]: DatabaseName = (localhost/3050:C:\FB_DATA\kappa.fdb)
+[2004.12.03]-(18:45:25)-|     [uhCommon::LoadDatabaseParameters]: CharSet = (WIN1251)
+[2004.12.03]-(18:45:25)-|     [uhCommon::LoadDatabaseParameters]: RoleName = (ENTRANCE)
+[2004.12.03]-(18:45:25)-|     [uhCommon::LoadDatabaseParameters]: UserName = (CASHIER002)
+[2004.12.03]-(18:45:25)-|     [uhCommon::LoadDatabaseParameters]: Password = (*****)
+[2004.12.03]-(18:45:25)-<   [uhCommon::LoadDatabaseParameters:@=(0x000F1FE0)]: <-
+[2004.12.03]-(18:45:25)-    [udCommon::DataModuleCreate]: DBParams = lc_ctype=WIN1251
+[2004.12.03]-(18:45:25)-    [udCommon::DataModuleCreate]: Try to connect ...
+[2004.12.03]-(18:45:25)-    [udCommon::DataModuleCreate]: db_kino1.Connected = Y
+[2004.12.03]-(18:45:25)-< [udCommon::DataModuleCreate:@=(0x000F19C4)]: <-
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: Database path >> localhost/3050:C:\FB_DATA\kappa.fdb
+[2004.12.03]-(18:45:25)-> [udCommon::GetDataBaseVersion:@=(0x000F10E0)]: ->
+[2004.12.03]-(18:45:25)-    [udCommon::GetDataBaseVersion]: VERSION_MAJOR = 0
+[2004.12.03]-(18:45:25)-    [udCommon::GetDataBaseVersion]: VERSION_MINOR = 1
+[2004.12.03]-(18:45:25)-    [udCommon::GetDataBaseVersion]: VERSION_RELEASE = 5
+[2004.12.03]-(18:45:25)-    [udCommon::GetDataBaseVersion]: VERSION_BUILD = 51
+[2004.12.03]-(18:45:25)-< [udCommon::GetDataBaseVersion:@=(0x000F10E0)]: <-
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: Database version : 0.1.5.51
+[2004.12.03]-(18:45:25)-  [kinode01::MainProgram]: Init time - (0:00:00.231)
+[2004.12.03]-(18:45:25)-  --------------------=< Creating login form ... >=--------------------
+[2004.12.03]-(18:45:25)-> [ufLogin::acLoginShowModal:@=(0x0016ABAC)]: ->
+[2004.12.03]-(18:45:25)-    [ufLogin::acLoginShowModal]: fm_Login.ShowModal
+[2004.12.03]-(18:45:25)->   [ufLogin::fm_Login.FormActivate:@=(0x0016ACD4)]: ->
+[2004.12.03]-(18:45:25)-|     [uhCommon::GetHostInfoEx]: HostName = (xf-ea.localnet)
+[2004.12.03]-(18:45:25)-|     [uhCommon::GetHostInfoEx]: HostAddress = [192.168.30.17]
+[2004.12.03]-(18:45:25)-|     [uhCommon::GetHostInfoEx]: HostAddr = 0x111EA8C0
+[2004.12.03]-(18:45:25)-|   > [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: ->
+[2004.12.03]-(18:45:25)-|       [uhCommon::Combo_Load_DataSet]: DataSet.Name is (ds_DBUser).
+[2004.12.03]-(18:45:25)-|       [uhCommon::Combo_Load_DataSet]: s_DataSet_Kod = DBUSER_KOD
+[2004.12.03]-(18:45:25)-|       [uhCommon::Combo_Load_DataSet]: s_DataSet_Nam = DBUSER_NAM
+[2004.12.03]-(18:45:25)-|       [uhCommon::Combo_Load_DataSet]: Start cycle...
+[2004.12.03]-(18:45:25)-|       [uhCommon::Combo_Load_DataSet]: Count = 6
+[2004.12.03]-(18:45:25)-|       [uhCommon::Combo_Load_DataSet]: Finish cycle...
+[2004.12.03]-(18:45:25)-|   < [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: <-
+[2004.12.03]-(18:45:25)-|   > [uhCommon::LoadLastUser:@=(0x000F2AD4)]: ->
+[2004.12.03]-(18:45:25)-|       [uhCommon::LoadLastUser]: UserKod = 2
+[2004.12.03]-(18:45:25)-|       [uhCommon::LoadLastUser]: UserName = (second)
+[2004.12.03]-(18:45:25)-|   < [uhCommon::LoadLastUser:@=(0x000F2AD4)]: <-
+[2004.12.03]-(18:45:25)-<   [ufLogin::fm_Login.FormActivate:@=(0x0016ACD4)]: <-
+[2004.12.03]-(18:45:26)->   [ufLogin::bt_OKClick:@=(0x0016B178)]: ->
+[2004.12.03]-(18:45:26)-|   > [uhCommon::AuthenticateUser:@=(0x000F3100)]: ->
+[2004.12.03]-(18:45:26)-|       [uhCommon::GetHostInfoEx]: HostName = (xf-ea.localnet)
+[2004.12.03]-(18:45:26)-|       [uhCommon::GetHostInfoEx]: HostAddress = [192.168.30.17]
+[2004.12.03]-(18:45:26)-|       [uhCommon::GetHostInfoEx]: HostAddr = 0x111EA8C0
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: USER_UID = 2
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: USER_KEY = *****
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: USER_HOST = (xf-ea.localnet) [192.168.30.17]
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: Transaction.Active = N
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: Transaction.Active = Y
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: Transaction.TRParams = (write,concurrency,nowait)
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: Transaction.Active = N
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: ERROR_ID = 0
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: ERROR_TEXT = IP_SESSION_START: Login is approved.
+[2004.12.03]-(18:45:26)-|       [uhCommon::AuthenticateUser]: SESSION_SID = 1567
+[2004.12.03]-(18:45:26)-|   < [uhCommon::AuthenticateUser:@=(0x000F3100)]: <-
+[2004.12.03]-(18:45:26)-|     [ufLogin::bt_OKClick]: User "second" is authenticated.
+[2004.12.03]-(18:45:26)-|   > [uhCommon::SaveLastUser:@=(0x000F2D38)]: ->
+[2004.12.03]-(18:45:26)-|       [uhCommon::SaveLastUser]: Last user params saved.
+[2004.12.03]-(18:45:26)-|   < [uhCommon::SaveLastUser:@=(0x000F2D38)]: <-
+[2004.12.03]-(18:45:26)-<   [ufLogin::bt_OKClick:@=(0x0016B178)]: <-
+[2004.12.03]-(18:45:26)-< [ufLogin::acLoginShowModal:@=(0x0016ABAC)]: <-
+[2004.12.03]-(18:45:26)-  --------------------=< Creating datamodule ... >=--------------------
+[2004.12.03]-(18:45:26)-> [udBase::DataModuleDestroy:@=(0x00161FF0)]: ->
+[2004.12.03]-(18:45:26)-< [udBase::DataModuleDestroy:@=(0x00161FF0)]: <-
+[2004.12.03]-(18:45:26)-> [udBase::Prepare_Buf_Dataset:@=(0x0016419C)]: ->
+[2004.12.03]-(18:45:26)-    [udBase::GetChangelog_Max_Value]: IN_CHANGE_NUM = [-1]
+[2004.12.03]-(18:45:26)-    [udBase::GetChangelog_Max_Value]: MAX_CHANGE_KOD = [130437]
+[2004.12.03]-(18:45:26)-    [udBase::GetChangelog_Max_Value]: ds_Changelog_Max.Active = N, RecordCount = (0)
+[2004.12.03]-(18:45:26)-    [udBase::Prepare_Buf_Dataset]: RecordCount0 = (0)
+[2004.12.03]-(18:45:26)-    [udBase::Prepare_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:26)-    [udBase::Prepare_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:26)-    [udBase::Prepare_Buf_Dataset]: Buffer_Dataset.Active = [Y]
+[2004.12.03]-(18:45:26)-< [udBase::Prepare_Buf_Dataset:@=(0x0016419C)]: <-
+[2004.12.03]-(18:45:26)-> [uhCommon::LockUserSession:@=(0x000F3FC8)]: ->
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Transaction.Active = N
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: db_kino1.Connected = Y
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: DataModule1Connected = Y
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: DataModule2Connected = Y
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Change owner database to db_kino2.
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: USER_UID = 2
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: SESSION_SID = 1567
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: LOCK_FLAG = 1
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: SESSION_KEY = *****
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Doing Transaction.StartTransaction
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Transaction.TRParams = (write,concurrency,nowait)
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Doing Transaction.Commit
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: ERROR_ID = 0
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: ERROR_TEXT = Well, go on. Prepared session count = 1.
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: USER_UID = 2
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: SESSION_SID = 1567
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: LOCK_FLAG = 2
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: SESSION_KEY = *****
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Doing Transaction.StartTransaction
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Transaction.TRParams = (write,concurrency,nowait)
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Skiping Transaction.Commit
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: Transaction.Active = Y
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: ERROR_ID = 0
+[2004.12.03]-(18:45:26)-    [uhCommon::LockUserSession]: ERROR_TEXT = Well, you are locked down. Locked session count = 1.
+[2004.12.03]-(18:45:26)-< [uhCommon::LockUserSession:@=(0x000F3FC8)]: <-
+[2004.12.03]-(18:45:26)-  [kinode01::MainProgram]: Session locked for "second"
+[2004.12.03]-(18:45:26)-  [kinode01::MainProgram]: Datamodule creation done.
+[2004.12.03]-(18:45:26)-> [udCommon::db_kino1AfterDisconnect:@=(0x000F1EE4)]: ->
+[2004.12.03]-(18:45:26)-< [udCommon::db_kino1AfterDisconnect:@=(0x000F1EE4)]: <-
+[2004.12.03]-(18:45:26)-  [kinode01::MainProgram]: Showing mainform ...
+[2004.12.03]-(18:45:26)-  --------------------=< Loading all digests. >=--------------------
+[2004.12.03]-(18:45:26)-> [ufMain::LoadDigests:@=(0x0015B9B8)]: ->
+[2004.12.03]-(18:45:26)->   [uhLoader::Load_All_Zals:@=(0x0010DDF8)]: ->
+[2004.12.03]-(18:45:26)-|   > [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: ->
+[2004.12.03]-(18:45:26)-|       [uhCommon::Combo_Load_DataSet]: DataSet.Name is (ds_Zal).
+[2004.12.03]-(18:45:26)-|       [uhCommon::Combo_Load_DataSet]: DataSet is not opened. Try to open.
+[2004.12.03]-(18:45:26)-|       [uhCommon::Combo_Load_DataSet]: s_DataSet_Kod = ODEUM_KOD
+[2004.12.03]-(18:45:26)-|       [uhCommon::Combo_Load_DataSet]: s_DataSet_Nam = ODEUM_DESC
+[2004.12.03]-(18:45:26)-|       [uhCommon::Combo_Load_DataSet]: Start cycle...
+[2004.12.03]-(18:45:26)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Сары-Арка - Основной (553)"
+[2004.12.03]-(18:45:27)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_1.ComponentCount = 558
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.210)
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Алатау - Основной (592)"
+[2004.12.03]-(18:45:27)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_2.ComponentCount = 597
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.210)
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Байконыр - Основной (443)"
+[2004.12.03]-(18:45:27)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_3.ComponentCount = 448
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.161)
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Целинный - Красный (322)"
+[2004.12.03]-(18:45:27)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_4.ComponentCount = 327
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.130)
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Целинный - Зеленый (322)"
+[2004.12.03]-(18:45:27)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_5.ComponentCount = 327
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.150)
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Номад - Основной (172)"
+[2004.12.03]-(18:45:27)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_6.ComponentCount = 177
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.100)
+[2004.12.03]-(18:45:27)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Искра - Красный (165)"
+[2004.12.03]-(18:45:28)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_7.ComponentCount = 170
+[2004.12.03]-(18:45:28)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.100)
+[2004.12.03]-(18:45:28)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Искра - Синий (165)"
+[2004.12.03]-(18:45:28)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_8.ComponentCount = 170
+[2004.12.03]-(18:45:28)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.100)
+[2004.12.03]-(18:45:28)-|       [uhLoader::Load_Zal_Map]: Zal_Desc = "Променад - Основной (120)"
+[2004.12.03]-(18:45:28)-|       [uhLoader::Import_Zal_ThreadProc]: pnZal_9.ComponentCount = 125
+[2004.12.03]-(18:45:28)-|       [uhLoader::Load_Zal_Map]: Work time - (0:00:00.091)
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: Count = 9
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: Finish cycle...
+[2004.12.03]-(18:45:28)-|   < [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: <-
+[2004.12.03]-(18:45:28)-<   [uhLoader::Load_All_Zals:@=(0x0010DDF8)]: <-
+[2004.12.03]-(18:45:28)->   [uhTicket::Load_All_Ticket_Types:@=(0x00110550)]: ->
+[2004.12.03]-(18:45:28)-|   > [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: ->
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: DataSet.Name is (ds_Ticket).
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: s_DataSet_Kod = TICKET_KOD
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: s_DataSet_Nam = TICKET_NAM
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: Start cycle...
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка 10%)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка 20%)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка 30%)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка 40%)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка 50%)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка специальная)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка групповая 1)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка групповая 2)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка групповая 3)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Скидка групповая 4)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (VIP карточка (именная))
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Взрослый)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Студенческий/Пенсионный)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Школьный)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Пригласительный)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Взрослый абонемент)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Студенческий абонемент)
+[2004.12.03]-(18:45:28)-|       [uhTicket::Add_Ticket_Desc]: str_Ticket_Nam = (Школьный абонемент)
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: Count = 18
+[2004.12.03]-(18:45:28)-|       [uhCommon::Combo_Load_DataSet]: Finish cycle...
+[2004.12.03]-(18:45:28)-|   < [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: <-
+[2004.12.03]-(18:45:28)-<   [uhTicket::Load_All_Ticket_Types:@=(0x00110550)]: <-
+[2004.12.03]-(18:45:28)-    [uhTicket::Load_All_Ticket_Types]: Work time - (0:00:00.090)
+[2004.12.03]-(18:45:28)-    --------------------=< Begin Zal Change >=--------------------
+[2004.12.03]-(18:45:28)->   [ufMain::Process_Zal_Change:@=(0x0015C748)]: ->
+[2004.12.03]-(18:45:28)-|     [ufMain::Process_Zal_Change]: Sender is null.
+[2004.12.03]-(18:45:28)-|     [ufMain::Process_Zal_Change]: Zal_Kod = (9)
+[2004.12.03]-(18:45:28)-|     [ufMain::Process_Zal_Change]: Description is (Променад - Основной (120))
+[2004.12.03]-(18:45:28)-|   > [uhMain::Change_Cur_Zal:@=(0x00134C10)]: ->
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: FirstTime = N
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: Cur_Zal_Kod = -1
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: NewZal = 9
+[2004.12.03]-(18:45:28)-|   >   [uhMain::Load_Repert:@=(0x001614C0)]: ->
+[2004.12.03]-(18:45:28)-|   |     [uhMain::Load_Repert]: NewZal = 9
+[2004.12.03]-(18:45:28)-|   |     [uhMain::Load_Repert]: NewDate = (03.12.2004)
+[2004.12.03]-(18:45:28)-|   |   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:28)-|   |       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [REPERT]
+[2004.12.03]-(18:45:28)-|   |       [udBase::Changelog_Events_Reg]: EvsReged = N, EvTableNames = ()
+[2004.12.03]-(18:45:28)-|   |   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:28)-|   |   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(REPERT)
+[2004.12.03]-(18:45:28)-|   |   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:28)-|   |   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:28)-|   |   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:28)-|   |       [udBase::GetChangelog_Max_Value]: IN_CHANGE_NUM = [130437]
+[2004.12.03]-(18:45:28)-|   |       [udBase::GetChangelog_Max_Value]: MAX_CHANGE_KOD = [130437]
+[2004.12.03]-(18:45:28)-|   |       [udBase::GetChangelog_Max_Value]: ds_Changelog_Max.Active = N, RecordCount = (0)
+[2004.12.03]-(18:45:28)-|   |       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:28)-|   |       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13)
+[2004.12.03]-(18:45:28)-|   |   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:28)-|   |   > [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: ->
+[2004.12.03]-(18:45:28)-|   |       [uhCommon::Combo_Load_DataSet]: DataSet.Name is (ds_Repert).
+[2004.12.03]-(18:45:28)-|   |       [uhCommon::Combo_Load_DataSet]: s_DataSet_Kod = REPERT_KOD
+[2004.12.03]-(18:45:28)-|   |       [uhCommon::Combo_Load_DataSet]: s_DataSet_Nam = REPERT_DESC
+[2004.12.03]-(18:45:28)-|   |       [uhCommon::Combo_Load_DataSet]: Start cycle...
+[2004.12.03]-(18:45:28)-|   |       [uhCommon::Combo_Load_DataSet]: Count = 0
+[2004.12.03]-(18:45:28)-|   |       [uhCommon::Combo_Load_DataSet]: Finish cycle...
+[2004.12.03]-(18:45:28)-|   |   < [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: <-
+[2004.12.03]-(18:45:28)-|   |     [uhMain::Load_Repert]: ds_Repert.Active = Y, RecordCount = (0)
+[2004.12.03]-(18:45:28)-|   |     [uhMain::Load_Repert]: Film_Items = 0
+[2004.12.03]-(18:45:28)-|   |     [uhMain::Load_Repert]: Cur_Repert_Kod = -1
+[2004.12.03]-(18:45:28)-|   <   [uhMain::Load_Repert:@=(0x001614C0)]: <-
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: LoadRepert() passed.
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: Films list is ()
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: Old_Repert_Kod = -1
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: Cur_Repert_Kod = -1
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: Calling - Change_Seans_Proc(nil)
+[2004.12.03]-(18:45:28)-|       --------------------=< Begin Film Change >=--------------------
+[2004.12.03]-(18:45:28)-|   >   [ufMain::Process_Film_Change:@=(0x0015D1B0)]: ->
+[2004.12.03]-(18:45:28)-|   |     [ufMain::Process_Film_Change]: Sender is null.
+[2004.12.03]-(18:45:28)-|   |     [ufMain::Process_Film_Change]: SeansReload = N
+[2004.12.03]-(18:45:28)-|   |     [ufMain::Process_Film_Change]: Film_Kod = (-1)
+[2004.12.03]-(18:45:28)-|   |     [ufMain::Process_Film_Change]: Sender is null.
+[2004.12.03]-(18:45:28)-|   |   > [uhMain::Change_Cur_Seans:@=(0x00135410)]: ->
+[2004.12.03]-(18:45:28)-|   |       --------------------=< Load Tariff Start >=--------------------
+[2004.12.03]-(18:45:28)-|   |   >   [uhTicket::Load_Tariff:@=(0x0010EA34)]: ->
+[2004.12.03]-(18:45:28)-|   |   <   [uhTicket::Load_Tariff:@=(0x0010EA34)]: <-
+[2004.12.03]-(18:45:28)-|   |       --------------------=< Load Tariff End >=--------------------
+[2004.12.03]-(18:45:28)-|   |       [uhTicket::Load_Tariff]: Work time - (0:00:00.000)
+[2004.12.03]-(18:45:28)-|   |   >   [uhMain::Refresh_TC_Count:@=(0x001619B8)]: ->
+[2004.12.03]-(18:45:28)-|   |   <   [uhMain::Refresh_TC_Count:@=(0x001619B8)]: <-
+[2004.12.03]-(18:45:28)-|   |   < [uhMain::Change_Cur_Seans:@=(0x00135410)]: <-
+[2004.12.03]-(18:45:28)-|   <   [ufMain::Process_Film_Change:@=(0x0015D1B0)]: <-
+[2004.12.03]-(18:45:28)-|       --------------------=< End Film Change >=--------------------
+[2004.12.03]-(18:45:28)-|       [ufMain::Process_Film_Change]: Work time - (0:00:00.000)
+[2004.12.03]-(18:45:28)-|       [uhMain::Change_Cur_Zal]: Cur_Repert_Kod = -1
+[2004.12.03]-(18:45:28)-|   < [uhMain::Change_Cur_Zal:@=(0x00134C10)]: <-
+[2004.12.03]-(18:45:28)-<   [ufMain::Process_Zal_Change:@=(0x0015C748)]: <-
+[2004.12.03]-(18:45:28)-    --------------------=< End Zal Change >=--------------------
+[2004.12.03]-(18:45:28)-    [ufMain::Process_Zal_Change]: Work time - (0:00:00.120)
+[2004.12.03]-(18:45:28)-    [ufMain::LoadDigests]: Work time - (0:00:01.502)
+[2004.12.03]-(18:45:28)-< [ufMain::LoadDigests:@=(0x0015B9B8)]: <-
+[2004.12.03]-(18:45:28)-> [ufMain::FormActivate:@=(0x0015C4B8)]: ->
+[2004.12.03]-(18:45:28)-    [uhCommon::GetHostInfoEx]: HostName = (xf-ea.localnet)
+[2004.12.03]-(18:45:28)-    [uhCommon::GetHostInfoEx]: HostAddress = [192.168.30.17]
+[2004.12.03]-(18:45:28)-    [uhCommon::GetHostInfoEx]: HostAddr = 0x111EA8C0
+[2004.12.03]-(18:45:28)-< [ufMain::FormActivate:@=(0x0015C4B8)]: <-
+[2004.12.03]-(18:45:28)-  [kinode01::MainProgram]: Load time - (0:00:03.515)
+[2004.12.03]-(18:45:28)-  --------------------=< Let's run! >=--------------------
+[2004.12.03]-(18:45:28)-  [kinode01::MainProgram]: ...
+[2004.12.03]-(18:45:31)-  --------------------=< Begin Date Change >=--------------------
+[2004.12.03]-(18:45:31)-> [ufMain::Process_Date_Change:@=(0x0015CCF4)]: ->
+[2004.12.03]-(18:45:31)-    [ufMain::Process_Date_Change]: Sender = dtp_Date (TDateTimePicker)
+[2004.12.03]-(18:45:31)-    [ufMain::Process_Date_Change]: Date is (30/11/2004)
+[2004.12.03]-(18:45:31)->   [uhMain::Change_Cur_Date:@=(0x00135018)]: ->
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: FirstTime = N
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Cur_Date = (03.12.2004)
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: NewDate = (30.11.2004)
+[2004.12.03]-(18:45:31)-|   > [uhMain::Load_Repert:@=(0x001614C0)]: ->
+[2004.12.03]-(18:45:31)-|       [uhMain::Load_Repert]: NewZal = 9
+[2004.12.03]-(18:45:31)-|       [uhMain::Load_Repert]: NewDate = (30.11.2004)
+[2004.12.03]-(18:45:31)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [REPERT]
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13)
+[2004.12.03]-(18:45:31)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:31)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf()
+[2004.12.03]-(18:45:31)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:31)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:31)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = N, EvTableNames = ()
+[2004.12.03]-(18:45:31)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:31)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [REPERT]
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = N, EvTableNames = ()
+[2004.12.03]-(18:45:31)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:31)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(REPERT)
+[2004.12.03]-(18:45:31)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:31)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:31)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:31)-|   |     [udBase::GetChangelog_Max_Value]: IN_CHANGE_NUM = [130437]
+[2004.12.03]-(18:45:31)-|   |     [udBase::GetChangelog_Max_Value]: MAX_CHANGE_KOD = [130437]
+[2004.12.03]-(18:45:31)-|   |     [udBase::GetChangelog_Max_Value]: ds_Changelog_Max.Active = N, RecordCount = (0)
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:31)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13)
+[2004.12.03]-(18:45:31)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:31)-|   >   [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: ->
+[2004.12.03]-(18:45:31)-|   |     [uhCommon::Combo_Load_DataSet]: DataSet.Name is (ds_Repert).
+[2004.12.03]-(18:45:31)-|   |     [uhCommon::Combo_Load_DataSet]: s_DataSet_Kod = REPERT_KOD
+[2004.12.03]-(18:45:31)-|   |     [uhCommon::Combo_Load_DataSet]: s_DataSet_Nam = REPERT_DESC
+[2004.12.03]-(18:45:31)-|   |     [uhCommon::Combo_Load_DataSet]: Start cycle...
+[2004.12.03]-(18:45:31)-|   |     [uhCommon::Combo_Load_DataSet]: Count = 4
+[2004.12.03]-(18:45:31)-|   |     [uhCommon::Combo_Load_DataSet]: Finish cycle...
+[2004.12.03]-(18:45:31)-|   <   [uhCommon::Combo_Load_DataSet:@=(0x000F6940)]: <-
+[2004.12.03]-(18:45:31)-|       [uhMain::Load_Repert]: ds_Repert.Active = Y, RecordCount = (4)
+[2004.12.03]-(18:45:31)-|       [uhMain::Load_Repert]: Film_Items = 4
+[2004.12.03]-(18:45:31)-|       [uhMain::Load_Repert]: Cur_Repert_Kod = -1
+[2004.12.03]-(18:45:31)-|   < [uhMain::Load_Repert:@=(0x001614C0)]: <-
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: LoadRepert() passed.
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Films list is ("[09:10 - 10:46] - Блуберри 123 (2004) - 96 min.","[14:00 - 16:12] - Звездные войны эпизод I : Призрачная угроза (2001) - 132 min.","[19:00 - 20:36] - Убить Билла часть 2 (2004) - 96 min.","[21:00 - 22:34] - Страсти Христовы (2003) - 94 min.")
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Old_Repert_Kod = -1
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Cur_Repert_Kod = -1
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Calling - Change_Seans_Proc(nil)
+[2004.12.03]-(18:45:31)-|     --------------------=< Begin Film Change >=--------------------
+[2004.12.03]-(18:45:31)-|   > [ufMain::Process_Film_Change:@=(0x0015D1B0)]: ->
+[2004.12.03]-(18:45:31)-|       [ufMain::Process_Film_Change]: Sender is null.
+[2004.12.03]-(18:45:31)-|       [ufMain::Process_Film_Change]: SeansReload = N
+[2004.12.03]-(18:45:31)-|       [ufMain::Process_Film_Change]: Film_Kod = (183)
+[2004.12.03]-(18:45:31)-|       [ufMain::Process_Film_Change]: Sender is null.
+[2004.12.03]-(18:45:31)-|       [ufMain::Process_Film_Change]: Cleared = 0
+[2004.12.03]-(18:45:31)-|       [ufMain::Process_Film_Change]: Description is ([09:10 - 10:46] - Блуберри 123 (2004) - 96 min.)
+[2004.12.03]-(18:45:31)-|   >   [uhMain::Change_Cur_Seans:@=(0x00135410)]: ->
+[2004.12.03]-(18:45:31)-|   |     --------------------=< Load Tariff Start >=--------------------
+[2004.12.03]-(18:45:31)-|   |   > [uhTicket::Load_Tariff:@=(0x0010EA34)]: ->
+[2004.12.03]-(18:45:31)-|   |   >   [uhTicket::Modify_Ticket_Desc:@=(0x0010E544)]: ->
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Get_Rate_Desc]: Reopen for FILT_TARIFF_KOD = (16)
+[2004.12.03]-(18:45:31)-|   |   |   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [COST]
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13)
+[2004.12.03]-(18:45:31)-|   |   |   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:31)-|   |   |   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(COST)
+[2004.12.03]-(18:45:31)-|   |   |   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:31)-|   |   |   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:31)-|   |   |   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9)
+[2004.12.03]-(18:45:31)-|   |   |   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Get_Rate_Desc]: ds_Cost.Active = Y, RecordCount = (13)
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[1] = " 1:01 - "Взрослый" :::::                                     500 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[2] = " 1:02 - "Студенческий/Пенсионный" :::::       450 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[3] = " 1:03 - "Школьный" :::::                                    400 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[14] = " 3:14 - "Пригласительный"".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[18] = " 7:18 - "Взрослый абонемент"".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[19] = " 7:19 - "Студенческий абонемент"".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[20] = " 7:20 - "Школьный абонемент"".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[4] = " 1:04 - "Скидка 10%" :::::                                  450 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[5] = " 1:05 - "Скидка 20%" :::::                                  400 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[6] = " 1:06 - "Скидка 30%" :::::                                  350 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[7] = " 1:07 - "Скидка 40%" :::::                                  300 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[8] = " 1:08 - "Скидка 50%" :::::                                  250 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[9] = " 1:09 - "Скидка специальная" :::::                  500 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[10] = " 2:10 - "Скидка групповая 1" :::::                     80 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[11] = " 2:11 - "Скидка групповая 2" :::::                    100 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[12] = " 2:12 - "Скидка групповая 3" :::::                    150 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[13] = " 2:13 - "Скидка групповая 4" :::::                    200 тенге".
+[2004.12.03]-(18:45:31)-|   |   |     [uhTicket::Modify_Ticket_Desc]: Cap[16] = " 5:16 - "VIP карточка (именная)"".
+[2004.12.03]-(18:45:31)-|   |   <   [uhTicket::Modify_Ticket_Desc:@=(0x0010E544)]: <-
+[2004.12.03]-(18:45:31)-|   |   < [uhTicket::Load_Tariff:@=(0x0010EA34)]: <-
+[2004.12.03]-(18:45:31)-|   |     --------------------=< Load Tariff End >=--------------------
+[2004.12.03]-(18:45:31)-|   |     [uhTicket::Load_Tariff]: Work time - (0:00:00.080)
+[2004.12.03]-(18:45:31)-|   |     --------------------=< Full Load Start >=--------------------
+[2004.12.03]-(18:45:31)-|   |   > [uhMain::Load_All_TC:@=(0x00169480)]: ->
+[2004.12.03]-(18:45:31)-|   |       [uhMain::Load_All_TC]: ds_Moves.Close
+[2004.12.03]-(18:45:31)-|   |       [uhMain::Load_All_TC]: ds_Moves.Open
+[2004.12.03]-(18:45:31)-|   |   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:31)-|   |   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [OPER]
+[2004.12.03]-(18:45:31)-|   |   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9)
+[2004.12.03]-(18:45:31)-|   |   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(OPER)
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:31)-|   |   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:31)-|   |   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:31)-|   |   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:31)-|   |   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19)
+[2004.12.03]-(18:45:31)-|   |   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:31)-|   |       [uhMain::Load_All_TC]: ds_Moves.RecordCount = 85
+[2004.12.03]-(18:45:31)-|   |       --------------------=< Cycle 1st >=--------------------
+[2004.12.03]-(18:45:31)-|   |       --------------------=< Cycle 2nd >=--------------------
+[2004.12.03]-(18:45:31)-|   |       --------------------=< Cycle 3rd >=--------------------
+[2004.12.03]-(18:45:31)-|   |       --------------------=< Cycles end >=--------------------
+[2004.12.03]-(18:45:31)-|   |       [uhMain::Load_All_TC]: Counter1 = 120
+[2004.12.03]-(18:45:31)-|   |       [uhMain::Load_All_TC]: Counter2 = 85
+[2004.12.03]-(18:45:31)-|   |       [uhMain::Load_All_TC]: Counter3 = 0
+[2004.12.03]-(18:45:31)-|   |   < [uhMain::Load_All_TC:@=(0x00169480)]: <-
+[2004.12.03]-(18:45:31)-|   |     --------------------=< Full Load End >=--------------------
+[2004.12.03]-(18:45:31)-|   |     [uhMain::Load_All_TC]: Work time - (0:00:00.151)
+[2004.12.03]-(18:45:31)-|   |   > [uhMain::Refresh_TC_Count:@=(0x001619B8)]: ->
+[2004.12.03]-(18:45:31)-|   |   < [uhMain::Refresh_TC_Count:@=(0x001619B8)]: <-
+[2004.12.03]-(18:45:31)-|   <   [uhMain::Change_Cur_Seans:@=(0x00135410)]: <-
+[2004.12.03]-(18:45:31)-|   < [ufMain::Process_Film_Change:@=(0x0015D1B0)]: <-
+[2004.12.03]-(18:45:31)-|     --------------------=< End Film Change >=--------------------
+[2004.12.03]-(18:45:31)-|     [ufMain::Process_Film_Change]: Work time - (0:00:00.261)
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Cur_Repert_Kod = 183
+[2004.12.03]-(18:45:31)-<   [uhMain::Change_Cur_Date:@=(0x00135018)]: <-
+[2004.12.03]-(18:45:31)-< [ufMain::Process_Date_Change:@=(0x0015CCF4)]: <-
+[2004.12.03]-(18:45:31)-  --------------------=< End Date Change >=--------------------
+[2004.12.03]-(18:45:31)-  [ufMain::Process_Date_Change]: Work time - (0:00:00.281)
+[2004.12.03]-(18:45:31)-  --------------------=< Begin Date Change >=--------------------
+[2004.12.03]-(18:45:31)-> [ufMain::Process_Date_Change:@=(0x0015CCF4)]: ->
+[2004.12.03]-(18:45:31)-    [ufMain::Process_Date_Change]: Sender = dtp_Date (TDateTimePicker)
+[2004.12.03]-(18:45:31)-    [ufMain::Process_Date_Change]: Date is (30/11/2004)
+[2004.12.03]-(18:45:31)->   [uhMain::Change_Cur_Date:@=(0x00135018)]: ->
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: FirstTime = N
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: Cur_Date = (30.11.2004)
+[2004.12.03]-(18:45:31)-|     [uhMain::Change_Cur_Date]: NewDate = (30.11.2004)
+[2004.12.03]-(18:45:31)-<   [uhMain::Change_Cur_Date:@=(0x00135018)]: <-
+[2004.12.03]-(18:45:31)-< [ufMain::Process_Date_Change:@=(0x0015CCF4)]: <-
+[2004.12.03]-(18:45:31)-  --------------------=< End Date Change >=--------------------
+[2004.12.03]-(18:45:31)-  [ufMain::Process_Date_Change]: Work time - (0:00:00.010)
+[2004.12.03]-(18:45:40)-> --------------------=< )   >>> [ufFilm::acFilmShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:40)->   [ufFilm::FormCreate:@=(0x0012EE28)]: ->
+[2004.12.03]-(18:45:40)-|     [ufFilm::FormCreate]: DataSource events hooked.
+[2004.12.03]-(18:45:40)-|     [ufFilm::FormCreate]: DataSet events hooked.
+[2004.12.03]-(18:45:40)-<   [ufFilm::FormCreate:@=(0x0012EE28)]: <-
+[2004.12.03]-(18:45:40)->   [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:40)-|     [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:40)-|     [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:40)-|     [ufDted::fm_Create_After]: DataSet = ds_Film
+[2004.12.03]-(18:45:40)-<   [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:40)-    [ufFilm::acFilmShowModal]: fm_Film.ShowModal
+[2004.12.03]-(18:45:40)->   [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:40)-|     [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:40)-|   > [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:40)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:40)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:40)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19)
+[2004.12.03]-(18:45:40)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:40)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:40)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:40)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:40)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:40)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:40)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,GENRE=10)
+[2004.12.03]-(18:45:40)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:40)-|   < [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:40)-|     [ufDted::fm_Activate]: Dataset close skipped.
+[2004.12.03]-(18:45:40)-|     [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:40)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:40)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [FILM]
+[2004.12.03]-(18:45:40)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,GENRE=10)
+[2004.12.03]-(18:45:40)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:40)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(FILM)
+[2004.12.03]-(18:45:40)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:40)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:40)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:40)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:40)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,GENRE=10,FILM=11)
+[2004.12.03]-(18:45:40)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:40)-|     [ufDted::dsrc_DataStateChange]: Name = (ds_Film), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:40)-|     [ufDted::dsrc_DataStateChange]: Field = (FILM_KOD), Value = [1]
+[2004.12.03]-(18:45:40)-|     [ufDted::dsrc_DataStateChange]: Name = (ds_Film), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:40)-|     [ufDted::dsrc_DataStateChange]: Field = (FILM_KOD), Value = [33]
+[2004.12.03]-(18:45:40)-<   [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:43)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:43)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:43)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:43)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:43)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:43)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:43)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:43)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,GENRE=10,FILM=11)
+[2004.12.03]-(18:45:43)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:43)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:43)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:43)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:43)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:43)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:43)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:43)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:43)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:43)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:43)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:43)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:43)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:43)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:43)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:43)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:43)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:43)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:43)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:43)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:43)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:43)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
+[2004.12.03]-(18:45:43)-<   --------------------=< )   <<< [ufGenre::acGenreShowModal] <<<   ( >=--------------------
+[2004.12.03]-(18:45:43)->   [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:43)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:43)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:43)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:43)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:43)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:43)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:43)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:43)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:43)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:43)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:43)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:43)-<   [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:44)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:44)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:44)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:44)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:44)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:44)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:44)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:44)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:44)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:44)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:44)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:44)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:44)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
+[2004.12.03]-(18:45:44)-<   --------------------=< )   <<< [ufGenre::acGenreShowModal] <<<   ( >=--------------------
+[2004.12.03]-(18:45:44)->   [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:44)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-<   [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:44)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:44)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:44)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:44)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:44)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:44)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:44)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:44)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:44)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:44)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:44)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:44)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:44)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:44)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:44)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:44)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
+[2004.12.03]-(18:45:44)-<   --------------------=< )   <<< [ufGenre::acGenreShowModal] <<<   ( >=--------------------
+[2004.12.03]-(18:45:44)->   [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:44)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:44)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:44)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:44)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:44)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:44)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:44)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:44)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:45)-<   [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:45)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:45)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:45)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:45)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:45)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:45)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:45)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:45)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:45)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:45)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:45)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:45)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:45)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:45)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:45)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:45)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:45)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:45)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:45)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:45)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:45)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:45)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:45)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:45)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:45)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:45)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:45)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:45)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:45)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:45)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
+[2004.12.03]-(18:45:45)-<   --------------------=< )   <<< [ufGenre::acGenreShowModal] <<<   ( >=--------------------
+[2004.12.03]-(18:45:45)->   [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:45)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:45)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:45)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:45)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:45)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:45)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:45)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:45)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:45)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:45)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:45)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:45)-<   [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:46)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:46)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:46)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:46)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:46)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:46)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:46)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:46)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:46)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:46)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:46)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:46)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:46)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:46)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:46)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:46)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:46)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:46)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:46)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:46)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:46)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:46)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:46)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
+[2004.12.03]-(18:45:46)-<   --------------------=< )   <<< [ufGenre::acGenreShowModal] <<<   ( >=--------------------
+[2004.12.03]-(18:45:46)->   [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:46)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:46)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:46)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:46)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:46)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:46)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:46)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:46)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:46)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:46)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:46)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:46)-<   [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:46)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:46)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:46)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:46)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:46)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:46)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:46)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:46)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:46)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:46)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:46)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:46)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:46)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:46)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:46)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:46)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:46)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:46)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:46)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:46)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:47)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:47)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:47)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:47)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:47)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:47)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:47)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
+[2004.12.03]-(18:45:47)-<   --------------------=< )   <<< [ufGenre::acGenreShowModal] <<<   ( >=--------------------
+[2004.12.03]-(18:45:47)->   [ufFilm::FormActivate:@=(0x0012ECFC)]: ->
+[2004.12.03]-(18:45:47)-|   > [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:47)-|       [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:47)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:47)-|   >   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:47)-|   |     [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:47)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:47)-|   |     [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:47)-|   <   [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:47)-|       [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:47)-|       [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:47)-|   < [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:47)-<   [ufFilm::FormActivate:@=(0x0012ECFC)]: <-
+[2004.12.03]-(18:45:47)->   --------------------=< )   >>> [ufGenre::acGenreShowModal] >>>   ( >=--------------------
+[2004.12.03]-(18:45:47)-|   > [ufDted::fm_Create_After:@=(0x0012D250)]: ->
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Create_After]: dbgr_Data events hooked.
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Create_After]: DataSource events hooked.
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Create_After]: DataSet = ds_Genre
+[2004.12.03]-(18:45:47)-|   < [ufDted::fm_Create_After:@=(0x0012D250)]: <-
+[2004.12.03]-(18:45:47)-|     [ufGenre::acGenreShowModal]: fm_Genre.ShowModal
+[2004.12.03]-(18:45:47)-|   > [ufDted::fm_Activate:@=(0x0012CAE4)]: ->
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Activate]: Calling FOnActivateSave at [0x0008AD64]
+[2004.12.03]-(18:45:47)-|   >   [ufGenre::FormActivate:@=(0x0012E5D8)]: ->
+[2004.12.03]-(18:45:47)-|   <   [ufGenre::FormActivate:@=(0x0012E5D8)]: <-
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Activate]: Closing dataset...
+[2004.12.03]-(18:45:47)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:47)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:47)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:47)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Activate]: Opening dataset...
+[2004.12.03]-(18:45:47)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(Y) for [GENRE]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:47)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:47)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:47)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:47)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:47)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:47)-|       [ufDted::dsrc_DataStateChange]: Name = (ds_Genre), State = (Просмотр [dsBrowse])
+[2004.12.03]-(18:45:47)-|       [ufDted::dsrc_DataStateChange]: Field = (GENRE_KOD), Value = [3]
+[2004.12.03]-(18:45:47)-|   < [ufDted::fm_Activate:@=(0x0012CAE4)]: <-
+[2004.12.03]-(18:45:47)-|     [ufDted::fm_CloseQuery]: CanClose = Y
+[2004.12.03]-(18:45:47)-|   > [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: ->
+[2004.12.03]-(18:45:47)-|       [ufDted::fm_Destroy_Before]: DatasetActiveState = N
+[2004.12.03]-(18:45:47)-|   >   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: ->
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Enter into - EventReg(N) for [GENRE]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11,GENRE=10)
+[2004.12.03]-(18:45:47)-|   |   > [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: ->
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: Enter into - ClearBuf(GENRE)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount1 = (0)
+[2004.12.03]-(18:45:47)-|   |       [udBase::Clear_Buf_Dataset]: RecordCount2 = (0)
+[2004.12.03]-(18:45:47)-|   |   < [udBase::Clear_Buf_Dataset:@=(0x001649DC)]: <-
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: Changelog_Max = [130437]
+[2004.12.03]-(18:45:47)-|   |     [udBase::Changelog_Events_Reg]: EvsReged = Y, EvTableNames = (REPERT=13,COST=9,OPER=19,FILM=11)
+[2004.12.03]-(18:45:47)-|   <   [udBase::Changelog_Events_Reg:@=(0x00162CC0)]: <-
+[2004.12.03]-(18:45:47)-|   < [ufDted::fm_Destroy_Before:@=(0x0012D9A4)]: <-
