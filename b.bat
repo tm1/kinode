@@ -63,7 +63,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName01_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName01_%.map
-MakeJclDbg -E %_ProjectName01_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName01_%.map
 if not ["%_ProjectDirOut01_%"]==[""] echo ===== & echo cd %_ProjectDirOut01_% & cd %_ProjectDirOut01_%
 echo --------------------------------------------------------------------
 :skip01
@@ -73,7 +73,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName02_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName02_%.map
-MakeJclDbg -E %_ProjectName02_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName02_%.map
 if not ["%_ProjectDirOut02_%"]==[""] echo ===== & echo cd %_ProjectDirOut02_% & cd %_ProjectDirOut02_%
 echo --------------------------------------------------------------------
 :skip02
@@ -83,7 +83,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName03_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName03_%.map
-MakeJclDbg -E %_ProjectName03_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName03_%.map
 if not ["%_ProjectDirOut03_%"]==[""] echo ===== & echo cd %_ProjectDirOut03_% & cd %_ProjectDirOut03_%
 echo --------------------------------------------------------------------
 :skip03
@@ -93,7 +93,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName04_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName04_%.map
-MakeJclDbg -E %_ProjectName04_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName04_%.map
 if not ["%_ProjectDirOut04_%"]==[""] echo ===== & echo cd %_ProjectDirOut04_% & cd %_ProjectDirOut04_%
 echo --------------------------------------------------------------------
 :skip04
@@ -103,7 +103,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName05_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName05_%.map
-MakeJclDbg -E %_ProjectName05_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName05_%.map
 if not ["%_ProjectDirOut05_%"]==[""] echo ===== & echo cd %_ProjectDirOut05_% & cd %_ProjectDirOut05_%
 echo --------------------------------------------------------------------
 :skip05
@@ -113,7 +113,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName06_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName06_%.map
-MakeJclDbg -E %_ProjectName06_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName06_%.map
 if not ["%_ProjectDirOut06_%"]==[""] echo ===== & echo cd %_ProjectDirOut06_% & cd %_ProjectDirOut06_%
 echo --------------------------------------------------------------------
 :skip06
@@ -123,7 +123,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName07_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName07_%.map
-MakeJclDbg -E %_ProjectName07_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName07_%.map
 if not ["%_ProjectDirOut07_%"]==[""] echo ===== & echo cd %_ProjectDirOut07_% & cd %_ProjectDirOut07_%
 echo --------------------------------------------------------------------
 :skip07
@@ -133,7 +133,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName08_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName08_%.map
-MakeJclDbg -E %_ProjectName08_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName08_%.map
 if not ["%_ProjectDirOut08_%"]==[""] echo ===== & echo cd %_ProjectDirOut08_% & cd %_ProjectDirOut08_%
 echo --------------------------------------------------------------------
 :skip08
@@ -143,7 +143,7 @@ pwd & echo =====
 dcc32 -M -I%_IncludeDirs_% -U%_UnitDirs_% -R%_ResDirs_% %2 %3 %4 %5 %6 %7 %8 %9 %_ProjectName09_%
 echo --------------------------------------------------------------------
 echo Running: MakeJclDbg -E %_ProjectName09_%.map
-MakeJclDbg -E %_ProjectName09_%.map
+.\jclDebug\MakeJclDbg -E %_ProjectName09_%.map
 if not ["%_ProjectDirOut09_%"]==[""] echo ===== & echo cd %_ProjectDirOut09_% & cd %_ProjectDirOut09_%
 echo --------------------------------------------------------------------
 :skip09
