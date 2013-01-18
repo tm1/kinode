@@ -30,7 +30,9 @@ uses
   ShpCtrl2 in 'Lib\ShpCtrl2.pas',
   WcBitBtn in 'Lib\WcBitBtn.pas',
   FrmRstr in 'Lib\FrmRstr.pas',
+{$IFNDEF No_XP_Menu}
   XPMenu in 'Lib\XPMenu.pas',
+{$ENDIF}
   THostInfoUnit in 'Lib\THostInfoUnit.pas',
 {$ELSE}
   // try to find in Delphi search paths

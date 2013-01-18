@@ -26,33 +26,4 @@ object SLForm: TSLForm
       OnExecute = SLFullScreenExecute
     end
   end
-  object SLXPMenu: TXPMenu
-    DimLevel = 30
-    GrayLevel = 10
-    Font.Charset = RUSSIAN_CHARSET
-    Font.Color = clMenuText
-    Font.Height = -11
-    Font.Name = 'Microsoft Sans Serif'
-    Font.Style = []
-    Color = clBtnFace
-    IconBackColor = clBtnFace
-    MenuBarColor = clBtnFace
-    SelectColor = clHighlight
-    SelectBorderColor = clHighlight
-    SelectFontColor = clMenuText
-    DisabledColor = clInactiveCaption
-    SeparatorColor = clBtnFace
-    CheckedColor = clHighlight
-    IconWidth = 24
-    DrawSelect = True
-    UseSystemColors = True
-    OverrideOwnerDraw = False
-    Gradient = False
-    FlatMenu = True
-    AutoDetect = True
-    XPControls = [xcMainMenu, xcPopupMenu, xcToolbar, xcControlbar, xcEdit, xcMaskEdit, xcMemo, xcRichEdit, xcRadioButton, xcButton, xcBitBtn, xcSpeedButton, xcPanel, xcGroupBox]
-    Active = False
-    Left = 88
-    Top = 8
-  end
 end

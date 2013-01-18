@@ -13,8 +13,8 @@
 //{$DEFINE No_Jcl_Debug}
 {$UNDEF No_Jcl_Debug}
 
-//{$DEFINE No_XP_Menu}
-{$UNDEF No_XP_Menu}
+{$DEFINE No_XP_Menu}
+//{$UNDEF No_XP_Menu}
 
 //{$DEFINE No_Eureka_Debug}
 {$UNDEF No_Eureka_Debug}

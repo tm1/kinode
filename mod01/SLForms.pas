@@ -8,18 +8,32 @@
 -----------------------------------------------------------------------------}
 unit SLForms;
 
+{$I kinode01.inc}
+
 interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  FrmRstr, ActnList, XPMenu;
+  FrmRstr, ActnList
+{$IFNDEF No_XP_Menu}
+  , XPMenu
+{$ENDIF}
+  ;
 
 type
+{$IFNDEF No_XP_Menu}
+  TXPMenu_Wrap = class(TXPMenu)
+  end;
+{$ELSE}
+  TXPMenu_Wrap = class(TAction)
+  end;
+{$ENDIF}
+ 
   TSLForm = class(TForm)
     SLFormRestorer: TFrmRstr;
     SLActionList: TActionList;
     SLFullScreen: TAction;
-    SLXPMenu: TXPMenu;
+    SLXPMenu: TXPMenu_Wrap;
     procedure SLFullScreenExecute(Sender: TObject);
   private
     _WindowState: TWindowState;
@@ -30,6 +44,8 @@ type
     procedure Activate; override;
   public
     { Public declarations }
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
   published
     property FullScreen: Boolean read GetFullScreen write SetFullScreen default false;
   end;
@@ -91,12 +107,35 @@ end;
 procedure TSLForm.Activate;
 begin
   inherited;
-  if SLXPMenu.Tag = 0 then
+ {$IFNDEF No_XP_Menu}
+ if SLXPMenu.Tag = 0 then
   begin
     SLXPMenu.Tag := 1;
     SLXPMenu.Active := false;
     SLXPMenu.Active := true;
   end;
+{$ENDIF}
+end;
+
+constructor TSLForm.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+{$IFNDEF No_XP_Menu}
+   SLXPMenu := TXPMenu_Wrap.Create(Self);
+   SLXPMenu.Active := false;
+{$ENDIF}
+end;
+
+destructor TSLForm.Destroy;
+begin
+{$IFNDEF No_XP_Menu}
+  try
+    SLXPMenu.Active := false;
+  finally
+    SLXPMenu.Destroy;
+  end;
+{$ENDIF}
+  inherited;
 end;
 
 end.

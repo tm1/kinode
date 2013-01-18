@@ -13,7 +13,10 @@ interface
 {$I kinode01.inc}
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Dialogs, Gauges, SLForms, XPMenu,
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Dialogs, Gauges, SLForms,
+{$IFNDEF No_XP_Menu}
+  XPMenu,
+{$ENDIF}
   ComCtrls, ExtCtrls, StdCtrls, Buttons, Menus, ImgList, ActnList, ShpCtrl2, uhOper, Forms,
   WcBitBtn;
 
@@ -441,7 +444,7 @@ begin
   // 2.2) Загрузка всех типов билетов
   // --------------------------------------------------------------------------
   if not Load_All_Ticket_Types(iml_Sell, pop_Ticket, ppmForFree.MenuIndex, ppmForMoney.MenuIndex,
-    ppmLine1Start.MenuIndex, ppmLine2Finish.MenuIndex, miCurCost, SLXPMenu.Font, TicketRightClick)
+    ppmLine1Start.MenuIndex, ppmLine2Finish.MenuIndex, miCurCost, Self.Font, TicketRightClick)
       then
   begin
     Application.MessageBox(PChar('Не могу загрузить типы билетов. Ошибка такая:' + c_CRLF +
@@ -1137,7 +1140,7 @@ begin
     // --------------------------------------------------------------------------
     s := st_Tariff.Caption;
     Change_Cur_Seans(tmpFilm_Kod, False, s, pop_Ticket, ppmForMoney, miCurCost,
-      Self.SLXPMenu.Font, ProgressBar);
+      Self.Font, ProgressBar);
     // --------------------------------------------------------------------------
     {
     if Get_Caption_Length(s, st_Tariff.FixedFont) > (st_Tariff.Width * 9) div 10 then
