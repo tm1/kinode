@@ -1,0 +1,1221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+  <meta name="ProgId" content="FrontPage.Editor.Document">
+  <title>XML parser reference documentation</title>
+  <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../ancientbrowser.css">
+  <link rel="stylesheet" type="text/css" href="../../site.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../../print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="../dir.css">
+  <style type="text/css"><!--
+	div.NviLevel span#NviXmlDoc {
+		background-color: #FFFFFF;
+		}
+  
+  --></style>
+</head>
+
+<body>
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-main.htm" TAG="BODY" startspan -->
+
+	<div id="DivPrinthead"><p>www.destructor.de</p></div>
+
+	<div id="DivHead">
+		<div id="NviSmall"><p><a
+		href="../../about.htm" title="About Box">About</a> | <a
+		href="../../contact.htm" title="Contacting me">Contact</a> | <a
+		href="../../impressum.htm" title="German legal stuff">Impressum</a></p></div>
+	</div>
+
+	<div class="NviLevel">
+		<hr>
+		<span id="NviHome"><a href="../../index.htm">Home</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjects"><a href="../../code/index.htm">Code</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviPublications"><a href="../../articles/index.htm">Articles</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviMisc"><a href="../../misc/index.htm">Misc</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviClose" class="x"><a href="../../close.htm" title="Close">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="32214" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-projects.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviProjectsXml"><a href="../index.htm" title="XML Parser for Delphi/Kylix">XML Parser</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsTar"><a href="../../libtar/index.htm" title="Delphi/Kylix library to read/write tar files">TAR Library</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsLinkList"><a href="../../linklist/index.htm" title="Delphi/Kylix library to handle doubly linked lists">Linked Lists</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsWinsock"><a href="../../code/winsock11.htm" title="Delphi library for WinSock 1.1 access">WinSock 1.1</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsClose" class="x"><a href="../../index.htm" title="Close Code">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="33970" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-xmlparser.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviXmlMain"><a href="../index.htm" title="The XML Parser in general">General</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlDownloads"><a href="../download.htm" title="XML Parser Downloads">Downloads</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlDoc"><a href="../doc.htm" title="XML Parser Documentation">Documentation</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlHistory"><a href="../history.htm" title="XML Parser History">History</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlLinks"><a href="../links.htm" title="XML Parser Links">Links</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlClose" class="x"><a href="../../code/index.htm" title="Close">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="124" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-xmlparser-doc.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviXmlDocumentation" class="x"><a href="../doc.htm" title="XML Parser Documentation">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="671" -->
+
+<div id="photo"><img src="../../img/trees.jpg" alt="" width="100" height="200"></div>
+
+
+<div id="body">
+
+<h1>TXmlParser Reference</h1>
+
+<p>This document gives in-depth
+information about the TXmlParser XML Parser for Borland Delphi.
+You can download the latest version of the parser at <a
+href="http://www.destructor.de/">www.destructor.de</a>. I assume that you have an understanding
+of the terms of XML. The first letter of XML terms is capitalized in this
+document.</p>
+
+<h2>Contents</h2>
+
+<ul >
+    <li><a href="#GENERAL">General</a>
+        <ul >
+            <li><a href="#OPTIMIZEDFORSPEE">Optimized for Speed</a></li>
+        </ul>
+    </li>    
+    
+    <li><a href="#PUBLICINTERFACE">Public
+        Interface</a><ul >
+            <li><a href="#PROPERTIES">Properties</a> <ul>
+                    <li><a href="#XMLVERSION">XmlVersion</a></li>
+                    <li><a href="#ENCODING">Encoding</a></li>
+                    <li><a href="#STANDALONE">Standalone</a></li>
+                    <li><a href="#ROOTNAME">RootName</a></li>
+                    <li><a href="#NORMALIZE">Normalize</a></li>
+                    <li><a href="#SOURCE">Source</a></li>
+                    <li><a href="#DOCBUFFER">DocBuffer</a></li>
+                    <li><a href="#ELEMENTS">Elements</a></li>
+                    <li><a href="#ENTITIES">Entities</a></li>
+                    <li><a href="#PARENTITIES">ParEntities</a></li>
+                    <li><a href="#NOTATIONS">Notations</a></li>
+                    <li><a href="#CURPARTTYPE">CurPartType</a></li>
+                    <li><a href="#CURNAME">CurName</a></li>
+                    <li><a href="#CURCONTENT">CurContent</a></li>
+                    <li><a href="#CURSTARTCURFINAL">CurStart,
+                        CurFinal</a></li>
+                    <li><a href="#CURATTR">CurAttr</a></li>
+                    <li><a href="#CURENCODING">CurEncoding</a></li>
+                </ul>
+            </li>    
+            <li><a href="#METHODS">Methods</a>
+                <ul>
+                    <li><a href="#PROCEDURELOADFRO">LoadFromFile</a></li>
+                    <li><a href="#PROCEDURELOADFRO-0001">LoadFromBuffer</a></li>
+                    <li><a href="#PROCEDURESETBUFF">SetBuffer</a></li>
+                    <li><a href="#PROCEDURECLEAR">Clear</a></li>
+                    <li><a href="#PROCEDURESTARTSC">StartScan</a></li>
+                    <li><a href="#FUNCTIONSCAN:BOO">Scan</a></li>
+                </ul>
+            </li>    
+            <li><a href="#VIRTUALMETHODS">Virtual Methods</a><ul>
+                    <li><a href="#FUNCTIONLOADEXTE">LoadExternalEntity</a></li>
+                    <li><a href="#FUNCTIONTRANSLAT">TranslateEncoding</a></li>
+                    <li><a href="#PROCEDUREDTDELEM">DtdElementFound</a></li>
+                </ul>
+            </li>    
+            <li><a href="#OTHERCLASSES">Other Classes</a>
+              <ul>
+                    <li><a href="#TNVPNODETNVPLIST">TNvpNode,
+                        TNvpList</a></li>
+                    <li><a href="#TATTRTATTRLIST">TAttr, TAttrList</a></li>
+                    <li><a href="#TENTITYSTACKTENT">TEntityStack,
+                        TEntityStackNode</a></li>
+                    <li><a href="#TATTRDEF">TAttrDef</a></li>
+                    <li><a href="#TELEMDEFTELEMLIS">TElemDef,
+                        TElemList</a></li>
+                    <li><a href="#TENTITYDEF">TEntityDef</a></li>
+                    <li><a href="#TNOTATIONDEF">TNotationDef</a></li>
+                </ul>
+            </li>    
+            <li><a href="#STANDALONEPROCED">Standalone Procedures and
+                Functions</a><ul>
+                    <li><a href="#FUNCTIONCONVERTW">ConvertWs</a></li>
+                    <li><a href="#PROCEDURESETSTRI">SetStringSF</a></li>
+                    <li><a href="#FUNCTIONSTRSFPAS">StrSFPas</a></li>
+                    <li><a href="#FUNCTIONTRIMWSSO">TrimWs</a></li>
+                    <li><a href="#FUNCTIONANSITOUT">AnsiToUtf8</a></li>
+                    <li><a href="#FUNCTIONUTF8TOAN">Utf8ToAnsi</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>      
+</ul>
+
+<hr>
+
+<h2><a name="GENERAL"></a>General</h2>
+
+<p>TXmlParser is a Delphi CLASS
+which is responsible for</p>
+
+<ul >
+    <li>handling the Document
+        buffer (either by handling its own buffer [then, the
+        FBufferSize attribute is &gt; 0] or by handling a pointer to
+        the buffer of another object [then, FBufferSize is 0])</li>
+    <li>handling general information about the XML document</li>
+    <li>handling the declarations
+        of the DTD</li>
+    <li>scanning through the
+        document and thereby processing External Entity
+        References</li>
+    <li>passing back all important
+        information to the application</li>
+</ul>
+
+<p>Like the XML specification
+points out, TXmlParser is the &quot;XML Processor&quot;. The code
+that uses TXmlParser is the &quot;Application&quot;.</p>
+
+<p>The common container class for
+TXmlParser is the TObjectList that comes with Delphi 5. If you
+have a version below 5, you can easily derive one from TList.
+TObjectList assumes that the objects added to the list 'belong'
+to the list; so calls to &quot;Delete&quot;, &quot;Clear&quot; or
+&quot;Free&quot; also destroy the objects.</p>
+
+<p>It is out of the scope of
+TXmlParser to load documents from HTTP or FTP servers. If you
+want to implement an application which is able to do this, you
+will have to use your own HTTP or FTP (or whatever) network
+client and hand over the loaded document to the TXmlParser using
+the <i>LoadFromBuffer</i> or <i>SetBuffer</i> methods.</p>
+
+<h3><a
+name="OPTIMIZEDFORSPEE"></a>Optimized for Speed</h3> 
+
+<p>TXmlParser was developed with <i>
+speed</i> in mind. You will notice this when you compare the speed
+with other XML parsers. The idea is that there is a PChar pointer
+running through the document, analyzing what's at its position.</p>
+
+<p>For this reason, the entire document must
+be a null terminated string.</p>
+
+<h2><a name="PUBLICINTERFACE"></a>Public Interface<a 
+name="PROPERTIES"></a></h2>
+
+<h3>Properties</h3>
+
+<p>Note: Properties with the prefix
+&quot;Cur&quot; hold data concerning the current &quot;Scan&quot;
+step. All other properties are more or less independent of
+scanning.</p>
+
+<h4><a name="XMLVERSION"></a>XmlVersion</h4>
+
+<p>Type: AnsiString, read-only</p>
+
+<p>This string contains the XML
+version number which is declared in the document's XML Prolog.
+The string is filled when the Prolog is scanned. Before that, it
+has the value '1.0'.</p>
+
+<h4><a name="ENCODING"></a>Encoding</h4>
+
+<p>Type: AnsiString, read-only</p>
+
+<p>The name of the character
+encoding. Default for XML is 'UTF-8'. Another widely used
+encoding is 'ISO-8859-1', which is about the same as the Windows &quot;ANSI&quot; 1252 character
+set (which would be 'windows-1252').</p>
+
+<p>The <i> Encoding</i> property holds the
+encoding name for the XML Document. If you want to determine the encoding of the current
+content while scanning, you must use
+&quot;CurEncoding&quot; (encode can change during the document when the parser
+reads an external entity which has a different encoding than the root document).</p>
+
+<p>You can read the <i> Encoding</i> field
+everytime, but it will be reset by the XML Prolog (PartType =
+ptXmlProlog)</p>
+
+<h4><a name="STANDALONE"></a>Standalone</h4>
+
+<p>Type: Boolean, read-only</p>
+
+<p>If the XML Prolog says &quot;standalone='yes'&quot;,
+then the Standalone property is TRUE, else it is FALSE.</p>
+
+<h4><a
+name="ROOTNAME"></a>RootName</h4>
+
+<p>Type: AnsiString, read-only</p>
+
+<p>The name of the Root Element.
+This is determined from the DOCTYPE declaration. Until the
+DOCTYPE declaration is found in the document, &quot;RootName&quot; is empty.
+It remains set after a &quot;StartScan&quot;. Note that RootName will not be set
+by the start tag of the root element.</p>
+
+<h4><a
+name="NORMALIZE"></a>Normalize</h4>
+
+<p>Type: Boolean, read/write</p>
+
+<p>Set this property to TRUE if you
+want Element Content to be normalized. This means that:</p>
+
+<ul >
+    <li>Contiguous Whitespace
+        characters will be compressed to one Space (#x20)
+        character</li>
+    <li>Whitespace at the beginning
+        and end of Content wiol be trimmed off</li>
+</ul>
+
+<p>You can set Normalize at any
+time. The next &quot;Scan&quot; call will immediately work
+accordingly. So if you find a Start Tag with an &quot;xml:space&quot;
+attribute, you can (and must) set &quot;Normalize&quot; yourself.</p>
+
+<p>Note: Normalization of Attribute
+Values is completely governed by the XML Spec.</p>
+
+<p>Note: The XML spec requires that all line breaks be changed to single
+linefeed (#x0A) characters. TXmlParser doesn't change line break characters, so
+will normally have CR+LF sequences, depending on what's in your XML file.</p>
+
+<h4><a
+name="SOURCE"></a>Source</h4>
+
+<p>Type: AnsiString, read-only</p>
+
+<p>This is not the Document source
+itself but instead the name of the source you got the document
+from:</p>
+
+<ul >
+    <li>If you loaded it via <i>LoadFromFile</i>, &quot;Source&quot; contains the Filename</li>
+    <li>If you loaded it via <i>LoadFromBuffer</i>, &quot;Source&quot; contains the string
+        '&lt;MEM&gt;'</li>
+    <li>If you loaded it via <i>SetBuffer</i>, &quot;Source&quot; contains the string '&lt;BUFFER&gt;'</li>
+</ul>
+
+<h4><a name="DOCBUFFER"></a>DocBuffer</h4>
+
+<p>Type: PChar, read-only</p>
+
+<p>Returns a pointer to the first
+character of the document. If there is no document loaded, &quot;DocBuffer&quot;
+returns a pointer to a null (#x00) character. So you always have
+a valid pointer and never NIL.</p>
+
+<h4><a name="ELEMENTS"></a>Elements</h4>
+
+<p>Type: TElemList (derived from
+TObjectList), Attribute</p>
+
+<p>This list contains all Element
+declarations which have been found in the DTD. Every Element
+definition is stored in a <i> TElemDef</i> object.</p>
+
+<h4><a
+name="ENTITIES"></a>Entities</h4>
+
+<p>Type: TNvpList (derived from
+TObjectList), Attribute</p>
+
+<p>This list contains all General
+Entity declarations which have been found in the DTD. Every
+Entity definition is stored in a <i> TEntityDef</i> object.</p>
+
+<h4><a
+name="PARENTITIES"></a>ParEntities</h4>
+
+<p>Type: TNvpList (derived from
+TObjectList), Attribute</p>
+
+<p>This list contains all Parameter
+Entity declarations which have been found in the DTD. Every
+Parameter Entity definition is also stored in a <i> TEntityDef</i> object.</p>
+
+<h4><a
+name="NOTATIONS"></a>Notations</h4>
+
+<p>Type: TNvpList (derived from
+TObjectList), Attribute</p>
+
+<p>This list contains all Notation
+declarations which have been found in the DTD. Every Notation
+definition is stored in a <i> TNotationDef</i> object.</p>
+
+<h4><a
+name="CURPARTTYPE"></a>CurPartType</h4>
+
+<p>Type: TPartType (Enumeration
+Type), Attribute</p>
+
+<p>Every time the &quot;Scan&quot;
+method returns, <i> CurPartType</i> holds the type of the current part
+which has been found by &quot;Scan&quot;. This can be one of the
+following part types:</p>
+
+<table>
+    <tr>
+        <th>CurPartType</th>
+        <th>Meaning</th>
+        <th>CurName</th>
+        <th>CurContent</th>
+    </tr>
+    <tr>
+        <td><b>ptNone</b></td>
+        <td>This
+        should never be returned. If it is, there must be an
+        error in the XML document (or in my code ;-)</td>
+        <td>Undefined</td>
+        <td>Undefined</td>
+    </tr>
+    <tr>
+        <td><b>ptXmlProlog</b></td>
+        <td>The
+        XML Prolog has been read in. Now you can read the
+        properties <i> XmlVersion, Encoding,</i> and <i> Standalone.</i></td>
+        <td>Undefined</td>
+        <td>Undefined</td>
+    </tr>
+    <tr>
+        <td><b>ptComment</b></td>
+        <td>A
+        comment has been found. You can retrieve the comment by
+        extracting the buffer part from <i> CurStart</i> to <i> CurFinal</i></td>
+        <td>Undefined</td>
+        <td>Untouched</td>
+    </tr>
+    <tr>
+        <td><b>ptPI</b></td>
+        <td>A
+        Processing Instruction has been found. If it has &quot;pseudo
+        attributes&quot;, you can find these in the <i> CurAttr</i>
+        list</td>
+        <td>Target
+        name</td>
+        <td>PI
+        content</td>
+    </tr>
+    <tr>
+        <td><b>ptStartTag</b></td>
+        <td>A
+        Start Tag has been found. You can find the Attributes in
+        the <i> CurAttr</i> list</td>
+        <td>Element name</td>
+        <td>Untouched</td>
+    </tr>
+    <tr>
+        <td><b>ptEmptyTag</b></td>
+        <td>An
+        Empty-Element tag has been found. You can find the
+        Attributes in the <i> CurAttr</i> list.<br>
+        NOTE: TXmlParser distinguishes between Empty-Element
+        Tags and a Start Tag directly followed by an End Tag. So
+        &lt;BR/&gt; will be returned as an Empty-Element Tag (ptEmptyTag)
+        and &lt;BR&gt;&lt;/BR&gt; will be returned as a Start Tag
+        followed by an End Tag.</td>
+        <td>Tag
+        name</td>
+        <td>Untouched</td>
+    </tr>
+    <tr>
+        <td><b>ptEndTag</b></td>
+        <td>An
+        End Tag has been found.</td>
+        <td>Tag
+        name</td>
+        <td>Untouched</td>
+    </tr>
+    <tr>
+        <td><b>ptContent</b></td>
+        <td>Text
+        Content (the part between Tags) has been found. General
+        Entities have been resolved. If &quot;Normalize&quot; is
+        TRUE, the content is already normalized. The Encoding has
+        been transferred by the &quot;TranslateEncoding&quot;
+        method. If &quot;Normalize&quot; is true, then Whitespace-only content
+          will not be return (i.e. there will be no ptContent part for them).</td>
+        <td>Untouched</td>
+        <td>Content</td>
+    </tr>
+    <tr>
+        <td><b>ptCData</b></td>
+        <td>A
+        CDATA section has been found. The Encoding has been
+        transferred by the &quot;TranslateEncoding&quot; method.
+        Whitespace is unchanged.</td>
+        <td>Empty</td>
+        <td>Content</td>
+    </tr>
+</table>
+
+<h4><a name="CURNAME"></a>CurName</h4>
+
+<p>Type: AnsiString, Attribute</p>
+
+<p>The Name of the last part which
+has a name (e.g. start tags or PIs have a name, comments or text contents don't have a name). If
+there is a part without a name, the <i>CurName</i> attribute
+stays untouched. So when you have a ptContent part, you (usually)
+know the name of the last tag by looking at <i>CurName</i>.</p>
+
+<h4><a
+name="CURCONTENT"></a>CurContent</h4>
+
+<p>Type: AnsiString, Attribute</p>
+
+<p>The last Content (from a
+ptContent, ptCData or ptPI). Like <i> CurName,</i> <i> CurContent</i> is not
+overwritten by parts which have no content (like Tags or Comments).</p>
+
+<h4><a
+name="CURSTARTCURFINAL"></a>CurStart, CurFinal</h4> 
+
+<p>Type: PChar, Attribute</p>
+
+<p>A pointer to the first (CurStart)
+and last (CurFinal) character of the current part returned by the
+Scan method. You can use these pointers to retrieve the exact
+part string.&nbsp;</p>
+
+<p>Example: You want to extract the contents of a
+comment (which is not done by the Scan method), you can use
+CurStart and CurFinal:</p>
+
+<pre>SetString (MyComment, CurStart, CurFinish - CurStart + 1);</pre>
+
+<p>or you could use the SetStringSF function which is exported by the
+LibXmlParser unit:</p>
+
+<pre>SetStringSF (MyComment, CurStart, CurFinish);</pre>
+
+<h4><a name="CURATTR"></a>CurAttr</h4>
+
+<p>Type: <a
+href="#TATTRTATTRLIST">TAttrList</a>, Attribute</p>
+
+<p>This is a list of <a
+href="#TATTRTATTRLIST"><i>TAttr</i></a> Objects. Every <i>TAttr</i> has a <i>Name</i>
+and a <i>Value</i> field, which contain the name and value
+of one attribute. The <i>ValueType</i> field of <i>TAttr</i> tells
+you where the value comes from:</p>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>ValueType</th>
+        <th>Meaning</th>
+    </tr>
+    <tr>
+        <td><b>vtNormal</b></td>
+        <td>The
+        attribute has been specified completely in the tag</td>
+    </tr>
+    <tr>
+        <td><b>vtImplied</b></td>
+        <td>The
+        attribute value is undefined; the attribute is defined as
+        #IMPLIED by the DTD. Your application must know how to
+        handle this attribute</td>
+    </tr>
+    <tr>
+        <td><b>vtFixed</b></td>
+        <td>The
+        attribute is defined as #FIXED in the DTD. If there was
+        an attribute value in the tag, it has been overwritten by
+        the attribute default value from the DTD</td>
+    </tr>
+    <tr>
+        <td><b>vtDefault</b></td>
+        <td>The
+        attribute was not specified in the tag; instead, it was
+        added because it was defined in the DTD. The attribute
+        value is the default value from the DTD's ATTLIST
+        definition.</td>
+    </tr>
+</table>
+
+<p>The AttrType field tells you the
+type of the Attribute. It is copied from the <i> TAttrDef</i> object
+which was created when the attribute was declared in the DTD.</p>
+
+<h4><a
+name="CURENCODING"></a>CurEncoding</h4>
+
+<p>Type: AnsiString, read-only
+property</p>
+
+<p>This is the name of the current
+Encoding. Encoding can change in the middle of the document if
+the parser has to parse an External Parsed Entity which has a
+different Encoding than the main document. This value is mainly
+used by the TranslateEncoding method. But it can also be
+used by the application.</p>
+
+<hr>
+
+<h3><a name="METHODS"></a>Methods</h3>
+
+<h4><a
+name="PROCEDURELOADFRO"></a>PROCEDURE LoadFromFile (Filename 
+: STRING);</h4> 
+
+<p>Loads the File into the internal
+Buffer of the TXmlParser instance. If this is successfull, then
+the <i>Source</i> property holds the name of the file.</p>
+
+<h4><a
+name="PROCEDURELOADFRO-0001"></a>PROCEDURE LoadFromBuffer (Buffer 
+: PChar);</h4> 
+
+<p>Loads the null-terminated
+string given by <i>Buffer</i> into the internal Buffer of the TXmlParser instance. The <i>Source</i>
+property has the value '&lt;MEM&gt;' after this step.</p>
+
+<h4><a
+name="PROCEDURESETBUFF"></a>PROCEDURE SetBuffer (Buffer : 
+PChar);</h4>
+
+<p>If you already have the XML
+Document loaded into memory and you don't want TXmlParser to keep
+the entire document in its own piece of memory, you can use the <i>SetBuffer</i>
+method. <i>SetBuffer</i> will not allocate memory but instead
+will let the internal FBuffer attribute point to your Buffer.</p>
+
+<p>Note: The XML document must be null-terminated (i.e. there is a NULL (#x0;)
+character at the end).</p>
+
+<p>You must not free your buffer
+before you free your TXmlParser instance or call the <i> Clear</i> method.
+This would cause access violations.</p>
+
+<h4><a
+name="PROCEDURECLEAR"></a>PROCEDURE Clear;</h4> 
+
+<p>Clears all internal variables
+and deallocates all buffer space previously allocated by the
+TXmlParser instance. After this, the TXmlParser is prepared for
+loading a new buffer. <i>Clear</i> is automatically called by
+the loading methods like <i>LoadFromFile, LoadFromBuffer,</i>
+or <i>SetBuffer.</i></p>
+
+<h4><a name="PROCEDURESTARTSC"></a>PROCEDURE StartScan;</h4> 
+
+<p>While you scan through your
+document (using the Scan method), there is always a
+pointer pointing to the current part of the document (in fact, it's
+two pointers: CurStart and CurFinal). StartScan
+initializes all pointers and all Cur* attributes in order to
+prepare for a new scan from the beginning of the Document.</p>
+
+<p>You may call StartScan
+as often as you want and at any time.</p>
+
+<h4><a
+name="FUNCTIONSCAN:BOO"></a>FUNCTION Scan : BOOLEAN;</h4> 
+
+<p>This is where scanning through
+the XML document really happens. The Scan method performs the
+following steps:</p>
+
+<ul >
+    <li>It determines the current
+        position in the document (using the <i> CurFinal</i> pointer)</li>
+    <li>It goes one character
+        further and looks, what it finds there (a tag, text
+        content, whatever)</li>
+    <li>It analyzes what it has
+        found, thereby giving all Cur* attributes new values</li>
+</ul>
+
+<p>After that, Scan
+returns a boolean value which is</p>
+
+<ul >
+    <li>true, if Scan has
+        found a new part in your Document</li>
+    <li>false, if Scan reached
+        the end of the Document (i.e. a NULL #x00 character).</li>
+</ul>
+
+<p>This behaviour of the Scan
+method was chosen so that you can write a WHILE loop for scanning
+through the document.</p>
+
+<p>With this WHILE loop, you can
+handle everything that you need in local variables of the
+procedure/function/method which analyzes your XML Document. In an
+event centric model, there would be a procedure call for every
+Document part and so you would have to handle everything in more
+or less global variables.</p>
+
+<h3><a name="VIRTUALMETHODS"></a>Virtual Methods</h3> 
+
+<p>With the virtual methods of
+TXmlParser you can modify the behaviour of TXmlParser. Just
+override them in a class descendant of your own.</p>
+
+<h4><a
+name="FUNCTIONLOADEXTE"></a>FUNCTION LoadExternalEntity (SystemId, 
+PublicId, Notation : STRING) : TXmlParser; VIRTUAL;</h4> 
+
+<p>Override this method if you have
+implemented a special mechanism for loading documents, if you
+want to process PUBLIC IDs or Notations.</p>
+
+<p><i>LoadExternalEntity</i> is
+called for every External Entity (be it Parsed or Unparsed). The
+known System and/or Public IDs and the Notation is passed as a
+string to this method. It has to create a new <i> TXmlParser</i> instance
+and load the desired Entity into the buffer of that instance.</p>
+
+<p><i>LoadExternalEntity</i> is
+also called when the External DTD Subset is to be loaded.</p>
+
+<h4><a
+name="FUNCTIONTRANSLAT"></a>FUNCTION TranslateEncoding (CONST 
+Source : STRING) : STRING; VIRTUAL;</h4> 
+
+<p>The XML Specification states
+that every XML parser must be able to handle UTF-8 and UTF-16
+documents. Beside these, parsers should be able to handle other
+Encodings. The encoding for a document is defined in the XML
+Prolog (for entire XML Documents) or in a Text Declaration at the
+beginning of Parsed External Entities or External DTD subsets.</p>
+
+<p>So there is a source Encoding (the
+Encoding of the Document and its external parts) and a
+destination encoding (the encoding your application wishes to
+process). For every content string which is passed to your
+application (Text Content between Tags, CDATA sections, Attribute
+values) the TranslateEncoding method is called. It
+retrieves the current source encoding by looking at the CurEncoding
+property and translates the passed &quot;Source&quot; string into
+the desired destination encoding.</p>
+
+<p>The TranslateEncoding method
+that is built into TXmlParser assumes that the destination
+encoding is the Windows ANSI encoding used in Windows apps. It
+can handle UTF-8 and ISO-8859-1 as source encodings. Note: It is
+assumed here that ISO-8859-1 and &quot;Windows ANSI&quot; are the
+same, which is not exactly true for some characters. But for the
+largest part of documents this should be true.&nbsp;</p>
+
+<p> UTF-8 correctly translated into the single-byte ANSI
+Windows-1252 format.</p>
+
+<p>At the time of this writing,
+TXmlParser is not able to handle multi-byte character strings.
+This is likely to change in the future.</p>
+
+<h4><a
+name="PROCEDUREDTDELEM"></a>PROCEDURE DtdElementFound (DtdElementRec 
+: TDtdElementRec); VIRTUAL;</h4> 
+
+<p>The Scan method just
+tells you when it just scanned the DTD declaration. It doesn't
+tell you anything about what it found in the DTD. (You could scan
+the Lists Elements, Entities, ParEntities, Notations but then you
+know nothing about comments or PIs inside the DTD.)</p>
+
+<p>If you want to build a
+validating parser or a tool which presents the elements of the
+DTD of your XML document or you want to handle comments or PIs
+inside the DTD, you can override the DtdElementFound
+virtual method. It is called everytime there is a DTD element
+found during the scan of the Document Type Declaration.</p>
+
+<p>DtdElementFound gets
+passed a TDtdElementRec, which is a variant record with
+the following declaration:</p>
+
+<pre>  TDtdElementRec = RECORD    // --- This Record is returned by the DTD parser callback function
+                     CASE ElementType : TDtdElemType OF
+                       deElement,
+                       deAttList  : (ElemDef      : TElemDef);
+                       deEntity   : (EntityDef    : TEntityDef);
+                       deNotation : (NotationDef  : TNotationDef);
+                       dePI       : (Target       : PChar;
+                                     Content      : PChar;
+                                     AttrList     : TAttrList);
+                       deComment  : (Start, Final : PChar);
+                       deError    : (Pos          : PChar);
+                   END;</pre>
+
+<p>The ElementType field
+tells you which type of DTD element the parser has just found.
+Depending on this field, you can find out what has been found:</p>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>ElementType Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><b>deElement,
+        deAttList</b></td>
+        <td>An
+        &lt;!ELEMENT&gt; or &lt;!ATTLIST&gt; declaration has been
+        found. The ElemDef field points to the TElemDef instance
+        created (for deElement) or filled with Attribute
+        definitions (for deAttList)</td>
+    </tr>
+    <tr>
+        <td><b>deEntity</b></td>
+        <td>An
+        &lt;!ENTITY&gt; declaration has been found. The EntityDef
+        field points to the TEntityDef instance created</td>
+    </tr>
+    <tr>
+        <td><b>deNotation</b></td>
+        <td>A
+        &lt;!NOTATION&gt; declaration has been found. The
+        NotationDef field points to the TNotationDef instance
+        created</td>
+    </tr>
+    <tr>
+        <td><b>dePI</b></td>
+        <td>A
+        Processing Instruction (PI) has been found inside the DTD.
+        Target points to a null-terminated string containing the
+        PI target; Content points to the part between the target
+        and ?&gt; in the PI. AttrList is the list of pseudo
+        attributes in the PI.</td>
+    </tr>
+    <tr>
+        <td><b>deComment</b></td>
+        <td>A
+        comment has been found inside the DTD. Start points to
+        the opening '&lt;!--' and Final points to the closing
+        '&gt;' of the comment.</td>
+    </tr>
+    <tr>
+        <td><b>deError</b></td>
+        <td>There
+        is an error inside the DTD. Pos points to the position of
+        the error</td>
+    </tr>
+</table>
+
+<p>Note that all pointers are only
+valid when DtdElementFound is called. Don't keep them
+for later use.</p>
+
+<hr>
+
+<h3><a name="OTHERCLASSES"></a>Other Classes</h3> 
+
+<h4><a
+name="TNVPNODETNVPLIST"></a>TNvpNode, TNvpList</h4> 
+
+<p>Name/Value Pairs (NVPs) are not
+handled using a TStringList (and its Names and Values
+properties). Instead, they are handled in a TNvpNode with the
+fields Name and Value and a special list for
+such nodes, TNvpList, which has special methods to get elements
+from the list. This concept was introduced because there are
+nodes derived from TNvpNode (like <a
+href="#TATTRTATTRLIST">TAttr</a>) which have additional fields.</p>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td style="white-space:nowrap">PROCEDURE <b>Add </b> (Node : TNvpNode)</td>
+        <td>Adds
+        a new node to the list. Nodes are always sorted by name
+        so the Node&nbsp;method can use a binary search</td>
+    </tr>
+    <tr>
+        <td style="white-space:nowrap">FUNCTION <b>Node</b> (Name : STRING) : TNvpNode</td>
+        <td>Retrieves
+        the node instance with the given name. If the node can
+        not be found, NIL is returned.</td>
+    </tr>
+    <tr>
+        <td style="white-space:nowrap">FUNCTION <b>Node</b> (Index : INTEGER) : TNvpNode</td>
+        <td>Retrieves
+        the node instance at the given position in the list.
+        Index is zero-based, i.e. for Index=1 the second element
+        is returned. If Index is smaller than zero or larger than
+        the number of nodes in the list (minus 1), NIL is
+        returned.</td>
+    </tr>
+    <tr>
+        <td style="white-space:nowrap">FUNCTION <b>Value</b> (Name : STRING) : STRING</td>
+        <td>Retrieves
+        the string value of the given name. If there is
+        no node with the name, an empty string is returned.</td>
+    </tr>
+    <tr>
+        <td style="white-space:nowrap">FUNCTION <b>Value</b> (Index : INTEGER) : STRING</td>
+        <td>Retrieves
+        the string value at the given position in the
+        list. Index is zero-based, i.e. for Index=1 the second
+        element is returned. If Index is smaller than zero or
+        larger than the number of nodes in the list (minus 1),
+        NIL is returned.</td>
+    </tr>
+    <tr>
+        <td style="white-space:nowrap">FUNCTION <b>Name</b> (Index : INTEGER) : STRING;</td>
+        <td>Retrieves
+        the name of the attribute at the given position
+        in the list. Index is zero-based, i.e. for Index=1 the
+        second element is returned. If Index is smaller than zero
+        or larger than the number of nodes in the list (minus 1),
+        NIL is returned.</td>
+    </tr>
+</table>
+
+<h4><a name="TATTRTATTRLIST"></a>TAttr, TAttrList</h4> 
+
+<p>Derived from <a
+href="#TNVPNODETNVPLIST">TNvpNode
+and TNvpList.</a> Used for
+passing back Tag attributes to the application.</p>
+
+<p>TAttr has two additional fields
+to hold informations about the Attribute, ValueType and AttrType:</p>
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><b>ValueType</b></td>
+        <td>See
+        the description of the CurAttr property</td>
+    </tr>
+    <tr>
+        <td><b>AttrType</b></td>
+        <td><p>The
+        type of the attribute, as declared in the DTD:</p>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>atUnknown</td>
+                <td>Unknown type</td>
+            </tr>
+            <tr>
+                <td>atCData</td>
+                <td>Character data only</td>
+            </tr>
+            <tr>
+                <td>atID</td>
+                <td>An ID (Unique attribute value)</td>
+            </tr>
+            <tr>
+                <td>atIdRef</td>
+                <td>An ID reference</td>
+            </tr>
+            <tr>
+                <td>atIdRefs</td>
+                <td>Several ID References, separated
+                by Whitespace</td>
+            </tr>
+            <tr>
+                <td>atEntity</td>
+                <td>Name of an unparsed Entity</td>
+            </tr>
+            <tr>
+                <td>atEntities</td>
+                <td>Several unparsed Entity names,
+                separated by Whitespace</td>
+            </tr>
+            <tr>
+                <td>atNmToken</td>
+                <td>Name Token</td>
+            </tr>
+            <tr>
+                <td>atNmTokens</td>
+                <td>Several Name Tokens, separated by
+                Whitespace</td>
+            </tr>
+            <tr>
+                <td>atNotation</td>
+                <td>A selection of Notation names (Unparsed
+                Entity), separated by pipe symbols. You can find
+                these in the Notations field of the TAttrDef
+                definition where the Attribute belongs to</td>
+            </tr>
+            <tr>
+                <td>atEnumeration</td>
+                <td>Enumeration (possible values,
+                separated by pipe symbols). You can find the
+                enumeration definition in the TypeDef field of
+                the TAttrDef definition where the Attribute
+                belongs to</td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+
+<h4><a name="TENTITYSTACKTENT"></a>TEntityStack, TEntityStackNode</h4> 
+
+<p>When the parser scans through
+the document, it can find a reference to a parsed entity,
+internal or external. In this case, the current position pointer
+is pushed to a stack (the EntityStack) and set to the first
+character of the entity replacement text. After the entity is
+scanned, the old pointer is popped off the stack and processing
+of the original document continues. As Entity references may nest,
+this has to be organized as a stack.</p>
+
+<h4><a name="TATTRDEF"></a>TAttrDef</h4>
+
+<p>Every &lt;!ATTLIST&gt; element
+gets transferred into a TAttrDef instance, which is inserted into
+the TElemDef where the Attribute definition belongs to. TAttrDef
+has the following fields:</p>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Name
+        of the Atribute</td>
+    </tr>
+    <tr>
+        <td>Value</td>
+        <td>Default
+        value</td>
+    </tr>
+    <tr>
+        <td>TypeDef</td>
+        <td>The
+        Type definition from the &lt;!ATTLIST&gt; declaration</td>
+    </tr>
+    <tr>
+        <td>Notations</td>
+        <td>The
+        listing of notations, if it is a NOTATION attribute. The
+        notation names are separated by pipe symbols.</td>
+    </tr>
+    <tr>
+        <td>AttrType</td>
+        <td>Type
+        of the Attribute</td>
+    </tr>
+    <tr>
+        <td>DefaultType</td>
+        <td>Type
+        of the default value declaration of the Attribute (normal
+        default value, #REQUIRED, #IMPLIED, #FIXED)</td>
+    </tr>
+</table>
+
+<h4><a name="TELEMDEFTELEMLIS"></a>TElemDef, TElemList</h4> 
+
+<p>TElemDef holds the data of an
+&lt;!ELEMENT&gt; definition:</p>
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Name
+        of the Element</td>
+    </tr>
+    <tr>
+        <td>ElemType</td>
+        <td><p>Type
+        of the element:</p>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>etEmpty</td>
+                <td>Element is always an Empty Element</td>
+            </tr>
+            <tr>
+                <td>etAny</td>
+                <td>Element can have any mixture of
+                PCDATA and any elements</td>
+            </tr>
+            <tr>
+                <td>etChildren</td>
+                <td>Element must contain only elements,
+                no PCDATA</td>
+            </tr>
+            <tr>
+                <td>etMixed</td>
+                <td>Mixed PCDATA and elements. The
+                Definition field holds the exact definition as
+                specified in the DTD.</td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Definition</td>
+        <td>The
+        exact definition of the element from the DTD</td>
+    </tr>
+</table>
+
+<p>As TElemDef is both, a node and
+a list, there is a special TElemList, which has almost the same
+code as TNvpList.</p>
+
+<h4><a name="TENTITYDEF"></a>TEntityDef</h4>
+
+<p>TEntityDef holds the data of an
+&lt;!ENTITY&gt; definition. Depending on the type (General or
+Parameter Entity), the TEntityDef node is added to the Entities or ParEntities list.</p>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Name
+        of the entity</td>
+    </tr>
+    <tr>
+        <td>Value</td>
+        <td>The
+        replacement text of the entity</td>
+    </tr>
+    <tr>
+        <td>SystemId</td>
+        <td>For
+        External Entities, this field contains the SYSTEM id</td>
+    </tr>
+    <tr>
+        <td>PublicId</td>
+        <td>For
+        External Entities, this field contains the PUBLIC id.
+        This field may be empty.</td>
+    </tr>
+    <tr>
+        <td>NotationName</td>
+        <td>For
+        NDATA Unparsed External Entities, this field contains the
+        Notation Name.</td>
+    </tr>
+</table>
+
+<h4><a name="TNOTATIONDEF"></a>TNotationDef</h4>
+
+<p>TNotationDef holds the data of a
+&lt;!NOTATION&gt; definition:</p>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Field</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Name
+        of the notation</td>
+    </tr>
+    <tr>
+        <td>Value</td>
+        <td>SYSTEM
+        id</td>
+    </tr>
+    <tr>
+        <td>PublicId</td>
+        <td>PUBLIC
+        id</td>
+    </tr>
+</table>
+
+<hr>
+
+<h3><a name="STANDALONEPROCED"></a>Standalone Procedures and 
+Functions</h3>
+
+<h4><a name="FUNCTIONCONVERTW"></a>FUNCTION ConvertWs (Source: 
+STRING; PackWs: BOOLEAN) : STRING;</h4> 
+
+<p>Converts all Whitespace
+characters (Space, Tab, Carriage Return, Linefeed) in the String
+to Space #x20 characters. If the PackWs parameter is true,
+contiguous whitespace characters will be packed to one space
+character.</p>
+
+<h4><a name="PROCEDURESETSTRI"></a>PROCEDURE SetStringSF (VAR S : 
+STRING; BufferStart, BufferFinal : PChar);</h4> 
+
+<p>The same as SysUtils.SetString.
+Exception: the second parameter denotes the position of the last
+character to transfer into the string, not the length.</p>
+
+<h4><a
+name="FUNCTIONSTRSFPAS"></a>FUNCTION StrSFPas (Start, 
+Finish : PChar) : STRING;</h4> 
+
+<p>Same as SysUtils.StrPas. In
+addition to the start of the string, the last character is also
+passed (Finish).</p>
+
+<h4><a name="FUNCTIONTRIMWSSO"></a>FUNCTION TrimWs (Source : 
+STRING) : STRING;</h4> 
+
+<p>Trimms all whitespace characters
+off the beginning and end of the Source string.</p>
+
+<h4><a
+name="FUNCTIONANSITOUT"></a>FUNCTION AnsiToUtf8 (Source : 
+ANSISTRING) : STRING;</h4> 
+
+<p>Converts the Windows 1252 ANSI Source
+string to a UTF-8 string.</p>
+
+<h4><a name="FUNCTIONUTF8TOAN"></a>FUNCTION Utf8ToAnsi (Source : STRING; UnknownChar : CHAR = 
+'¿') : ANSISTRING;</h4> 
+
+<p>Converts the given UTF-8 string
+to Windows ANSI. Unicode characters which don't fit into the Windows-1252 range are converted to
+the &quot;UnknownChar&quot; character, which defaults to a reverse question mark.</p>
+
+
+</div>
+</body>
+
+</html>

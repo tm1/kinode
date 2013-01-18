@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+  <meta name="ProgId" content="FrontPage.Editor.Document">
+  <title>XML parser documentation overview</title>
+  <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../ancientbrowser.css">
+  <link rel="stylesheet" type="text/css" href="../../site.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../../print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="../dir.css">
+  <style type="text/css"><!--
+	div.NviLevel span#NviXmlDoc {
+		background-color: #FFFFFF;
+		}
+  --></style>
+</head>
+
+<body>
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-main.htm" TAG="BODY" startspan -->
+
+	<div id="DivPrinthead"><p>www.destructor.de</p></div>
+
+	<div id="DivHead">
+		<div id="NviSmall"><p><a
+		href="../../about.htm" title="About Box">About</a> | <a
+		href="../../contact.htm" title="Contacting me">Contact</a> | <a
+		href="../../impressum.htm" title="German legal stuff">Impressum</a></p></div>
+	</div>
+
+	<div class="NviLevel">
+		<hr>
+		<span id="NviHome"><a href="../../index.htm">Home</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjects"><a href="../../code/index.htm">Code</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviPublications"><a href="../../articles/index.htm">Articles</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviMisc"><a href="../../misc/index.htm">Misc</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviClose" class="x"><a href="../../close.htm" title="Close">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="32214" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-projects.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviProjectsXml"><a href="../index.htm" title="XML Parser for Delphi/Kylix">XML Parser</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsTar"><a href="../../libtar/index.htm" title="Delphi/Kylix library to read/write tar files">TAR Library</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsLinkList"><a href="../../linklist/index.htm" title="Delphi/Kylix library to handle doubly linked lists">Linked Lists</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsWinsock"><a href="../../code/winsock11.htm" title="Delphi library for WinSock 1.1 access">WinSock 1.1</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsClose" class="x"><a href="../../index.htm" title="Close Code">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="33970" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-xmlparser.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviXmlMain"><a href="../index.htm" title="The XML Parser in general">General</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlDownloads"><a href="../download.htm" title="XML Parser Downloads">Downloads</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlDoc"><a href="../doc.htm" title="XML Parser Documentation">Documentation</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlHistory"><a href="../history.htm" title="XML Parser History">History</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlLinks"><a href="../links.htm" title="XML Parser Links">Links</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlClose" class="x"><a href="../../code/index.htm" title="Close">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="124" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-xmlparser-doc.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviXmlDocumentation" class="x"><a href="../doc.htm" title="XML Parser Documentation">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="671" -->
+
+<div id="photo"><img src="../../img/trees.jpg" alt="" width="100" height="200"></div>
+
+
+<div id="body">
+
+<h1>XML Parser: Usage Overview</h1>
+
+
+
+<p>TXmlParser is a free native XML
+Parser for Borland Delphi. This document gives an overview of how
+the parser is working.</p>
+
+<h2>Contents</h2>
+
+<p>&darr; <a href="#DOWNLOADINGTXMLP">Download</a><br> 
+&darr; <a href="#LICENCE">Licence</a><br> 
+&darr; <a href="#SCANNINGANXMLDOC">Scanning an XML Document</a><br> 
+&darr; <a href="#LOADINGTHEXMLDOC">Loading the XML Document</a><br> 
+&darr; <a href="#CHARACTERENCODIN">Character Encodings</a><br> 
+&darr; <a href="#BUFFERHANDLING">Buffer Handling</a><br> 
+&darr; <a href="#WHITESPACEHANDLI">Whitespace Handling</a><br> 
+&darr; <a href="#NON-XML-CONFORMI">Non XML conforming</a><br> 
+&darr; <a href="#VERSIONNUMBERSCH">Version Numbers, Change History</a></p> 
+
+<hr>
+
+<h2><a name="DOWNLOADINGTXMLP"></a>Downloading TXmlParser</h2> 
+
+<p>The official site to get this
+parser is <a href="http://www.destructor.de/">http://www.destructor.de</a></p>
+
+<hr>
+
+<h2><a name="LICENCE"></a>Licence</h2>
+
+<p>Usage and Distribution of this
+Source Code is ruled by the &quot;Destructor.de Source code
+Licence&quot; (DSL) which comes with the parser files.</p>
+
+<p>The DSL says in short: This
+source code is free. You use it completely on your own risk.</p>
+
+<hr>
+
+<h2><a name="SCANNINGANXMLDOC"></a>Scanning an XML document</h2> 
+
+<p>TXmlParser is designed to scan
+an XML document rather than loading it into an Object Model into
+memory. You always start scanning at the beginning of the XML
+document. You can cancel scanning at every point you wish to and
+you can start scanning the same document as often as you want to.</p>
+
+<p>TXmlParser's main task is to
+crack up the XML document into its parts (Start Tags, End Tags,
+Text Content between them, CDATA sections, Empty-Element Tags,
+the DTD, Processing Instructions (PIs) and Comments). As you scan
+through the document, TXmlParser will tell you, what it has found.</p>
+
+<p>In short, the process looks like
+this:</p>
+
+<pre class="comment">// Create an Instance of TXmlParser</pre>
+
+<pre>VAR
+  Parser : TXmlParser;
+BEGIN
+  Parser := TXmlParser.Create;          // Create Parser Instance</pre>
+  
+<pre class="comment">// Tell the parser if you want content to be normalized
+// (i.e. pack and trimm off Whitespaces)</pre>
+
+<pre>  Parser.Normalize := TRUE;</pre>
+
+<pre class="comment">// Load the XML Document</pre>
+<pre>  Parser.LoadFromFile (XmlFilename);    // Load XML file</pre>
+
+<pre class="comment">// Initialize for Scanning through the Document</pre>
+
+<pre>  Parser.StartScan;                     // Prepare Scanning through the document</pre>
+
+<pre class="comment">// Scanning is done with this loop</pre>
+
+<pre>  WHILE Parser.Scan DO 
+    CASE Parser.CurPartType OF          // Here the parser tells you what it has found
+      ptStartTag,
+      ptEmptyTag : // Process Parser.CurName and Parser.CurAttr (see below) fields here
+      ptContent,
+      ptCData    : // Process Parser.CurContent field here
+      ptEndTag   : // Process End-Tag here (Parser.CurName)
+      ptPI       : // Process PI here (Parser.CurName is the target, Parser.CurContent)
+      END;
+  Parser.Free;
+END;</pre>
+
+<pre class="comment">// In Start Tags (ptStartTag) and Empty-Element Tags (ptEmptyTag) you 
+// can access attributes (CurAttr)</pre>
+<p>You can access the attributes by
+name:</p>
+
+<pre>Value := Parser.CurAttr.Value ('name');   // where 'name' is the attribute's name</pre>
+
+<p>Or you can scan through the
+whole list of attributes:</p>
+
+<pre>FOR i := 0 TO Parser.CurAttr.Count-1 DO BEGIN
+  Name  := Parser.CurAttr.Name  (i);
+  Value := Parser.CurAttr.Value (i);
+    // or
+  Value := Parser.CurAttr.Value (Name);   // Same result, but slower
+  END;</pre>
+
+<hr>
+
+<h2><a name="LOADINGTHEXMLDOC"></a>Loading the XML document</h2> 
+
+<p>An XML Document must be loaded
+completely into RAM before TXmlParser can scan it. So the maximum
+size of Document is limited by available RAM. However, as
+TXmlParser does not build an Object Model, the RAM needed is
+exactly the same as the size of the document.</p>
+
+<p>You can load the XML document
+from a file with the &quot;LoadFromFile&quot; method. It is
+beyond the scope of TXmlParser to perform HTTP or FTP accesses.
+If you want your application to handle such requests (URLs), you
+can load the XML via HTTP or FTP or whatever protocol and hand
+over the data buffer using the &quot;LoadFromBuffer&quot; or
+&quot;SetBuffer&quot; method.</p>
+
+<p>&quot;LoadFromBuffer&quot; loads
+the internal buffer of TXmlParser with the given null-terminated
+string, thereby creating a copy of that buffer.</p>
+
+<p>&quot;SetBuffer&quot; just takes
+the pointer to another buffer, which means that the given buffer
+pointer must be valid while the document is accessed via
+TXmlParser.</p>
+
+<hr>
+
+<h2><a name="CHARACTERENCODIN"></a>Character Encodings</h2> 
+
+<p>TXmlParser &quot;understands&quot;
+the following encodings</p>
+
+<ul>
+    <li>UTF-8</li>
+    <li>ISO-8859-1</li>
+    <li>Windows 1252</li>
+</ul>
+
+<p>Any flavor of multi-byte
+characters and UTF-16 is not supported. Sorry.</p>
+
+<p>Every string which has to be
+passed to the application passes the virtual method &quot;TranslateEncoding&quot;
+which translates the string from the current encoding (stored in
+&quot;CurEncoding&quot;) into the encoding the application wishes
+to receive.</p>
+
+<p>The &quot;TranslateEncoding&quot;
+method that is built into TXmlParser assumes that the application
+wants to receive Windows ANSI (about the same as ISO-8859-1) and
+is able to convert UTF-8 and ISO-8859-1 encodings.</p>
+
+<p>For other source and target
+encodings, you will have to override &quot;TranslateEncoding&quot;
+yourself.</p>
+
+<hr>
+
+<h2><a name="BUFFERHANDLING"></a>Buffer Handling</h2> 
+
+<ul>
+    <li>The document must be loaded
+        completely into a piece of RAM</li>
+    <li>All character positions are
+        referenced by PChar pointers</li>
+    <li>The TXmlParser instance can
+        either &quot;own&quot; the buffer itself (then,
+        FBufferSize is &gt; 0) or reference the buffer of another
+        instance or object (then, FBuffersize is 0 and FBuffer is
+        not NIL)</li>
+    <li>The Property DocBuffer
+        passes back a pointer to the first byte of the document.
+        If there is no document stored (FBuffer is NIL), the
+        DocBuffer returns a pointer to a NULL character.</li>
+</ul>
+
+<hr>
+
+<h2><a name="WHITESPACEHANDLI"></a>Whitespace Handling, Normalization</h2> 
+
+<p>The TXmlParser property &quot;Normalize&quot;
+determines how Whitespace is returned in Text Content:</p>
+
+<p>While Normalize is true, all
+leading and trailing whitespace characters are trimmed off, all
+Whitespace is converted to Space #x20 characters and contiguous
+Whitespace characters are compressed to one.</p>
+
+<p>If the &quot;Scan&quot; method
+reports a ptContent part, the application can get the original
+text with all whitespace characters by extracting the characters
+from &quot;CurStart&quot; to &quot;CurFinal&quot;.</p>
+
+<p>If the application detects an
+xml:space attribute, it can set &quot;Normalize&quot;
+accordingly or use CurStart/CurFinal..</p>
+
+<p>Please note that TXmlParser does not normalize Line Breaks to single LineFeed characters
+as the XmlSpec requires (XmlSpec 2.11). The xml:space attribute
+is not handled by TXmlParser. This is on behalf of the
+application.</p>
+
+<hr>
+
+<h2><a name="NON-XML-CONFORMI"></a>Non-XML-Conforming</h2>
+
+<p>TXmlParser does not conform 100
+% exactly to the XmlSpec:</p>
+
+<ul>
+    <li>UTF-16 is not supported (XmlSpec
+        2.2) <br>
+        (Workaround: Convert UTF-16 to UTF-8 and hand the buffer
+        over to TXmlParser)</li>
+    <li>As the parser only works
+        with single byte strings, all Unicode characters &gt; 255 can not be handled.</li>
+    <li>Line breaks are not
+        normalized to single Linefeed #x0A characters (XmlSpec 2.11)<br>
+      (Workaround: The Application can access the text contents
+        on its own [CurStart, CurFinal], thereby applying every
+        normalization it wishes to)</li>
+    <li>See also the code parts
+        marked with three consecutive exclamation marks. These
+        are parts which are not finished in the current code
+        release.</li>
+</ul>
+
+<p>This list may be incomplete, so
+it may grow if I get to know any other points. As work on the
+parser proceeds, this list may also shrink.</p>
+
+<hr>
+
+<h2><a name="VERSIONNUMBERSCH"></a>Version Numbers, Change History</h2> 
+
+<p>There is a history at the beginning of the LibXmlParser unit's
+source code. This history is the only valid history. All other
+histories my be erroneous or out of date.</p>
+
+
+
+
+
+</div>
+</body>
+
+</html>

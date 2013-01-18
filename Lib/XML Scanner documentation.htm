@@ -1,0 +1,901 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+  <meta name="ProgId" content="FrontPage.Editor.Document">
+  <title>XML Scanner documentation</title>
+  <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../../ancientbrowser.css">
+  <link rel="stylesheet" type="text/css" href="../../site.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../../print.css" media="print">
+  <link rel="stylesheet" type="text/css" href="../dir.css">
+  <style type="text/css"><!--
+	div.NviLevel span#NviXmlDoc {
+		background-color: #FFFFFF;
+		}
+  
+  --></style>
+</head>
+
+<body>
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-main.htm" TAG="BODY" startspan -->
+
+	<div id="DivPrinthead"><p>www.destructor.de</p></div>
+
+	<div id="DivHead">
+		<div id="NviSmall"><p><a
+		href="../../about.htm" title="About Box">About</a> | <a
+		href="../../contact.htm" title="Contacting me">Contact</a> | <a
+		href="../../impressum.htm" title="German legal stuff">Impressum</a></p></div>
+	</div>
+
+	<div class="NviLevel">
+		<hr>
+		<span id="NviHome"><a href="../../index.htm">Home</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjects"><a href="../../code/index.htm">Code</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviPublications"><a href="../../articles/index.htm">Articles</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviMisc"><a href="../../misc/index.htm">Misc</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviClose" class="x"><a href="../../close.htm" title="Close">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="32214" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-projects.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviProjectsXml"><a href="../index.htm" title="XML Parser for Delphi/Kylix">XML Parser</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsTar"><a href="../../libtar/index.htm" title="Delphi/Kylix library to read/write tar files">TAR Library</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsLinkList"><a href="../../linklist/index.htm" title="Delphi/Kylix library to handle doubly linked lists">Linked Lists</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsWinsock"><a href="../../code/winsock11.htm" title="Delphi library for WinSock 1.1 access">WinSock 1.1</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviProjectsClose" class="x"><a href="../../index.htm" title="Close Code">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="33970" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-xmlparser.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviXmlMain"><a href="../index.htm" title="The XML Parser in general">General</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlDownloads"><a href="../download.htm" title="XML Parser Downloads">Downloads</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlDoc"><a href="../doc.htm" title="XML Parser Documentation">Documentation</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlHistory"><a href="../history.htm" title="XML Parser History">History</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlLinks"><a href="../links.htm" title="XML Parser Links">Links</a></span><span class="delim">&nbsp;|&nbsp;</span>
+		<span id="NviXmlClose" class="x"><a href="../../code/index.htm" title="Close">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="124" -->
+
+<!--webbot bot="Include" U-Include="../../fpinclude/navi-xmlparser-doc.htm" TAG="BODY" startspan -->
+
+	<div class="NviLevel">
+		<span id="NviXmlDocumentation" class="x"><a href="../doc.htm" title="XML Parser Documentation">x</a></span>
+		<hr>
+	</div>
+
+<!--webbot bot="Include" endspan i-checksum="671" -->
+
+<div id="photo"><img src="../../img/trees.jpg" alt="" width="100" height="200"></div>
+
+
+<div id="body">
+
+<h1>XML Scanner Reference Documentation</h1>
+
+
+
+
+
+<p>TXmlScanner is a VCL/CLX component wrapper for <a href="overview.htm">TXmlParser</a>.
+You can simply click a TXmlScanner non-visual component on your form or data
+module and just use it.</p>
+
+
+
+
+
+<table border="0" cellpadding="6">
+    <tr>
+        <th>Methods</th>
+        <th>Properties</th>
+        <th>Events</th>
+    </tr>
+    <tr>
+        <td>&darr; <a href="#loadfromfile">LoadFromFile</a><br> 
+          &darr; <a href="#loadfrombuffer">LoadFromBuffer</a><br> 
+          &darr; <a href="#setbuffer">SetBuffer</a><br> 
+          &darr; <a href="#execute">Execute</a></td> 
+        <td>&darr; <a href="#filename">Filename</a><br> 
+          &darr; <a href="#normalize">Normalize</a><br> 
+        </td>
+        <td>
+        &darr; <a href="#onattlist">OnAttList</a><br> 
+        &darr; <a href="#oncdata">OnCData</a><br> 
+        &darr; <a href="#oncomment">OnComment</a><br> 
+        &darr; <a href="#oncontent">OnContent</a><br> 
+        &darr; <a href="#ondtderror">OnDtdError</a><br> 
+        &darr; <a href="#ondtdread">OnDtdRead</a><br> 
+        &darr; <a href="#onelement">OnElement</a><br> 
+        &darr; <a href="#onemptytag">OnEmptyTag</a><br> 
+        &darr; <a href="#onendtag">OnEndTag</a><br> 
+        &darr; <a href="#onentity">OnEntity</a><br> 
+        &darr; <a href="#onloadexternal">OnLoadExternal</a><br> 
+          &darr; <a href="#onnotation"> OnNotation</a><br> 
+          &darr; <a href="#onpi"> OnPI</a><br> 
+          &darr; <a href="#onstarttag"> OnStartTag</a><br> 
+          &darr; <a href="#ontranslateencoding"> OnTranslateEncoding</a><br> 
+          &darr; <a href="#onxmlprolog"> OnXmlProlog</a> 
+        </td>
+    </tr>
+</table>
+
+<h2>How to use it</h2>
+
+<ul>
+    <li>Put a <i> TXmlScanner</i> component
+        on your form</li>
+    <li>Assign the name of the XML
+        file to scan to the <a href="#filename"> Filename</a> property -- or --
+      call <a href="#loadfromfile">LoadFromFile</a> (or <a href="#loadfrombuffer">LoadFromBuffer</a>
+      or <a href="#setbuffer">SetBuffer</a>) to load your XML into the
+      component.</li>
+    <li>Call the <a href="#execute"> Execute</a> method</li>
+    <li>For every part the scanner
+        finds in the XML file, one of the Events is triggered and
+        you can do whatever you like with that part</li>
+</ul>
+
+<hr>
+
+<h2>TEasyXmlScanner</h2>
+<p>The TEasyXmlScanner component is easier to use than TXmlScanner: it lacks
+events which you won't need for standard applications. So there are only those
+events left in the object inspector that you're most likely to use. Everything
+else is the same.</p>
+<hr>
+<h2><a name="loadfromfile"></a>LoadFromFile</h2>
+
+
+
+
+
+<pre>PROCEDURE LoadFromFile (Filename : STRING); </pre>
+
+<p>Loads the given file into the
+internal buffer of TXmlScanner. If you specify an unknown
+filename, the internal buffers will be cleared and a subsequent
+call to <a href="#execute">Execute</a>
+will do nothing.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Filename</th>
+        <td>The name of the XML
+        file to read in</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#loadfrombuffer">LoadFromBuffer</a>, <a href="#setbuffer">SetBuffer</a>,
+<a href="#filename">Filename</a>
+property</p>
+
+<hr>
+
+<h2><a name="loadfrombuffer"></a>LoadFromBuffer</h2>
+
+<pre>PROCEDURE LoadFromBuffer (Buffer : PChar); </pre>
+
+<p>Loads the given buffer into the
+internal buffer of TXmlScanner. Buffer must be a null terminated string
+containing the XML document.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Buffer</th>
+        <td>Pointer of the Buffer
+        to read in</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#loadfromfile">LoadFromFile</a>, <a href="#setbuffer">SetBuffer</a></p>
+
+<hr>
+
+<h2><a name="setbuffer"></a>SetBuffer</h2>
+
+<pre>PROCEDURE SetBuffer (Buffer : PChar);</pre>
+
+<p>Makes the given buffer the data
+buffer where the parser gets the data from. This buffer must not
+be deallocated as long as <a href="#execute"> Execute</a> is working on it.</p>
+
+<p>The Buffer must be null
+terminated.</p>
+
+<p>The parser will not modify the
+contents of the buffer.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th>Buffer</th>
+        <td>Pointer of the Buffer
+        to use</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#loadfromfile">LoadFromFile</a>, <a href="#loadfrombuffer">LoadFromBuffer</a></p>
+
+<hr>
+
+<h2><a name="execute"></a>Execute</h2>
+
+<pre>PROCEDURE Execute;</pre>
+
+<p>This is where the scanning takes
+place. <i> Execute</i> runs through the XML document and triggers one of
+the Events for every XML part it finds in the document.</p>
+
+<p>When <i> Execute</i> returns, the whole
+document has been scanned.</p>
+
+<p>Calling of the event methods is done synchronously (no
+threading, one after the other) so when <i> Execute</i> returns you can be sure that all of your Event
+handler methods have finished running.</p>
+
+<h3>Parameters</h3>
+
+<p>None</p>
+
+<h3>See also</h3>
+
+<p><a href="#loadfromfile">LoadFromFile</a>, <a href="#loadfrombuffer">LoadFromBuffer</a>,
+<a href="#setbuffer">SetBuffer</a>, <a href="#normalize">Normalize</a> Property</p>
+
+<hr>
+
+<h2><a name="filename"></a>Filename</h2>
+
+<pre>PROPERTY Filename : STRING READ GetFilename WRITE LoadFromFile;</pre>
+
+<p>Gets/Sets the filename of the
+scanner. If you set the filename, the file is read into
+TXmlScanner's internal buffer.</p>
+
+<h3>See also</h3>
+
+<p><a href="#loadfromfile">LoadFromFile</a></p>
+
+<hr>
+
+<h2><a name="normalize"></a>Normalize</h2>
+
+<pre>PROPERTY Normalize : BOOLEAN READ GetNormalize WRITE SetNormalize;</pre>
+
+<p>If you set Normalize to TRUE,
+the following normalization on element text content will take
+place:</p>
+
+<ul>
+    <li>Content which is only
+        whitespace is not returned to your application</li>
+    <li>Leading and trailing
+        whitespace is trimmed off</li>
+    <li>Contiguous whitespace
+        characters are packed to one space character</li>
+</ul>
+
+<p>Whitespace, as according to the
+XML 1.0 specification, is one of the following characters:</p>
+
+<ul>
+    <li>The SPACE character (#32, #x0020)</li>
+    <li>The TAB character (#9, #x0009)</li>
+    <li>The CARRIAGE RETURN
+        character (#13, #x000D)</li>
+    <li>The LINE FEED character (#10,
+        #x000A)</li>
+</ul>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a></p>
+
+<hr>
+
+<h2><a name="onattlist"></a>OnAttList</h2>
+
+<pre>PROPERTY OnAttList : TElementEvent  READ FOnAttList WRITE FOnAttList;
+
+TElementEvent = PROCEDURE (Sender : TObject; ElemDef : TElemDef) OF OBJECT;</pre>
+
+<p>OnAttList is fired when the parser has found an &lt;!ATTLIST&gt; definition
+in the DTD. It gets passed the complete element definition as the ElemDef
+parameter which is a name/value pair list (TNvpList) containing the Attribute
+definitions (TAttrDef).</p>
+
+<h3>Parameters</h3>
+
+<table border="1">
+  <tr>
+    <th>Sender</th>
+    <td>The
+        TXmlScanner instance which triggers the event</td>
+  </tr>
+  <tr>
+    <th>ElemDef</th>
+    <td>Element definitions of the element the attributes belong to. Complete
+      with attribute definitions.</td>
+  </tr>
+</table>
+<h3>Example</h3>
+<pre>FOR I := 0 TO ElemDef.Count-1 DO BEGIN
+    AD := TAttrDef (ElemDef [I]);
+    IF AD.AttrType IN [atNotation, atEnumeration] 
+      THEN S  := AD.Name + ': ' + AD.TypeDef + ' Default=' + AnsiQuotedStr (AD.Value, '''')
+      ELSE S  := AD.Name+': '+CAttrType_Name [AD.AttrType] + ' Default=' + AnsiQuotedStr (AD.Value, '''');
+    Memo1.Lines.Add (S);
+    END;</pre>
+<hr>
+<h2><a name="oncdata"></a>OnCData</h2>
+
+
+
+
+
+<pre>TContentEvent = PROCEDURE (Sender : TObject; Content : STRING) OF OBJECT;</pre>
+
+<pre>PROPERTY OnCData : TContentEvent READ FOnCData WRITE FOnCData;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has parsed a CDATA section.</p>
+
+<h2>Parameters</h2>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">Content</th>
+        <td valign="top">The text
+        content of the CDATA section.</td>
+    </tr>
+</table>
+
+<h2>See also</h2>
+
+<p><a href="#execute">Execute</a>, <a href="#onstarttag">OnStartTag</a>, <a href="#oncontent">OnContent</a></p>
+<hr>
+<h2><a name="oncomment"></a>OnComment</h2>
+<pre>TCommentEvent = PROCEDURE (Sender : TObject; Comment : STRING) OF OBJECT;</pre>
+
+<pre>PROPERTY OnComment : TCommentEvent READ FOnComment WRITE FOnComment;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has parsed a comment.</p>
+
+<h2>Parameters</h2>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">Comment</th>
+        <td valign="top">The
+        comment</td>
+    </tr>
+</table>
+
+<h2>See also</h2>
+
+<p><a href="#execute">Execute</a></p>
+
+<hr>
+<h2><a name="oncontent"></a>OnContent</h2>
+
+<pre>TContentEvent = PROCEDURE (Sender : TObject; Content : STRING) OF OBJECT;</pre>
+
+<pre>PROPERTY OnContent : TContentEvent READ FOnContent WRITE FOnContent;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has parsed element text content.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">Content</th>
+        <td valign="top">The text
+        content. Entities have already been resolved.</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a>, <a href="#onstarttag">OnStartTag</a>, <a href="#oncdata">OnCData</a></p>
+<hr>
+
+<h2><a name="ondtderror"></a>OnDtdError</h2>
+
+<pre>TErrorEvent = PROCEDURE (Sender : TObject; ErrorPos : PChar) OF OBJECT;</pre>
+
+<pre>PROPERTY OnDtdError : TErrorEvent READ FOnDtdError WRITE FOnDtdError;</pre>
+<p>Gets called whenever there is an error found in the DTD.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">ErrorPos</th>
+        <td valign="top">Points to the position of the error in the DTD</td>
+    </tr>
+</table>
+
+<hr>
+<h2><a name="ondtdread"></a>OnDtdRead</h2>
+
+<pre>TDtdEvent = PROCEDURE (Sender : TObject; RootElementName : STRING) OF OBJECT;</pre>
+
+<pre>PROPERTY OnDtdRead : TDtdEvent READ FOnDtdRead WRITE FOnDtdRead;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has finished parsing the document
+type declaration.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">RootElementName</th>
+        <td valign="top">The name
+        of the DTD root element</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a></p>
+
+<hr>
+<h2><a name="onelement"></a>OnElement</h2>
+
+<pre>PROPERTY OnElement : TElementEvent READ FOnElement WRITE FOnElement;
+
+TElementEvent = PROCEDURE (Sender : TObject; ElemDef : TElemDef) OF OBJECT;</pre>
+
+<p>OnElement is fired when the parser has found an &lt;!ELEMENT&gt; definition
+in the DTD. It gets passed the complete element definition as the ElemDef
+parameter. The Attribute list is empty when OnElement gets fired.</p>
+
+<h3>Parameters</h3>
+
+<table border="1">
+  <tr>
+    <th>Sender</th>
+    <td>The TXmlScanner instance which triggers the event</td>
+  </tr>
+  <tr>
+    <th>ElemDef</th>
+    <td>Element definitions of the element</td>
+  </tr>
+</table>
+<h3>Example</h3>
+<pre>Memo1.Lines.Add ('OnElement: '+ElemDef.Name+': '+ElemDef.Definition);</pre>
+<hr>
+<h2><a name="onemptytag"></a>OnEmptyTag</h2>
+
+<pre>TStartTagEvent = PROCEDURE (Sender : TObject; TagName : STRING; Attributes : TAttrList) OF OBJECT;</pre>
+
+<pre>PROPERTY OnEmptyTag : TStartTagEvent READ FOnEmptyTag WRITE FOnEmptyTag;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has read in an Empty-Element Tag
+of the form &lt;name/&gt;</p>
+
+<p>When you have an Empty-Element
+Tag of the form &lt;name&gt;&lt;/name&gt;, the events <a href="#onstarttag">OnStartTag</a> and
+<a href="#onendtag">OnEndTag</a> are triggered.</p>
+
+<p>You can access the
+attributes by name or by scanning through the list of
+attributes (Value and Name are STRING variables, i is of type
+INTEGER):</p>
+
+<pre>Value := Attributes.Value ('name');         // Access by name</pre>
+
+<pre>for i := 0 to Attributes.Count-1 do begin   // Scan through attributes
+  Name  := Attributes.Name (i);
+  Value := Attributes.Value (i);
+  end;</pre>
+
+<p>Note that all names in XML are
+case-sensitive. This includes attribute names. The list of
+attributes is always sorted by name by the parser.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">TagName</th>
+        <td valign="top">The name
+        of the Start Tag. Case sensitive.</td>
+    </tr>
+    <tr>
+        <th valign="top">Attributes</th>
+        <td valign="top">List of
+        attributes</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a>, <a href="#onstarttag">OnStartTag</a>, <a href="#onendtag">OnEndTag</a></p>
+<hr>
+
+
+
+
+
+<h2><a name="onendtag"></a>OnEndTag</h2>
+
+
+
+
+
+<pre>TEndTagEvent = PROCEDURE (Sender : TObject; TagName : STRING) OF OBJECT;</pre>
+
+<pre>PROPERTY OnEndTag : TEndTagEvent READ FOnEndTag WRITE FOnEndTag;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has parsed an End Tag.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">TagName</th>
+        <td valign="top">The name
+        of the End Tag. Case sensitive.</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a>, <a href="#onstarttag">OnStartTag</a></p>
+<hr>
+<h2><a name="onentity"></a>OnEntity</h2>
+<pre>TEntityEvent = PROCEDURE (Sender : TObject; EntityDef : TEntityDef) OF OBJECT;</pre>
+<pre>PROPERTY OnEntity : TEntityEvent READ FOnEntity WRITE FOnEntity;</pre>
+<p>This event is fired when the parser has found an &lt;!ENTITY&gt; definition
+in the DTD.</p>
+<h3>Parameters</h3>
+<table border="1">
+  <tr>
+    <th>Sender</th>
+    <td>The
+        TXmlScanner instance which triggers the event</td>
+  </tr>
+  <tr>
+    <th>EntityDef</th>
+    <td>A TEntityDef instance defining the contents of the entity</td>
+  </tr>
+</table>
+<hr>
+<h2><a name="onloadexternal"></a>OnLoadExternal</h2>
+<pre>TExternalEvent = PROCEDURE (Sender : TObject; 
+                            SystemId, PublicId, NotationId : STRING;
+                            VAR Result : TXmlParser) OF OBJECT;</pre>
+<pre>PROPERTY OnLoadExternal : TExternalEvent READ FOnLoadExternal WRITE FOnLoadExternal;</pre>
+<p>When your XML document contains references to External Entities or External
+DTDs, the external entity must be loaded into memory. When the parser finds an
+External Entity reference or an external DTD reference, it fires to
+OnLoadExternal event.</p>
+<p>The event handler must</p>
+<ul>
+  <li>create a new TXmlParser instance and assign it to <i>Result</i></li>
+  <li>Load the external entity file into the newly created TXmlParser instance</li>
+</ul>
+<h3>Parameters</h3>
+<table border="1">
+  <tr>
+    <th>Sender</th>
+    <td>The
+        TXmlScanner instance which triggers the event</td>
+  </tr>
+  <tr>
+    <th>SystemId</th>
+    <td>The SYSTEM identifier of the external entity. This is always given and
+      is the URI of the file to load</td>
+  </tr>
+  <tr>
+    <th>PublicId</th>
+    <td>The PUBLIC identifier of the external entity. This is optional.</td>
+  </tr>
+  <tr>
+    <th>NotationId</th>
+    <td>The NOTATION identifier of the external entity. Only applicable for
+      General Unparsed External Entities.</td>
+  </tr>
+</table>
+<h3>Example</h3>
+<p>There is a call to an external entity in the DTD:</p>
+<pre>&lt;!ENTITY blah SYSTEM &quot;myentity.xml&quot;&gt;</pre>
+<p>In this case, &quot;myentity.xml&quot; is passed as the SYSTEM identifier.
+This is how the event handler looks like:</p>
+<pre>Result := TXmlParser.Create;
+Result.LoadFromFile (SystemId);</pre>
+<p>Please note that TXmlParser is not able to do HTTP or FTP transfers. In case
+you need this, you must implement it yourself (e.g. by using Indy or other
+components that come with Delphi). When you have downloaded from HTTP or FTP,
+you can use TXmlParser.LoadFromBuffer or TXmlParser.SetBuffer to load the XML
+into the parser instance.</p>
+<hr>
+<h2><a name="onnotation"></a>OnNotation</h2>
+<pre>TNotationEvent = PROCEDURE (Sender : TObject; NotationDef : TNotationDef) OF OBJECT;</pre>
+<pre>PROPERTY OnNotation : TNotationEvent READ FOnNotation WRITE FOnNotation;</pre>
+<p>OnNotation gets called when the parser has found a &lt;!NOTATION&gt;
+definition in the DTD.</p>
+<h3>Parameters</h3>
+<table border="1">
+  <tr>
+    <th>Sender</th>
+    <td>The
+        TXmlScanner instance which triggers the event</td>
+  </tr>
+  <tr>
+    <th>NotationDef</th>
+    <td>The Definition of the Notation (Name, Value=System ID, Public ID)</td>
+  </tr>
+</table>
+<hr>
+<h2><a name="onpi"></a>OnPI</h2>
+
+<pre>TPIEvent = PROCEDURE (Sender : TObject; Target, Content: STRING; Attributes : TAttrList) OF OBJECT;</pre>
+
+<pre>PROPERTY OnPI : TPIEvent READ FOnPI WRITE FOnPI;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has parsed a Processing
+Instruction (PI).</p>
+
+<p>A PI can have any format after
+the target. It is a common practice to specifiy &quot;pseudo&quot;
+attributes like the ones in start tags. For this, you get passed
+a list of attributes here, which is of course only valid and
+useable if the PI contains pseudo attributes.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">Target</th>
+        <td valign="top">The PI
+        target name</td>
+    </tr>
+    <tr>
+        <th valign="top">Content</th>
+        <td valign="top">The
+        content of the PI, not including the target name and the
+        final ?&gt;</td>
+    </tr>
+    <tr>
+        <th valign="top">Attributes</th>
+        <td valign="top">Pseudo
+        attributes</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a></p>
+
+<hr>
+<h2><a name="onstarttag"></a>OnStartTag</h2>
+
+<pre>TStartTagEvent = PROCEDURE (Sender : TObject; TagName : STRING; Attributes : TAttrList) OF OBJECT;</pre>
+
+<pre>PROPERTY OnStartTag : TStartTagEvent READ FOnStartTag WRITE FOnStartTag;</pre>
+
+<p>Is called whenever the <a href="#execute">Execute</a> method has read in a Start Tag.
+</p>
+
+<p>You can <b>access the
+attributes</b> by name or by scanning through the list of
+attributes (Value and Name are STRING variables, i is of type
+INTEGER):</p>
+
+<pre>Value := Attributes.Value ('name');         // Access by name</pre>
+
+<pre>for i := 0 to Attributes.Count-1 do begin   // Scan through attributes
+  Name  := Attributes.Name (i);
+  Value := Attributes.Value (i);
+  end;</pre>
+
+<p>Note that all names in XML are
+case-sensitive. This includes attribute names. The list of
+attributes is always sorted by name by the parser.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">TagName</th>
+        <td valign="top">The name
+        of the Start Tag. Case sensitive.</td>
+    </tr>
+    <tr>
+        <th valign="top">Attributes</th>
+        <td valign="top">List of
+        attributes</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a>, <a href="#onendtag">OnEndTag</a></p>
+<hr>
+<h2><a name="ontranslateencoding"></a>OnTranslateEncoding</h2>
+
+<pre>TEncodingEvent = FUNCTION  (Sender : TObject; CurrentEncoding, Source : STRING) : STRING OF OBJECT;</pre>
+
+<pre>PROPERTY OnTranslateEncoding : TEncodingEvent READ FOnTranslateEncoding WRITE FOnTranslateEncoding;</pre>
+
+<p>The XML Specification states
+that every XML parser must be able to handle UTF-8 and UTF-16
+documents. Beside these, parsers should be able to handle other
+Encodings. The encoding for a document is defined in the XML
+Prolog (for entire XML Documents) or in a Text Declaration at the
+beginning of Parsed External Entities or External DTD subsets.</p>
+
+<p>So there is a source Encoding (the
+Encoding of the Document and its external parts) and a
+destination encoding (the encoding your application wishes to
+process). For every content string which is passed to your
+application (Text Content between Tags, CDATA sections, Attribute
+values) the <i>OnTranslateEncoding</i> event is fired. It
+retrieves the current source encoding by looking at the <i>CurrentEncoding</i>
+argument and translates the passed <i>Source</i> string into
+the desired destination encoding.</p>
+
+<p>The TranslateEncoding method
+that is built into TXmlParser assumes that the destination
+encoding is the Windows ANSI encoding used in Windows apps. It
+can handle UTF-8 and ISO-8859-1 as source encodings. Note: It is
+assumed here that ISO-8859-1 and &quot;Windows ANSI&quot; are the
+same, which is not exactly true for some characters.&nbsp;</p>
+
+<p> UTF-8 correctly translated into the single-byte ANSI  
+Windows-1252 format.</p>  
+
+<p>At the time of this writing,
+TXmlParser and TXmlScanner are not able to handle multi-byte character strings.
+This is likely to change in the future.</p>
+
+<h3>Parameters</h3>
+
+<table border="1">
+  <tr>
+    <th>Sender</th>
+    <td>The
+        TXmlScanner instance which triggers the event</td>
+  </tr>
+  <tr>
+    <th>CurrentEncoding</th>
+    <td>The name of the encoding of the current part of XML. This name is NOT
+      case sensitive. Examples are: UTF-8, ISO-8859-1, WINDOWS-1252, etc. The
+      encoding is always given in uppercase.</td>
+  </tr>
+  <tr>
+    <th>Source</th>
+    <td>The source string which must be translated</td>
+  </tr>
+</table>
+<h3>Example</h3>
+<p>Let's assume that the CurrentEncoding is UTF-8 and you want to translate it
+to the Windows ANSI 1252 character set:</p>
+<pre>IF CurrentEncoding = 'UTF-8' THEN
+  Result := Utf8ToAnsi (Source);     // Utf8ToAnsi provided by LibXmlParser</pre>
+<hr>
+<h2><a name="onxmlprolog"></a>OnXmlProlog</h2>
+
+<pre>TXmlPrologEvent = PROCEDURE (Sender : TObject; XmlVersion, Encoding: STRING; Standalone : BOOLEAN) OF OBJECT;</pre>
+
+<pre>PROPERTY OnXmlProlog : TXmlPrologEvent READ FOnXmlProlog WRITE FOnXmlProlog;</pre>
+
+<p>Is called when the <a href="#execute">Execute</a> method has parsed an XML
+Declaration or a Text Declaration.</p>
+
+<h3>Parameters</h3>
+
+<table border="0" cellpadding="3">
+    <tr>
+        <th valign="top">Sender</th>
+        <td valign="top">The
+        TXmlScanner instance which triggers the event</td>
+    </tr>
+    <tr>
+        <th valign="top">XmlVersion</th>
+        <td valign="top">The XML
+        version number specified in the prolog. The current
+        version of XML is 1.0</td>
+    </tr>
+    <tr>
+        <th valign="top">Encoding</th>
+        <td valign="top">The
+        character encoding specified in the prolog. There are a
+        lot of possible values here. Usual values are: UTF-8, ISO-8859-1.
+        You can assume UTF-8 if there is no encoding specified by
+        the prolog.</td>
+    </tr>
+    <tr>
+        <th valign="top">Standalone</th>
+        <td valign="top">True if
+        there is a standalone='yes' in the prolog. Please refer
+        to the XML spec for an exact definition of the standalone
+        declaration.</td>
+    </tr>
+</table>
+
+<h3>See also</h3>
+
+<p><a href="#execute">Execute</a></p>
+
+
+
+
+
+</div>
+</body>
+
+</html>
