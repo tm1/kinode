@@ -189,8 +189,9 @@ begin
       Stream := TStringStream.Create('');
       try
         CinemaLogoBmp.SaveToStream(Stream);
-        buffer := '@2,';
-        buffer := buffer + Base64EncodeStr(Stream.DataString);
+        // -- buffer := '@2,';
+        // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
+        buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -226,8 +227,9 @@ begin
       Stream := TStringStream.Create('');
       try
         OdeumLogoBmp.SaveToStream(Stream);
-        buffer := '@2,';
-        buffer := buffer + Base64EncodeStr(Stream.DataString);
+        // -- buffer := '@2,';
+        // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
+        buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -259,9 +261,10 @@ begin
       // --------------------------------------------------------------------------
       // Загрузка названия зала
       // --------------------------------------------------------------------------
-      buffer := '@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF;
+      // -- buffer := '@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF;
       // buffer := buffer + '^0090,0000;' + 'Зеленый зал';
-      buffer := buffer + '^0190,0030;' + OdeumName;
+      // -- buffer := buffer + '^0190,0030;' + OdeumName;
+      buffer := Format('@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF + '^0190,0030;' + '%s', [OdeumName]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -306,9 +309,10 @@ begin
       // --------------------------------------------------------------------------
       // Загрузка слова "ряд"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      buffer := buffer + '^0029,0000;' + str_Ryad;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
+      // -- buffer := buffer + '^0029,0000;' + str_Ryad;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0029,0000;' + '%s', [str_Ryad]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -317,11 +321,12 @@ begin
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Ryad = [' + IntToStr(gfx_Ryad) + ']');
 {$ENDIF}
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка слова "место"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      buffer := buffer + '^0040,0000;' + str_Mesto;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
+      // -- buffer := buffer + '^0040,0000;' + str_Mesto;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0040,0000;' + '%s', [str_Mesto]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -330,11 +335,12 @@ begin
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Mesto = [' + IntToStr(gfx_Mesto) + ']');
 {$ENDIF}
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка слова "цена"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      buffer := buffer + '^0032,0000;' + str_Cena;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
+      // -- buffer := buffer + '^0032,0000;' + str_Cena;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Cena]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -343,11 +349,12 @@ begin
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Cena = [' + IntToStr(gfx_Cena) + ']');
 {$ENDIF}
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка слова "сумма"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      buffer := buffer + '^0032,0000;' + str_Summa;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
+      // -- buffer := buffer + '^0032,0000;' + str_Summa;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Summa]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -356,11 +363,12 @@ begin
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Summa = [' + IntToStr(gfx_Summa) + ']');
 {$ENDIF}
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка слова "тенге"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      buffer := buffer + '^0028,0000;' + str_Tenge;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
+      // -- buffer := buffer + '^0028,0000;' + str_Tenge;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0028,0000;' + '%s', [str_Tenge]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -369,11 +377,12 @@ begin
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Tenge = [' + IntToStr(gfx_Tenge) + ']');
 {$ENDIF}
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка слов "Бесплатный билет"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-      buffer := buffer + '^0105,0000;' + str_Halyava;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
+      // -- buffer := buffer + '^0105,0000;' + str_Halyava;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_Halyava]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -442,11 +451,12 @@ begin
 {$ENDIF}
       *)
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка слов "Кол-во мест"
       // --------------------------------------------------------------------------
-      buffer := '@2,000,050' + c_CRLF;
-      buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      buffer := buffer + '^0092,0000;' + str_Kolvomest;
+      // -- buffer := '@2,000,050' + c_CRLF;
+      // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
+      // -- buffer := buffer + '^0092,0000;' + str_Kolvomest;
+      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0092,0000;' + '%s', [str_Kolvomest]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -501,7 +511,7 @@ begin
     if (not Emblema_Loaded) then
     begin
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка картинок предварительная
       // --------------------------------------------------------------------------
       FlushGfxCache;
       Init_Global_Print(bmp_CinemaLogo, bmp_OdeumLogo, str_Zal_Nam);
@@ -521,11 +531,12 @@ begin
       Result := Result + 1;
     end;
     // --------------------------------------------------------------------------
-    // Загрузка
+    // Загрузка названия фильма
     // --------------------------------------------------------------------------
-    buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
+    // -- buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
     // buffer := buffer + '^0266,0000;' + strFilm_Name;
-    buffer := buffer + '^0246,0000;' + strFilm_Name;
+    // -- buffer := buffer + '^0246,0000;' + strFilm_Name;
+    buffer := Format('@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF + '^0246,0000;' + '%s', [strFilm_Name]);
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -534,7 +545,7 @@ begin
     DEBUGMessEnh(0, UnitName, ProcName, 'gfx1_Filmname = [' + IntToStr(gfx1_Filmname) + ']');
 {$ENDIF}
     // --------------------------------------------------------------------------
-    // Загрузка
+    // Загрузка даты и времени сеанса
     // --------------------------------------------------------------------------
     case Print_Maket_Version of
       1:
@@ -547,14 +558,18 @@ begin
         end
     else
     end;
-    buffer := '@2,000,050' + c_CRLF;
-    buffer := buffer + '#Arial,0000,19,204' + c_CRLF;
-    buffer := buffer + '^0120,0000;' + FormatDateTime('d mmmm yyyy', dtFilm_Date) + c_CRLF;
-    buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-    buffer := buffer + '^0052,0000;' + '  ' + tmp_Vremya + '  ' + c_CRLF;
-    buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
+    // -- buffer := '@2,000,050' + c_CRLF;
+    // -- buffer := buffer + '#Arial,0000,19,204' + c_CRLF;
+    // -- buffer := buffer + '^0120,0000;' + FormatDateTime('d mmmm yyyy', dtFilm_Date) + c_CRLF;
+    // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
+    // -- buffer := buffer + '^0052,0000;' + '  ' + tmp_Vremya + '  ' + c_CRLF;
+    // -- buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
     // buffer := buffer + '^0100,0000;' + strSeans_Time;
-    buffer := buffer + '^0048,0000;' + strSeans_Time;
+    // -- buffer := buffer + '^0048,0000;' + strSeans_Time;
+    buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,19,204' + c_CRLF + '^0120,0000;' + '%s' + c_CRLF
+      + '#Arial,0000,18,204' + c_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + c_CRLF
+      + '#Arial,1000,19,204' + c_CRLF + '^0048,0000;' + '%s',
+      [FormatDateTime('d mmmm yyyy', dtFilm_Date), tmp_Vremya, strSeans_Time]);
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -829,18 +844,20 @@ begin
       if Print_Type = 1 then
       begin
         // групповой
-        buffer := '@2,000,050' + c_CRLF;
-        buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
-        buffer := buffer + '^0181,0000;' + s_Group_Num + c_CRLF;
+        // -- buffer := '@2,000,050' + c_CRLF;
+        // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
+        // -- buffer := buffer + '^0181,0000;' + s_Group_Num + c_CRLF;
+        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0181,0000;' + '%s' + c_CRLF, [s_Group_Num]);
         // gfx2_Ryadnum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Ryadnum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'gfx2_Ryadnum = [' + IntToStr(gfx2_Ryadnum) + ']');
 {$ENDIF}
         str_Sum := IntToStr(_Sum);
-        buffer := '@2,000,050' + c_CRLF;
-        buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-        buffer := buffer + '^0030,0000;' + str_Sum;
+        // -- buffer := '@2,000,050' + c_CRLF;
+        // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
+        // -- buffer := buffer + '^0030,0000;' + str_Sum;
+        buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0030,0000;' + '%s', [str_Sum]);
         // gfx2_Primechanie := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Primechanie := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -852,18 +869,20 @@ begin
       begin
         // обычный
         s_NomerRyada := IntToStr(_Row_Num);
-        buffer := '@2,000,050' + c_CRLF;
-        buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
-        buffer := buffer + '^0039,0000;' + s_NomerRyada + c_CRLF;
+        // -- buffer := '@2,000,050' + c_CRLF;
+        // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
+        // -- buffer := buffer + '^0039,0000;' + s_NomerRyada + c_CRLF;
+        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s' + c_CRLF, [s_NomerRyada]);
         // gfx2_Ryadnum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Ryadnum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'gfx2_Ryadnum = [' + IntToStr(gfx2_Ryadnum) + ']');
 {$ENDIF}
         s_NomerMesta := IntToStr(_Column_Num);
-        buffer := '@2,000,050' + c_CRLF;
-        buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
-        buffer := buffer + '^0039,0000;' + s_NomerMesta;
+        // -- buffer := '@2,000,050' + c_CRLF;
+        // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
+        // -- buffer := buffer + '^0039,0000;' + s_NomerMesta;
+        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s', [s_NomerMesta]);
         // gfx2_Mestonum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Mestonum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -871,9 +890,10 @@ begin
 {$ENDIF}
         if Length(str_TICKET_LABEL) > 0 then
         begin
-          buffer := '@2,000,050' + c_CRLF;
-          buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-          buffer := buffer + '^0105,0000;' + str_TICKET_LABEL;
+          // -- buffer := '@2,000,050' + c_CRLF;
+          // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
+          // -- buffer := buffer + '^0105,0000;' + str_TICKET_LABEL;
+          buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_TICKET_LABEL]);
           // gfx2_Primechanie := PrepareBitmapFromText(PChar(buffer), 0, 0);
           gfx2_Primechanie := CacheBitmapFromText(buffer, 0, 0);
         end
@@ -893,9 +913,10 @@ begin
       begin
         // Платный
         str_Sum := IntToStr(_Sum);
-        buffer := '@2,000,050' + c_CRLF;
-        buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
-        buffer := buffer + '^0032,0000;' + str_Sum;
+        // -- buffer := '@2,000,050' + c_CRLF;
+        // -- buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
+        // -- buffer := buffer + '^0032,0000;' + str_Sum;
+        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,19,204' + c_CRLF + '^0032,0000;' + '%s', [str_Sum]);
         // gfx2_Cenamesta := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Cenamesta := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -905,8 +926,8 @@ begin
       //*****************************************************************************************
       if Add_Elem and Print_Serial_Num and b_TICKET_SERIALIZE then
       begin
-        buffer := '@2,000,050' + c_CRLF;
-        buffer := buffer + '#Arial,1000,20,204' + c_CRLF;
+        // -- buffer := '@2,000,050' + c_CRLF;
+        // -- buffer := buffer + '#Arial,1000,20,204' + c_CRLF;
         // ----------------
         // Length(WWWWWWW) is 7, width is 175 dots ~ 0,86 inches ~ 21,90 mm.
         // buffer := buffer + '^0094,0000;' + 'WWWWWWW';
@@ -916,7 +937,8 @@ begin
         // ----------------
         // Length(AL00001) is 7, width is 111 dots ~ 0,55 inches ~ 13,90 mm.
         // buffer := buffer + '^0068,0000;' + str_Zal_Prefix + FixFmt(_Serial_Num, 5, '0');
-        buffer := buffer + '^0068,0000;' + str_Zal_Prefix + s_Serial_Num;
+        // -- buffer := buffer + '^0068,0000;' + str_Zal_Prefix + s_Serial_Num;
+        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,20,204' + c_CRLF + '^0068,0000;' + '%s%s', [str_Zal_Prefix, s_Serial_Num]);
         // ----------------
         gfx2_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
       end
@@ -1238,11 +1260,12 @@ begin
   if ClearPrinterBuffer >= 0 then
   begin
     // --------------------------------------------------------------------------
-    // Загрузка
+    // Загрузка теста 1
     // --------------------------------------------------------------------------
-    buffer := '@2,000,050' + c_CRLF;
-    buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
-    buffer := buffer + '^0266,0000;' + TestText1; // Film_Name;
+    // -- buffer := '@2,000,050' + c_CRLF;
+    // -- buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
+    // -- buffer := buffer + '^0266,0000;' + TestText1; // Film_Name;
+    buffer := Format('@2,000,050' + c_CRLF + '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF + '^0266,0000;' + '%s', [TestText1]);
     // =============================================================================
     // buffer := '@2,000,050' + c_CRLF;
     // buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
@@ -1256,11 +1279,12 @@ begin
     DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Test_Text1 = [' + IntToStr(gfx_Test_Text1) + ']');
 {$ENDIF}
     // --------------------------------------------------------------------------
-    // Загрузка
+    // Загрузка теста 2
     // --------------------------------------------------------------------------
-    buffer := '@2,000,050' + c_CRLF;
-    buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
-    buffer := buffer + '^0256,0000;' + TestText2; // Film_Name;
+    // buffer := '@2,000,050' + c_CRLF;
+    // -- buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
+    // -- buffer := buffer + '^0256,0000;' + TestText2; // Film_Name;
+    buffer := Format('@2,000,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF + '^0256,0000;' + '%s', [TestText2]);
     // =============================================================================
     // buffer := '@2,000,050' + c_CRLF;
     // buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
@@ -1284,13 +1308,14 @@ begin
     if Assigned(TestBmp1) then
     begin
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка тест картинки 1
       // --------------------------------------------------------------------------
       Stream := TStringStream.Create('');
       try
         TestBmp1.SaveToStream(Stream);
-        buffer := '@2,';
-        buffer := buffer + Base64EncodeStr(Stream.DataString);
+        // -- buffer := '@2,';
+        // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
+        buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -1315,13 +1340,14 @@ begin
     if Assigned(TestBmp2) then
     begin
       // --------------------------------------------------------------------------
-      // Загрузка
+      // Загрузка тест картинки 2
       // --------------------------------------------------------------------------
       Stream := TStringStream.Create('');
       try
         TestBmp2.SaveToStream(Stream);
-        buffer := '@2,';
-        buffer := buffer + Base64EncodeStr(Stream.DataString);
+        // -- buffer := '@2,';
+        // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
+        buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
