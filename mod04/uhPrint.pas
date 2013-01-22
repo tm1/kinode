@@ -29,6 +29,10 @@ type
   // --------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------
+// Загрузка форм билетов
+// --------------------------------------------------------------------------
+function Init_Blank_Print(i_BlankForm_Num: integer; b_Force: boolean): Integer; //ready partially
+// --------------------------------------------------------------------------
 // Инициализация печати глобальная
 // --------------------------------------------------------------------------
 function Init_Global_Print(CinemaLogoBmp, OdeumLogoBmp: TBitmap;
@@ -67,6 +71,19 @@ const
   Print_Maket_Version: Integer = 1;
   Print_Maket_Horz_Shift: Integer = 0;
   Print_Maket_Vert_Shift: Integer = 0;
+  cur_BlankForm_Section: string = '';
+  cur_BlankForm_Num: integer = 1;
+  cur_CinemaLogoBmp_Fmt: string = '';
+  cur_OdeumLogoBmp_Fmt: string = '';
+  cur_OdeumName_Fmt: string = '';
+  cur_Ryad_Fmt: string = '';
+  cur_Mesto_Fmt: string = '';
+  cur_Cena_Fmt: string = '';
+  cur_Summa_Fmt: string = '';
+  cur_Tenge_Fmt: string = '';
+  cur_Halyava_Fmt: string = '';
+  cur_Kolvomest_Fmt: string = '';
+  cur_FilmName_Fmt: string = '';
 
 implementation
 
@@ -83,6 +100,8 @@ uses
   uTools,
   StrConsts,
   uhImport,
+  uhCommon,
+  urCommon,
   SysUtils,
   Classes,
   DCPbase64;
@@ -120,6 +139,106 @@ const
   Odeum2Logo_iX: Integer = 0;
   Odeum2Logo_iY: Integer = 0;
   // -----------------------------------------------------------------------------
+
+procedure Load_Save_Blank_Form_Param(const str_BlankForm_Section, str_Param_Fmt,
+  Param_Fmt_Def: string; const max_Param_Fmt_Len: integer; var var_Param_Fmt: string);
+const
+  RepFlags: TReplaceFlags =  [ rfReplaceAll ];
+var
+  tmp_Param_Fmt_In, tmp_Param_Fmt_Out: string;  
+begin
+  // --------------------------------------------------------------------------
+  tmp_Param_Fmt_In := Param_Fmt_Def;
+  LoadInitParameterStr(str_BlankForm_Section, str_Param_Fmt,
+    Param_Fmt_Def, tmp_Param_Fmt_In);
+  tmp_Param_Fmt_Out := tmp_Param_Fmt_In;  
+  if (Length(tmp_Param_Fmt_In) = 0)
+    or (Length(tmp_Param_Fmt_In) > Abs(max_Param_Fmt_Len)) then
+    tmp_Param_Fmt_Out := Param_Fmt_Def;
+  if (Length(tmp_Param_Fmt_In) > 0) then
+    if (tmp_Param_Fmt_In[1] <> Param_Fmt_Def[1]) then
+      tmp_Param_Fmt_Out := Param_Fmt_Def;
+  SaveInitParameter(str_BlankForm_Section, str_Param_Fmt, tmp_Param_Fmt_Out);
+  var_Param_Fmt := StringReplace(tmp_Param_Fmt_Out, m_CRLF, c_CRLF, RepFlags);
+  // --------------------------------------------------------------------------
+end;
+
+// --------------------------------------------------------------------------
+// Загрузка форм билетов
+// --------------------------------------------------------------------------
+function Init_Blank_Print(i_BlankForm_Num: integer; b_Force: boolean): Integer; //ready partially
+const
+  ProcName: string = 'Init_Blank_Print';
+  // RepFlags: TReplaceFlags =  [ rfReplaceAll, rfIgnoreCase ];
+var
+  Time_Start, Time_End: TDateTime;
+  Hour, Min, Sec, MSec: Word;
+  tmp_BlankForm_Section: string;
+begin
+  Time_Start := Now;
+  {!$IFDEF uhPrint_DEBUG}
+  DEBUGMessEnh(1, UnitName, ProcName, '->');
+  {!$ENDIF}
+  Result := 0;
+  if b_Force or (i_BlankForm_Num <> cur_BlankForm_Num) then
+  begin
+    tmp_BlankForm_Section := s_BlankForm_Section + IntToStr(i_BlankForm_Num);
+    // --------------------------------------------------------------------------
+    {
+    tmp_CinemaLogoBmp_Fmt := CinemaLogoBmp_Fmt_Def;
+    LoadInitParameterStr(tmp_BlankForm_Section, str_CinemaLogoBmp_Fmt,
+      CinemaLogoBmp_Fmt_Def, tmp_CinemaLogoBmp_Fmt);
+    if (Length(tmp_CinemaLogoBmp_Fmt) = 0)
+      or (Length(tmp_CinemaLogoBmp_Fmt) > 100) then
+      tmp_CinemaLogoBmp_Fmt := CinemaLogoBmp_Fmt_Def;
+    if (Length(tmp_CinemaLogoBmp_Fmt) > 0) then
+      if (tmp_CinemaLogoBmp_Fmt[1] <> CinemaLogoBmp_Fmt_Def[1]) then
+      tmp_CinemaLogoBmp_Fmt := CinemaLogoBmp_Fmt_Def;
+    SaveInitParameter(tmp_BlankForm_Section, str_CinemaLogoBmp_Fmt,
+      tmp_CinemaLogoBmp_Fmt);
+    tmp_CinemaLogoBmp_Fmt := StringReplace(tmp_CinemaLogoBmp_Fmt, m_CRLF, c_CRLF, RepFlags);
+    }
+    // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_CinemaLogoBmp_Fmt,
+      CinemaLogoBmp_Fmt_Def, max_CinemaLogoBmp_Fmt_Len, cur_CinemaLogoBmp_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_OdeumLogoBmp_Fmt,
+      OdeumLogoBmp_Fmt_Def, max_OdeumLogoBmp_Fmt_Len, cur_OdeumLogoBmp_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_OdeumName_Fmt,
+      OdeumName_Fmt_Def, max_OdeumName_Fmt_Len, cur_OdeumName_Fmt);
+    // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Ryad_Fmt,
+      Ryad_Fmt_Def, max_Ryad_Fmt_Len, cur_Ryad_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Mesto_Fmt,
+      Mesto_Fmt_Def, max_Mesto_Fmt_Len, cur_Mesto_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Cena_Fmt,
+      Cena_Fmt_Def, max_Cena_Fmt_Len, cur_Cena_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Summa_Fmt,
+      Summa_Fmt_Def, max_Summa_Fmt_Len, cur_Summa_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Tenge_Fmt,
+      Tenge_Fmt_Def, max_Tenge_Fmt_Len, cur_Tenge_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Halyava_Fmt,
+      Halyava_Fmt_Def, max_Halyava_Fmt_Len, cur_Halyava_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Kolvomest_Fmt,
+      Kolvomest_Fmt_Def, max_Kolvomest_Fmt_Len, cur_Kolvomest_Fmt);
+    // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_FilmName_Fmt,
+      FilmName_Fmt_Def, max_FilmName_Fmt_Len, cur_FilmName_Fmt);
+    // --------------------------------------------------------------------------
+    Result := Result + 1;
+  end;
+  {!$IFDEF uhPrint_DEBUG}
+  DEBUGMessEnh(-1, UnitName, ProcName, '<-');
+  {!$ENDIF}
+  // --------------------------------------------------------------------------
+  // calculating work time
+  // --------------------------------------------------------------------------
+  Time_End := Now;
+  DecodeTime(Time_End - Time_Start, Hour, Min, Sec, MSec);
+  {!$IFDEF uhPrint_DEBUG}
+  DEBUGMessEnh(0, UnitName, ProcName, 'Work time - (' + IntToStr(Hour) + ':' + FixFmt(Min, 2, '0')
+    + ':' + FixFmt(Sec, 2, '0') + '.' + FixFmt(MSec, 3, '0') + ')');
+  {!$ENDIF}
+end;
 
 // --------------------------------------------------------------------------
 // Инициализация печати глобальная
@@ -191,7 +310,8 @@ begin
         CinemaLogoBmp.SaveToStream(Stream);
         // -- buffer := '@2,';
         // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
-        buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
+        // buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
+        buffer := Format(cur_CinemaLogoBmp_Fmt, [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -229,7 +349,8 @@ begin
         OdeumLogoBmp.SaveToStream(Stream);
         // -- buffer := '@2,';
         // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
-        buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
+        // buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
+        buffer := Format(cur_OdeumLogoBmp_Fmt, [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -264,7 +385,8 @@ begin
       // -- buffer := '@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF;
       // buffer := buffer + '^0090,0000;' + 'Зеленый зал';
       // -- buffer := buffer + '^0190,0030;' + OdeumName;
-      buffer := Format('@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF + '^0190,0030;' + '%s', [OdeumName]);
+      // buffer := Format('@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF + '^0190,0030;' + '%s', [OdeumName]);
+      buffer := Format(cur_OdeumName_Fmt, [OdeumName]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -312,7 +434,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
       // -- buffer := buffer + '^0029,0000;' + str_Ryad;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0029,0000;' + '%s', [str_Ryad]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0029,0000;' + '%s', [str_Ryad]);
+      buffer := Format(cur_Ryad_Fmt, [str_Ryad]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -326,7 +449,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
       // -- buffer := buffer + '^0040,0000;' + str_Mesto;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0040,0000;' + '%s', [str_Mesto]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0040,0000;' + '%s', [str_Mesto]);
+      buffer := Format(cur_Mesto_Fmt, [str_Mesto]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -340,7 +464,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
       // -- buffer := buffer + '^0032,0000;' + str_Cena;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Cena]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Cena]);
+      buffer := Format(cur_Cena_Fmt, [str_Cena]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -354,7 +479,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
       // -- buffer := buffer + '^0032,0000;' + str_Summa;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Summa]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Summa]);
+      buffer := Format(cur_Summa_Fmt, [str_Summa]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -368,7 +494,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
       // -- buffer := buffer + '^0028,0000;' + str_Tenge;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0028,0000;' + '%s', [str_Tenge]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0028,0000;' + '%s', [str_Tenge]);
+      buffer := Format(cur_Tenge_Fmt, [str_Tenge]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -382,7 +509,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
       // -- buffer := buffer + '^0105,0000;' + str_Halyava;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_Halyava]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_Halyava]);
+      buffer := Format(cur_Halyava_Fmt, [str_Halyava]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -456,7 +584,8 @@ begin
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
       // -- buffer := buffer + '^0092,0000;' + str_Kolvomest;
-      buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0092,0000;' + '%s', [str_Kolvomest]);
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0092,0000;' + '%s', [str_Kolvomest]);
+      buffer := Format(cur_Kolvomest_Fmt, [str_Kolvomest]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -536,7 +665,8 @@ begin
     // -- buffer := '@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF;
     // buffer := buffer + '^0266,0000;' + strFilm_Name;
     // -- buffer := buffer + '^0246,0000;' + strFilm_Name;
-    buffer := Format('@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF + '^0246,0000;' + '%s', [strFilm_Name]);
+    // buffer := Format('@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF + '^0246,0000;' + '%s', [strFilm_Name]);
+    buffer := Format(cur_FilmName_Fmt, [strFilm_Name]);
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}

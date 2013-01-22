@@ -61,7 +61,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=2
 Release=8
-Build=130
+Build=131
 Debug=0
 PreRelease=0
 Special=0
@@ -72,15 +72,15 @@ CodePage=1251
 [Version Info Keys]
 CompanyName=Cinema Dev
 FileDescription=KinoDE project
-FileVersion=1.2.8.130
+FileVersion=1.2.8.131
 InternalName=kinode
 LegalCopyright=n0mad eagle eye
 LegalTrademarks=for internal use only
 OriginalFilename=kinode.exe
 ProductName=KinoDE
 ProductVersion=1.2.8.x
-Comments=2013.01.18.01
-PrivateBuild=2013.01.18.01
+Comments=2013.01.23.01
+PrivateBuild=2013.01.23.01
 [Excluded Packages]
 $(DELPHI)\Bin\dclmid50.bpl=Borland MIDAS Components
 [HistoryLists\hlUnitAliases]

@@ -418,6 +418,7 @@ var
   i, tmp_Zal_Kod, tmp_Odeum_Horz_Pos, tmp_Odeum_Vert_Pos: integer;
   tmp_Print_Maket_Version, tmp_Print_Maket_Horz_Shift, tmp_Print_Maket_Vert_Shift: integer;
   tmp_Odeum_Show_Hint: string;
+  tmp_BlankForm_Num: integer;
 begin
   DEBUGMessEnh(1, UnitName, ProcName, '->');
   // --------------------------------------------------------------------------
@@ -561,6 +562,17 @@ begin
   end;
   // --------------------------------------------------------------------------
   SaveInitParameter(s_Preferences_Section, s_PrintMaketVertShift, IntToStr(Print_Maket_Vert_Shift));
+  // --------------------------------------------------------------------------
+  if LoadInitParameterInt(s_Preferences_Section, s_BlankForm_Num, cur_BlankForm_Num,
+    tmp_BlankForm_Num) then
+  begin
+    if (tmp_BlankForm_Num > 0) and (tmp_BlankForm_Num < 1000) then
+      cur_BlankForm_Num := tmp_BlankForm_Num;
+  end;
+  // --------------------------------------------------------------------------
+  SaveInitParameter(s_Preferences_Section, s_BlankForm_Num, IntToStr(cur_BlankForm_Num));
+  cur_BlankForm_Section := s_BlankForm_Section + IntToStr(cur_BlankForm_Num);
+  Init_Blank_Print(cur_BlankForm_Num, true);
   // --------------------------------------------------------------------------
   // calculating work time
   // --------------------------------------------------------------------------

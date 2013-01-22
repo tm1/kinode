@@ -116,6 +116,21 @@ const
   Common_Odeum_Horz_Pos: integer = 10;
   Common_Odeum_Vert_Pos: integer = 50;
   // -------------------------------------------------------------------------
+  m_CRLF = '\n';
+  max_CinemaLogoBmp_Fmt_Len: integer = 5;
+  max_OdeumLogoBmp_Fmt_Len: integer = 5;
+  max_OdeumName_Fmt_Len: integer = 100;
+  // -------------------------------------------------------------------------
+  max_Ryad_Fmt_Len: integer = 100;
+  max_Mesto_Fmt_Len: integer = 100;
+  max_Cena_Fmt_Len: integer = 100;
+  max_Summa_Fmt_Len: integer = 100;
+  max_Tenge_Fmt_Len: integer = 100;
+  max_Halyava_Fmt_Len: integer = 100;
+  max_Kolvomest_Fmt_Len: integer = 100;
+  // -------------------------------------------------------------------------
+  max_FilmName_Fmt_Len: integer = 100;
+  // -------------------------------------------------------------------------
 
 resourcestring
   // Some predefined constants
@@ -151,6 +166,30 @@ resourcestring
   s_Yes = 'Yes';
   s_No = 'No';
   s_RptPref = 'RptPref';
+  s_BlankForm_Section = 'BlankForm';
+  s_BlankForm_Num = 'BlankFormNumber';
+  str_CinemaLogoBmp_Fmt = 'CinemaLogoBmp_Fmt';
+  CinemaLogoBmp_Fmt_Def = '@2,%s';
+  str_OdeumLogoBmp_Fmt = 'OdeumLogoBmp_Fmt';
+  OdeumLogoBmp_Fmt_Def = '@2,%s';
+  str_OdeumName_Fmt = 'OdeumName_Fmt';
+  OdeumName_Fmt_Def = '@2,050,050' + m_CRLF + '#Courier New,1000,20,204' + m_CRLF + '^0190,0030;' + '%s';
+  str_Ryad_Fmt = 'Ryad_Fmt';
+  Ryad_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0029,0000;' + '%s';
+  str_Mesto_Fmt = 'Mesto_Fmt';
+  Mesto_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0040,0000;' + '%s';
+  str_Cena_Fmt = 'Cena_Fmt';
+  Cena_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0032,0000;' + '%s';
+  str_Summa_Fmt = 'Summa_Fmt';
+  Summa_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0032,0000;' + '%s';
+  str_Tenge_Fmt = 'Tenge_Fmt';
+  Tenge_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0028,0000;' + '%s';
+  str_Halyava_Fmt = 'Halyava_Fmt';
+  Halyava_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,18,204' + m_CRLF + '^0105,0000;' + '%s';
+  str_Kolvomest_Fmt = 'Kolvomest_Fmt';
+  Kolvomest_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0092,0000;' + '%s';
+  str_FilmName_Fmt = 'FilmName_Fmt';
+  FilmName_Fmt_Def = '@2,025,050' + m_CRLF + '#Times New Roman,1000,25,204' + m_CRLF + '^0246,0000;' + '%s';
   // -------------------------------------------------------------------------
   // Procedure names and params
   // -------------------------------------------------------------------------
