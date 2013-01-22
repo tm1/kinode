@@ -130,6 +130,14 @@ const
   max_Kolvomest_Fmt_Len: integer = 100;
   // -------------------------------------------------------------------------
   max_FilmName_Fmt_Len: integer = 100;
+  max_SeansDateTime_Fmt_Len: integer = 100;
+  max_GroupNum_Fmt_Len: integer = 100;
+  max_GroupSum_Fmt_Len: integer = 100;
+  max_NomerRyada_Fmt_Len: integer = 100;
+  max_NomerMesta_Fmt_Len: integer = 100;
+  max_TicketLabel_Fmt_Len: integer = 100;
+  max_TicketSum_Fmt_Len: integer = 100;
+  max_SerialNum_Fmt_Len: integer = 100;
   // -------------------------------------------------------------------------
 
 resourcestring
@@ -190,6 +198,24 @@ resourcestring
   Kolvomest_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0092,0000;' + '%s';
   str_FilmName_Fmt = 'FilmName_Fmt';
   FilmName_Fmt_Def = '@2,025,050' + m_CRLF + '#Times New Roman,1000,25,204' + m_CRLF + '^0246,0000;' + '%s';
+  str_SeansDateTime_Fmt = 'SeansDateTime_Fmt';
+  SeansDateTime_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,19,204' + m_CRLF + '^0120,0000;' + '%s' + m_CRLF
+    + '#Arial,0000,18,204' + m_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + m_CRLF
+    + '#Arial,1000,19,204' + m_CRLF + '^0048,0000;' + '%s';
+  str_GroupNum_Fmt = 'GroupNum_Fmt';
+  GroupNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0181,0000;' + '%s' + m_CRLF;
+  str_GroupSum_Fmt = 'GroupSum_Fmt';
+  GroupSum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,18,204' + m_CRLF + '^0030,0000;' + '%s';
+  str_NomerRyada_Fmt = 'NomerRyada_Fmt';
+  NomerRyada_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0039,0000;' + '%s' + m_CRLF;
+  str_NomerMesta_Fmt = 'NomerMesta_Fmt';
+  NomerMesta_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0039,0000;' + '%s';
+  str_TicketLabel_Fmt = 'TicketLabel_Fmt';
+  TicketLabel_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,18,204' + m_CRLF + '^0105,0000;' + '%s';
+  str_TicketSum_Fmt = 'TicketSum_Fmt';
+  TicketSum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,19,204' + m_CRLF + '^0032,0000;' + '%s';
+  str_SerialNum_Fmt = 'SerialNum_Fmt';
+  SerialNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,20,204' + m_CRLF + '^0068,0000;' + '%s%s';
   // -------------------------------------------------------------------------
   // Procedure names and params
   // -------------------------------------------------------------------------

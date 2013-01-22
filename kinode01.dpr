@@ -34,6 +34,7 @@ uses
   XPMenu in 'Lib\XPMenu.pas',
 {$ENDIF}
   THostInfoUnit in 'Lib\THostInfoUnit.pas',
+  // LibXmlParser in 'Lib\LibXmlParser.pas',
 {$ELSE}
   // try to find in Delphi search paths
 {$ENDIF}

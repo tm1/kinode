@@ -84,6 +84,14 @@ const
   cur_Halyava_Fmt: string = '';
   cur_Kolvomest_Fmt: string = '';
   cur_FilmName_Fmt: string = '';
+  cur_SeansDateTime_Fmt: string = '';
+  cur_GroupNum_Fmt: string = '';
+  cur_GroupSum_Fmt: string = '';
+  cur_NomerRyada_Fmt: string = '';
+  cur_NomerMesta_Fmt: string = '';
+  cur_TicketLabel_Fmt: string = '';
+  cur_TicketSum_Fmt: string = '';
+  cur_SerialNum_Fmt: string = '';
 
 implementation
 
@@ -223,6 +231,22 @@ begin
     // --------------------------------------------------------------------------
     Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_FilmName_Fmt,
       FilmName_Fmt_Def, max_FilmName_Fmt_Len, cur_FilmName_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_SeansDateTime_Fmt,
+      SeansDateTime_Fmt_Def, max_SeansDateTime_Fmt_Len, cur_SeansDateTime_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_GroupNum_Fmt,
+      GroupNum_Fmt_Def, max_GroupNum_Fmt_Len, cur_GroupNum_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_GroupSum_Fmt,
+      GroupSum_Fmt_Def, max_GroupSum_Fmt_Len, cur_GroupSum_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_NomerRyada_Fmt,
+      NomerRyada_Fmt_Def, max_NomerRyada_Fmt_Len, cur_NomerRyada_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_NomerMesta_Fmt,
+      NomerMesta_Fmt_Def, max_NomerMesta_Fmt_Len, cur_NomerMesta_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_TicketLabel_Fmt,
+      TicketLabel_Fmt_Def, max_TicketLabel_Fmt_Len, cur_TicketLabel_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_TicketSum_Fmt,
+      TicketSum_Fmt_Def, max_TicketSum_Fmt_Len, cur_TicketSum_Fmt);
+    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_SerialNum_Fmt,
+      SerialNum_Fmt_Def, max_SerialNum_Fmt_Len, cur_SerialNum_Fmt);
     // --------------------------------------------------------------------------
     Result := Result + 1;
   end;
@@ -696,9 +720,11 @@ begin
     // -- buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
     // buffer := buffer + '^0100,0000;' + strSeans_Time;
     // -- buffer := buffer + '^0048,0000;' + strSeans_Time;
-    buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,19,204' + c_CRLF + '^0120,0000;' + '%s' + c_CRLF
-      + '#Arial,0000,18,204' + c_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + c_CRLF
-      + '#Arial,1000,19,204' + c_CRLF + '^0048,0000;' + '%s',
+    // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,19,204' + c_CRLF + '^0120,0000;' + '%s' + c_CRLF
+    //   + '#Arial,0000,18,204' + c_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + c_CRLF
+    //   + '#Arial,1000,19,204' + c_CRLF + '^0048,0000;' + '%s',
+    //   [FormatDateTime('d mmmm yyyy', dtFilm_Date), tmp_Vremya, strSeans_Time]);
+    buffer := Format(cur_SeansDateTime_Fmt,
       [FormatDateTime('d mmmm yyyy', dtFilm_Date), tmp_Vremya, strSeans_Time]);
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
@@ -977,7 +1003,8 @@ begin
         // -- buffer := '@2,000,050' + c_CRLF;
         // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
         // -- buffer := buffer + '^0181,0000;' + s_Group_Num + c_CRLF;
-        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0181,0000;' + '%s' + c_CRLF, [s_Group_Num]);
+        // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0181,0000;' + '%s' + c_CRLF, [s_Group_Num]);
+        buffer := Format(cur_GroupNum_Fmt, [s_Group_Num]);
         // gfx2_Ryadnum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Ryadnum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -987,7 +1014,8 @@ begin
         // -- buffer := '@2,000,050' + c_CRLF;
         // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
         // -- buffer := buffer + '^0030,0000;' + str_Sum;
-        buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0030,0000;' + '%s', [str_Sum]);
+        // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0030,0000;' + '%s', [str_Sum]);
+        buffer := Format(cur_GroupSum_Fmt, [str_Sum]);
         // gfx2_Primechanie := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Primechanie := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1002,7 +1030,8 @@ begin
         // -- buffer := '@2,000,050' + c_CRLF;
         // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
         // -- buffer := buffer + '^0039,0000;' + s_NomerRyada + c_CRLF;
-        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s' + c_CRLF, [s_NomerRyada]);
+        // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s' + c_CRLF, [s_NomerRyada]);
+        buffer := Format(cur_NomerRyada_Fmt, [s_NomerRyada]);
         // gfx2_Ryadnum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Ryadnum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1012,7 +1041,8 @@ begin
         // -- buffer := '@2,000,050' + c_CRLF;
         // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
         // -- buffer := buffer + '^0039,0000;' + s_NomerMesta;
-        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s', [s_NomerMesta]);
+        // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s', [s_NomerMesta]);
+        buffer := Format(cur_NomerMesta_Fmt, [s_NomerMesta]);
         // gfx2_Mestonum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Mestonum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1023,7 +1053,8 @@ begin
           // -- buffer := '@2,000,050' + c_CRLF;
           // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
           // -- buffer := buffer + '^0105,0000;' + str_TICKET_LABEL;
-          buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_TICKET_LABEL]);
+          // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_TICKET_LABEL]);
+          buffer := Format(cur_TicketLabel_Fmt, [str_TICKET_LABEL]);
           // gfx2_Primechanie := PrepareBitmapFromText(PChar(buffer), 0, 0);
           gfx2_Primechanie := CacheBitmapFromText(buffer, 0, 0);
         end
@@ -1046,7 +1077,8 @@ begin
         // -- buffer := '@2,000,050' + c_CRLF;
         // -- buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
         // -- buffer := buffer + '^0032,0000;' + str_Sum;
-        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,19,204' + c_CRLF + '^0032,0000;' + '%s', [str_Sum]);
+        // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,19,204' + c_CRLF + '^0032,0000;' + '%s', [str_Sum]);
+        buffer := Format(cur_TicketSum_Fmt, [str_Sum]);
         // gfx2_Cenamesta := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Cenamesta := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1068,7 +1100,8 @@ begin
         // Length(AL00001) is 7, width is 111 dots ~ 0,55 inches ~ 13,90 mm.
         // buffer := buffer + '^0068,0000;' + str_Zal_Prefix + FixFmt(_Serial_Num, 5, '0');
         // -- buffer := buffer + '^0068,0000;' + str_Zal_Prefix + s_Serial_Num;
-        buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,20,204' + c_CRLF + '^0068,0000;' + '%s%s', [str_Zal_Prefix, s_Serial_Num]);
+        // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,20,204' + c_CRLF + '^0068,0000;' + '%s%s', [str_Zal_Prefix, s_Serial_Num]);
+        buffer := Format(cur_SerialNum_Fmt, [str_Zal_Prefix, s_Serial_Num]);
         // ----------------
         gfx2_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
       end
