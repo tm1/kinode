@@ -107,8 +107,8 @@ end;
 procedure TSLForm.Activate;
 begin
   inherited;
- {$IFNDEF No_XP_Menu}
- if SLXPMenu.Tag = 0 then
+{$IFNDEF No_XP_Menu}
+  if SLXPMenu.Tag = 0 then
   begin
     SLXPMenu.Tag := 1;
     SLXPMenu.Active := false;
@@ -120,6 +120,8 @@ end;
 constructor TSLForm.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
+  if Assigned(SLFormRestorer) and (SLFormRestorer is TFrmRstr) then
+    SLFormRestorer.RegKey := 'Software\Home(R)\KinoDe\1.2.8';
 {$IFNDEF No_XP_Menu}
    SLXPMenu := TXPMenu_Wrap.Create(Self);
    SLXPMenu.Active := false;

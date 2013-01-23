@@ -12,10 +12,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  Gauges, ExtCtrls, jpeg, StdCtrls, Menus;
+  Gauges, ExtCtrls, jpeg, StdCtrls, Menus, SLForms;
 
 type
-  Tfm_Splash = class(TForm)
+  Tfm_Splash = class(TSLForm)
+    // FormRestorer: TFrmRstr;
     pn_Splash: TPanel;
     im_Splash: TImage;
     gg_LoadProgress: TGauge;
@@ -31,6 +32,8 @@ type
     procedure bt_ExitClick(Sender: TObject);
     procedure mm_LoadKeyPress(Sender: TObject; var Key: Char);
     procedure FormActivate(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -189,6 +192,18 @@ end;
 procedure Tfm_Splash.FormActivate(Sender: TObject);
 begin
   mm_Load.SetFocus;
+end;
+
+procedure Tfm_Splash.FormCreate(Sender: TObject);
+begin
+  // FormRestorer := TFrmRstr.Create(fm_Splash);
+  // if Assigned(FormRestorer) and (FormRestorer is TFrmRstr) then
+  //  FormRestorer.RegKey := 'Software\Home(R)\KinoDe\1.2.8';
+end;
+
+procedure Tfm_Splash.FormDestroy(Sender: TObject);
+begin
+  // FormRestorer.Destroy;
 end;
 
 {$IFDEF DEBUG_Module_Start_Finish}

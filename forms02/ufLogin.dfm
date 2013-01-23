@@ -48,7 +48,6 @@ object fm_Login: Tfm_Login
     0000000000000000000000000000000000000000000000000000000000000000
     00000000000000000000000000000000000000000000}
   OldCreateOrder = False
-  Position = poDesktopCenter
   OnActivate = FormActivate
   OnCreate = FormCreate
   PixelsPerInch = 96

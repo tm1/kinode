@@ -14,10 +14,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, Mask,
-  ExtCtrls, Buttons;
+  ExtCtrls, Buttons, SLForms;
 
 type
-  Tfm_Login = class(TForm)cmb_UserName: TComboBox;
+  Tfm_Login = class(TSLForm)
+    cmb_UserName: TComboBox;
     med_Password: TMaskEdit;
     lbl_UserName: TLabel;
     lbl_Password: TLabel;
@@ -76,7 +77,8 @@ end;
 
 procedure Tfm_Login.FormCreate(Sender: TObject);
 begin
-  //
+  // if Assigned(FormRestorer) and (FormRestorer is TFrmRstr) then
+  //   FormRestorer.RegKey := 'Software\Home(R)\KinoDe\1.2.8';
   bt_OK.ModalResult := mrNone;
   bt_Cancel.ModalResult := mrCancel;
 end;

@@ -14,7 +14,6 @@ object SLForm: TSLForm
   PixelsPerInch = 96
   TextHeight = 13
   object SLFormRestorer: TFrmRstr
-    RegKey = 'Software\Home(R)\KinoDe\1.2.8'
     Left = 8
     Top = 8
   end
