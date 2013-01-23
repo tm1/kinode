@@ -8,7 +8,7 @@ object fm_DRpEx: Tfm_DRpEx
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   OnActivate = FormActivate
@@ -41,7 +41,7 @@ object fm_DRpEx: Tfm_DRpEx
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -215,7 +215,7 @@ object fm_DRpEx: Tfm_DRpEx
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -331,7 +331,7 @@ object fm_DRpEx: Tfm_DRpEx
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
-    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     Columns = <
       item
@@ -355,7 +355,7 @@ object fm_DRpEx: Tfm_DRpEx
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         Title.Caption = 'Начало'
         Visible = True
@@ -366,7 +366,7 @@ object fm_DRpEx: Tfm_DRpEx
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         Title.Caption = 'Конец'
         Visible = True

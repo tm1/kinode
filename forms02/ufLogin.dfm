@@ -10,7 +10,7 @@ object fm_Login: Tfm_Login
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   Icon.Data = {
     0000010002002020100001000400E80200002600000010101000010004002801

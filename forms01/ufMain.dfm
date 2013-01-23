@@ -10,7 +10,7 @@ object fm_Main: Tfm_Main
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   KeyPreview = True
   Menu = mm_Main
@@ -106,7 +106,7 @@ object fm_Main: Tfm_Main
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -313,13 +313,13 @@ object fm_Main: Tfm_Main
         RegularFont.Charset = DEFAULT_CHARSET
         RegularFont.Color = clBlack
         RegularFont.Height = -11
-        RegularFont.Name = 'MS Sans Serif'
+        RegularFont.Name = 'Tahoma'
         RegularFont.Style = []
         TrackBrush.Color = 7864302
         TrackFont.Charset = DEFAULT_CHARSET
         TrackFont.Color = clWhite
         TrackFont.Height = -11
-        TrackFont.Name = 'MS Sans Serif'
+        TrackFont.Name = 'Tahoma'
         TrackFont.Style = [fsBold]
         TrackPen.Color = clAqua
         TrackPen.Width = 2
@@ -329,7 +329,7 @@ object fm_Main: Tfm_Main
         SelectFont.Charset = DEFAULT_CHARSET
         SelectFont.Color = clWhite
         SelectFont.Height = -11
-        SelectFont.Name = 'MS Sans Serif'
+        SelectFont.Name = 'Tahoma'
         SelectFont.Style = [fsBold]
         SelectPen.Color = clYellow
         SelectPen.Width = 2
@@ -358,7 +358,7 @@ object fm_Main: Tfm_Main
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
       end
@@ -376,13 +376,13 @@ object fm_Main: Tfm_Main
         RegularFont.Charset = DEFAULT_CHARSET
         RegularFont.Color = clNavy
         RegularFont.Height = -11
-        RegularFont.Name = 'MS Sans Serif'
+        RegularFont.Name = 'Tahoma'
         RegularFont.Style = []
         TrackBrush.Color = 11053056
         TrackFont.Charset = DEFAULT_CHARSET
         TrackFont.Color = clBlack
         TrackFont.Height = -11
-        TrackFont.Name = 'MS Sans Serif'
+        TrackFont.Name = 'Tahoma'
         TrackFont.Style = []
         TrackPen.Color = clNavy
         TrackPen.Width = 2
@@ -415,13 +415,13 @@ object fm_Main: Tfm_Main
         RegularFont.Charset = DEFAULT_CHARSET
         RegularFont.Color = clNavy
         RegularFont.Height = -11
-        RegularFont.Name = 'MS Sans Serif'
+        RegularFont.Name = 'Tahoma'
         RegularFont.Style = [fsBold]
         TrackBrush.Color = 13540979
         TrackFont.Charset = DEFAULT_CHARSET
         TrackFont.Color = clCaptionText
         TrackFont.Height = -11
-        TrackFont.Name = 'MS Sans Serif'
+        TrackFont.Name = 'Tahoma'
         TrackFont.Style = []
         TrackPen.Color = clWindowText
         TrackPen.Width = 2
@@ -450,7 +450,7 @@ object fm_Main: Tfm_Main
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
-        Font.Name = 'MS Sans Serif'
+        Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
         OnClick = SaveOdeumMapToFile
@@ -569,7 +569,7 @@ object fm_Main: Tfm_Main
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -11
-          Font.Name = 'MS Sans Serif'
+          Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           HotTrack = True
           Images = iml_Film
@@ -598,7 +598,7 @@ object fm_Main: Tfm_Main
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -11
-            Font.Name = 'MS Sans Serif'
+            Font.Name = 'Tahoma'
             Font.Style = []
             ParentColor = False
             ParentFont = False
@@ -634,7 +634,7 @@ object fm_Main: Tfm_Main
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clGrayText
               Font.Height = -11
-              Font.Name = 'MS Sans Serif'
+              Font.Name = 'Tahoma'
               Font.Style = [fsBold]
               ParentColor = False
               ParentFont = False
@@ -963,7 +963,7 @@ object fm_Main: Tfm_Main
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clCaptionText
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2

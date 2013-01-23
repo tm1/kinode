@@ -14,10 +14,10 @@ object fm_Splash: Tfm_Splash
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poMainFormCenter
   OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
@@ -1305,7 +1305,7 @@ object fm_Splash: Tfm_Splash
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
@@ -1359,7 +1359,7 @@ object fm_Splash: Tfm_Splash
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clLime
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
       ReadOnly = True
