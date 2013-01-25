@@ -305,7 +305,7 @@ resourcestring
   str_TicketSum = 'TicketSum';
   TicketSum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,19,204' + m_CRLF + '^0032,0000;' + '%s';
   str_SerialNum = 'SerialNum';
-  SerialNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,20,204' + m_CRLF + '^0068,0000;' + '%s%s';
+  SerialNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,20,204' + m_CRLF + '^0098,0000;' + '%s%s';
   // -------------------------------------------------------------------------
   // Localization
   // -------------------------------------------------------------------------

@@ -1288,11 +1288,11 @@ begin
         // buffer := buffer + '^0068,0000;' + str_Zal_Prefix + FixFmt(_Serial_Num, 5, '0');
         // -- buffer := buffer + '^0068,0000;' + str_Zal_Prefix + s_Serial_Num;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,20,204' + c_CRLF + '^0068,0000;' + '%s%s', [str_Zal_Prefix, s_Serial_Num]);
-        buffer := Format(cur_SerialNum1_Fmt, [str_Zal_Prefix, s_Serial_Num]);
+        buffer := Format(cur_SerialNum1_Fmt, [str_Zal_Prefix, FormatTextToMax(s_Serial_Num, 8, 'x', false)]);
         // ----------------
         gfx21_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
         // ----------------
-        buffer := Format(cur_SerialNum2_Fmt, [str_Zal_Prefix, s_Serial_Num]);
+        buffer := Format(cur_SerialNum2_Fmt, [str_Zal_Prefix, FormatTextToMax(s_Serial_Num, 8, 'x', false)]);
         // ----------------
         gfx22_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
       end
@@ -1302,6 +1302,7 @@ begin
         gfx22_Serial := 0;
       end;  
 {$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 's_Serial_Num = [' + s_Serial_Num + ']');
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx21_Serial = [' + IntToStr(gfx21_Serial) + ']');
       DEBUGMessEnh(0, UnitName, ProcName, 'gfx22_Serial = [' + IntToStr(gfx22_Serial) + ']');
 {$ENDIF}
