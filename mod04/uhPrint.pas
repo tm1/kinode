@@ -73,6 +73,7 @@ const
   Print_Maket_Vert_Shift: Integer = 0;
   cur_BlankForm_Section: string = '';
   cur_BlankForm_Num: integer = 1;
+  // -----------------------------------------------------------------------------
   cur_CinemaLogoBmp_Fmt: string = '';
   cur_OdeumLogoBmp_Fmt: string = '';
   cur_OdeumName_Fmt: string = '';
@@ -92,6 +93,48 @@ const
   cur_TicketLabel_Fmt: string = '';
   cur_TicketSum_Fmt: string = '';
   cur_SerialNum_Fmt: string = '';
+  // -----------------------------------------------------------------------------
+  cur_CinemaLogoBmp1_Pos_X: integer = 0;
+  cur_CinemaLogoBmp1_Pos_Y: integer = 0;
+  cur_OdeumLogoBmp1_Pos_X: integer = 0;
+  cur_OdeumLogoBmp1_Pos_Y: integer = 0;
+  cur_OdeumName1_Pos_X: integer = 0;
+  cur_OdeumName1_Pos_Y: integer = 0;
+  cur_Ryad1_Pos_X: integer = 0;
+  cur_Ryad1_Pos_Y: integer = 0;
+  cur_Mesto1_Pos_X: integer = 0;
+  cur_Mesto1_Pos_Y: integer = 0;
+  cur_Cena1_Pos_X: integer = 0;
+  cur_Cena1_Pos_Y: integer = 0;
+  cur_Summa1_Pos_X: integer = 0;
+  cur_Summa1_Pos_Y: integer = 0;
+  cur_Tenge1_Pos_X: integer = 0;
+  cur_Tenge1_Pos_Y: integer = 0;
+  cur_Halyava1_Pos_X: integer = 0;
+  cur_Halyava1_Pos_Y: integer = 0;
+  cur_Kolvomest1_Pos_X: integer = 0;
+  cur_Kolvomest1_Pos_Y: integer = 0;
+  cur_FilmName1_Pos_X: integer = 0;
+  cur_FilmName1_Pos_Y: integer = 0;
+  cur_SeansDateTime1_Pos_X: integer = 0;
+  cur_SeansDateTime1_Pos_Y: integer = 0;
+  cur_GroupNum1_Pos_X: integer = 0;
+  cur_GroupNum1_Pos_Y: integer = 0;
+  cur_GroupSum1_Pos_X: integer = 0;
+  cur_GroupSum1_Pos_Y: integer = 0;
+  cur_NomerRyada1_Pos_X: integer = 0;
+  cur_NomerRyada1_Pos_Y: integer = 0;
+  cur_NomerMesta1_Pos_X: integer = 0;
+  cur_NomerMesta1_Pos_Y: integer = 0;
+  cur_TicketLabel1_Pos_X: integer = 0;
+  cur_TicketLabel1_Pos_Y: integer = 0;
+  cur_TicketSum1_Pos_X: integer = 0;
+  cur_TicketSum1_Pos_Y: integer = 0;
+  cur_SerialNum1_Pos_X: integer = 0;
+  cur_SerialNum1_Pos_Y: integer = 0;
+  cur_SerialNum2_Pos_X: integer = 0;
+  cur_SerialNum2_Pos_Y: integer = 0;
+  // -----------------------------------------------------------------------------
 
 implementation
 
@@ -148,26 +191,60 @@ const
   Odeum2Logo_iY: Integer = 0;
   // -----------------------------------------------------------------------------
 
-procedure Load_Save_Blank_Form_Param(const str_BlankForm_Section, str_Param_Fmt,
-  Param_Fmt_Def: string; const max_Param_Fmt_Len: integer; var var_Param_Fmt: string);
+procedure Load_Save_Blank_Form_Fmt(str_BlankForm_Section, str_Param_Name,
+  Param_Fmt_Def: string; max_Param_Fmt_Len: integer; var var_Param_Fmt: string);
 const
   RepFlags: TReplaceFlags =  [ rfReplaceAll ];
 var
-  tmp_Param_Fmt_In, tmp_Param_Fmt_Out: string;  
+  tmp_Param_Name, tmp_Param_Fmt_In, tmp_Param_Fmt_Out: string;
 begin
   // --------------------------------------------------------------------------
+  tmp_Param_Name := str_Param_Name + str_Fmt;
   tmp_Param_Fmt_In := Param_Fmt_Def;
-  LoadInitParameterStr(str_BlankForm_Section, str_Param_Fmt,
+  LoadInitParameterStr(str_BlankForm_Section, tmp_Param_Name,
     Param_Fmt_Def, tmp_Param_Fmt_In);
-  tmp_Param_Fmt_Out := tmp_Param_Fmt_In;  
+  tmp_Param_Fmt_Out := tmp_Param_Fmt_In;
   if (Length(tmp_Param_Fmt_In) = 0)
     or (Length(tmp_Param_Fmt_In) > Abs(max_Param_Fmt_Len)) then
     tmp_Param_Fmt_Out := Param_Fmt_Def;
   if (Length(tmp_Param_Fmt_In) > 0) then
     if (tmp_Param_Fmt_In[1] <> Param_Fmt_Def[1]) then
       tmp_Param_Fmt_Out := Param_Fmt_Def;
-  SaveInitParameter(str_BlankForm_Section, str_Param_Fmt, tmp_Param_Fmt_Out);
+  SaveInitParameter(str_BlankForm_Section, tmp_Param_Name, tmp_Param_Fmt_Out);
   var_Param_Fmt := StringReplace(tmp_Param_Fmt_Out, m_CRLF, c_CRLF, RepFlags);
+  // --------------------------------------------------------------------------
+end;
+
+procedure Load_Save_Blank_Form_Pos(str_BlankForm_Section, str_Param_Name: string;
+  Param_Pos_X_Def, Param_Pos_Y_Def, max_Param_Pos_Value: integer;
+  var var_Param_Pos_X, var_Param_Pos_Y: integer);
+var
+  tmp_Param_Name: string;
+  tmp_Param_Pos_X_In, tmp_Param_Pos_X_Out, tmp_Param_Pos_Y_In,
+  tmp_Param_Pos_Y_Out: integer;
+begin
+  // --------------------------------------------------------------------------
+  tmp_Param_Name := str_Param_Name + str_Pos_X;
+  tmp_Param_Pos_X_In := Param_Pos_X_Def;
+  LoadInitParameterInt(str_BlankForm_Section, tmp_Param_Name,
+    Param_Pos_X_Def, tmp_Param_Pos_X_In);
+  tmp_Param_Pos_X_Out := tmp_Param_Pos_X_In;
+  if (Abs(tmp_Param_Pos_X_In) > Abs(max_Param_Pos_Value)) then
+    tmp_Param_Pos_X_Out := Abs(max_Param_Pos_Value);
+  SaveInitParameter(str_BlankForm_Section, tmp_Param_Name,
+    IntToStr(tmp_Param_Pos_X_Out));
+  var_Param_Pos_X := tmp_Param_Pos_X_Out;
+  // --------------------------------------------------------------------------
+  tmp_Param_Name := str_Param_Name + str_Pos_Y;
+  tmp_Param_Pos_Y_In := Param_Pos_Y_Def;
+  LoadInitParameterInt(str_BlankForm_Section, tmp_Param_Name,
+    Param_Pos_Y_Def, tmp_Param_Pos_Y_In);
+  tmp_Param_Pos_Y_Out := tmp_Param_Pos_Y_In;
+  if (Abs(tmp_Param_Pos_Y_In) > Abs(max_Param_Pos_Value)) then
+    tmp_Param_Pos_Y_Out := Abs(max_Param_Pos_Value);
+  SaveInitParameter(str_BlankForm_Section, tmp_Param_Name,
+    IntToStr(tmp_Param_Pos_Y_Out));
+  var_Param_Pos_Y := tmp_Param_Pos_Y_Out;
   // --------------------------------------------------------------------------
 end;
 
@@ -192,61 +269,115 @@ begin
   begin
     tmp_BlankForm_Section := s_BlankForm_Section + IntToStr(i_BlankForm_Num);
     // --------------------------------------------------------------------------
-    {
-    tmp_CinemaLogoBmp_Fmt := CinemaLogoBmp_Fmt_Def;
-    LoadInitParameterStr(tmp_BlankForm_Section, str_CinemaLogoBmp_Fmt,
-      CinemaLogoBmp_Fmt_Def, tmp_CinemaLogoBmp_Fmt);
-    if (Length(tmp_CinemaLogoBmp_Fmt) = 0)
-      or (Length(tmp_CinemaLogoBmp_Fmt) > 100) then
-      tmp_CinemaLogoBmp_Fmt := CinemaLogoBmp_Fmt_Def;
-    if (Length(tmp_CinemaLogoBmp_Fmt) > 0) then
-      if (tmp_CinemaLogoBmp_Fmt[1] <> CinemaLogoBmp_Fmt_Def[1]) then
-      tmp_CinemaLogoBmp_Fmt := CinemaLogoBmp_Fmt_Def;
-    SaveInitParameter(tmp_BlankForm_Section, str_CinemaLogoBmp_Fmt,
-      tmp_CinemaLogoBmp_Fmt);
-    tmp_CinemaLogoBmp_Fmt := StringReplace(tmp_CinemaLogoBmp_Fmt, m_CRLF, c_CRLF, RepFlags);
-    }
+    // Загрузка форматов строк для рисунков
     // --------------------------------------------------------------------------
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_CinemaLogoBmp_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_CinemaLogoBmp,
       CinemaLogoBmp_Fmt_Def, max_CinemaLogoBmp_Fmt_Len, cur_CinemaLogoBmp_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_OdeumLogoBmp_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_OdeumLogoBmp,
       OdeumLogoBmp_Fmt_Def, max_OdeumLogoBmp_Fmt_Len, cur_OdeumLogoBmp_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_OdeumName_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_OdeumName,
       OdeumName_Fmt_Def, max_OdeumName_Fmt_Len, cur_OdeumName_Fmt);
     // --------------------------------------------------------------------------
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Ryad_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Ryad,
       Ryad_Fmt_Def, max_Ryad_Fmt_Len, cur_Ryad_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Mesto_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Mesto,
       Mesto_Fmt_Def, max_Mesto_Fmt_Len, cur_Mesto_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Cena_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Cena,
       Cena_Fmt_Def, max_Cena_Fmt_Len, cur_Cena_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Summa_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Summa,
       Summa_Fmt_Def, max_Summa_Fmt_Len, cur_Summa_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Tenge_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Tenge,
       Tenge_Fmt_Def, max_Tenge_Fmt_Len, cur_Tenge_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Halyava_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Halyava,
       Halyava_Fmt_Def, max_Halyava_Fmt_Len, cur_Halyava_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_Kolvomest_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Kolvomest,
       Kolvomest_Fmt_Def, max_Kolvomest_Fmt_Len, cur_Kolvomest_Fmt);
     // --------------------------------------------------------------------------
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_FilmName_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_FilmName,
       FilmName_Fmt_Def, max_FilmName_Fmt_Len, cur_FilmName_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_SeansDateTime_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SeansDateTime,
       SeansDateTime_Fmt_Def, max_SeansDateTime_Fmt_Len, cur_SeansDateTime_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_GroupNum_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_GroupNum,
       GroupNum_Fmt_Def, max_GroupNum_Fmt_Len, cur_GroupNum_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_GroupSum_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_GroupSum,
       GroupSum_Fmt_Def, max_GroupSum_Fmt_Len, cur_GroupSum_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_NomerRyada_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_NomerRyada,
       NomerRyada_Fmt_Def, max_NomerRyada_Fmt_Len, cur_NomerRyada_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_NomerMesta_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_NomerMesta,
       NomerMesta_Fmt_Def, max_NomerMesta_Fmt_Len, cur_NomerMesta_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_TicketLabel_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketLabel,
       TicketLabel_Fmt_Def, max_TicketLabel_Fmt_Len, cur_TicketLabel_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_TicketSum_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketSum,
       TicketSum_Fmt_Def, max_TicketSum_Fmt_Len, cur_TicketSum_Fmt);
-    Load_Save_Blank_Form_Param(tmp_BlankForm_Section, str_SerialNum_Fmt,
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SerialNum,
       SerialNum_Fmt_Def, max_SerialNum_Fmt_Len, cur_SerialNum_Fmt);
+    // --------------------------------------------------------------------------
+    Result := Result + 1;
+    // --------------------------------------------------------------------------
+    // Загрузка позиций рисунков
+    // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_CinemaLogoBmp + '1',
+      CinemaLogoBmp1_Pos_X_Def, CinemaLogoBmp1_Pos_Y_Def, max_CinemaLogoBmp_Pos_Value,
+      cur_CinemaLogoBmp1_Pos_X, cur_CinemaLogoBmp1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_OdeumLogoBmp + '1',
+      OdeumLogoBmp1_Pos_X_Def, OdeumLogoBmp1_Pos_Y_Def, max_OdeumLogoBmp_Pos_Value,
+      cur_OdeumLogoBmp1_Pos_X, cur_OdeumLogoBmp1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_OdeumName + '1',
+      OdeumName1_Pos_X_Def, OdeumName1_Pos_Y_Def, max_OdeumName_Pos_Value,
+      cur_OdeumName1_Pos_X, cur_OdeumName1_Pos_Y);
+    // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Ryad + '1',
+      Ryad1_Pos_X_Def, Ryad1_Pos_Y_Def, max_Ryad_Pos_Value,
+      cur_Ryad1_Pos_X, cur_Ryad1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Mesto + '1',
+      Mesto1_Pos_X_Def, Mesto1_Pos_Y_Def, max_Mesto_Pos_Value,
+      cur_Mesto1_Pos_X, cur_Mesto1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Cena + '1',
+      Cena1_Pos_X_Def, Cena1_Pos_Y_Def, max_Cena_Pos_Value,
+      cur_Cena1_Pos_X, cur_Cena1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Summa + '1',
+      Summa1_Pos_X_Def, Summa1_Pos_Y_Def, max_Summa_Pos_Value,
+      cur_Summa1_Pos_X, cur_Summa1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Tenge + '1',
+      Tenge1_Pos_X_Def, Tenge1_Pos_Y_Def, max_Tenge_Pos_Value,
+      cur_Tenge1_Pos_X, cur_Tenge1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Halyava + '1',
+      Halyava1_Pos_X_Def, Halyava1_Pos_Y_Def, max_Halyava_Pos_Value,
+      cur_Halyava1_Pos_X, cur_Halyava1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Kolvomest + '1',
+      Kolvomest1_Pos_X_Def, Kolvomest1_Pos_Y_Def, max_Kolvomest_Pos_Value,
+      cur_Kolvomest1_Pos_X, cur_Kolvomest1_Pos_Y);
+    // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_FilmName + '1',
+      FilmName1_Pos_X_Def, FilmName1_Pos_Y_Def, max_FilmName_Pos_Value,
+      cur_FilmName1_Pos_X, cur_FilmName1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_SeansDateTime + '1',
+      SeansDateTime1_Pos_X_Def, SeansDateTime1_Pos_Y_Def, max_SeansDateTime_Pos_Value,
+      cur_SeansDateTime1_Pos_X, cur_SeansDateTime1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_GroupNum + '1',
+      GroupNum1_Pos_X_Def, GroupNum1_Pos_Y_Def, max_GroupNum_Pos_Value,
+      cur_GroupNum1_Pos_X, cur_GroupNum1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_GroupSum + '1',
+      GroupSum1_Pos_X_Def, GroupSum1_Pos_Y_Def, max_GroupSum_Pos_Value,
+      cur_GroupSum1_Pos_X, cur_GroupSum1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_NomerRyada + '1',
+      NomerRyada1_Pos_X_Def, NomerRyada1_Pos_Y_Def, max_NomerRyada_Pos_Value,
+      cur_NomerRyada1_Pos_X, cur_NomerRyada1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_NomerMesta + '1',
+      NomerMesta1_Pos_X_Def, NomerMesta1_Pos_Y_Def, max_NomerMesta_Pos_Value,
+      cur_NomerMesta1_Pos_X, cur_NomerMesta1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_TicketLabel + '1',
+      TicketLabel1_Pos_X_Def, TicketLabel1_Pos_Y_Def, max_TicketLabel_Pos_Value,
+      cur_TicketLabel1_Pos_X, cur_TicketLabel1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_TicketSum + '1',
+      TicketSum1_Pos_X_Def, TicketSum1_Pos_Y_Def, max_TicketSum_Pos_Value,
+      cur_TicketSum1_Pos_X, cur_TicketSum1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_SerialNum + '1',
+      SerialNum1_Pos_X_Def, SerialNum1_Pos_Y_Def, max_SerialNum_Pos_Value,
+      cur_SerialNum1_Pos_X, cur_SerialNum1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_SerialNum + '2',
+      SerialNum2_Pos_X_Def, SerialNum2_Pos_Y_Def, max_SerialNum_Pos_Value,
+      cur_SerialNum2_Pos_X, cur_SerialNum2_Pos_Y);
     // --------------------------------------------------------------------------
     Result := Result + 1;
   end;
@@ -290,7 +421,7 @@ var
   Stream: TStringStream;
   Cinema1Logo_iW, Cinema1Logo_iH, Odeum2Logo_iW, Odeum2Logo_iH: Integer;
   // Cinema1Logo_mW, Cinema1Logo_mH, Odeum2Logo_mW, Odeum2Logo_mH: Integer;
-  Logo_Xmax, Logo_Ymax, Logo_Wmax, Logo_Hmax, Logo_1_2_HDelta: Integer;
+  Logo_Xmax, Logo_Ymax, Logo_Wmax, Logo_Hmax, Logo_1_2_WDelta, Logo_1_2_HDelta: Integer;
 begin
   // --------------------------------------------------------------------------
   // Инициализация печати
@@ -312,6 +443,7 @@ begin
     Logo_Ymax := 228; // 220
     Logo_Wmax := 160;
     Logo_Hmax := 74;
+    Logo_1_2_WDelta := 4;
     Logo_1_2_HDelta := 4;
     // --------------------------------------------------------------------------
     Cinema1Logo_iX := 0;
@@ -420,7 +552,7 @@ begin
 {$ENDIF}
       Odeum2Logo_iW := 190;
       Odeum2Logo_iH := 30;
-      Odeum2Logo_iX := Logo_Xmax + (Logo_Wmax - Odeum2Logo_iW) div 2;
+      Odeum2Logo_iX := Logo_Xmax + (Logo_Wmax - Odeum2Logo_iW) div 2 + Logo_1_2_WDelta;
     end;
     //#########################################################################################
     if (gfx_CinemaLogo > 0) and (gfx_OdeumLogo > 0) then
@@ -1141,9 +1273,19 @@ begin
         Cinema1Logo_iY := Odeum2Logo_iY + Odeum2Logo_iH + Logo_1_2_HDelta;
         }
         //*****************************************************************************************
-        PlaceBitmap(1, 1, Cinema1Logo_iX, Cinema1Logo_iY, gfx_CinemaLogo);
+        // PlaceBitmap(1, 1, Cinema1Logo_iX, Cinema1Logo_iY, gfx_CinemaLogo);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Cinema1Logo_iX, Cinema1Logo_iY]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_CinemaLogoBmp1_Pos_X, cur_CinemaLogoBmp1_Pos_Y, gfx_CinemaLogo);
         //*****************************************************************************************
-        PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
+        // PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Odeum2Logo_iX, Odeum2Logo_iY]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_OdeumLogoBmp1_Pos_X, cur_OdeumLogoBmp1_Pos_Y, gfx_OdeumLogo);
       end
       else if (gfx_CinemaLogo > 0) then
       begin
@@ -1151,7 +1293,12 @@ begin
         Cinema1Logo_iY := Logo_Ymax + (Logo_Hmax - Cinema1Logo_iH) div 2;
         }
         //*****************************************************************************************
-        PlaceBitmap(1, 1, Cinema1Logo_iX, Cinema1Logo_iY, gfx_CinemaLogo);
+        // PlaceBitmap(1, 1, Cinema1Logo_iX, Cinema1Logo_iY, gfx_CinemaLogo);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Cinema1Logo_iX, Cinema1Logo_iY]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_CinemaLogoBmp1_Pos_X, cur_CinemaLogoBmp1_Pos_Y, gfx_CinemaLogo);
       end
       else if (gfx_OdeumLogo > 0) then
       begin
@@ -1159,7 +1306,12 @@ begin
         Odeum2Logo_iY := Logo_Ymax + (Logo_Hmax - Odeum2Logo_iH) div 2;
         }
         //*****************************************************************************************
-        PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
+        // PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Odeum2Logo_iX, Odeum2Logo_iY]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_OdeumLogoBmp1_Pos_X, cur_OdeumLogoBmp1_Pos_Y, gfx_OdeumLogo);
       end;
       //*****************************************************************************************
       Text_X := 10 + Print_Maket_Horz_Shift; // 10
@@ -1170,18 +1322,33 @@ begin
       // Название фильма
       // --------------------------------------------------------------------------
       // PlaceBitmap(1, 1, 21, 215, gfx1_Filmname); // 95, 105
-      PlaceBitmap(1, 1, Text_X + 11, Text_Y, gfx1_Filmname);
+      // PlaceBitmap(1, 1, Text_X + 11, Text_Y, gfx1_Filmname);
+      {!$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+        + Format('X = %d, Y = %d', [Text_X + 11, Text_Y]));
+      {!$ENDIF}
+      PlaceBitmap(1, 1, cur_FilmName1_Pos_X, cur_FilmName1_Pos_Y, gfx1_Filmname);
       //*****************************************************************************************
       // Дата и время
       // --------------------------------------------------------------------------
       // PlaceBitmap(1, 1, 15, 188, gfx1_Datavremya); // 110, 80
       // PlaceBitmap(1, 1, Text_X + 5, Text_Y - 27, gfx1_Datavremya);
-      PlaceBitmap(1, 1, Text_X + 25 + 10, Text_Y - 27 + 8, gfx1_Datavremya);
+      // PlaceBitmap(1, 1, Text_X + 25 + 10, Text_Y - 27 + 8, gfx1_Datavremya);
+      {!$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+        + Format('X = %d, Y = %d', [Text_X + 25 + 10, Text_Y - 27 + 8]));
+      {!$ENDIF}
+      PlaceBitmap(1, 1, cur_SeansDateTime1_Pos_X, cur_SeansDateTime1_Pos_Y, gfx1_Datavremya);
       //*****************************************************************************************
       // Надпись "Ряд"
       // --------------------------------------------------------------------------
       // PlaceBitmap(1, 1, 228, 167, gfx_Ryad); // 340, 60
-      PlaceBitmap(1, 1, Text_X + 218 - 5, Text_Y - 48 + 5, gfx3_Ryad);
+      // PlaceBitmap(1, 1, Text_X + 218 - 5, Text_Y - 48 + 5, gfx3_Ryad);
+      {!$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+        + Format('X = %d, Y = %d', [Text_X + 218 - 5, Text_Y - 48 + 5]));
+      {!$ENDIF}
+      PlaceBitmap(1, 1, cur_Ryad1_Pos_X, cur_Ryad1_Pos_Y, gfx3_Ryad);
       //*****************************************************************************************
       if Print_Type = 1 then
       begin
@@ -1191,7 +1358,12 @@ begin
         // Номер ряда
         // --------------------------------------------------------------------------
         // PlaceBitmap(1, 1, 30, 167, gfx2_Ryadnum); // 150, 60
-        PlaceBitmap(1, 1, Text_X + 20 - 5, Text_Y - 48 + 5, gfx2_Ryadnum);
+        // PlaceBitmap(1, 1, Text_X + 20 - 5, Text_Y - 48 + 5, gfx2_Ryadnum);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 20 - 5, Text_Y - 48 + 5]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_GroupNum1_Pos_X, cur_GroupNum1_Pos_Y, gfx2_Ryadnum);
       end
       else
       begin
@@ -1201,17 +1373,32 @@ begin
         // Номер ряда
         // --------------------------------------------------------------------------
         // PlaceBitmap(1, 1, 189, 167, gfx2_Ryadnum); // 300, 60
-        PlaceBitmap(1, 1, Text_X + 179 - 5, Text_Y - 48 + 5, gfx2_Ryadnum);
+        // PlaceBitmap(1, 1, Text_X + 179 - 5, Text_Y - 48 + 5, gfx2_Ryadnum);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 179 - 5, Text_Y - 48 + 5]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_NomerRyada1_Pos_X, cur_NomerRyada1_Pos_Y, gfx2_Ryadnum);
         //*****************************************************************************************
         // Надпись "Место"
         // --------------------------------------------------------------------------
         // PlaceBitmap(1, 1, 149, 167, gfx_Mesto); // 230, 60
-        PlaceBitmap(1, 1, Text_X + 139 - 5, Text_Y - 48 + 5, gfx3_Mesto);
+        // PlaceBitmap(1, 1, Text_X + 139 - 5, Text_Y - 48 + 5, gfx3_Mesto);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 139 - 5, Text_Y - 48 + 5]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_Mesto1_Pos_X, cur_Mesto1_Pos_Y, gfx3_Mesto);
         //*****************************************************************************************
         // Номер места
         // --------------------------------------------------------------------------
         // PlaceBitmap(1, 1, 110, 167, gfx2_Mestonum); // 190, 60
-        PlaceBitmap(1, 1, Text_X + 100 - 5, Text_Y - 48 + 5, gfx2_Mestonum);
+        // PlaceBitmap(1, 1, Text_X + 100 - 5, Text_Y - 48 + 5, gfx2_Mestonum);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 100 - 5, Text_Y - 48 + 5]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_NomerMesta1_Pos_X, cur_NomerMesta1_Pos_Y, gfx2_Mestonum);
       end;
       //*****************************************************************************************
       if b_CLASS_FOR_FREE then
@@ -1220,7 +1407,12 @@ begin
         // Бесплатный
         // --------------------------------------------------------------------------
         // PlaceBitmap(1, 1, 152, 146, gfx_Halyava); // 225, 45
-        PlaceBitmap(1, 1, Text_X + 142 - 5 - 40, Text_Y - 69 + 6, gfx_Halyava);
+        // PlaceBitmap(1, 1, Text_X + 142 - 5 - 40, Text_Y - 69 + 6, gfx_Halyava);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 142 - 5 - 40, Text_Y - 69 + 6]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_Halyava1_Pos_X, cur_Halyava1_Pos_Y, gfx_Halyava);
       end
       else
       begin
@@ -1231,46 +1423,91 @@ begin
         begin
           //*****************************************************************************************
           // PlaceBitmap(1, 1, 225, 146, gfx_Summa); // 320, 45
-          PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx_Summa);
+          // PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx_Summa);
+          {!$IFDEF uhPrint_DEBUG}
+          DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+            + Format('X = %d, Y = %d', [Text_X + 215 - 5, Text_Y - 69 + 6]));
+          {!$ENDIF}
+          PlaceBitmap(1, 1, cur_Summa1_Pos_X, cur_Summa1_Pos_X, gfx_Summa);
         end
         else
         begin
           //*****************************************************************************************
           // PlaceBitmap(1, 1, 225, 146, gfx_Cena); // 320, 45
-          PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx3_Cena);
+          // PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx3_Cena);
+          {!$IFDEF uhPrint_DEBUG}
+          DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+            + Format('X = %d, Y = %d', [Text_X + 215 - 5, Text_Y - 69 + 6]));
+          {!$ENDIF}
+          PlaceBitmap(1, 1, cur_Cena1_Pos_X, cur_Cena1_Pos_Y, gfx3_Cena);
         end;
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 193, 146, gfx2_Cenamesta); // 250, 45
-        PlaceBitmap(1, 1, Text_X + 183 - 5, Text_Y - 69 + 6, gfx2_Cenamesta);
+        // PlaceBitmap(1, 1, Text_X + 183 - 5, Text_Y - 69 + 6, gfx2_Cenamesta);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 183 - 5, Text_Y - 69 + 6]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_Summa1_Pos_X, cur_Summa1_Pos_Y, gfx2_Cenamesta);
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 165, 146, gfx_Tenge); // 190, 45
-        PlaceBitmap(1, 1, Text_X + 155 - 5, Text_Y - 69 + 6, gfx_Tenge);
+        // PlaceBitmap(1, 1, Text_X + 155 - 5, Text_Y - 69 + 6, gfx_Tenge);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 155 - 5, Text_Y - 69 + 6]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_Tenge1_Pos_X, cur_Tenge1_Pos_Y, gfx_Tenge);
       end;
       //*****************************************************************************************
       if Print_Type = 1 then
       begin
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 170, 131, gfx_Kolvomest); // 290, 30
-        PlaceBitmap(1, 1, Text_X + 160 - 5, Text_Y - 84, gfx_Kolvomest);
+        // PlaceBitmap(1, 1, Text_X + 160 - 5, Text_Y - 84, gfx_Kolvomest);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 160 - 5, Text_Y - 84]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_Kolvomest1_Pos_X, cur_Kolvomest1_Pos_Y, gfx_Kolvomest);
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 132, 131, gfx_Kolvomest); // 290, 30
-        PlaceBitmap(1, 1, Text_X + 122 - 5, Text_Y - 84, gfx2_Primechanie);
+        // PlaceBitmap(1, 1, Text_X + 122 - 5, Text_Y - 84, gfx2_Primechanie);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 122 - 5, Text_Y - 84]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_GroupSum1_Pos_X, cur_GroupSum1_Pos_Y, gfx2_Primechanie);
       end
       else
       begin
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 152, 131, gfx2_Primechanie); // 225, 30
-        PlaceBitmap(1, 1, Text_X + 142 - 5, Text_Y - 84, gfx2_Primechanie);
+        // PlaceBitmap(1, 1, Text_X + 142 - 5, Text_Y - 84, gfx2_Primechanie);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 142 - 5, Text_Y - 84]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_TicketLabel1_Pos_X, cur_TicketLabel1_Pos_Y, gfx2_Primechanie);
       end;
       //*****************************************************************************************
       if Add_Elem and Print_Serial_Num and b_TICKET_SERIALIZE then
       begin
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 149, 109, gfx2_Serial); // 225, 30
-        PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 106, gfx2_Serial);
+        // PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 106, gfx2_Serial);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 139 - 50, Text_Y - 106]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_SerialNum1_Pos_X, cur_SerialNum1_Pos_Y, gfx2_Serial);
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 149, 73, gfx2_Serial); // 225, 30
-        PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 142, gfx2_Serial);
+        // PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 142, gfx2_Serial);
+        {!$IFDEF uhPrint_DEBUG}
+        DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+          + Format('X = %d, Y = %d', [Text_X + 139 - 50, Text_Y - 142]));
+        {!$ENDIF}
+        PlaceBitmap(1, 1, cur_SerialNum2_Pos_X, cur_SerialNum2_Pos_Y, gfx2_Serial);
       end;
       //*****************************************************************************************
       if EndLabelCmd >= 0 then

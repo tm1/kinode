@@ -139,6 +139,71 @@ const
   max_TicketSum_Fmt_Len: integer = 100;
   max_SerialNum_Fmt_Len: integer = 100;
   // -------------------------------------------------------------------------
+  max_CinemaLogoBmp_Pos_Value: integer = 100;
+  max_OdeumLogoBmp_Pos_Value: integer = 100;
+  max_OdeumName_Pos_Value: integer = 100;
+  // -------------------------------------------------------------------------
+  max_Ryad_Pos_Value: integer = 100;
+  max_Mesto_Pos_Value: integer = 100;
+  max_Cena_Pos_Value: integer = 100;
+  max_Summa_Pos_Value: integer = 100;
+  max_Tenge_Pos_Value: integer = 100;
+  max_Halyava_Pos_Value: integer = 100;
+  max_Kolvomest_Pos_Value: integer = 100;
+  // -------------------------------------------------------------------------
+  max_FilmName_Pos_Value: integer = 100;
+  max_SeansDateTime_Pos_Value: integer = 100;
+  max_GroupNum_Pos_Value: integer = 100;
+  max_GroupSum_Pos_Value: integer = 100;
+  max_NomerRyada_Pos_Value: integer = 100;
+  max_NomerMesta_Pos_Value: integer = 100;
+  max_TicketLabel_Pos_Value: integer = 100;
+  max_TicketSum_Pos_Value: integer = 100;
+  max_SerialNum_Pos_Value: integer = 100;
+  // -------------------------------------------------------------------------
+  CinemaLogoBmp1_Pos_X_Def: integer = 100;
+  CinemaLogoBmp1_Pos_Y_Def: integer = 100;
+  OdeumLogoBmp1_Pos_X_Def: integer = 100;
+  OdeumLogoBmp1_Pos_Y_Def: integer = 100;
+  OdeumName1_Pos_X_Def: integer = 100;
+  OdeumName1_Pos_Y_Def: integer = 100;
+  // -------------------------------------------------------------------------
+  Ryad1_Pos_X_Def: integer = 100;
+  Ryad1_Pos_Y_Def: integer = 100;
+  Mesto1_Pos_X_Def: integer = 100;
+  Mesto1_Pos_Y_Def: integer = 100;
+  Cena1_Pos_X_Def: integer = 100;
+  Cena1_Pos_Y_Def: integer = 100;
+  Summa1_Pos_X_Def: integer = 100;
+  Summa1_Pos_Y_Def: integer = 100;
+  Tenge1_Pos_X_Def: integer = 100;
+  Tenge1_Pos_Y_Def: integer = 100;
+  Halyava1_Pos_X_Def: integer = 100;
+  Halyava1_Pos_Y_Def: integer = 100;
+  Kolvomest1_Pos_X_Def: integer = 100;
+  Kolvomest1_Pos_Y_Def: integer = 100;
+  // -------------------------------------------------------------------------
+  FilmName1_Pos_X_Def: integer = 100;
+  FilmName1_Pos_Y_Def: integer = 100;
+  SeansDateTime1_Pos_X_Def: integer = 100;
+  SeansDateTime1_Pos_Y_Def: integer = 100;
+  GroupNum1_Pos_X_Def: integer = 100;
+  GroupNum1_Pos_Y_Def: integer = 100;
+  GroupSum1_Pos_X_Def: integer = 100;
+  GroupSum1_Pos_Y_Def: integer = 100;
+  NomerRyada1_Pos_X_Def: integer = 100;
+  NomerRyada1_Pos_Y_Def: integer = 100;
+  NomerMesta1_Pos_X_Def: integer = 100;
+  NomerMesta1_Pos_Y_Def: integer = 100;
+  TicketLabel1_Pos_X_Def: integer = 100;
+  TicketLabel1_Pos_Y_Def: integer = 100;
+  TicketSum1_Pos_X_Def: integer = 100;
+  TicketSum1_Pos_Y_Def: integer = 100;
+  SerialNum1_Pos_X_Def: integer = 100;
+  SerialNum1_Pos_Y_Def: integer = 100;
+  SerialNum2_Pos_X_Def: integer = 100;
+  SerialNum2_Pos_Y_Def: integer = 100;
+  // -------------------------------------------------------------------------
 
 resourcestring
   // Some predefined constants
@@ -176,45 +241,48 @@ resourcestring
   s_RptPref = 'RptPref';
   s_BlankForm_Section = 'BlankForm';
   s_BlankForm_Num = 'BlankFormNumber';
-  str_CinemaLogoBmp_Fmt = 'CinemaLogoBmp_Fmt';
+  str_Fmt = '_Fmt';
+  str_Pos_X = '_Pos_X';
+  str_Pos_Y = '_Pos_Y';
+  str_CinemaLogoBmp = 'CinemaLogoBmp';
   CinemaLogoBmp_Fmt_Def = '@2,%s';
-  str_OdeumLogoBmp_Fmt = 'OdeumLogoBmp_Fmt';
+  str_OdeumLogoBmp = 'OdeumLogoBmp';
   OdeumLogoBmp_Fmt_Def = '@2,%s';
-  str_OdeumName_Fmt = 'OdeumName_Fmt';
+  str_OdeumName = 'OdeumName';
   OdeumName_Fmt_Def = '@2,050,050' + m_CRLF + '#Courier New,1000,20,204' + m_CRLF + '^0190,0030;' + '%s';
-  str_Ryad_Fmt = 'Ryad_Fmt';
+  str_Ryad = 'Ryad';
   Ryad_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0029,0000;' + '%s';
-  str_Mesto_Fmt = 'Mesto_Fmt';
+  str_Mesto = 'Mesto';
   Mesto_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0040,0000;' + '%s';
-  str_Cena_Fmt = 'Cena_Fmt';
+  str_Cena = 'Cena';
   Cena_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0032,0000;' + '%s';
-  str_Summa_Fmt = 'Summa_Fmt';
+  str_Summa = 'Summa';
   Summa_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0032,0000;' + '%s';
-  str_Tenge_Fmt = 'Tenge_Fmt';
+  str_Tenge = 'Tenge';
   Tenge_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0028,0000;' + '%s';
-  str_Halyava_Fmt = 'Halyava_Fmt';
+  str_Halyava = 'Halyava';
   Halyava_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,18,204' + m_CRLF + '^0105,0000;' + '%s';
-  str_Kolvomest_Fmt = 'Kolvomest_Fmt';
+  str_Kolvomest = 'Kolvomest';
   Kolvomest_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0092,0000;' + '%s';
-  str_FilmName_Fmt = 'FilmName_Fmt';
+  str_FilmName = 'FilmName';
   FilmName_Fmt_Def = '@2,025,050' + m_CRLF + '#Times New Roman,1000,25,204' + m_CRLF + '^0246,0000;' + '%s';
-  str_SeansDateTime_Fmt = 'SeansDateTime_Fmt';
+  str_SeansDateTime = 'SeansDateTime';
   SeansDateTime_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,19,204' + m_CRLF + '^0120,0000;' + '%s' + m_CRLF
     + '#Arial,0000,18,204' + m_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + m_CRLF
     + '#Arial,1000,19,204' + m_CRLF + '^0048,0000;' + '%s';
-  str_GroupNum_Fmt = 'GroupNum_Fmt';
+  str_GroupNum = 'GroupNum';
   GroupNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0181,0000;' + '%s' + m_CRLF;
-  str_GroupSum_Fmt = 'GroupSum_Fmt';
+  str_GroupSum = 'GroupSum';
   GroupSum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,18,204' + m_CRLF + '^0030,0000;' + '%s';
-  str_NomerRyada_Fmt = 'NomerRyada_Fmt';
+  str_NomerRyada = 'NomerRyada';
   NomerRyada_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0039,0000;' + '%s' + m_CRLF;
-  str_NomerMesta_Fmt = 'NomerMesta_Fmt';
+  str_NomerMesta = 'NomerMesta';
   NomerMesta_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0039,0000;' + '%s';
-  str_TicketLabel_Fmt = 'TicketLabel_Fmt';
+  str_TicketLabel = 'TicketLabel';
   TicketLabel_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,18,204' + m_CRLF + '^0105,0000;' + '%s';
-  str_TicketSum_Fmt = 'TicketSum_Fmt';
+  str_TicketSum = 'TicketSum';
   TicketSum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,19,204' + m_CRLF + '^0032,0000;' + '%s';
-  str_SerialNum_Fmt = 'SerialNum_Fmt';
+  str_SerialNum = 'SerialNum';
   SerialNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,20,204' + m_CRLF + '^0068,0000;' + '%s%s';
   // -------------------------------------------------------------------------
   // Procedure names and params
