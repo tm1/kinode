@@ -8,7 +8,7 @@ object fm_Info: Tfm_Info
   ClientWidth = 387
   Color = clBtnFace
   Constraints.MaxHeight = 600
-  Constraints.MaxWidth = 395
+  Constraints.MaxWidth = 450
   Constraints.MinHeight = 200
   Constraints.MinWidth = 365
   DefaultMonitor = dmDesktop
@@ -30,7 +30,7 @@ object fm_Info: Tfm_Info
   object pnInfo: TPanel
     Left = 0
     Top = 0
-    Width = 387
+    Width = 397
     Height = 172
     Align = alClient
     BevelOuter = bvLowered
@@ -39,7 +39,7 @@ object fm_Info: Tfm_Info
     object lv_Info: TListView
       Left = 1
       Top = 1
-      Width = 385
+      Width = 395
       Height = 170
       Align = alClient
       Columns = <
@@ -68,8 +68,8 @@ object fm_Info: Tfm_Info
           Width = 30
         end
         item
-          Caption = '#'
-          Width = 22
+          Caption = '###'
+          Width = 30
         end>
       GridLines = True
       IconOptions.Arrangement = iaLeft

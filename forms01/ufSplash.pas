@@ -78,8 +78,8 @@ begin
     BorderStyle := bsNone;
   if FormStyle <> fsNormal then
     FormStyle := fsNormal; // fsStayOnTop;
-  if Position <> poDesktopCenter then
-    Position := poDesktopCenter;
+  // if Position <> poDesktopCenter then
+  //   Position := poDesktopCenter;
   if WindowState <> wsNormal then
     WindowState := wsNormal;
   gg_LoadProgress.MinValue := 0;
@@ -95,8 +95,8 @@ begin
       BorderStyle := bsDialog;
   if FormStyle <> fsNormal then
     FormStyle := fsNormal;
-  if Position <> poDesktopCenter then
-    Position := poDesktopCenter;
+  // if Position <> poDesktopCenter then
+  //   Position := poDesktopCenter;
   if WindowState <> wsNormal then
     WindowState := wsNormal;
   bv_LoadTitle.Visible := false;

@@ -161,8 +161,8 @@ begin
   try
     lc := lv_Info.Columns.Add;
     lc.Alignment := taLeftJustify;
-    lc.Caption := '#';
-    lc.Width := 22;
+    lc.Caption := '###';
+    lc.Width := 30;
   except
   end;
   // --------------------------------------------------------------------------
