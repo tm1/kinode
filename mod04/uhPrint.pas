@@ -92,7 +92,8 @@ const
   cur_NomerMesta_Fmt: string = '';
   cur_TicketLabel_Fmt: string = '';
   cur_TicketSum_Fmt: string = '';
-  cur_SerialNum_Fmt: string = '';
+  cur_SerialNum1_Fmt: string = '';
+  cur_SerialNum2_Fmt: string = '';
   // -----------------------------------------------------------------------------
   cur_CinemaLogoBmp1_Pos_X: integer = 0;
   cur_CinemaLogoBmp1_Pos_Y: integer = 0;
@@ -309,8 +310,10 @@ begin
       TicketLabel_Fmt_Def, max_TicketLabel_Fmt_Len, cur_TicketLabel_Fmt);
     Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketSum,
       TicketSum_Fmt_Def, max_TicketSum_Fmt_Len, cur_TicketSum_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SerialNum,
-      SerialNum_Fmt_Def, max_SerialNum_Fmt_Len, cur_SerialNum_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SerialNum + '1',
+      SerialNum_Fmt_Def, max_SerialNum_Fmt_Len, cur_SerialNum1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SerialNum + '2',
+      SerialNum_Fmt_Def, max_SerialNum_Fmt_Len, cur_SerialNum2_Fmt);
     // --------------------------------------------------------------------------
     Result := Result + 1;
     // --------------------------------------------------------------------------
@@ -1015,7 +1018,8 @@ var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  gfx2_Ryadnum, gfx2_Mestonum, gfx2_Cenamesta, gfx2_Primechanie, gfx2_Serial: Integer;
+  gfx2_Ryadnum, gfx2_Mestonum, gfx2_Cenamesta, gfx2_Primechanie,
+    gfx21_Serial, gfx22_Serial: Integer;
   gfx3_Ryad, gfx3_Mesto, gfx3_Cena: Integer;
   s_NomerRyada, s_NomerMesta, str_Sum: string;
   buffer: string;
@@ -1233,14 +1237,22 @@ begin
         // buffer := buffer + '^0068,0000;' + str_Zal_Prefix + FixFmt(_Serial_Num, 5, '0');
         // -- buffer := buffer + '^0068,0000;' + str_Zal_Prefix + s_Serial_Num;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,20,204' + c_CRLF + '^0068,0000;' + '%s%s', [str_Zal_Prefix, s_Serial_Num]);
-        buffer := Format(cur_SerialNum_Fmt, [str_Zal_Prefix, s_Serial_Num]);
+        buffer := Format(cur_SerialNum1_Fmt, [str_Zal_Prefix, s_Serial_Num]);
         // ----------------
-        gfx2_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
+        gfx21_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
+        // ----------------
+        buffer := Format(cur_SerialNum2_Fmt, [str_Zal_Prefix, s_Serial_Num]);
+        // ----------------
+        gfx22_Serial := PrepareBitmapFromText(PChar(buffer), 0, 0);
       end
       else
-        gfx2_Serial := 0;
+      begin
+        gfx21_Serial := 0;
+        gfx22_Serial := 0;
+      end;  
 {$IFDEF uhPrint_DEBUG}
-      DEBUGMessEnh(0, UnitName, ProcName, 'gfx2_Serial = [' + IntToStr(gfx2_Serial) + ']');
+      DEBUGMessEnh(0, UnitName, ProcName, 'gfx21_Serial = [' + IntToStr(gfx21_Serial) + ']');
+      DEBUGMessEnh(0, UnitName, ProcName, 'gfx22_Serial = [' + IntToStr(gfx22_Serial) + ']');
 {$ENDIF}
       case Print_Maket_Version of
         1:
@@ -1499,7 +1511,7 @@ begin
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
           + Format('X = %d, Y = %d, %s', [Text_X + 139 - 50, Text_Y - 106, str_SerialNum + '1']));
         {!$ENDIF}
-        PlaceBitmap(1, 1, cur_SerialNum1_Pos_X, cur_SerialNum1_Pos_Y, gfx2_Serial);
+        PlaceBitmap(1, 1, cur_SerialNum1_Pos_X, cur_SerialNum1_Pos_Y, gfx21_Serial);
         //*****************************************************************************************
         // PlaceBitmap(1, 1, 149, 73, gfx2_Serial); // 225, 30
         // PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 142, gfx2_Serial);
@@ -1507,7 +1519,7 @@ begin
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
           + Format('X = %d, Y = %d, %s', [Text_X + 139 - 50, Text_Y - 142, str_SerialNum + '2']));
         {!$ENDIF}
-        PlaceBitmap(1, 1, cur_SerialNum2_Pos_X, cur_SerialNum2_Pos_Y, gfx2_Serial);
+        PlaceBitmap(1, 1, cur_SerialNum2_Pos_X, cur_SerialNum2_Pos_Y, gfx22_Serial);
       end;
       //*****************************************************************************************
       if EndLabelCmd >= 0 then

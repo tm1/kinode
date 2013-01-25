@@ -119,25 +119,25 @@ const
   m_CRLF = '\n';
   max_CinemaLogoBmp_Fmt_Len: integer = 5;
   max_OdeumLogoBmp_Fmt_Len: integer = 5;
-  max_OdeumName_Fmt_Len: integer = 100;
+  max_OdeumName_Fmt_Len: integer = 1023;
   // -------------------------------------------------------------------------
-  max_Ryad_Fmt_Len: integer = 100;
-  max_Mesto_Fmt_Len: integer = 100;
-  max_Cena_Fmt_Len: integer = 100;
-  max_Summa_Fmt_Len: integer = 100;
-  max_Tenge_Fmt_Len: integer = 100;
-  max_Halyava_Fmt_Len: integer = 100;
-  max_Kolvomest_Fmt_Len: integer = 100;
+  max_Ryad_Fmt_Len: integer = 1023;
+  max_Mesto_Fmt_Len: integer = 1023;
+  max_Cena_Fmt_Len: integer = 1023;
+  max_Summa_Fmt_Len: integer = 1023;
+  max_Tenge_Fmt_Len: integer = 1023;
+  max_Halyava_Fmt_Len: integer = 1023;
+  max_Kolvomest_Fmt_Len: integer = 1023;
   // -------------------------------------------------------------------------
-  max_FilmName_Fmt_Len: integer = 100;
-  max_SeansDateTime_Fmt_Len: integer = 100;
-  max_GroupNum_Fmt_Len: integer = 100;
-  max_GroupSum_Fmt_Len: integer = 100;
-  max_NomerRyada_Fmt_Len: integer = 100;
-  max_NomerMesta_Fmt_Len: integer = 100;
-  max_TicketLabel_Fmt_Len: integer = 100;
-  max_TicketSum_Fmt_Len: integer = 100;
-  max_SerialNum_Fmt_Len: integer = 100;
+  max_FilmName_Fmt_Len: integer = 1023;
+  max_SeansDateTime_Fmt_Len: integer = 1023;
+  max_GroupNum_Fmt_Len: integer = 1023;
+  max_GroupSum_Fmt_Len: integer = 1023;
+  max_NomerRyada_Fmt_Len: integer = 1023;
+  max_NomerMesta_Fmt_Len: integer = 1023;
+  max_TicketLabel_Fmt_Len: integer = 1023;
+  max_TicketSum_Fmt_Len: integer = 1023;
+  max_SerialNum_Fmt_Len: integer = 1023;
   // -------------------------------------------------------------------------
   max_CinemaLogoBmp_Pos_Value: integer = 999;
   max_OdeumLogoBmp_Pos_Value: integer = 999;
