@@ -1276,14 +1276,14 @@ begin
         // PlaceBitmap(1, 1, Cinema1Logo_iX, Cinema1Logo_iY, gfx_CinemaLogo);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Cinema1Logo_iX, Cinema1Logo_iY]));
+          + Format('X = %d, Y = %d, %s', [Cinema1Logo_iX, Cinema1Logo_iY, str_CinemaLogoBmp + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_CinemaLogoBmp1_Pos_X, cur_CinemaLogoBmp1_Pos_Y, gfx_CinemaLogo);
         //*****************************************************************************************
         // PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Odeum2Logo_iX, Odeum2Logo_iY]));
+          + Format('X = %d, Y = %d, %s', [Odeum2Logo_iX, Odeum2Logo_iY, str_OdeumLogoBmp + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_OdeumLogoBmp1_Pos_X, cur_OdeumLogoBmp1_Pos_Y, gfx_OdeumLogo);
       end
@@ -1296,7 +1296,7 @@ begin
         // PlaceBitmap(1, 1, Cinema1Logo_iX, Cinema1Logo_iY, gfx_CinemaLogo);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Cinema1Logo_iX, Cinema1Logo_iY]));
+          + Format('X = %d, Y = %d, %s', [Cinema1Logo_iX, Cinema1Logo_iY, str_CinemaLogoBmp + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_CinemaLogoBmp1_Pos_X, cur_CinemaLogoBmp1_Pos_Y, gfx_CinemaLogo);
       end
@@ -1309,7 +1309,7 @@ begin
         // PlaceBitmap(1, 1, Odeum2Logo_iX, Odeum2Logo_iY, gfx_OdeumLogo);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Odeum2Logo_iX, Odeum2Logo_iY]));
+          + Format('X = %d, Y = %d, %s', [Odeum2Logo_iX, Odeum2Logo_iY, str_OdeumLogoBmp + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_OdeumLogoBmp1_Pos_X, cur_OdeumLogoBmp1_Pos_Y, gfx_OdeumLogo);
       end;
@@ -1325,7 +1325,7 @@ begin
       // PlaceBitmap(1, 1, Text_X + 11, Text_Y, gfx1_Filmname);
       {!$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-        + Format('X = %d, Y = %d', [Text_X + 11, Text_Y]));
+        + Format('X = %d, Y = %d, %s', [Text_X + 11, Text_Y, str_FilmName + '1']));
       {!$ENDIF}
       PlaceBitmap(1, 1, cur_FilmName1_Pos_X, cur_FilmName1_Pos_Y, gfx1_Filmname);
       //*****************************************************************************************
@@ -1336,7 +1336,7 @@ begin
       // PlaceBitmap(1, 1, Text_X + 25 + 10, Text_Y - 27 + 8, gfx1_Datavremya);
       {!$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-        + Format('X = %d, Y = %d', [Text_X + 25 + 10, Text_Y - 27 + 8]));
+        + Format('X = %d, Y = %d, %s', [Text_X + 25 + 10, Text_Y - 27 + 8, str_SeansDateTime + '1']));
       {!$ENDIF}
       PlaceBitmap(1, 1, cur_SeansDateTime1_Pos_X, cur_SeansDateTime1_Pos_Y, gfx1_Datavremya);
       //*****************************************************************************************
@@ -1346,7 +1346,7 @@ begin
       // PlaceBitmap(1, 1, Text_X + 218 - 5, Text_Y - 48 + 5, gfx3_Ryad);
       {!$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-        + Format('X = %d, Y = %d', [Text_X + 218 - 5, Text_Y - 48 + 5]));
+        + Format('X = %d, Y = %d, %s', [Text_X + 218 - 5, Text_Y - 48 + 5, str_Ryad + '1']));
       {!$ENDIF}
       PlaceBitmap(1, 1, cur_Ryad1_Pos_X, cur_Ryad1_Pos_Y, gfx3_Ryad);
       //*****************************************************************************************
@@ -1361,7 +1361,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 20 - 5, Text_Y - 48 + 5, gfx2_Ryadnum);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 20 - 5, Text_Y - 48 + 5]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 20 - 5, Text_Y - 48 + 5, str_GroupNum + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_GroupNum1_Pos_X, cur_GroupNum1_Pos_Y, gfx2_Ryadnum);
       end
@@ -1376,7 +1376,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 179 - 5, Text_Y - 48 + 5, gfx2_Ryadnum);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 179 - 5, Text_Y - 48 + 5]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 179 - 5, Text_Y - 48 + 5, str_NomerRyada + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_NomerRyada1_Pos_X, cur_NomerRyada1_Pos_Y, gfx2_Ryadnum);
         //*****************************************************************************************
@@ -1386,7 +1386,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 139 - 5, Text_Y - 48 + 5, gfx3_Mesto);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 139 - 5, Text_Y - 48 + 5]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 139 - 5, Text_Y - 48 + 5, str_Mesto + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_Mesto1_Pos_X, cur_Mesto1_Pos_Y, gfx3_Mesto);
         //*****************************************************************************************
@@ -1396,7 +1396,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 100 - 5, Text_Y - 48 + 5, gfx2_Mestonum);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 100 - 5, Text_Y - 48 + 5]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 100 - 5, Text_Y - 48 + 5, str_NomerMesta + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_NomerMesta1_Pos_X, cur_NomerMesta1_Pos_Y, gfx2_Mestonum);
       end;
@@ -1410,7 +1410,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 142 - 5 - 40, Text_Y - 69 + 6, gfx_Halyava);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 142 - 5 - 40, Text_Y - 69 + 6]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 142 - 5 - 40, Text_Y - 69 + 6, str_Halyava + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_Halyava1_Pos_X, cur_Halyava1_Pos_Y, gfx_Halyava);
       end
@@ -1426,7 +1426,7 @@ begin
           // PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx_Summa);
           {!$IFDEF uhPrint_DEBUG}
           DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-            + Format('X = %d, Y = %d', [Text_X + 215 - 5, Text_Y - 69 + 6]));
+            + Format('X = %d, Y = %d, %s', [Text_X + 215 - 5, Text_Y - 69 + 6, str_Summa + '1']));
           {!$ENDIF}
           PlaceBitmap(1, 1, cur_Summa1_Pos_X, cur_Summa1_Pos_X, gfx_Summa);
         end
@@ -1437,7 +1437,7 @@ begin
           // PlaceBitmap(1, 1, Text_X + 215 - 5, Text_Y - 69 + 6, gfx3_Cena);
           {!$IFDEF uhPrint_DEBUG}
           DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-            + Format('X = %d, Y = %d', [Text_X + 215 - 5, Text_Y - 69 + 6]));
+            + Format('X = %d, Y = %d, %s', [Text_X + 215 - 5, Text_Y - 69 + 6, str_Cena + '1']));
           {!$ENDIF}
           PlaceBitmap(1, 1, cur_Cena1_Pos_X, cur_Cena1_Pos_Y, gfx3_Cena);
         end;
@@ -1446,7 +1446,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 183 - 5, Text_Y - 69 + 6, gfx2_Cenamesta);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 183 - 5, Text_Y - 69 + 6]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 183 - 5, Text_Y - 69 + 6, str_Summa + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_Summa1_Pos_X, cur_Summa1_Pos_Y, gfx2_Cenamesta);
         //*****************************************************************************************
@@ -1454,7 +1454,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 155 - 5, Text_Y - 69 + 6, gfx_Tenge);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 155 - 5, Text_Y - 69 + 6]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 155 - 5, Text_Y - 69 + 6, str_Tenge + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_Tenge1_Pos_X, cur_Tenge1_Pos_Y, gfx_Tenge);
       end;
@@ -1466,7 +1466,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 160 - 5, Text_Y - 84, gfx_Kolvomest);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 160 - 5, Text_Y - 84]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 160 - 5, Text_Y - 84, str_Kolvomest + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_Kolvomest1_Pos_X, cur_Kolvomest1_Pos_Y, gfx_Kolvomest);
         //*****************************************************************************************
@@ -1474,7 +1474,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 122 - 5, Text_Y - 84, gfx2_Primechanie);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 122 - 5, Text_Y - 84]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 122 - 5, Text_Y - 84, str_GroupSum + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_GroupSum1_Pos_X, cur_GroupSum1_Pos_Y, gfx2_Primechanie);
       end
@@ -1485,7 +1485,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 142 - 5, Text_Y - 84, gfx2_Primechanie);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 142 - 5, Text_Y - 84]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 142 - 5, Text_Y - 84, str_TicketLabel + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_TicketLabel1_Pos_X, cur_TicketLabel1_Pos_Y, gfx2_Primechanie);
       end;
@@ -1497,7 +1497,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 106, gfx2_Serial);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 139 - 50, Text_Y - 106]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 139 - 50, Text_Y - 106, str_SerialNum + '1']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_SerialNum1_Pos_X, cur_SerialNum1_Pos_Y, gfx2_Serial);
         //*****************************************************************************************
@@ -1505,7 +1505,7 @@ begin
         // PlaceBitmap(1, 1, Text_X + 139 - 50, Text_Y - 142, gfx2_Serial);
         {!$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
-          + Format('X = %d, Y = %d', [Text_X + 139 - 50, Text_Y - 142]));
+          + Format('X = %d, Y = %d, %s', [Text_X + 139 - 50, Text_Y - 142, str_SerialNum + '2']));
         {!$ENDIF}
         PlaceBitmap(1, 1, cur_SerialNum2_Pos_X, cur_SerialNum2_Pos_Y, gfx2_Serial);
       end;
