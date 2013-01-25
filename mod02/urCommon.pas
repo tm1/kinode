@@ -139,27 +139,27 @@ const
   max_TicketSum_Fmt_Len: integer = 100;
   max_SerialNum_Fmt_Len: integer = 100;
   // -------------------------------------------------------------------------
-  max_CinemaLogoBmp_Pos_Value: integer = 100;
-  max_OdeumLogoBmp_Pos_Value: integer = 100;
-  max_OdeumName_Pos_Value: integer = 100;
+  max_CinemaLogoBmp_Pos_Value: integer = 999;
+  max_OdeumLogoBmp_Pos_Value: integer = 999;
+  max_OdeumName_Pos_Value: integer = 999;
   // -------------------------------------------------------------------------
-  max_Ryad_Pos_Value: integer = 100;
-  max_Mesto_Pos_Value: integer = 100;
-  max_Cena_Pos_Value: integer = 100;
-  max_Summa_Pos_Value: integer = 100;
-  max_Tenge_Pos_Value: integer = 100;
-  max_Halyava_Pos_Value: integer = 100;
-  max_Kolvomest_Pos_Value: integer = 100;
+  max_Ryad_Pos_Value: integer = 999;
+  max_Mesto_Pos_Value: integer = 999;
+  max_Cena_Pos_Value: integer = 999;
+  max_Summa_Pos_Value: integer = 999;
+  max_Tenge_Pos_Value: integer = 999;
+  max_Halyava_Pos_Value: integer = 999;
+  max_Kolvomest_Pos_Value: integer = 999;
   // -------------------------------------------------------------------------
-  max_FilmName_Pos_Value: integer = 100;
-  max_SeansDateTime_Pos_Value: integer = 100;
-  max_GroupNum_Pos_Value: integer = 100;
-  max_GroupSum_Pos_Value: integer = 100;
-  max_NomerRyada_Pos_Value: integer = 100;
-  max_NomerMesta_Pos_Value: integer = 100;
-  max_TicketLabel_Pos_Value: integer = 100;
-  max_TicketSum_Pos_Value: integer = 100;
-  max_SerialNum_Pos_Value: integer = 100;
+  max_FilmName_Pos_Value: integer = 999;
+  max_SeansDateTime_Pos_Value: integer = 999;
+  max_GroupNum_Pos_Value: integer = 999;
+  max_GroupSum_Pos_Value: integer = 999;
+  max_NomerRyada_Pos_Value: integer = 999;
+  max_NomerMesta_Pos_Value: integer = 999;
+  max_TicketLabel_Pos_Value: integer = 999;
+  max_TicketSum_Pos_Value: integer = 999;
+  max_SerialNum_Pos_Value: integer = 999;
   // -------------------------------------------------------------------------
   CinemaLogoBmp1_Pos_X_Def: integer = 100;
   CinemaLogoBmp1_Pos_Y_Def: integer = 100;
