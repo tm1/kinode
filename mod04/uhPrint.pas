@@ -74,24 +74,27 @@ const
   cur_BlankForm_Section: string = '';
   cur_BlankForm_Num: integer = 1;
   // -----------------------------------------------------------------------------
-  cur_CinemaLogoBmp_Fmt: string = '';
-  cur_OdeumLogoBmp_Fmt: string = '';
-  cur_OdeumName_Fmt: string = '';
-  cur_Ryad_Fmt: string = '';
-  cur_Mesto_Fmt: string = '';
-  cur_Cena_Fmt: string = '';
-  cur_Summa_Fmt: string = '';
-  cur_Tenge_Fmt: string = '';
-  cur_Halyava_Fmt: string = '';
-  cur_Kolvomest_Fmt: string = '';
-  cur_FilmName_Fmt: string = '';
-  cur_SeansDateTime_Fmt: string = '';
-  cur_GroupNum_Fmt: string = '';
-  cur_GroupSum_Fmt: string = '';
-  cur_NomerRyada_Fmt: string = '';
-  cur_NomerMesta_Fmt: string = '';
-  cur_TicketLabel_Fmt: string = '';
-  cur_TicketSum_Fmt: string = '';
+  cur_CinemaLogoBmp1_Fmt: string = '';
+  cur_OdeumLogoBmp1_Fmt: string = '';
+  cur_OdeumName1_Fmt: string = '';
+  cur_Vremya1_Fmt: string = '';
+  cur_Ryad1_Fmt: string = '';
+  cur_Mesto1_Fmt: string = '';
+  cur_Cena1_Fmt: string = '';
+  cur_Summa1_Fmt: string = '';
+  cur_Tenge1_Fmt: string = '';
+  cur_Halyava1_Fmt: string = '';
+  cur_Kolvomest1_Fmt: string = '';
+  cur_FilmName1_Fmt: string = '';
+  // cur_SeansDateTime1_Fmt: string = '';
+  cur_SeansDate1_Fmt: string = '';
+  cur_SeansTime1_Fmt: string = '';
+  cur_GroupNum1_Fmt: string = '';
+  cur_GroupSum1_Fmt: string = '';
+  cur_NomerRyada1_Fmt: string = '';
+  cur_NomerMesta1_Fmt: string = '';
+  cur_TicketLabel1_Fmt: string = '';
+  cur_TicketSum1_Fmt: string = '';
   cur_SerialNum1_Fmt: string = '';
   cur_SerialNum2_Fmt: string = '';
   // -----------------------------------------------------------------------------
@@ -101,6 +104,8 @@ const
   cur_OdeumLogoBmp1_Pos_Y: integer = 0;
   cur_OdeumName1_Pos_X: integer = 0;
   cur_OdeumName1_Pos_Y: integer = 0;
+  cur_Vremya1_Pos_X: integer = 0;
+  cur_Vremya1_Pos_Y: integer = 0;
   cur_Ryad1_Pos_X: integer = 0;
   cur_Ryad1_Pos_Y: integer = 0;
   cur_Mesto1_Pos_X: integer = 0;
@@ -117,8 +122,14 @@ const
   cur_Kolvomest1_Pos_Y: integer = 0;
   cur_FilmName1_Pos_X: integer = 0;
   cur_FilmName1_Pos_Y: integer = 0;
+  {
   cur_SeansDateTime1_Pos_X: integer = 0;
   cur_SeansDateTime1_Pos_Y: integer = 0;
+  }
+  cur_SeansDate1_Pos_X: integer = 0;
+  cur_SeansDate1_Pos_Y: integer = 0;
+  cur_SeansTime1_Pos_X: integer = 0;
+  cur_SeansTime1_Pos_Y: integer = 0;
   cur_GroupNum1_Pos_X: integer = 0;
   cur_GroupNum1_Pos_Y: integer = 0;
   cur_GroupSum1_Pos_X: integer = 0;
@@ -169,6 +180,7 @@ const
   gfx_CinemaLogo: integer = 0;
   gfx_OdeumLogo: integer = 0;
   // gfx_OdeumName: integer = 0;
+  gfx_Vremya: integer = 0;
   gfx_Ryad: integer = 0;
   gfx_Mesto: integer = 0;
   gfx_Cena: integer = 0;
@@ -184,7 +196,9 @@ const
   // Local GFX
   // -----------------------------------------------------------------------------
   gfx1_Filmname: integer = 0;
-  gfx1_Datavremya: integer = 0;
+  // gfx1_Datavremya: integer = 0;
+  gfx1_SeansDate: integer = 0;
+  gfx1_SeansTime: integer = 0;
   // -----------------------------------------------------------------------------
   Cinema1Logo_iX: Integer = 0;
   Cinema1Logo_iY: Integer = 0;
@@ -272,44 +286,52 @@ begin
     // --------------------------------------------------------------------------
     // Загрузка форматов строк для рисунков
     // --------------------------------------------------------------------------
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_CinemaLogoBmp,
-      CinemaLogoBmp_Fmt_Def, max_CinemaLogoBmp_Fmt_Len, cur_CinemaLogoBmp_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_OdeumLogoBmp,
-      OdeumLogoBmp_Fmt_Def, max_OdeumLogoBmp_Fmt_Len, cur_OdeumLogoBmp_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_OdeumName,
-      OdeumName_Fmt_Def, max_OdeumName_Fmt_Len, cur_OdeumName_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_CinemaLogoBmp + '1',
+      CinemaLogoBmp_Fmt_Def, max_CinemaLogoBmp_Fmt_Len, cur_CinemaLogoBmp1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_OdeumLogoBmp + '1',
+      OdeumLogoBmp_Fmt_Def, max_OdeumLogoBmp_Fmt_Len, cur_OdeumLogoBmp1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_OdeumName + '1',
+      OdeumName_Fmt_Def, max_OdeumName_Fmt_Len, cur_OdeumName1_Fmt);
     // --------------------------------------------------------------------------
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Ryad,
-      Ryad_Fmt_Def, max_Ryad_Fmt_Len, cur_Ryad_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Mesto,
-      Mesto_Fmt_Def, max_Mesto_Fmt_Len, cur_Mesto_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Cena,
-      Cena_Fmt_Def, max_Cena_Fmt_Len, cur_Cena_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Summa,
-      Summa_Fmt_Def, max_Summa_Fmt_Len, cur_Summa_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Tenge,
-      Tenge_Fmt_Def, max_Tenge_Fmt_Len, cur_Tenge_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Halyava,
-      Halyava_Fmt_Def, max_Halyava_Fmt_Len, cur_Halyava_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Kolvomest,
-      Kolvomest_Fmt_Def, max_Kolvomest_Fmt_Len, cur_Kolvomest_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Vremya + '1',
+      Vremya_Fmt_Def, max_Vremya_Fmt_Len, cur_Vremya1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Ryad + '1',
+      Ryad_Fmt_Def, max_Ryad_Fmt_Len, cur_Ryad1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Mesto + '1',
+      Mesto_Fmt_Def, max_Mesto_Fmt_Len, cur_Mesto1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Cena + '1',
+      Cena_Fmt_Def, max_Cena_Fmt_Len, cur_Cena1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Summa + '1',
+      Summa_Fmt_Def, max_Summa_Fmt_Len, cur_Summa1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Tenge + '1',
+      Tenge_Fmt_Def, max_Tenge_Fmt_Len, cur_Tenge1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Halyava + '1',
+      Halyava_Fmt_Def, max_Halyava_Fmt_Len, cur_Halyava1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_Kolvomest + '1',
+      Kolvomest_Fmt_Def, max_Kolvomest_Fmt_Len, cur_Kolvomest1_Fmt);
     // --------------------------------------------------------------------------
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_FilmName,
-      FilmName_Fmt_Def, max_FilmName_Fmt_Len, cur_FilmName_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SeansDateTime,
-      SeansDateTime_Fmt_Def, max_SeansDateTime_Fmt_Len, cur_SeansDateTime_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_GroupNum,
-      GroupNum_Fmt_Def, max_GroupNum_Fmt_Len, cur_GroupNum_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_GroupSum,
-      GroupSum_Fmt_Def, max_GroupSum_Fmt_Len, cur_GroupSum_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_NomerRyada,
-      NomerRyada_Fmt_Def, max_NomerRyada_Fmt_Len, cur_NomerRyada_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_NomerMesta,
-      NomerMesta_Fmt_Def, max_NomerMesta_Fmt_Len, cur_NomerMesta_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketLabel,
-      TicketLabel_Fmt_Def, max_TicketLabel_Fmt_Len, cur_TicketLabel_Fmt);
-    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketSum,
-      TicketSum_Fmt_Def, max_TicketSum_Fmt_Len, cur_TicketSum_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_FilmName + '1',
+      FilmName_Fmt_Def, max_FilmName_Fmt_Len, cur_FilmName1_Fmt);
+    {
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SeansDateTime + '1',
+      SeansDateTime_Fmt_Def, max_SeansDateTime_Fmt_Len, cur_SeansDateTime1_Fmt);
+    }  
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SeansDate + '1',
+      SeansDate_Fmt_Def, max_SeansDate_Fmt_Len, cur_SeansDate1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SeansTime + '1',
+      SeansTime_Fmt_Def, max_SeansTime_Fmt_Len, cur_SeansTime1_Fmt);      
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_GroupNum + '1',
+      GroupNum_Fmt_Def, max_GroupNum_Fmt_Len, cur_GroupNum1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_GroupSum + '1',
+      GroupSum_Fmt_Def, max_GroupSum_Fmt_Len, cur_GroupSum1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_NomerRyada + '1',
+      NomerRyada_Fmt_Def, max_NomerRyada_Fmt_Len, cur_NomerRyada1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_NomerMesta + '1',
+      NomerMesta_Fmt_Def, max_NomerMesta_Fmt_Len, cur_NomerMesta1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketLabel + '1',
+      TicketLabel_Fmt_Def, max_TicketLabel_Fmt_Len, cur_TicketLabel1_Fmt);
+    Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_TicketSum + '1',
+      TicketSum_Fmt_Def, max_TicketSum_Fmt_Len, cur_TicketSum1_Fmt);
     Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SerialNum + '1',
       SerialNum_Fmt_Def, max_SerialNum_Fmt_Len, cur_SerialNum1_Fmt);
     Load_Save_Blank_Form_Fmt(tmp_BlankForm_Section, str_SerialNum + '2',
@@ -329,6 +351,9 @@ begin
       OdeumName1_Pos_X_Def, OdeumName1_Pos_Y_Def, max_OdeumName_Pos_Value,
       cur_OdeumName1_Pos_X, cur_OdeumName1_Pos_Y);
     // --------------------------------------------------------------------------
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Vremya + '1',
+      Vremya1_Pos_X_Def, Vremya1_Pos_Y_Def, max_Vremya_Pos_Value,
+      cur_Vremya1_Pos_X, cur_Vremya1_Pos_Y);
     Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_Ryad + '1',
       Ryad1_Pos_X_Def, Ryad1_Pos_Y_Def, max_Ryad_Pos_Value,
       cur_Ryad1_Pos_X, cur_Ryad1_Pos_Y);
@@ -354,9 +379,17 @@ begin
     Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_FilmName + '1',
       FilmName1_Pos_X_Def, FilmName1_Pos_Y_Def, max_FilmName_Pos_Value,
       cur_FilmName1_Pos_X, cur_FilmName1_Pos_Y);
+    {  
     Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_SeansDateTime + '1',
       SeansDateTime1_Pos_X_Def, SeansDateTime1_Pos_Y_Def, max_SeansDateTime_Pos_Value,
       cur_SeansDateTime1_Pos_X, cur_SeansDateTime1_Pos_Y);
+    }
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_SeansDate + '1',
+      SeansDate1_Pos_X_Def, SeansDate1_Pos_Y_Def, max_SeansDate_Pos_Value,
+      cur_SeansDate1_Pos_X, cur_SeansDate1_Pos_Y);
+    Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_SeansTime + '1',
+      SeansTime1_Pos_X_Def, SeansTime1_Pos_Y_Def, max_SeansTime_Pos_Value,
+      cur_SeansTime1_Pos_X, cur_SeansTime1_Pos_Y);
     Load_Save_Blank_Form_Pos(tmp_BlankForm_Section, str_GroupNum + '1',
       GroupNum1_Pos_X_Def, GroupNum1_Pos_Y_Def, max_GroupNum_Pos_Value,
       cur_GroupNum1_Pos_X, cur_GroupNum1_Pos_Y);
@@ -406,17 +439,6 @@ function Init_Global_Print(CinemaLogoBmp, OdeumLogoBmp: TBitmap;
   OdeumName: string): Integer; //ready partially
 const
   ProcName: string = 'Init_Global_Print';
-  str_Ryad: string = 'ряд';
-  str_Mesto: string = 'место';
-  str_Cena: string = 'цена';
-  str_Summa: string = 'сумма';
-  str_Tenge: string = 'тенге';
-  str_Halyava: string = 'Бесплатный билет';
-  str_Studpens: string = 'Студенч./Пенсион.';
-  str_Detski: string = 'Детский билет';
-  str_Priglas: string = 'Пригласительный';
-  str_Vip: string = 'VIP карточка';
-  str_Kolvomest: string = 'Кол-во мест';
 var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
@@ -470,7 +492,7 @@ begin
         // -- buffer := '@2,';
         // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
         // buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
-        buffer := Format(cur_CinemaLogoBmp_Fmt, [Base64EncodeStr(Stream.DataString)]);
+        buffer := Format(cur_CinemaLogoBmp1_Fmt, [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -509,7 +531,7 @@ begin
         // -- buffer := '@2,';
         // -- buffer := buffer + Base64EncodeStr(Stream.DataString);
         // buffer := Format('@2,%s', [Base64EncodeStr(Stream.DataString)]);
-        buffer := Format(cur_OdeumLogoBmp_Fmt, [Base64EncodeStr(Stream.DataString)]);
+        buffer := Format(cur_OdeumLogoBmp1_Fmt, [Base64EncodeStr(Stream.DataString)]);
 {$IFDEF uhPrint_DEBUG}
         DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -545,7 +567,7 @@ begin
       // buffer := buffer + '^0090,0000;' + 'Зеленый зал';
       // -- buffer := buffer + '^0190,0030;' + OdeumName;
       // buffer := Format('@2,050,050' + c_CRLF + '#Courier New,1000,20,204' + c_CRLF + '^0190,0030;' + '%s', [OdeumName]);
-      buffer := Format(cur_OdeumName_Fmt, [OdeumName]);
+      buffer := Format(cur_OdeumName1_Fmt, [OdeumName]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -588,13 +610,25 @@ begin
     if True then
     begin
       // --------------------------------------------------------------------------
+      // Загрузка слова "время"
+      // --------------------------------------------------------------------------
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0029,0000;' + '%s', [str_loc_Vremya]);
+      buffer := Format(cur_Vremya1_Fmt, [str_loc_Vremya]);
+{$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
+{$ENDIF}
+      gfx_Vremya := PrepareBitmapFromText(PChar(buffer), 0, 1);
+{$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'gfx_Vremya = [' + IntToStr(gfx_Vremya) + ']');
+{$ENDIF}
+      // --------------------------------------------------------------------------
       // Загрузка слова "ряд"
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      // -- buffer := buffer + '^0029,0000;' + str_Ryad;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0029,0000;' + '%s', [str_Ryad]);
-      buffer := Format(cur_Ryad_Fmt, [str_Ryad]);
+      // -- buffer := buffer + '^0029,0000;' + str_loc_Ryad;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0029,0000;' + '%s', [str_loc_Ryad]);
+      buffer := Format(cur_Ryad1_Fmt, [str_loc_Ryad]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -607,9 +641,9 @@ begin
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      // -- buffer := buffer + '^0040,0000;' + str_Mesto;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0040,0000;' + '%s', [str_Mesto]);
-      buffer := Format(cur_Mesto_Fmt, [str_Mesto]);
+      // -- buffer := buffer + '^0040,0000;' + str_loc_Mesto;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0040,0000;' + '%s', [str_loc_Mesto]);
+      buffer := Format(cur_Mesto1_Fmt, [str_loc_Mesto]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -622,9 +656,9 @@ begin
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      // -- buffer := buffer + '^0032,0000;' + str_Cena;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Cena]);
-      buffer := Format(cur_Cena_Fmt, [str_Cena]);
+      // -- buffer := buffer + '^0032,0000;' + str_loc_Cena;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_loc_Cena]);
+      buffer := Format(cur_Cena1_Fmt, [str_loc_Cena]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -637,9 +671,9 @@ begin
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      // -- buffer := buffer + '^0032,0000;' + str_Summa;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_Summa]);
-      buffer := Format(cur_Summa_Fmt, [str_Summa]);
+      // -- buffer := buffer + '^0032,0000;' + str_loc_Summa;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0032,0000;' + '%s', [str_loc_Summa]);
+      buffer := Format(cur_Summa1_Fmt, [str_loc_Summa]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -652,9 +686,9 @@ begin
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      // -- buffer := buffer + '^0028,0000;' + str_Tenge;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0028,0000;' + '%s', [str_Tenge]);
-      buffer := Format(cur_Tenge_Fmt, [str_Tenge]);
+      // -- buffer := buffer + '^0028,0000;' + str_loc_Tenge;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0028,0000;' + '%s', [str_loc_Tenge]);
+      buffer := Format(cur_Tenge1_Fmt, [str_loc_Tenge]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -667,9 +701,9 @@ begin
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-      // -- buffer := buffer + '^0105,0000;' + str_Halyava;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_Halyava]);
-      buffer := Format(cur_Halyava_Fmt, [str_Halyava]);
+      // -- buffer := buffer + '^0105,0000;' + str_loc_Halyava;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_loc_Halyava]);
+      buffer := Format(cur_Halyava1_Fmt, [str_loc_Halyava]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -683,7 +717,7 @@ begin
       // --------------------------------------------------------------------------
       buffer := '@2,000,050' + c_CRLF;
       buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-      buffer := buffer + '^0105,0000;' + str_Studpens;
+      buffer := buffer + '^0105,0000;' + str_loc_Studpens;
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -698,7 +732,7 @@ begin
       // --------------------------------------------------------------------------
       buffer := '@2,000,050' + c_CRLF;
       buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-      buffer := buffer + '^0105,0000;' + str_Detski;
+      buffer := buffer + '^0105,0000;' + str_loc_Detski;
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -713,7 +747,7 @@ begin
       // --------------------------------------------------------------------------
       buffer := '@2,000,050' + c_CRLF;
       buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-      buffer := buffer + '^0105,0000;' + str_Priglas;
+      buffer := buffer + '^0105,0000;' + str_loc_Priglas;
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -728,7 +762,7 @@ begin
       // --------------------------------------------------------------------------
       buffer := '@2,000,050' + c_CRLF;
       buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
-      buffer := buffer + '^0105,0000;' + str_Vip;
+      buffer := buffer + '^0105,0000;' + str_loc_Vip;
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -742,9 +776,9 @@ begin
       // --------------------------------------------------------------------------
       // -- buffer := '@2,000,050' + c_CRLF;
       // -- buffer := buffer + '#Arial,0000,16,204' + c_CRLF;
-      // -- buffer := buffer + '^0092,0000;' + str_Kolvomest;
-      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0092,0000;' + '%s', [str_Kolvomest]);
-      buffer := Format(cur_Kolvomest_Fmt, [str_Kolvomest]);
+      // -- buffer := buffer + '^0092,0000;' + str_loc_Kolvomest;
+      // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,16,204' + c_CRLF + '^0092,0000;' + '%s', [str_loc_Kolvomest]);
+      buffer := Format(cur_Kolvomest1_Fmt, [str_loc_Kolvomest]);
 {$IFDEF uhPrint_DEBUG}
       DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -778,7 +812,6 @@ function Init_TC_Print(bmp_CinemaLogo, bmp_OdeumLogo: TBitmap;
   strSeans_Time: string): Integer; //ready
 const
   ProcName: string = 'Init_TC_Print';
-  str_Vremya: string = 'время';
 var
   Time_Start, Time_End: TDateTime;
   Hour, Min, Sec, MSec: Word;
@@ -825,7 +858,7 @@ begin
     // buffer := buffer + '^0266,0000;' + strFilm_Name;
     // -- buffer := buffer + '^0246,0000;' + strFilm_Name;
     // buffer := Format('@2,025,050' + c_CRLF + '#Times New Roman,1000,25,204' + c_CRLF + '^0246,0000;' + '%s', [strFilm_Name]);
-    buffer := Format(cur_FilmName_Fmt, [strFilm_Name]);
+    buffer := Format(cur_FilmName1_Fmt, [strFilm_Name]);
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
@@ -839,7 +872,7 @@ begin
     case Print_Maket_Version of
       1:
         begin
-          tmp_Vremya := str_Vremya;
+          tmp_Vremya := str_loc_Vremya;
         end;
       2:
         begin
@@ -859,14 +892,32 @@ begin
     //   + '#Arial,0000,18,204' + c_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + c_CRLF
     //   + '#Arial,1000,19,204' + c_CRLF + '^0048,0000;' + '%s',
     //   [FormatDateTime('d mmmm yyyy', dtFilm_Date), tmp_Vremya, strSeans_Time]);
-    buffer := Format(cur_SeansDateTime_Fmt,
+    {
+    buffer := Format(cur_SeansDateTime1_Fmt,
       [FormatDateTime('d mmmm yyyy', dtFilm_Date), tmp_Vremya, strSeans_Time]);
+    }  
+{$IFDEF uhPrint_DEBUG}
+    // DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
+{$ENDIF}
+    // gfx1_Datavremya := PrepareBitmapFromText(PChar(buffer), 0, 0);
+{$IFDEF uhPrint_DEBUG}
+    // DEBUGMessEnh(0, UnitName, ProcName, 'gfx1_Datavremya = [' + IntToStr(gfx1_Datavremya) + ']');
+{$ENDIF}
+    buffer := Format(cur_SeansDate1_Fmt, [FormatDateTime('d mmmm yyyy', dtFilm_Date)]);
 {$IFDEF uhPrint_DEBUG}
     DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
 {$ENDIF}
-    gfx1_Datavremya := PrepareBitmapFromText(PChar(buffer), 0, 0);
+    gfx1_SeansDate := PrepareBitmapFromText(PChar(buffer), 0, 0);
 {$IFDEF uhPrint_DEBUG}
-    DEBUGMessEnh(0, UnitName, ProcName, 'gfx1_Datavremya = [' + IntToStr(gfx1_Datavremya) + ']');
+    DEBUGMessEnh(0, UnitName, ProcName, 'gfx1_SeansDate = [' + IntToStr(gfx1_SeansDate) + ']');
+{$ENDIF}
+    buffer := Format(cur_SeansTime1_Fmt, [strSeans_Time]);
+{$IFDEF uhPrint_DEBUG}
+    DEBUGMessEnh(0, UnitName, ProcName, 'buffer = [' + buffer + ']');
+{$ENDIF}
+    gfx1_SeansTime := PrepareBitmapFromText(PChar(buffer), 0, 0);
+{$IFDEF uhPrint_DEBUG}
+    DEBUGMessEnh(0, UnitName, ProcName, 'gfx1_SeansTime = [' + IntToStr(gfx1_SeansTime) + ']');
 {$ENDIF}
     InitializePrinterJob;
     PrintJob_StartNew := False;
@@ -1140,7 +1191,7 @@ begin
         // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
         // -- buffer := buffer + '^0181,0000;' + s_Group_Num + c_CRLF;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0181,0000;' + '%s' + c_CRLF, [s_Group_Num]);
-        buffer := Format(cur_GroupNum_Fmt, [s_Group_Num]);
+        buffer := Format(cur_GroupNum1_Fmt, [s_Group_Num]);
         // gfx2_Ryadnum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Ryadnum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1151,7 +1202,7 @@ begin
         // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
         // -- buffer := buffer + '^0030,0000;' + str_Sum;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0030,0000;' + '%s', [str_Sum]);
-        buffer := Format(cur_GroupSum_Fmt, [str_Sum]);
+        buffer := Format(cur_GroupSum1_Fmt, [str_Sum]);
         // gfx2_Primechanie := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Primechanie := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1167,7 +1218,7 @@ begin
         // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
         // -- buffer := buffer + '^0039,0000;' + s_NomerRyada + c_CRLF;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s' + c_CRLF, [s_NomerRyada]);
-        buffer := Format(cur_NomerRyada_Fmt, [s_NomerRyada]);
+        buffer := Format(cur_NomerRyada1_Fmt, [s_NomerRyada]);
         // gfx2_Ryadnum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Ryadnum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1178,7 +1229,7 @@ begin
         // -- buffer := buffer + '#Arial,1100,20,204' + c_CRLF;
         // -- buffer := buffer + '^0039,0000;' + s_NomerMesta;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1100,20,204' + c_CRLF + '^0039,0000;' + '%s', [s_NomerMesta]);
-        buffer := Format(cur_NomerMesta_Fmt, [s_NomerMesta]);
+        buffer := Format(cur_NomerMesta1_Fmt, [s_NomerMesta]);
         // gfx2_Mestonum := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Mestonum := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1190,7 +1241,7 @@ begin
           // -- buffer := buffer + '#Arial,0000,18,204' + c_CRLF;
           // -- buffer := buffer + '^0105,0000;' + str_TICKET_LABEL;
           // buffer := Format('@2,000,050' + c_CRLF + '#Arial,0000,18,204' + c_CRLF + '^0105,0000;' + '%s', [str_TICKET_LABEL]);
-          buffer := Format(cur_TicketLabel_Fmt, [str_TICKET_LABEL]);
+          buffer := Format(cur_TicketLabel1_Fmt, [str_TICKET_LABEL]);
           // gfx2_Primechanie := PrepareBitmapFromText(PChar(buffer), 0, 0);
           gfx2_Primechanie := CacheBitmapFromText(buffer, 0, 0);
         end
@@ -1214,7 +1265,7 @@ begin
         // -- buffer := buffer + '#Arial,1000,19,204' + c_CRLF;
         // -- buffer := buffer + '^0032,0000;' + str_Sum;
         // buffer := Format('@2,000,050' + c_CRLF + '#Arial,1000,19,204' + c_CRLF + '^0032,0000;' + '%s', [str_Sum]);
-        buffer := Format(cur_TicketSum_Fmt, [str_Sum]);
+        buffer := Format(cur_TicketSum1_Fmt, [str_Sum]);
         // gfx2_Cenamesta := PrepareBitmapFromText(PChar(buffer), 0, 0);
         gfx2_Cenamesta := CacheBitmapFromText(buffer, 0, 0);
 {$IFDEF uhPrint_DEBUG}
@@ -1347,10 +1398,22 @@ begin
       // PlaceBitmap(1, 1, Text_X + 5, Text_Y - 27, gfx1_Datavremya);
       // PlaceBitmap(1, 1, Text_X + 25 + 10, Text_Y - 27 + 8, gfx1_Datavremya);
       {!$IFDEF uhPrint_DEBUG}
+      {
       DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
         + Format('X = %d, Y = %d, %s', [Text_X + 25 + 10, Text_Y - 27 + 8, str_SeansDateTime + '1']));
+      }
       {!$ENDIF}
-      PlaceBitmap(1, 1, cur_SeansDateTime1_Pos_X, cur_SeansDateTime1_Pos_Y, gfx1_Datavremya);
+      // PlaceBitmap(1, 1, cur_SeansDateTime1_Pos_X, cur_SeansDateTime1_Pos_Y, gfx1_Datavremya);
+      {!$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+        + Format('X = %d, Y = %d, %s', [Text_X + 25 + 10, Text_Y - 27 + 8, str_SeansDate + '1']));
+      {!$ENDIF}
+      PlaceBitmap(1, 1, cur_SeansDate1_Pos_X, cur_SeansDate1_Pos_Y, gfx1_SeansDate);
+      {!$IFDEF uhPrint_DEBUG}
+      DEBUGMessEnh(0, UnitName, ProcName, 'PlaceBitmap calc test1 '
+        + Format('X = %d, Y = %d, %s', [Text_X + 25 - 15, Text_Y - 27 + 8, str_SeansTime + '1']));
+      {!$ENDIF}
+      PlaceBitmap(1, 1, cur_SeansTime1_Pos_X, cur_SeansTime1_Pos_Y, gfx1_SeansTime);
       //*****************************************************************************************
       // Надпись "Ряд"
       // --------------------------------------------------------------------------

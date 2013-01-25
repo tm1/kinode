@@ -121,6 +121,7 @@ const
   max_OdeumLogoBmp_Fmt_Len: integer = 5;
   max_OdeumName_Fmt_Len: integer = 1023;
   // -------------------------------------------------------------------------
+  max_Vremya_Fmt_Len: integer = 1023;
   max_Ryad_Fmt_Len: integer = 1023;
   max_Mesto_Fmt_Len: integer = 1023;
   max_Cena_Fmt_Len: integer = 1023;
@@ -130,7 +131,9 @@ const
   max_Kolvomest_Fmt_Len: integer = 1023;
   // -------------------------------------------------------------------------
   max_FilmName_Fmt_Len: integer = 1023;
-  max_SeansDateTime_Fmt_Len: integer = 1023;
+  // max_SeansDateTime_Fmt_Len: integer = 1023;
+  max_SeansDate_Fmt_Len: integer = 1023;
+  max_SeansTime_Fmt_Len: integer = 1023;
   max_GroupNum_Fmt_Len: integer = 1023;
   max_GroupSum_Fmt_Len: integer = 1023;
   max_NomerRyada_Fmt_Len: integer = 1023;
@@ -143,6 +146,7 @@ const
   max_OdeumLogoBmp_Pos_Value: integer = 999;
   max_OdeumName_Pos_Value: integer = 999;
   // -------------------------------------------------------------------------
+  max_Vremya_Pos_Value: integer = 999;
   max_Ryad_Pos_Value: integer = 999;
   max_Mesto_Pos_Value: integer = 999;
   max_Cena_Pos_Value: integer = 999;
@@ -152,7 +156,9 @@ const
   max_Kolvomest_Pos_Value: integer = 999;
   // -------------------------------------------------------------------------
   max_FilmName_Pos_Value: integer = 999;
-  max_SeansDateTime_Pos_Value: integer = 999;
+  // max_SeansDateTime_Pos_Value: integer = 999;
+  max_SeansDate_Pos_Value: integer = 999;
+  max_SeansTime_Pos_Value: integer = 999;
   max_GroupNum_Pos_Value: integer = 999;
   max_GroupSum_Pos_Value: integer = 999;
   max_NomerRyada_Pos_Value: integer = 999;
@@ -168,6 +174,8 @@ const
   OdeumName1_Pos_X_Def: integer = 100;
   OdeumName1_Pos_Y_Def: integer = 100;
   // -------------------------------------------------------------------------
+  Vremya1_Pos_X_Def: integer = 100;
+  Vremya1_Pos_Y_Def: integer = 100;
   Ryad1_Pos_X_Def: integer = 100;
   Ryad1_Pos_Y_Def: integer = 100;
   Mesto1_Pos_X_Def: integer = 100;
@@ -185,8 +193,14 @@ const
   // -------------------------------------------------------------------------
   FilmName1_Pos_X_Def: integer = 100;
   FilmName1_Pos_Y_Def: integer = 100;
+  {
   SeansDateTime1_Pos_X_Def: integer = 100;
   SeansDateTime1_Pos_Y_Def: integer = 100;
+  }
+  SeansDate1_Pos_X_Def: integer = 100;
+  SeansDate1_Pos_Y_Def: integer = 100;
+  SeansTime1_Pos_X_Def: integer = 100;
+  SeansTime1_Pos_Y_Def: integer = 100;
   GroupNum1_Pos_X_Def: integer = 100;
   GroupNum1_Pos_Y_Def: integer = 100;
   GroupSum1_Pos_X_Def: integer = 100;
@@ -250,6 +264,8 @@ resourcestring
   OdeumLogoBmp_Fmt_Def = '@2,%s';
   str_OdeumName = 'OdeumName';
   OdeumName_Fmt_Def = '@2,050,050' + m_CRLF + '#Courier New,1000,20,204' + m_CRLF + '^0190,0030;' + '%s';
+  str_Vremya = 'Vremya';
+  Vremya_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0029,0000;' + '%s';
   str_Ryad = 'Ryad';
   Ryad_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0029,0000;' + '%s';
   str_Mesto = 'Mesto';
@@ -266,10 +282,16 @@ resourcestring
   Kolvomest_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,16,204' + m_CRLF + '^0092,0000;' + '%s';
   str_FilmName = 'FilmName';
   FilmName_Fmt_Def = '@2,025,050' + m_CRLF + '#Times New Roman,1000,25,204' + m_CRLF + '^0246,0000;' + '%s';
+  {
   str_SeansDateTime = 'SeansDateTime';
   SeansDateTime_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,19,204' + m_CRLF + '^0120,0000;' + '%s' + m_CRLF
     + '#Arial,0000,18,204' + m_CRLF + '^0052,0000;' + '  ' + '%s' + '  ' + m_CRLF
     + '#Arial,1000,19,204' + m_CRLF + '^0048,0000;' + '%s';
+  }  
+  str_SeansDate = 'SeansDate';
+  SeansDate_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,0000,19,204' + m_CRLF + '^0120,0000;' + '%s';
+  str_SeansTime = 'SeansTime';
+  SeansTime_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,19,204' + m_CRLF + '^0048,0000;' + '%s';
   str_GroupNum = 'GroupNum';
   GroupNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1100,20,204' + m_CRLF + '^0181,0000;' + '%s' + m_CRLF;
   str_GroupSum = 'GroupSum';
@@ -284,6 +306,21 @@ resourcestring
   TicketSum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,19,204' + m_CRLF + '^0032,0000;' + '%s';
   str_SerialNum = 'SerialNum';
   SerialNum_Fmt_Def = '@2,000,050' + m_CRLF + '#Arial,1000,20,204' + m_CRLF + '^0068,0000;' + '%s%s';
+  // -------------------------------------------------------------------------
+  // Localization
+  // -------------------------------------------------------------------------
+  str_loc_Vremya = 'время';
+  str_loc_Ryad = 'ряд';
+  str_loc_Mesto = 'место';
+  str_loc_Cena = 'цена';
+  str_loc_Summa = 'сумма';
+  str_loc_Tenge = 'тенге';
+  str_loc_Halyava = 'Бесплатный билет';
+  // str_loc_Studpens = 'Студенч./Пенсион.';
+  // str_loc_Detski = 'Детский билет';
+  // str_loc_Priglas = 'Пригласительный';
+  // str_loc_Vip = 'VIP карточка';
+  str_loc_Kolvomest = 'Кол-во мест';
   // -------------------------------------------------------------------------
   // Procedure names and params
   // -------------------------------------------------------------------------
